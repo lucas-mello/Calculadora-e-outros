@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- validação transistional,w3c -->
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <!-- validação transistional,w3c -->
+    <html>
+    <!-- abrir html -->
+    <html lang="en">
+    <!-- linguagem -->
+        <head>
+            <!-- abrir cabeçalho -->
+        <title></title>
+        <!-- inserir titulo -->
+        
+        <!-- abrir meta -->
+        <!-- meta, insere caracteristicas a página web-->
+        <!-- abrir 1* tag meta -->
+        <meta charset="utf-8"/>
+        <!-- fechar 1* tag meta -->
+
+        <!-- abrir 2* tag meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- fechar 2* tag meta -->
+
+        <!-- abrir 3* tag meta -->
+        <meta http-equiv="X-UA-Compatible" content="IE=9" />
+        <!-- fechar 3* tag meta -->
+
+        <!-- abrir 4* tag meta -->
+        <meta name="GENERATOR" content="Microsoft SharePoint" />
+        <!-- fechar 4* tag meta -->
+
+        <!-- abrir 5* tag meta -->
+        <meta name="progid" content="SharePoint.WebPartPage.Document" />
+        <!-- fechar 5* tag meta -->
+
+        <!-- abrir 6* tag meta -->
+        <meta http-equiv="Expires" content="0" />
+        <!-- fechar 6* tag meta -->
+
+        <!-- abrir 7* tag meta -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!-- fechar 7* tag meta -->
+
+        <!-- abrir 8* tag meta -->
+        <meta http-equiv="Page-Enter" content="blendTrans(Duration=1.10)">
+        <!-- fechar 8* tag meta -->
+
+        <!-- abrir 9* tag meta -->
+        <meta http-equiv="Page-Exit" content="blendTrans(Duration=1.10)">
+        <!-- fechar 9* tag meta -->
+
+        <!-- abrir 10* tag meta -->
+        <meta name="viewport" content="width=800px,initial-scale=1">
+        <!-- fechar 10* tag meta -->
+
+        <!-- abrir 11* tag meta -->
+        <meta name="keywords" content=" texto"/>
+        <!-- digite um texto em content -->
+        <!-- fechar 11* tag meta -->
+
+        <!-- abrir 12* tag meta -->
+        <meta name="description" content="texto "/>
+        <!-- digite um texto em content--> 
+        <!-- fechar 12* tag meta -->
+
+        <!-- abrir 13* tag meta -->           
+        <meta name="robots" content="index, follow"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 13* tag meta -->
+
+        <!-- abrir 14* tag meta -->            
+        <meta name="HandheldFriendly" content="True"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 14* tag meta -->
+
+        <!-- abrir 15* tag meta -->           
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+        <!-- fechar 15* tag meta -->
+
+        <!-- abrir 16* tag meta -->
+        <meta property="og:title" content="calculadora"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 16* tag meta -->
+
+        <!-- abrir 17* tag meta -->
+        <meta property="og:description" content="calculadora "/>
+        <!-- digite um texto em content-->
+        <!-- fechar 17* tag meta -->
+
+        <!-- abrir 18* tag meta -->
+        <meta property="og:url" content="calculadora"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 18* tag meta -->
+
+        <!-- abrir 19* tag meta -->
+        <meta property="og:site_name" content="calculadora"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 19* tag meta -->
+
+        <!-- abrir 20* tag meta -->
+        <meta property="fb:app_id" content="1573751922880959"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 20* tag meta -->
+
+        <!-- abrir 21* tag meta -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!-- digite um texto em content-->
+        <!-- fechar 21* tag meta -->
+         
+         <!-- fechar meta -->
+        
+       
+        <title>HTML5 JavaScript Piano</title>
+        <meta name="description" content="A synth piano synth that generates all of its audio files dynamically using JavaScript and data URIs. Choose from a variety of sounds styles and play with the looper, visual waveforms, and more." />
+        <link rel="stylesheet" type="text/css" href="piano.css" />
+        <meta property="og:image" content="http://mrcoles.com/media/img/piano-visual-mode.png">
+        <link rel="image_src" href="http://mrcoles.com/media/img/piano-visual-mode.png" />
+    </head>
+    <body style="background-color:rgba(150,150,220,0.4);">
+
+        <div id="content">
+            <div id="content-inner">
+                <div id="piano">
+                    
+                    <div class="help show" tabindex="1">
+                        <div class="help-inner">
+                            <div id="synth-settings"></div>
+                            <div class="opts">
+                                <p><strong>Controls:</strong></p>
+                                <p>play using home row &amp; above &nbsp; /</p>
+                                <p>change playable keys: “,” &amp; “.” &nbsp; /</p>
+                                <p>shift keyboard: ← &amp; → <span id="shift"></span></p>
+                            </div>
+                            <div class="opts">
+                                <p><strong>Extras:</strong></p>
+                                <p class="toggle-color toggle hold">Color - c &nbsp; /</p>
+                                <p class="toggle-demo toggle">Demo - m &nbsp; /</p>
+                                <p class="toggle-animate toggle">Visual mode - 8 &nbsp; /</p>
+                                <p class="toggle-looper">Looper - 9 &nbsp; /</p>
+                                <p>Help - 0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loop" tabindex="2">loop</div>
+                </div>
+            </div>
+        </div>
+        <div id="below">
+            <p id="info">info</p>
+            <p id="top">↑</p>
+            <div id="below-inner">
+                <h2>HTML5 Javascript Piano</h2>
+                <p>This synth piano is written <em>solely</em> using HTML, JS, and CSS. It contains a small handful of synths with configurable decays, a looper, demo mode, visual mode, and a variety of colors. View controls by hitting the top-right button on the piano.</p>
+                <p>
+                    It doesn't use a single static audio file, instead it generates them on the fly at the byte level and then converts them to files using the data URI schema. On a similar note, it doesn't use a single image either, just CSS.
+                    You can make pretty much any kind of file with a data URI, such as a
+                    <a href="http://mrcoles.com/low-res-paint/">bitmap file</a> or a
+                    <a href="http://mrcoles.com/favicon-generator/">favicon</a>.
+                </p>
+                <p><span title="May 16, 2012">Currently</span> iOS doesn’t support HTML5 audio well enough in the browser to make this work. So, no go on iPhone and iPad, for now.</p>
+                <p>Various people have been experimenting with audio files and data URIs for a while now. I first came across <a href="http://www.sk89q.com/playground/jswav/">this implementation</a> by sk89q, which was helpful in getting my audio files to work. For future projects, I will probably use an audio api, but currently it’s just <a href="http://caniuse.com/audio-api">firefox &amp; chrome</a>. For further reading, here is a good overview of <a href="http://matt.west.co.tt/music/jasmid-midi-synthesis-with-javascript-and-html5-audio/">the state of HTML5 audio</a> from December 2010.</p>
+                <p>
+                    By <a href="http://mrcoles.com">Peter Coles</a>
+                    / <a href="http://twitter.com/lethys">@lethys</a>
+                    – May 16, 2012
+                </p>
+            </div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mrcoles.com/piano/" data-text="HTML5 Piano - with a data URI synth" data-via="lethys">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+        <script src="jquery-1.7.1.min.js"></script>
+        <script src="audio.js"></script>
+        <script src="piano.js"></script>
+    </body>
+</html>
