@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <html>
+  <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+<meta name="GENERATOR" content="Microsoft SharePoint" />
+
+<meta name="progid" content="SharePoint.WebPartPage.Document" />
+<meta http-equiv="Expires" content="0" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Page-Enter" content="blendTrans(Duration=1.10)">
+<meta http-equiv="Page-Exit" content="blendTrans(Duration=1.10)">
+<meta name="viewport" content="width=800px,initial-scale=1">
+<meta name="keywords" content="calculadora"/>
+
+<meta name="description" content="calculadora "/>
+                    
+<meta name="robots" content="index, follow"/>
+                    
+
+<meta name="HandheldFriendly" content="True"/>
+                   
+<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+
+<meta property="og:title" content="calculadora"/>
+
+<meta property="og:description" content="calculadora "/>
+
+<meta property="og:url" content="calculadora"/>
+
+<meta property="og:site_name" content="calculadora"/>
+
+<meta property="fb:app_id" content="1573751922880959"/>
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="style.css" />
+        <title>2048</title>
+    </head>
+    <body onload="init_game()">
+
+        <div id="promptDiv">
+            <div id="opacityDiv"></div>
+            <div id="promptHandler">
+                <div id="centerDiv"></div>
+                <div id="prompt">
+                    
+                </div>
+            </div>
+        </div>
+
+        <header id="mainHeader">
+            <h1>2048</h1>
+            
+        </header>
+        
+        <aside id="leftAside">
+        </aside>
+
+        <aside id="rightAside">
+            <div id="game_buttons">
+                <input id="restartButton" type="button" value="Reiniciar" onclick="restart_game()"/>
+                <input id="undoButton" type="button" value="Desfazer"/>
+                <p>Placar</p>
+                <div id="scoreContainer">0</div>
+            </div>
+
+            <div id="game_options">
+                <p>Tamanho</p>
+                <span id="gameOptionSize3" onclick="change_game_size(3)">x3</span>
+                <span id="gameOptionSize4" onclick="change_game_size(4)">x4</span>
+                <span id="gameOptionSize6" onClick="change_game_size(5)">x5</span>
+                <span id="gameOptionSize8" onclick="change_game_size(6)">x6</span>
+                <span id="gameOptionSize10" onclick="change_game_size(8)">x8</span>
+                <p>Nome do jogador</p>
+                <input id="playerName" type="text" value=""/>
+            </div>
+        </aside>
+
+        <div id="mouseControls">
+            <input id="topArrow" type="button" value="↑" onclick="move_top()"/>
+            <input id="leftArrow" type="button" value="←" onclick="move_left()"/>
+            <input id="bottomArrow" type="button" value="↓" onclick="move_bottom()"/>
+            <input id="rightArrow" type="button" value="→" onclick="move_right()"/>
+        </div>
+        
+        <div id="mainDiv">
+            <div id="gameDiv">
+            </div>
+        </div>
+
+        <script type="text/javascript" src="gametest.js"></script>
+        <script type="text/javascript" src="storage.js"></script>
+        <script type="text/javascript" src="blocks.js"></script>
+        <script type="text/javascript" src="initialization.js"></script>
+        <script type="text/javascript" src="gameplay.js"></script>
+        <script type="text/javascript" src="formulaire.js"></script>
+    </body>
+</html>
