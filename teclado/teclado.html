@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- validação transistional,w3c -->
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<!-- validação transistional,w3c -->
+  	<html>
+  	<!-- abrir html -->
+  	<html lang="en">
+  	<!-- linguagem -->
+  		<head>
+  			<!-- abrir cabeçalho -->
+    	<title>TECLADO SEM JQUERY</title>
+    	<!-- inserir titulo -->
+        
+        <!-- abrir meta -->
+        <!-- meta, insere caracteristicas a página web-->
+    	<!-- abrir 1* tag meta -->
+        <meta charset="utf-8"/>
+        <!-- fechar 1* tag meta -->
+
+        <!-- abrir 2* tag meta -->
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<!-- fechar 2* tag meta -->
+
+    	<!-- abrir 3* tag meta -->
+  		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+  		<!-- fechar 3* tag meta -->
+
+  		<!-- abrir 4* tag meta -->
+		<meta name="GENERATOR" content="Microsoft SharePoint" />
+		<!-- fechar 4* tag meta -->
+
+		<!-- abrir 5* tag meta -->
+		<meta name="progid" content="SharePoint.WebPartPage.Document" />
+		<!-- fechar 5* tag meta -->
+
+		<!-- abrir 6* tag meta -->
+		<meta http-equiv="Expires" content="0" />
+		<!-- fechar 6* tag meta -->
+
+		<!-- abrir 7* tag meta -->
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<!-- fechar 7* tag meta -->
+
+		<!-- abrir 8* tag meta -->
+		<meta http-equiv="Page-Enter" content="blendTrans(Duration=1.10)">
+		<!-- fechar 8* tag meta -->
+
+		<!-- abrir 9* tag meta -->
+		<meta http-equiv="Page-Exit" content="blendTrans(Duration=1.10)">
+		<!-- fechar 9* tag meta -->
+
+		<!-- abrir 10* tag meta -->
+		<meta name="viewport" content="width=800px,initial-scale=1">
+		<!-- fechar 10* tag meta -->
+
+		<!-- abrir 11* tag meta -->
+		<meta name="keywords" content=" texto"/>
+		<!-- digite um texto em content -->
+		<!-- fechar 11* tag meta -->
+
+		<!-- abrir 12* tag meta -->
+		<meta name="description" content="texto "/>
+        <!-- digite um texto em content--> 
+        <!-- fechar 12* tag meta -->
+
+        <!-- abrir 13* tag meta -->           
+		<meta name="robots" content="index, follow"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 13* tag meta -->
+
+        <!-- abrir 14* tag meta -->            
+		<meta name="HandheldFriendly" content="True"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 14* tag meta -->
+
+        <!-- abrir 15* tag meta -->           
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+		<!-- fechar 15* tag meta -->
+
+		<!-- abrir 16* tag meta -->
+		<meta property="og:title" content="calculadora"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 16* tag meta -->
+
+        <!-- abrir 17* tag meta -->
+		<meta property="og:description" content="calculadora "/>
+		<!-- digite um texto em content-->
+		<!-- fechar 17* tag meta -->
+
+		<!-- abrir 18* tag meta -->
+		<meta property="og:url" content="calculadora"/>
+		<!-- digite um texto em content-->
+		<!-- fechar 18* tag meta -->
+
+		<!-- abrir 19* tag meta -->
+		<meta property="og:site_name" content="calculadora"/>
+		<!-- digite um texto em content-->
+		<!-- fechar 19* tag meta -->
+
+		<!-- abrir 20* tag meta -->
+		<meta property="fb:app_id" content="1573751922880959"/>
+		<!-- digite um texto em content-->
+		<!-- fechar 20* tag meta -->
+
+		<!-- abrir 21* tag meta -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- digite um texto em content-->
+		<!-- fechar 21* tag meta -->
+         
+         <!-- fechar meta -->
+         <style type="text/css">
+          	charset 'utf-8';
+          		* {
+     			margin:0;
+     			padding:0;
+    		    border:0;
+     		    /* CSS RESET - zera estilo para começar novo css*/
+     		    text-decoration:none;
+     			list-style:none;
+     			vertical-align:baseline;
+    			 z-index:0;
+
+			}
+			#body{
+				background-color:rgba(16,150,225,0.9);
+			}
+			.button{
+				background-color: rgba(0,210,80,0.9);
+				font-weight:bolder;
+				width:90px;
+				height:35px;
+				font-size:17px;
+				margin:2px;
+				cursor:pointer;
+				background:808a9c;
+				border:none;
+				color:#000;
+				border: 4px solid #000;
+				border-radius:15px; 
+				-moz-border-radius:15px;
+				-webkit-border-radius:15px;	
+			}
+			.button1{
+				background-color: rgba(0,210,80,0.9);
+				font-weight:bolder;
+				font-size:60px;
+				margin:2px;
+				cursor:pointer;
+				width:376px;
+				height:85px;
+				background:808a9c;
+				border:none;
+				color:#000;
+				border: 4px solid #000;
+				border-radius:15px; 
+				-moz-border-radius:15px;
+				-webkit-border-radius:15px;	
+			}
+              
+              	/*.textview{
+				width:1135px;
+				height:49px;
+				font-size:25px;
+				margin:5px;
+				padding:5px;
+				color:808a9c;
+				border:none;
+				background-color: rgba(210,210,198,0.9);
+				font-weight:bolder;
+				text-decoration:underline;
+				border: 4px solid #000;
+				border-radius:15px; 
+				-moz-border-radius:15px;
+				-webkit-border-radius:15px;
+			}*/
+
+			.p{
+			text-align: center;
+			font-family: arial;
+			font-size: 28px;
+			font-weight: bold;
+			font-style: italic;
+			text-decoration: underline;	
+  			}
+			.main{
+				margin-top:30px;
+				background-color: #000;
+				border:4px solid #000;
+				border-radius:15px; 
+				-moz-border-radius:15px;
+				-webkit-border-radius:15px;
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translateX(-50%) translateY(-50%);
+
+
+			}
+			.bg{
+                background: linear-gradient(red, yellow);
+                height:100%; 
+			}
+          </style>
+          <!-- abrir chamando bootstrap -->
+   		<link rel="stylesheet" href="https://v40.pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css" media="screen"> 
+      	<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+      	<!-- fechar chamando bootstrap -->
+  		</head>
+  		<!-- fechar cabeçalho -->
+
+	<script type="text/javascript">
+		function insert(num) {
+		document.form.textview.value = document.form.textview.value+num;
+	     
+		}
+		
+		
+			function clean() {
+				document.form.textview.value="";
+		}
+
+		function back() {
+			 var exp = document.form.textview.value;
+			 document.form.textview.value = exp.substring(0,exp.length-1);
+		}
+
+
+	</script>
+
+	<body id="body">
+			 
+             <p class="p">Teclado Virtual</p>
+				<div class="bg"></div>
+      <div class="main">
+  <form name="form">
+  	  <table border="0" align="center">
+    	<tr>
+    		<th>
+    			<textarea  class="textview" name="textview" cols="125" rows="2" style="border:5px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;background-color:#00ff00;text-decoration: underline;font-style: italic;font-size:15px;" readonly="readonly">
+    	
+    			</textarea>
+    		</th>
+    	</tr>
+    </table>
+
+    <table>
+    	<tr>
+    		
+    		<th><input class="button" type="button" value="C" onclick="clean();"/></th>
+      		<th><input class="button" type="button" value="<-" onclick="back();"/></th>
+    		<th><input type="button" id="button" name="button" class="button" value="q" onclick="insert('q');"/ ></th>
+            <th><input type="button" id="button" name="button" class="button" value="Q" onclick="insert('Q');"/ ></th>
+            <th><input type="button" id="button" name="button" class="button" value="w" onclick="insert('w');"/ ></th>
+            <th><input type="button" id="button" name="button" class="button" value="W" onclick="insert('W');"/ ></th>
+            <th><input type="button" id="button" name="button" class="button" value="e" onclick="insert('e');"/ ></th>
+            <th><input type="button" id="button" name="button" class="button" value="E" onclick="insert('E');"/ ></th>
+            <th><input type="button" id="button" name="button" class="button" value="r" onclick="insert('r');"/ ></th>
+            <th><input type="button" id="button" name="button" class="button" value="R" onclick="insert('R');"/ ></th>
+            <th><input type="button" id="button" name="button" class="button" value="t" onclick="insert('t');"/ ></th>
+            
+         </tr>
+
+         <tr>
+         	<th><input type="button" id="button" name="button" class="button" value="T" onclick="insert('T');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="y" onclick="insert('y');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="y" onclick="insert('Y');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="u" onclick="insert('u');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="U" onclick="insert('U');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="i" onclick="insert('i');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="I" onclick="insert('I');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="o" onclick="insert('o');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="O" onclick="insert('O');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="p" onclick="insert('p');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="P" onclick="insert('P');"/ ></th>
+
+         </tr>
+
+          <tr>
+         
+         	<th><input type="button" id="button" name="button" class="button" value="´" onclick="insert('´');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="{" onclick="insert('{');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="}" onclick="insert('}');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="a" onclick="insert('a');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="A" onclick="insert('A');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="s" onclick="insert('s');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="S" onclick="insert('S');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="d" onclick="insert('d');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="D" onclick="insert('D');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="f" onclick="insert('f');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="F" onclick="insert('F');"/ ></th>
+         </tr>
+
+         <tr>
+         
+         	<th><input type="button" id="button" name="button" class="button" value="g" onclick="insert('g');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="G" onclick="insert('G');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="h" onclick="insert('h');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="H" onclick="insert('H');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="j" onclick="insert('j');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="J" onclick="insert('J');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="k" onclick="insert('k');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="K" onclick="insert('K');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="l" onclick="insert('l');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="L" onclick="insert('L');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="ç" onclick="insert('ç');"/ ></th>
+         </tr>
+         <tr>
+         
+         	<th><input type="button" id="button" name="button" class="button" value="Ç" onclick="insert('Ç');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="^" onclick="insert('^');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="~" onclick="insert('~');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="[" onclick="insert('[');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="]" onclick="insert(']');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="|" onclick="insert('|');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="\" onclick="insert('\ ');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="z" onclick="insert('z');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="Z" onclick="insert('Z');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="x" onclick="insert('x');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="X" onclick="insert('X');"/ ></th>
+         </tr>
+         <tr>
+         
+         	<th><input type="button" id="button" name="button" class="button" value="c" onclick="insert('c');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="C" onclick="insert('C');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="v" onclick="insert('v');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="V" onclick="insert('V');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="b" onclick="insert('b');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="B" onclick="insert('B');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="n" onclick="insert('n');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="N" onclick="insert('N');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="m" onclick="insert('m');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="M" onclick="insert('M');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="," onclick="insert(',');"/ ></th>
+         </tr>
+         <tr>
+         
+         	<th><input type="button" id="button" name="button" class="button" value="<" onclick="insert('<');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value=">" onclick="insert('>');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="." onclick="insert('.');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value=":" onclick="insert(':');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value=";" onclick="insert(';');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="?" onclick="insert('?');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="!" onclick="insert('!');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="@" onclick="insert('@');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="#" onclick="insert('#');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="$" onclick="insert('$');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="%" onclick="insert('%');"/ ></th>
+         </tr>
+         <tr>
+         
+         	<th><input type="button" id="button" name="button" class="button" value="*" onclick="insert('*');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="(" onclick="insert('(');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value=")" onclick="insert(')');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="-" onclick="insert('-');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="&" onclick="insert('&');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="¨" onclick="insert('¨');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value=" + " onclick="insert(' +');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="/" onclick="insert('/');"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="1" onclick="insert(1);"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="2" onclick="insert(2);"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="3" onclick="insert(3);"/ ></th>
+         </tr>
+         <tr>
+         
+         	<th><input type="button" id="button" name="button" class="button" value="4" onclick="insert(4);"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="5" onclick="insert(5);"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="6" onclick="insert(6);"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="7" onclick="insert(7);"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="8" onclick="insert(8);"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="9" onclick="insert(9);"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="0" onclick="insert(0);"/ ></th>
+         	<th><input type="button" id="button" name="button" class="button" value="espaço" onclick="insert(' ');"/ ></th>
+         	
+         </tr>
+         
+       
+    </table>
+  </form>
+</div>
+
+ <nav class="navbar navbar-expand-md bg-primary navbar-dark h-50">
+    <div class="container-fluid">
+   
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="co" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+</body>
+</html>

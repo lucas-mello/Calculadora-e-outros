@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- validação transistional,w3c -->
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<!-- validação transistional,w3c -->
+  	<html>
+  	<!-- abrir html -->
+  	<html lang="en">
+  	<!-- linguagem -->
+  		<head>
+  			<!-- abrir cabeçalho -->
+    	<title>TECLADO COM JQUERY</title>
+    	<!-- inserir titulo -->
+        
+        <!-- abrir meta -->
+        <!-- meta, insere caracteristicas a página web-->
+    	<!-- abrir 1* tag meta -->
+        <meta charset="utf-8"/>
+        <!-- fechar 1* tag meta -->
+
+        <!-- abrir 2* tag meta -->
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<!-- fechar 2* tag meta -->
+
+    	<!-- abrir 3* tag meta -->
+  		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+  		<!-- fechar 3* tag meta -->
+
+  		<!-- abrir 4* tag meta -->
+		<meta name="GENERATOR" content="Microsoft SharePoint" />
+		<!-- fechar 4* tag meta -->
+
+		<!-- abrir 5* tag meta -->
+		<meta name="progid" content="SharePoint.WebPartPage.Document" />
+		<!-- fechar 5* tag meta -->
+
+		<!-- abrir 6* tag meta -->
+		<meta http-equiv="Expires" content="0" />
+		<!-- fechar 6* tag meta -->
+
+		<!-- abrir 7* tag meta -->
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<!-- fechar 7* tag meta -->
+
+		<!-- abrir 8* tag meta -->
+		<meta http-equiv="Page-Enter" content="blendTrans(Duration=1.10)">
+		<!-- fechar 8* tag meta -->
+
+		<!-- abrir 9* tag meta -->
+		<meta http-equiv="Page-Exit" content="blendTrans(Duration=1.10)">
+		<!-- fechar 9* tag meta -->
+
+		<!-- abrir 10* tag meta -->
+		<meta name="viewport" content="width=800px,initial-scale=1">
+		<!-- fechar 10* tag meta -->
+
+		<!-- abrir 11* tag meta -->
+		<meta name="keywords" content=" texto"/>
+		<!-- digite um texto em content -->
+		<!-- fechar 11* tag meta -->
+
+		<!-- abrir 12* tag meta -->
+		<meta name="description" content="texto "/>
+        <!-- digite um texto em content--> 
+        <!-- fechar 12* tag meta -->
+
+        <!-- abrir 13* tag meta -->           
+		<meta name="robots" content="index, follow"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 13* tag meta -->
+
+        <!-- abrir 14* tag meta -->            
+		<meta name="HandheldFriendly" content="True"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 14* tag meta -->
+
+        <!-- abrir 15* tag meta -->           
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+		<!-- fechar 15* tag meta -->
+
+		<!-- abrir 16* tag meta -->
+		<meta property="og:title" content="calculadora"/>
+        <!-- digite um texto em content-->
+        <!-- fechar 16* tag meta -->
+
+        <!-- abrir 17* tag meta -->
+		<meta property="og:description" content="calculadora "/>
+		<!-- digite um texto em content-->
+		<!-- fechar 17* tag meta -->
+
+		<!-- abrir 18* tag meta -->
+		<meta property="og:url" content="calculadora"/>
+		<!-- digite um texto em content-->
+		<!-- fechar 18* tag meta -->
+
+		<!-- abrir 19* tag meta -->
+		<meta property="og:site_name" content="calculadora"/>
+		<!-- digite um texto em content-->
+		<!-- fechar 19* tag meta -->
+
+		<!-- abrir 20* tag meta -->
+		<meta property="fb:app_id" content="1573751922880959"/>
+		<!-- digite um texto em content-->
+		<!-- fechar 20* tag meta -->
+
+		<!-- abrir 21* tag meta -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- digite um texto em content-->
+		<!-- fechar 21* tag meta -->
+		 <!-- abrir chamando bootstrap -->
+   		<link rel="stylesheet" href="https://v40.pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css" media="screen"> 
+      	<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+      	<!-- fechar chamando bootstrap -->
+  		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+			<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script> 
+
+    <!-- abrir chamada arquivo externo-->
+    <script type="text/javascript" src="script1.js"></script>
+    <script type="text/javascript" src="outros.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+   <!-- fechar chamada arquivo externo -->
+   	
+	</head>
+	<!-- fechar cabeçalho -->
+		<body onload="Tempo()">
+      <nav class="navbar navbar-expand-md bg-primary navbar-dark h-50">
+    <div class="container-fluid">
+   
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+     </div>
+   </nav>
+
+    <!-- função tempo do body da linha 126 -->
+    <div class="tempo"  id="lugar">Tempo</div>
+
+ 
+
+         <table width="770"  border="5" cellspacing="15" cellpadding="15" align="center" >
+    <tr><td align="center"><span id="clock" ></span><script>setTimeout("horas()",1000);</script></td></tr>
+    </table>
+ <table width="770"  border="5" cellspacing="15" cellpadding="15" align="center" ><tr><th>
+    <form name="y_datetime"><input name="textbox1" type=text class="style1"  
+style="text-align=center" size=55 width=32 > 
+</form>
+<script type="text/javascript">
+	 ydate = new Object(); 
+ydate.style  = 3; 
+ydate.military = 0; 
+
+ydate.days1  = new Array("Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"); 
+ydate.days2  = new Array("Domingo","Segunda","Terça","Quarta", 
+"Quinta","Sexta","Sabado"); 
+ydate.months1 = new Array("janeiro","fevereiro","março","abril","maio","junho","julho", "agosto","setembro","outubro","novembro","dezembro"); 
+ydate.months2 = new Array("jan","fev","mar","abr","mai","jun", 
+"jul","ago","set","out","nov","dez"); 
+
+function datedisplay() { 
+
+  ydate.now   = new Date(); 
+  ydate.year  = ydate.now.getFullYear(); 
+  ydate.month = ydate.now.getMonth(); 
+  ydate.date  = ydate.now.getDate(); 
+  ydate.day   = ydate.now.getDay(); 
+  ydate.hour  = ydate.now.getHours(); 
+  ydate.min   = ydate.now.getMinutes(); 
+  ydate.sec   = ydate.now.getSeconds(); 
+  ydate.ampm  = ""; 
+
+  if (ydate.military) { 
+        if (ydate.hour < 10) { ydate.hour = "0" + ydate.hour; } 
+  } 
+  else if (ydate.hour > 11) { 
+        ydate.ampm = "Pm"; 
+        ydate.hour = ydate.hour - 12; 
+  } 
+  else { ydate.ampm = "Am"; } 
+
+  if (ydate.hour == 0) { ydate.hour = 12; } 
+  if (ydate.min < 10)  { ydate.min = "0" + ydate.min; } 
+  if (ydate.sec < 10)  { ydate.sec = "0" + ydate.sec; } 
+
+  if (ydate.style == 0)      { ydate.txt = ydate.months2[ydate.month]+" "+ydate.date+" "+ydate.year; } 
+  else if (ydate.style == 1) { ydate.txt =":: "+ ydate.days2[ydate.day]+" "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm+" ::"; } 
+  else if (ydate.style == 2) { ydate.txt =":: "+ydate.date+" "+ydate.months2[ydate.month]+"  "+ydate.year+" :: "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm+" ::"; } 
+  else if (ydate.style == 3) { ydate.txt =":: "+ydate.days1[ydate.day]+" - "+ydate.date+" de " +ydate.months1[ydate.month]+" de "+ydate.year+" - "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm+" ::"; } 
+  else if (ydate.style == 4) { ydate.txt = ":: "+ydate.date+"/"+(ydate.month+1)+"/"+ydate.year+" :: "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm+" ::"; } 
+  else{ ydate.txt = ydate.year+"/"+(ydate.month+1)+"/"+ydate.date+" , "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm; } 
+
+  document.y_datetime.textbox1.value = ydate.txt; 
+  ydate.id=setTimeout("datedisplay()",1000); 
+} 
+
+datedisplay(); 
+
+</script>
+
+</th></tr></table>
+        <div class="container">
+  	  			<header class="top">
+  	  				<form class="form" action=" " method="" enctype=" ">
+
+  	  					<label id="op"></label>
+                      
+  	  	          <textarea cols="88" rows="27" style="font-size:19px;font-family: arial;font-style: italic;font-weight: bold;" value=" "  id="result" class="campo" readonly="readonly"  >
+  	  	          	
+  	  	          	 
+  	  	          </textarea> 
+
+  	  				</form>
+
+
+  	  			</header>
+  
+  	   <section class="body">
+
+  	  	 <table border="0">
+  	  	 	<tr>
+
+  	  	 	   <th>
+  	  	 	   	<input type="button" name="ce" class="btn" value="ce">
+  	  	 	   	<input type="button" name="c" class="btn" value="c">
+  	  	 		<input type="button" name="btn" class="btn"  value="q">
+  	  	        <input type="button" name="btn" class="btn" value="Q">
+  	  	  	    <input type="button" name="btn" class="btn" value="w">
+  	  	  	    <input type="button" name="btn" class="btn" value="W">
+  	  	  	    <input type="button" name="btn" class="btn" value="e">
+  	  	  	    <input type="button" name="btn" class="btn" value="E">
+  	  	  	    <input type="button" name="btn" class="btn" value="r">
+  	  	  	    <input type="button" name="btn" class="btn" value="R">
+  	  	  	    <input type="button" name="btn" class="btn" value="t">
+  	  	  	    <input type="button" name="btn" class="btn" value="T">
+  	  	  	    <input type="button" name="btn" class="btn" value="y">
+  	  	  	    <input type="button" name="btn" class="btn" value="Y">
+  	  	  	    <input type="button" name="btn" class="btn" value="u">
+  	  	  	    <input type="button" name="btn" class="btn" value="U">
+  	  	  	    <input type="button" name="btn" class="btn" value="i">
+  	  	  	    <input type="button" name="btn" class="btn" value="I">
+  	  	  	    <input type="button" name="btn" class="btn" value="o">
+  	  	  	    <input type="button" name="btn" class="btn" value="O">
+  	  	  	    <input type="button" name="btn" class="btn" value="p">
+  	  	  	    <input type="button" name="btn" class="btn" value="P">
+  	  	  	    <input type="button" name="btn" class="btn" value="'">
+  	  	  	    <input type="button" name="btn" class="btn" value="{">
+  	  	  	    <input type="button" name="btn" class="btn" value="}">
+  	  	  	    <input type="button" name="btn" class="btn" value="a">
+  	  	  	    <input type="button" name="btn" class="btn" value="A">
+  	  	  	    <input type="button" name="btn" class="btn" value="s">
+  	  	  	    <input type="button" name="btn" class="btn" value="S">
+  	  	  	    <input type="button" name="btn" class="btn" value="d">
+  	  	  	    <input type="button" name="btn" class="btn" value="D">
+  	  	  	    <input type="button" name="btn" class="btn" value="f">
+  	  	  	    <input type="button" name="btn" class="btn" value="F">
+  	  	  	    <input type="button" name="btn" class="btn" value="g">
+  	  	  	    <input type="button" name="btn" class="btn" value="G">
+  	  	  	    <input type="button" name="btn" class="btn" value="h">
+  	  	  	    <input type="button" name="btn" class="btn" value="H">
+  	  	  	    <input type="button" name="btn" class="btn" value="j">
+  	  	  	    <input type="button" name="btn" class="btn" value="J">
+  	  	  	    <input type="button" name="btn" class="btn" value="k">
+  	  	  	    <input type="button" name="btn" class="btn" value="K">
+  	  	  	    <input type="button" name="btn" class="btn" value="l">
+  	  	  	    <input type="button" name="btn" class="btn" value="L">
+  	  	  	    <input type="button" name="btn" class="btn" value="ç">
+  	  	  	    <input type="button" name="btn" class="btn" value="Ç">
+  	  	  	    <input type="button" name="btn" class="btn" value="^">
+  	  	  	    <input type="button" name="btn" class="btn" value="~">
+  	  	  	    <input type="button" name="btn" class="btn" value="[">
+  	  	  	    <input type="button" name="btn" class="btn" value="]">	
+  	  	  	    <input type="button" name="btn" class="btn" value="|">
+  	  	  	    <input type="button" name="btn" class="btn" value="\">
+  	  	  	    <input type="button" name="btn" class="btn" value="z">
+  	  	  	    <input type="button" name="btn" class="btn" value="Z">
+  	  	  	    <input type="button" name="btn" class="btn" value="x">
+  	  	  	    <input type="button" name="btn" class="btn" value="X">
+  	  	  	    <input type="button" name="btn" class="btn" value="c">
+  	  	  	    <input type="button" name="btn" class="btn" value="C">
+  	  	  	    <input type="button" name="btn" class="btn" value="v">
+  	  	  	    <input type="button" name="btn" class="btn" value="V">
+  	  	  	    <input type="button" name="btn" class="btn" value="b">
+  	  	  	    <input type="button" name="btn" class="btn" value="B">
+  	  	  	    <input type="button" name="btn" class="btn" value="n">
+  	  	  	    <input type="button" name="btn" class="btn" value="N">
+  	  	  	    <input type="button" name="btn" class="btn" value="m">
+  	  	  	    <input type="button" name="btn" class="btn" value="M">
+  	  	  	    <input type="button" name="btn" class="btn" value=",">
+  	  	  	    <input type="button" name="btn" class="btn" value="<">
+  	  	  	    <input type="button" name="btn" class="btn" value=">">
+  	  	  	    <input type="button" name="btn" class="btn" value=".">
+  	  	  	    <input type="button" name="btn" class="btn" value=":">
+  	  	  	    <input type="button" name="btn" class="btn" value=";">
+  	  	  	    <input type="button" name="btn" class="btn" value="?">
+  	  	  	    <input type="button" name="btn" class="btn" value="!">
+  	  	  	    <input type="button" name="btn" class="btn" value="@">
+  	  	  	    <input type="button" name="btn" class="btn" value="#">
+  	  	  	    <input type="button" name="btn" class="btn" value="$">
+  	  	  	    <input type="button" name="btn" class="btn" value="%">
+  	  	  	    <input type="button" name="btn" class="btn" value="*">
+  	  	  	    <input type="button" name="btn" class="btn" value="(">
+  	  	  	    <input type="button" name="btn" class="btn" value=")">
+  	  	  	    <input type="button" name="btn" class="btn" value="-">
+  	  	  	    <input type="button" name="btn" class="btn" value="&">
+  	  	  	    <input type="button" name="btn" class="btn" value="¨">
+  	  	  	    <input type="button" name="btn" class="btn" value="+">
+  	  	  	    <input type="button" name="btn" class="btn" value="/">
+  	  	  	    <input type="button" name="btn" class="btn" value="1">
+  	  	  	    <input type="button" name="btn" class="btn" value="2">
+  	  	  	    <input type="button" name="btn" class="btn" value="3">
+  	  	  	    <input type="button" name="btn" class="btn" value="4">
+  	  	  	    <input type="button" name="btn" class="btn" value="5">
+  	  	  	    <input type="button" name="btn" class="btn" value="6">
+  	  	  	    <input type="button" name="btn" class="btn" value="7">
+  	  	  	    <input type="button" name="btn" class="btn" value="8">
+  	  	  	    <input type="button" name="btn" class="btn" value="9">
+  	  	  	    <input type="button" name="btn" class="btn" value="0">
+  	  	  	    <input type="button" name="btn" class="btn" value=" ">
+  	  	  	    
+
+  	  	  	    
+  	  	  	   
+  	  	 	   </th>
+  	  	  
+  	  	      
+  	  	 	</tr>
+  	  	 </table>
+  	  	   
+
+  	   </section>
+  			</div>
+       
+             
+            </script>
+   
+</body>	
+ </html>
