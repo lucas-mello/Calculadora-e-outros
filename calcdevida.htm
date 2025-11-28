@@ -1,0 +1,609 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <html>
+  <html lang="en">
+  <head>
+    <title>calculadora</title>
+
+          <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+<meta name="GENERATOR" content="Microsoft SharePoint" />
+
+<meta name="progid" content="SharePoint.WebPartPage.Document" />
+<meta http-equiv="Expires" content="0" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="viewport" content="width=800px,initial-scale=1">
+<meta name="keywords" content="calculadora"/>
+
+<meta name="description" content="calculadora "/>
+                    
+<meta name="robots" content="index, follow"/>
+                    
+
+<meta name="HandheldFriendly" content="True"/>
+                   
+<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+
+<meta property="og:title" content="calculadora"/>
+
+<meta property="og:description" content="calculadora "/>
+
+<meta property="og:url" content="calculadora"/>
+
+<meta property="og:site_name" content="calculadora"/>
+
+<meta property="fb:app_id" content="1573751922880959"/>
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+   <link rel="stylesheet" href="https://v40.pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css" media="screen"> 
+
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+
+<SCRIPT language=JavaScript>
+<!-- Begin
+function start() {
+document.form1.day.value = "";
+document.form1.month.value = "";
+document.form1.year.value = "";
+document.form1.age.value = "";
+document.form1.months.value = "";
+document.form1.weeks.value = "";
+document.form1.answer.value = "";
+document.form1.hours.value = "";
+document.form1.min.value = "";
+document.form1.sec.value = "";
+document.form1.bday.value = "";
+document.form1.milli.value = "";
+}
+function run() {
+var ap;
+dd = document.form1.day.value;
+mm = document.form1.month.value;
+yy = document.form1.year.value;
+with(document.form1) {
+ap = parseInt(ampm.selectedIndex);
+hr = parseInt(hrs.value);
+if(hr <= 0 && hr >= 13) {
+ap = null;
+alert("asdf")
+   }
+}
+main="valid";
+if ((mm < 1) || (mm > 12) || (dd < 1) || (dd > 31) || (yy < 1) ||(mm == "") || (dd == "") || (yy == ""))
+main = "Invalid";
+else
+if (((mm == 4) || (mm == 6) || (mm == 9) || (mm == 11)) && (dd > 30))
+main = "Invalid";
+else
+if (mm == 2) {
+if (dd > 29)
+main = "Invalid";
+else if((dd > 28) && (!lyear(yy)))
+main="Invalid";
+}
+else
+if((yy > 9999)||(yy < 0))
+main = "Invalid";
+else
+main = main;
+if(main == "valid") {
+function leapyear(a) {
+if(((a % 4 == 0) && (a % 100 != 0)) || (a % 400 == 0))
+return true;
+else
+return false;
+}
+days = new Date();
+gdate = days.getDate();
+gmonth = days.getMonth();
+gyear = days.getYear();
+age = gyear - yy;
+if((mm == (gmonth + 1)) && (dd <= parseInt(gdate))) {
+age = age;
+}
+else {
+if(mm <= (gmonth)) {
+age = age;
+}
+else {
+age = age - 1;
+   }
+}
+if(age == 0)
+age = age;
+document.form1.age.value="  Você tem " + age+ " anos   e  ";
+if(mm <= (gmonth + 1))
+age = age - 1;
+if((mm == (gmonth + 1)) && (dd > parseInt(gdate)))
+age = age + 1;
+var m;
+var n;
+if (mm == 12) { n = 31 - dd; }
+if (mm == 11) { n = 61 - dd; }
+if (mm == 10) { n = 92 - dd; }
+if (mm == 9) { n = 122 - dd; }
+if (mm == 8) { n = 153 - dd; }
+if (mm == 7) { n = 184 - dd; }
+if (mm == 6) { n = 214 - dd; }
+if (mm == 5) { n = 245 - dd; }
+if (mm == 4) { n = 275 - dd; }
+if (mm == 3) { n = 306 - dd; }
+if (mm == 2) { n = 334 - dd; if(leapyear(yy)) n = n + 1; }
+if (mm == 1) { n = 365 - dd; if (leapyear(yy)) n = n + 1; }
+if (gmonth == 1) m = 31;
+if (gmonth == 2) { m = 59;   if (leapyear(gyear)) m = m + 1; }
+if (gmonth == 3) { m = 90;   if (leapyear(gyear)) m = m + 1; }
+if (gmonth == 4) { m = 120;  if (leapyear(gyear)) m = m + 1; }
+if (gmonth == 5) { m = 151;  if (leapyear(gyear)) m = m + 1; }
+if (gmonth == 6) { m = 181;  if (leapyear(gyear)) m = m + 1; }
+if (gmonth == 7) { m = 212;  if (leapyear(gyear)) m = m + 1; }
+if (gmonth == 8) { m = 243;  if (leapyear(gyear)) m = m + 1; }
+if (gmonth == 9) { m = 273;  if (leapyear(gyear)) m = m + 1; }
+if (gmonth == 10) { m = 304; if (leapyear(gyear)) m = m + 1; }
+if (gmonth == 11) { m = 334; if (leapyear(gyear)) m = m + 1; }
+if (gmonth == 12) { m = 365; if (leapyear(gyear)) m = m + 1; }
+totdays = (parseInt(age) * 365);
+totdays += age / 4;
+totdays = parseInt(totdays) + gdate + m + n;
+document.form1.answer.value = "" + totdays +" dias ";
+months = age * 12;
+months += 12 - parseInt(mm);
+months += gmonth;
+document.form1.months.value = months + " meses";
+if (gmonth == 1) p = 31 + gdate;
+if (gmonth == 2) { p = 59 + gdate;   if (leapyear(gyear)) m = m + 1; }
+if (gmonth == 3) { p = 90 + gdate;   if (leapyear(gyear)) p = p + 1; }
+if (gmonth == 4) { p = 120 + gdate;  if (leapyear(gyear)) p = p + 1; }
+if (gmonth == 5) { p = 151 + gdate;  if (leapyear(gyear)) p = p + 1; }
+if (gmonth == 6) { p = 181 + gdate;  if (leapyear(gyear)) p = p + 1; }
+if (gmonth == 7) { p = 212 + gdate;  if (leapyear(gyear)) p = p + 1; }
+if (gmonth == 8) { p = 243 + gdate;  if (leapyear(gyear)) p = p + 1; }
+if (gmonth == 9) { p = 273 + gdate;  if (leapyear(gyear)) p = p + 1; }
+if (gmonth == 10) { p = 304 + gdate; if (leapyear(gyear)) p = p + 1; }
+if (gmonth == 11) { p = 334 + gdate; if (leapyear(gyear)) p = p + 1; }
+if (gmonth == 12) { p = 365 + gdate; if (leapyear(gyear)) p = p + 1; }
+weeks = totdays / 7;
+weeks += " weeks";
+weeks = parseInt(weeks);
+document.form1.weeks.value = weeks + " semanas";
+var time = new Date();
+ghour = time.getHours();
+gmin = time.getMinutes();
+gsec = time.getSeconds();
+hour = ((age * 365) + n + p) * 24;
+hour += (parseInt(age / 4) * 24);
+if(ap == 0)
+hour = hour - hr;
+else {
+if(ap == 1) {
+hour = hour - (11 + hr)
+   }
+}
+document.form1.hours.value = hour + " horas";
+var min;
+min = (hour * 60) + gmin;
+document.form1.min.value = min + " minutos";
+sec = (min * 60) + gsec;
+document.form1.sec.value = sec + " segundos";
+var millisec;
+var gmil;
+gmil = days.getMilliseconds();
+millisec = (sec * 1000) + gmil;
+document.form1.milli.value = millisec + " milisegundos";
+mm = mm - 1;
+var r;
+if(mm == 0) r = 1;
+if(mm == 1) r = 31;
+if(mm == 2) { r = 59;    if (leapyear(gyear)) m = m + 1; }
+if(mm == 3) { r = 90;    if (leapyear(gyear)) r = r + 1; }
+if(mm == 4) { r = 120;   if (leapyear(gyear)) r = r + 1; }
+if(mm == 5) { r = 151;   if (leapyear(gyear)) r = r + 1; }
+if(mm == 6) { r = 181;   if (leapyear(gyear)) r = r + 1; }
+if(mm == 7) { r = 212;   if (leapyear(gyear)) r = r + 1; }
+if(mm == 8) { r = 243;   if (leapyear(gyear)) r = r + 1; }
+if(mm == 9) { r = 273;   if (leapyear(gyear)) r = r + 1; }
+if(mm == 10) { r = 304;  if (leapyear(gyear)) r = r + 1; }
+if(mm == 11) { r = 334;  if (leapyear(gyear)) r = r + 1; }
+if(mm == 12) { r = 365;  if (leapyear(gyear)) r = r + 1; }
+mm = mm + 1;
+r = parseInt(r) + parseInt(dd);
+if( mm > (gmonth + 1)) {
+bday = r - m - gdate;
+}
+else {
+if(mm == (gmonth + 1) && (gdate < dd)) {
+bday = (r - m - gdate);
+}
+else {
+if((leapyear(gyear)) && ((mm > 2) && (dd < 29))) {
+a = 366;
+}
+else {
+a = 365;
+}
+bday = a + (r - m - gdate);
+   }
+}
+nhour = 24-parseInt(ghour);
+nmin = 60 - parseInt(gmin);
+nsec = 60 - parseInt(gsec);
+go();
+if(((bday == 366) && (leapyear(yy))) || ((bday == 365) && (!leapyear(yy)))) {
+document.form1.bday.value = "Hoje é o seu aniversário";
+alert("Feliz aniversário");
+} else {
+document.form1.bday.value = bday + " dias " + nhour + " horas " + nmin + " minutos " + nsec + " segundos";
+setTimeout("run()", 1);
+}
+function go() {
+function lyear(a) {
+if(((a % 4 == 0) && (a % 100 != 0)) || (a % 400 == 0)) return true;
+else return false;
+}
+mm = parseInt(mm);
+dd = parseInt(dd);
+yy = parseInt(yy);
+if ((mm < 1) || (mm > 12) || (dd < 1) || (dd > 31) || (yy < 1) ||(mm == " ") || (dd == " ") || (yy == " "))  main="Invalid";
+else
+if (((mm == 4) || (mm == 6) || (mm == 9) || (mm == 11)) && (dd > 30)) main = "Invalid";
+else
+if (mm == 2) {
+if (dd > 29)
+main = "Invalid";
+else
+if(( dd > 28) && (!lyear(yy)))
+main = "Invalid";
+}
+else main = main;
+if(main == "valid") {
+var m;
+if (mm == 1) n = 31;
+if (mm == 2) n = 59 + 1;
+if (mm == 3) n = 90 + 1;
+if (mm == 4) n = 120 + 1;
+if (mm == 5) n = 151 + 1;
+if (mm == 6) n = 181 + 1;
+if (mm == 7) n = 212 + 1;
+if (mm == 8) n = 243 + 1;
+if (mm == 9) n = 273 + 1;
+if (mm == 10) n = 304 + 1;
+if (mm == 11) n = 334 + 1;
+if (mm == 12) n = 365 + 1;
+if((mm == 1)||(mm == 3)||(mm == 5)||(mm == 7)||(mm == 8)||(mm == 10)||(mm == 12))
+n += 31 + dd;
+else if((mm == 4)||(mm == 6)||(mm == 9)||(mm == 11))
+n += 31 + dd + 1;
+else if(mm == 2) {
+if(lyear(yy)) n += 29 + dd - 3;
+else if(!lyear(yy)) n += 28 + dd - 1;
+}
+fours = yy / 4;
+hunds = yy / 100;
+fhunds = yy / 400;
+var day;
+day = (yy + n + fours - hunds + fhunds) % 7;
+day = parseInt(day)
+switch(day)
+{
+case 1 : document.form1.age.value +="  você nasceu em um Domingo"
+break
+case 2 : document.form1.age.value +="  você nasceu em uma  Segunda-feira"
+break
+case 3 : document.form1.age.value +="  você nasceu em uma  Terça-feira"
+break
+case 4 : document.form1.age.value +="  você nasceu em uma  Quarta-feira"
+break
+case 5 : document.form1.age.value +="  você nasceu em uma  Quinta-feira"
+break
+case 6 : document.form1.age.value +="  você nasceu em uma  Sexta-feira"
+break
+case 7 : document.form1.age.value +="  você nasceu em um  Sábado"
+break
+case 0 : document.form1.age.value +="  você nasceu em um  Sábado"
+break
+   }
+}
+else {
+document.form1.age.value += main + " Data";
+      }
+   }
+}
+else {
+document.form1.age.value = main + " Data";
+document.form1.months.value = "";
+document.form1.weeks.value = "";
+document.form1.answer.value = "";
+document.form1.hours.value = "";
+document.form1.min.value = "";
+document.form1.sec.value = "";
+document.form1.bday.value = "";
+document.form1.milli.value = "";
+   }
+}
+//  End -->
+</SCRIPT>
+
+<META content="MSHTML 5.50.4807.2300" name=GENERATOR></HEAD>
+<BODY lang=PT-BR style="tab-interval: 35.4pt" text=#0000ff vLink=#003300 aLink=#003300 link=#003300 bgColor=#000000 onload=start()>
+     <nav class="navbar navbar-expand-md bg-primary navbar-dark h-50">
+    <div class="container-fluid">
+   
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+     
+
+    </div>
+       <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+  </nav>
+    </div>
+  </nav>
+  <div class="text-center text-uppercase opaque-overlay h-100">
+    <div class="container py-5 h-100">
+      <div class="row">
+        <div class="col-md-12 text-Dark text-center w-25">
+          <p  style="font-family: arial;font-size: 88px;font-style: italic;
+          font-weight: bolder;" class="display-3 mb-4"><u>
+            CONVERSAO</u></p>
+       
+          <br/>
+           </div>
+      </div>
+  </div>
+  </div>
+  </form>
+        </div>
+        <div class="col-4 col-md-2 align-self-center">
+          <a href="https://www.facebook.com" target="_blank"><i class="fa fa-fw fa-facebook fa-3x text-white"></i></a>
+        </div>
+        <div class="col-4 col-md-1 align-self-center">
+          <a href="https://twitter.com" target="_blank"><i class="fa fa-fw fa-twitter fa-3x text-white"></i></a>
+        </div>
+        <div class="col-4 col-md-1 align-self-center">
+          <a href="https://www.instagram.com" target="_blank"><i class="fa fa-fw fa-instagram text-white fa-3x"></i></a>
+        </div>
+      </div>
+          <hr style="border:4px solid #e6e6e6; " />
+<CENTER><!--[if gte mso 9]><xml>
+ <v:background id="_x0000_s1025" o:bwmode="white">
+  <v:fill src="ATT-0-F74CB1282FDBD411951A0050DAC60B49-CWINDOWS.jpe" type="tile"/>
+ </v:background></xml><![endif]-->
+<TABLE cellPadding=0 width=500 border=1>
+  <TBODY>
+  <TR>
+    <TD align=middle bgColor=#00ffff colSpan=2>
+      <TABLE cellPadding=0 width=500 border=1>
+        <TBODY>
+        <TR><BR>
+          <TD align=middle colSpan=2><FONT face=Verdana color=navy 
+            size=2><B>Ai esta a oportunidade de verificar quanto tempo voce ja 
+            viveu.</B><BR><B>Divirta-se.</B></FONT> </TD></TR></TBODY></TABLE><!-- THREE STEPS TO INSTALL AGE CALCULATOR:
+
+  1.  Copy the coding into the HEAD of your HTML document
+  2.  Add the onLoad event handler into the BODY tag
+  3.  Put the last coding into the BODY of your HTML document  --><!-- STEP ONE: Paste this code into the HEAD of your HTML document  --><!-- STEP TWO: Insert the onLoad event handler into your BODY tag  --><!-- STEP THREE: Copy this code into the BODY of your HTML document  --><BR><FONT 
+      face=Verdana color=navy size=3><B>Entre com sua data de nascimento</B> 
+
+ </FONT>
+      <FORM name=form1><FONT face=Verdana color=navy size=2>Dia&nbsp;<INPUT 
+      size=3 value=26 name=day style="border: 4px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-;border-radius:10px;"> Mes&nbsp;<INPUT size=3 value=11 name=month style="border: 4px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-;border-radius:10px;"> 
+      Ano&nbsp;<INPUT size=6 value=1959 name=year style="border: 4px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-;border-radius:10px;"> 
+      Hora&nbsp;<INPUT size=6 
+      value=00:00 name=hrs style="border: 4px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-;border-radius:10px;"><SELECT name=ampm> <OPTION 
+        selected>AM<OPTION>PM</OPTION></SELECT> <INPUT onclick=run() type=button value=Calcular name=start style="border: 4px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-;border-radius:10px;"> 
+      </FONT><BR><BR><INPUT size=55 value="Sua idade será apresentada aqui" 
+      name=age style="border: 4px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-;border-radius:10px;"> <BR><BR><FONT face=Verdana color=navy size=3><B>Voce esta 
+      vivendo ha:</B></FONT> <BR><BR>
+      <TABLE cellPadding=0 width=500 border=1>
+        <TBODY>
+        <TR>
+          <TD colSpan=2></TD></TR>
+        <TR>
+          <TD><FONT face=Verdana color=navy size=2>&nbsp;&nbsp; Em 
+            meses:</FONT> </TD>
+          <TD><INPUT size=30 name=months style="border: 4px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-;border-radius:10px;"> </TD></TR>
+        <TR>
+          <TD><FONT face=Verdana color=navy size=2>&nbsp;&nbsp; Em 
+            semanas:</FONT> </TD>
+          <TD><INPUT size=30 name=weeks style="border: 4px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-;border-radius:10px;"> </TD></TR>
+        <TR>
+          <TD><FONT face=Verdana color=navy size=2>&nbsp;&nbsp; Em 
+            dias:</FONT> </TD>
+          <TD><INPUT size=30 name=answer style="border: 4px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-;border-radius:10px;"> </TD></TR>
+        <TR>
+          <TD><FONT face=Verdana color=navy size=2>&nbsp;&nbsp; Em 
+            horas:</FONT> </TD>
+          <TD><INPUT size=30 name=hours style="border: 4px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-;border-radius:10px;"> </TD></TR>
+        <TR>
+          <TD><FONT face=Verdana color=navy size=2>&nbsp;&nbsp; Em 
+            minutos:</FONT> </TD>
+          <TD><INPUT size=30 name=min style="border: 4px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-;border-radius:10px;"> </TD></TR>
+        <TR>
+          <TD><FONT face=Verdana color=navy size=2>&nbsp;&nbsp; Em 
+            segundos:</FONT> </TD>
+          <TD><INPUT size=30 name=sec style="border: 4px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-;border-radius:10px;"> </TD></TR>
+        <TR>
+          <TD><FONT face=Verdana color=navy size=2>&nbsp;&nbsp; Em 
+            milisegundos:</FONT> </TD>
+          <TD><INPUT size=30 name=milli style="border: 4px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-;border-radius:10px;"> </TD></TR></TBODY></TABLE><BR><FONT 
+      face=Verdana color=navy size=3><B>Seu proximo aniversario será daqui a: 
+      </B><BR><BR><INPUT size=40 name=bday style="border: 4px solid #000;border-radius:10px;-moz-border-radius:10px;-webkit-;border-radius:10px;">&nbsp; </FORM>
+
+      <TABLE cellPadding=0 width=500 border=1>
+
+        <TBODY>
+
+        <TR>
+
+          <TD align=middle colSpan=2><FONT face=Verdana color=navy 
+            size=2>Aproveite cada segundo como se fosse o ultimo. <BR>Amando, 
+            desejando sempre o bem para os outros. <BR>Nada nessa vida tem mais 
+            valor e mais poder do que o Amor. <BR>Que ele esteja sempre presente 
+            em sua vida. <BR>E que ela seja longa e muito feliz. 
+
+<p align=center>
+<A HREF="javascript:window.close()">
+<IMG BORDER="0" SRC="Buttonclose.jpg" WIDTH="85" HEIGHT="26"></A>
+
+        </FONT></TD></TR></TBODY></TABLE></FONT></TD></TR></TBODY></TABLE></CENTER>
+
+
+
+</BODY>
+</HTML>

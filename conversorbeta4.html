@@ -1,0 +1,844 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <html>
+  <html lang="en">
+	<head>
+		<title>calculadora</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+<meta name="GENERATOR" content="Microsoft SharePoint" />
+
+<meta name="progid" content="SharePoint.WebPartPage.Document" />
+<meta http-equiv="Expires" content="0" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="viewport" content="width=800px,initial-scale=1">
+<meta name="keywords" content="calculadora"/>
+
+<meta name="description" content="calculadora "/>
+                    
+<meta name="robots" content="index, follow"/>
+                    
+
+<meta name="HandheldFriendly" content="True"/>
+                   
+<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+
+<meta property="og:title" content="calculadora"/>
+
+<meta property="og:description" content="calculadora "/>
+
+<meta property="og:url" content="calculadora"/>
+
+<meta property="og:site_name" content="calculadora"/>
+
+<meta property="fb:app_id" content="1573751922880959"/>
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+   <link rel="stylesheet" href="https://v40.pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css" media="screen"> 
+   		<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+			<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script> 
+<!-- Creation date: 8/1/2006 -->
+<!--um lembrete para mim:
+energia    = 8
+byte       = 7  #ok
+velocidade = 6  #ok
+massa      = 7  #ok
+area       = 11
+volume     = 16
+potencia   = 4
+tempo      = 6  #ok
+pressao    = 5
+comprimento= 10
+temperatura= 3  #ok
+numeração  = 3+ #+-ok-->
+
+
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="José Roberto">
+<meta name="linguagem" content="JavaScript, HTML, CSS">
+<meta name="idioma" content="português brasileiro">
+<meta name="generator" content="AceHTML 5 Pro">
+<style>
+<!--
+table.tabela{border-color: #3366CC; background-color:#CCFFFF}
+-->
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://v40.pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css" media="screen"> 
+
+<script>
+//#0 função de início
+function tipoF(){
+var a=conversor.tipo.value;
+if(a=="tempo"){tempo()}
+else if(a=="temperatura"){temperatura()}
+else if(a=="velocidade"){velocidade()}
+else if(a=="massa"){massa()}
+else if(a=="bytes"){bytes()}
+else if(a=="pressao"){pressao()}
+else if(a=="numeracao"){numeracao();}
+else {alert("Ocorreu um erro\n\n#1")}
+}
+//#0 função de troca
+function trocaF(){
+	var tipo=conversor.tipo.value;
+		if(tipo=="tempo"){//vamos criar as opções
+			var opt=new Array(); var i=0; var j=0; var x=0; var y=0;
+			opt[1]=new Option("Anos",0)
+			opt[2]=new Option("Semanas",1)
+			opt[3]=new Option("Dias",2)
+			opt[4]=new Option("Horas",3)
+			opt[5]=new Option("Minutos",4)
+			opt[6]=new Option("Segundos",5)
+			//agora vamos preencher o resto com nada
+			for (i=7; i<=16; i++){opt[i]=new Option("",i-1)}
+			//vamos escrever
+			for (j=1; j<=16; j++){conversor.tipode.options[j-1]=opt[j]}
+			//vamos criar de novo para "tipopara"
+			var optp=new Array()
+			optp[1]=new Option("Anos",0)
+			optp[2]=new Option("Semanas",1)
+			optp[3]=new Option("Dias",2)
+			optp[4]=new Option("Horas",3)
+			optp[5]=new Option("Minutos",4)
+			optp[6]=new Option("Segundos",5)
+			//preenchendo com branco
+			for (x=7; x<=16; x++){optp[x]=new Option("",x-1)}
+			//escrevendo
+			for (y=1; y<=16; y++){conversor.tipopara.options[y-1]=optp[y]}
+		}
+		else if(tipo=="temperatura"){//o mesmo
+			var opt=new Array(); var i=0; var j=0; var x=0; var y=0;
+			opt[1]=new Option("Celcius (ºC)",0)
+			opt[2]=new Option("Fahrenheit (ºF)",1)
+			opt[3]=new Option("Kelvin (K)",2)
+			for (i=4; i<=16; i++){opt[i]=new Option("",i-1)}
+			for (j=1; j<=16; j++){conversor.tipode.options[j-1]=opt[j]}
+			var optp=new Array()
+			optp[1]=new Option("Celcius (ºC)",0)
+			optp[2]=new Option("Fahrenheit (ºF)",1)
+			optp[3]=new Option("Kelvin (K)",2)
+			for (x=4; x<=16; x++){optp[x]=new Option("",x-1)}
+			for (y=1; y<=16; y++){conversor.tipopara.options[y-1]=optp[y]}
+		}
+		else if(tipo=="velocidade"){
+			var opt=new Array(); var i=0; var j=0; var x=0; var y=0;
+			opt[1]=new Option("Quilômetros/h",0)
+			opt[2]=new Option("Milhas/h",1)
+			opt[3]=new Option("Metros/s",2)
+			opt[4]=new Option("Milhas/s",3)
+			opt[5]=new Option("Nós",4)
+			opt[6]=new Option("Mach",5)
+			for (i=7; i<=16; i++){opt[i]=new Option("",i-1)}
+			for (j=1; j<=16; j++){conversor.tipode.options[j-1]=opt[j]}
+			var optp=new Array()
+			optp[1]=new Option("Quilômetros/h",0)
+			optp[2]=new Option("Milhas/h",1)
+			optp[3]=new Option("Metros/s",2)
+			optp[4]=new Option("Milhas/s",3)
+			optp[5]=new Option("Nós",4)
+			optp[6]=new Option("Mach",5)
+			for (x=7; x<=16; x++){optp[x]=new Option("",x-1)}
+			for (y=1; y<=16; y++){conversor.tipopara.options[y-1]=optp[y]}
+		}
+else if(tipo=="massa"){
+var opt=new Array(); var i=0; var j=0; var x=0; var y=0;
+opt[1]=new Option("Toneladas",0)
+opt[2]=new Option("Quilogramas",1)
+opt[3]=new Option("Gramas",2)
+opt[4]=new Option("Miligramas",3)
+opt[5]=new Option("Libras",4)
+opt[6]=new Option("Onças",5)
+opt[7]=new Option("Grãos",6)
+for (i=8; i<=16; i++){opt[i]=new Option("",i-1)}
+for (j=1; j<=16; j++){conversor.tipode.options[j-1]=opt[j]}
+var optp=new Array()
+optp[1]=new Option("Toneladas",0)
+optp[2]=new Option("Quilogramas",1)
+optp[3]=new Option("Gramas",2)
+optp[4]=new Option("Miligramas",3)
+optp[5]=new Option("Libras",4)
+optp[6]=new Option("Onças",5)
+optp[7]=new Option("Grãos",6)
+for (x=8; x<=16; x++){optp[x]=new Option("",x-1)}
+for (y=1; y<=16; y++){conversor.tipopara.options[y-1]=optp[y]}
+}
+//numeração
+else if(tipo=="numeracao"){
+var opt=new Array(); var i=0; var j=0; var x=0; var y=0;
+opt[1]=new Option("Binário",0)
+opt[2]=new Option("Normal",1)
+opt[3]=new Option("Hexadecimal",2)
+for (i=4; i<=16; i++){opt[i]=new Option("",i-1)}
+for (j=1; j<=16; j++){conversor.tipode.options[j-1]=opt[j]}
+var optp=new Array()
+optp[1]=new Option("Binário",0)
+optp[2]=new Option("Normal",1)
+optp[3]=new Option("Hexadecimal",2)
+for (x=4; x<=16; x++){optp[x]=new Option("",x-1)}
+for (y=1; y<=16; y++){conversor.tipopara.options[y-1]=optp[y]}
+}
+
+else if(tipo=="bytes"){
+var opt=new Array(); var i=0; var j=0; var x=0; var y=0;
+opt[1]=new Option("Bits (b)",0)
+opt[2]=new Option("Bytes (B)",1)
+opt[3]=new Option("Kilobytes (Kb)",2)
+opt[4]=new Option("Megabytes (Mb)",3)
+opt[5]=new Option("Gigabyte (Gb)",4)
+opt[6]=new Option("Terabyte (Tb)",5)
+opt[7]=new Option("Polibyte (Pb)",6)
+for (i=8; i<=16; i++){opt[i]=new Option("",i-1)}
+for (j=1; j<=16; j++){conversor.tipode.options[j-1]=opt[j]}
+var optp=new Array()
+optp[1]=new Option("Bits (b)",0)
+optp[2]=new Option("Bytes (B)",1)
+optp[3]=new Option("Kilobytes (Kb)",2)
+optp[4]=new Option("Megabytes (Mb)",3)
+optp[5]=new Option("Gigabyte (Gb)",4)
+optp[6]=new Option("Terabyte (Tb)",5)
+optp[7]=new Option("Polibyte (Pb)",6)
+for (x=8; x<=16; x++){optp[x]=new Option("",x-1)}
+for (y=1; y<=16; y++){conversor.tipopara.options[y-1]=optp[y]}
+}
+
+else if(tipo=="pressao"){
+var opt=new Array(); var i=0; var j=0; var x=0; var y=0;
+opt[1]=new Option("Atmosferas",0)
+opt[2]=new Option("Pascals",1)
+opt[3]=new Option("Tors",2)
+opt[4]=new Option("Libs/pol. quadr.",3)
+opt[5]=new Option("Bars",4)
+for (i=6; i<=16; i++){opt[i]=new Option("",i-1)}
+for (j=1; j<=16; j++){conversor.tipode.options[j-1]=opt[j]}
+var optp=new Array()
+optp[1]=new Option("Atmosferas",0)
+optp[2]=new Option("Pascals",1)
+optp[3]=new Option("Tors",2)
+optp[4]=new Option("Libs/pol. quadr.",3)
+optp[5]=new Option("Bars",4)
+for (x=6; x<=16; x++){optp[x]=new Option("",x-1)}
+for (y=1; y<=16; y++){conversor.tipopara.options[y-1]=optp[y]}
+}//o comando abaixo faz o conversor começar fazendo um primeiro cálculo
+else{}
+conversor.tipopara.options[1].selected=true;
+//agora vamos calcular com tipoF()
+conversor.inteiro.disabled=false
+tipoF()
+}
+//#1 função de tempo
+function tempo(){
+var a=conversor.de.value
+var b=conversor.tipode.value
+var c=conversor.tipopara.value
+var d=""
+if(a==""){a=0}
+else{}
+//#2 anos
+if(b==0 && c==1){d=a*52.17857143;}
+else if(b==0 && c==2){d=a*365.25;}
+else if(b==0 && c==3){d=a*8766;}
+else if(b==0 && c==4){d=a*525960;}
+else if(b==0 && c==5){d=a*31557600;}
+//#2 semanas
+else if(b==1 && c==0){d=a*0.01916495;}
+else if(b==1 && c==2){d=a*7;}
+else if(b==1 && c==3){d=a*168;}
+else if(b==1 && c==4){d=a*10080;}
+else if(b==1 && c==5){d=a*604800;}
+//#2 dias
+else if(b==2 && c==1){d=a*0.14285714;}
+else if(b==2 && c==0){d=a*0.00273785;}
+else if(b==2 && c==3){d=a*24;}
+else if(b==2 && c==4){d=a*1440;}
+else if(b==2 && c==5){d=a*86400;}
+//#2 horas
+else if(b==3 && c==0){d=a*0.00011407;}
+else if(b==3 && c==1){d=a*0.00595238;}
+else if(b==3 && c==2){d=a*0.04166666;}
+else if(b==3 && c==4){d=a*60;}
+else if(b==3 && c==5){d=a*3600;}
+//#2 minutos
+else if(b==4 && c==0){d=""; c="Calculo impossível.";}
+else if(b==4 && c==1){d=a*0.00009920;}
+else if(b==4 && c==2){d=a*0.00069444;}
+else if(b==4 && c==3){d=a*0.01666666;}
+else if(b==4 && c==5){d=a*60;}
+//#2 segundos
+else if(b==5 && c==0){d=""; c="Calculo impossível.";}
+else if(b==5 && c==1){d=""; c="Calculo impossível.";}
+else if(b==5 && c==2){d=a*0.00001157;}
+else if(b==5 && c==3){d=a*0.00027777;}
+else if(b==5 && c==4){d=a*0.1666666;}
+//#2 outros
+else if(b>5 || c>5){d=""; c="Selecione uma opção.";}
+else if(b==c){d=a; resposta.innerHTML=d; resptipo.innerHTML=c}
+else{alert("ocorreu um erro!\n\n#2")}
+//vamos mudar os valolers numericos para nomes
+if(c==0){c="anos"}
+else if(c==1){c="semanas"}
+else if(c==2){c="dias"}
+else if(c==3){c="horas"}
+else if(c==4){c="minutos"}
+else if(c==5){c="segundos"}
+else if(c>5){d=""; c="Selecione uma opção.";}
+else{}//se você quiser ver o número decima...
+if(conversor.inteiro.checked==true && d!=""){d=parseInt(d)}
+else{}//escrevendo
+resposta.innerHTML=d; resptipo.innerHTML=c
+}
+//#1 função de temperatura  
+function temperatura(){
+var a=conversor.de.value
+var b=conversor.tipode.value
+var c=conversor.tipopara.value
+var d=""; var e=""
+if(a==""){a=0}
+else{}
+//#2 ºC
+if(b==0 && c==1){d=(a*9/5)+32}
+else if(b==0 && c==2){d=eval(a+"+273.15")}
+//#2 ºF
+else if(b==1 && c==0){d=(a-32) /9*5}
+else if(b==1 && c==2){e=(a-32) /9*5; d=e+273.15}
+//#2 K
+else if(b==2 && c==0){d=a-273.15}
+else if(b==2 && c==1){e=eval(a+"-273.15"); d=(e*9/5)+32}
+//#2 outros
+else if(b==c){d=a}
+else if(b>2 || c>2){d=""; c="Selecione uma opção.";}
+else{}
+//vamos mudar os valores da temperatura
+if(c==0){c="ºC"}
+else if(c==1){c="ºF"}
+else if(c==2){c="K"}
+else if(c>2){d=""; c="Selecione uma opção.";}
+else{}
+if(conversor.inteiro.checked==true && d!=""){d=parseInt(d)}
+else{}
+resposta.innerHTML=d; resptipo.innerHTML=c
+}
+function parseText(N){
+	N+="'";
+	N=N.split("'");
+	N=N[0];
+	return N;
+}
+function numeracao(){
+var a=conversor.de.value
+var b=conversor.tipode.value
+var c=conversor.tipopara.value
+if(a==""){a=0}
+else{}
+var d=""; var e=""; var ff; var fff; var i; var gg=0; var hh=0; var ii=a.length; var cc=0;
+//Binário
+if(b==0 && c==1){var Bin="01"; var ERRR=false; for(i=0; i<a.length; i++){if(Bin.indexOf(a.substring(i,i+1))<0){d=""; c="Digite apenas \"0\", \"1\""; ERRR=true;} else{}} if(!ERRR){ff=a.length; ii=ff; for(i=0; i<ff; i++){gg=(a.substring(i,i+1)*Math.pow(2,ii))/2; ii--; hh+=gg;} d=hh;} else{}}
+else if(b==0 && c==2){d=""; c="Indisponível"}
+//Normal
+else if(b==1 && c==0){var Hex="0123456789"; var ERRR=false; for(i=0; i<a.length; i++){if(Hex.indexOf(a.substring(i,i+1))<0){	d="";c="Digite apenas números";	ERRR=true;}	else{}} if(!ERRR){ii=""; var PLAY=a; var errorr=0; i=0; while(PLAY){ii=parseText(parseInt(PLAY)%2)+ii; PLAY=parseInt(PLAY)/2; errorr++; if(errorr>=300){if(confirm("Loop! Parar?")){break;} else{errorr=0;}} else{}} ii=ii.substring(1); if(ii==""){ii=0;}{} d=ii;}{}}
+else if(b==1 && c==2){d=""; c="Indisponível"}
+//Hexadecimal
+else if(b==2 && c==0){var Hex="0123456789ABCDEF"; var ERRR=false; for(i=0; i<a.length; i++){if(Hex.indexOf(a.substring(i,i+1))<0){	d="";c="Digite apenas de \"0\" à \"9\" e de \"A\" à \"F\"";	ERRR=true;}	else{}} if(!ERRR){fff=a.length ;if(a!=""){ff=a.split("");}else{}ii=a.length; for(i=0; i<a.length;i++){if(ff[i]=="A"){ff[i]=10;}else if(ff[i]=="B"){ff[i]=11;}else if(ff[i]=="C"){ff[i]=12;}else if(ff[i]=="D"){ff[i]=13;} else if(ff[i]=="E"){ff[i]=14;} else if(ff[i]=="F"){ff[i]=15;} else{}cc=(ff[i]*Math.pow(16,ii))/16; ii--;gg+=cc;} ii=""; var PLAY=gg; var errorr=0; i=0; while(PLAY){ii=parseText(parseInt(PLAY)%2)+ii; PLAY=parseInt(PLAY)/2; errorr++; if(errorr>=300){if(confirm("Loop! Parar?")){break;} else{errorr=0;}} else{}} ii=ii.substring(1); if(ii==""){ii=0;}{} d=ii;}else{}}
+else if(b==2 && c==1){var Hex="0123456789ABCDEF"; var ERRR=false; for(i=0; i<a.length; i++){if(Hex.indexOf(a.substring(i,i+1))<0){	d="";c="Digite apenas de \"0\" à \"9\" e de \"A\" à \"F\"";	ERRR=true;}	else{}} if(!ERRR){fff=a.length ;if(a!=""){ff=a.split("");}else{}ii=a.length; for(i=0; i<a.length;i++){if(ff[i]=="A"){ff[i]=10;}else if(ff[i]=="B"){ff[i]=11;}else if(ff[i]=="C"){ff[i]=12;}else if(ff[i]=="D"){ff[i]=13;} else if(ff[i]=="E"){ff[i]=14;} else if(ff[i]=="F"){ff[i]=15;} else{}cc=(ff[i]*Math.pow(16,ii))/16; ii--;gg+=cc;} d=gg;}else{}}
+//Outros
+else if(b==c){d=a}
+else if(b>2 || c>2){d=""; c="Selecione uma opção.";}
+else{}
+
+if(c==0){c="<sub><font size=2>2</font></sub>"}
+else if(c==1){c="<sub><font size=2>10</font></sub>"}
+else if(c==2){c="<sub><font size=2>16</font></sub>"}
+else if(c>2){d=""; c="Selecione uma opção.";}
+else{}
+conversor.inteiro.disabled=true
+if(conversor.inteiro.checked==true && d!=""){}
+else{}
+resposta.innerHTML=d; resptipo.innerHTML=c
+}
+
+
+function velocidade(){
+var a=conversor.de.value
+var b=conversor.tipode.value
+var c=conversor.tipopara.value
+var d="";
+if(a==""){a=0}
+else{}
+//#2 Km/h
+if(b==0 && c==1){d=a*0.6213712}
+else if(b==0 && c==2){d=a*0.27777777}
+else if(b==0 && c==3){d=a*0.00017260}
+else if(b==0 && c==4){d=a*0.5399568}
+else if(b==0 && c==5){d=a*1225.044}
+//#2 Milha/h
+else if(b==1 && c==0){d=a*1.60934398}
+else if(b==1 && c==2){d=a*0.44703999}
+else if(b==1 && c==3){d=a*0.00027777}
+else if(b==1 && c==4){d=a*0.86897622}
+else if(b==1 && c==5){d=a*761.2070603}
+//#2 m/s
+else if(b==2 && c==0){d=a*3.6}
+else if(b==2 && c==1){d=a*2.23693632}
+else if(b==2 && c==3){d=a*0.00062137}
+else if(b==2 && c==4){d=a*1.94384448}
+else if(b==2 && c==5){d=a*340.29}
+//#2 milhas/s
+else if(b==3 && c==0){d=a*5793.638398}
+else if(b==3 && c==1){d=a*3600.000044}
+else if(b==3 && c==2){d=a*1609.344}
+else if(b==3 && c==4){d=a*3128.31445}
+else if(b==3 && c==5){d=a*0.21144640}
+//#2 nós
+else if(b==4 && c==0){d=a*1.852000012}
+else if(b==4 && c==1){d=a*1.15077947}
+else if(b==4 && c==2){d=a*0.51666666}
+else if(b==4 && c==3){d=a*0.00031966}
+else if(b==4 && c==5){d=a*661.4708381}
+//#2 mach
+else if(b==5 && c==0){d=a*1225.044}
+else if(b==5 && c==1){d=a*761.2070603}
+else if(b==5 && c==2){d=a*340.29}
+else if(b==5 && c==3){d=a*0.21144640}
+else if(b==5 && c==4){d=a*661.4708381}
+//outros
+else if(b==c){d=a}
+else if(b>5 || c>5){d=""; c="Selecione uma opção.";}
+else{}
+if(c==0){c="km/h"}
+else if(c==1){c="mh/h"}
+else if(c==2){c="m/s"}
+else if(c==3){c="mh/s"}
+else if(c==4){c="nós"}
+else if(c==5){c="mach"}
+else if(c>5){d=""; c="Selecione uma opção."}
+else{}
+if(conversor.inteiro.checked==true && d!=""){d=parseInt(d)}
+else{}
+resposta.innerHTML=d; resptipo.innerHTML=c
+}
+function massa(){
+var a=conversor.de.value
+var b=conversor.tipode.value
+var c=conversor.tipopara.value
+var d=""
+if(a==""){a=0}
+else{}
+//toneladas
+if(b==0 && c==1){d=a*1000}
+else if(b==0 && c==2){d=a*1000000}
+else if(b==0 && c==3){d=a*1000000000}
+else if(b==0 && c==4){d=a*2204.6}
+else if(b==0 && c==5){d=a*35274}
+else if(b==0 && c==6){d=a*15432358.4}
+//quilogramas
+else if(b==1 && c==0){d=a/1000}
+else if(b==1 && c==2){d=a*1000}
+else if(b==1 && c==3){d=a*1000000}
+else if(b==1 && c==4){d=a*2.2046}
+else if(b==1 && c==5){d=a*35.274}
+else if(b==1 && c==6){d=a*15432.3584}
+//gramas
+else if(b==2 && c==0){d=""; c="Calculo muito extenso"}
+else if(b==2 && c==1){d=a/1000}
+else if(b==2 && c==3){d=a*1000}
+else if(b==2 && c==4){d=a*0.0022046}
+else if(b==2 && c==5){d=a*0.035274}
+else if(b==2 && c==6){d=a*15.4323584}
+//miligramas
+else if(b==3 && c==0){d=""; c="Calculo muito extenso"}
+else if(b==3 && c==1){d=""; c="Calculo muito extenso"}
+else if(b==3 && c==2){d=a/1000}
+else if(b==3 && c==4){d=""; c="Calculo muito extenso"}
+else if(b==3 && c==5){d=a*0.00003527}
+else if(b==3 && c==6){d=a*0.01543235}
+//libras
+else if(b==4 && c==0){d=a*0.00045359}
+else if(b==4 && c==1){d=a*0.45359702}
+else if(b==4 && c==2){d=a*453.5970244}
+else if(b==4 && c==3){d=a*453597.0244}
+else if(b==4 && c==5){d=a*16.00018144}
+else if(b==4 && c==6){d=a*7000.07185}
+//onças
+else if(b==5 && c==0){d=a*0.00002834}
+else if(b==5 && c==1){d=a*0.02834949}
+else if(b==5 && c==2){d=a*28.34949254}
+else if(b==5 && c==3){d=a*28349.49254}
+else if(b==5 && c==4){d=a*0.06249929}
+else if(b==5 && c==4){d=a*437.4995294}
+//grãos
+else if(b==6 && c==0){d=""; c="Calculo muito extenso"}
+else if(b==6 && c==1){d=a*0.00006479}
+else if(b==6 && c==2){d=a*0.06479890}
+else if(b==6 && c==3){d=a*64.7989098}
+else if(b==6 && c==4){d=a*0.00014285}
+else if(b==6 && c==5){d=a*0.00228571}
+//outros
+else if(b==c){d=a}
+else if(b>6 || c>6){d=""; c="Selecione uma opção."}
+else{}
+
+if(c==0){c="toneladas"}
+else if(c==1){c="Kg"}
+else if(c==2){c="g"}
+else if(c==3){c="mg"}
+else if(c==4){c="lb"}
+else if(c==5){c="onças"}
+else if(c==6){c="grãos"}
+else if(c>6){d=""; c="Selecione uma opção."}
+else{}
+if(conversor.inteiro.checked==true && d!=""){d=parseInt(d)}
+else{}
+resposta.innerHTML=d; resptipo.innerHTML=c
+}
+function bytes(){
+var a=conversor.de.value
+var b=conversor.tipode.value
+var c=conversor.tipopara.value
+var d=""
+if(a==""){a=0}
+else{}
+//bits
+if(b==0 && c==1){d=a/8}
+else if(b==0 && c==2){d=a/8192}
+else if(b==0 && c==3){d=a/8388608}
+else if(b==0 && c==4){d=a/8589934592}
+else if(b==0 && c==5){d=a/8796093022208}
+else if(b==0 && c==6){d=a/9007199254740992}
+//bytes
+else if(b==1 && c==0){d=a*8}
+else if(b==1 && c==2){d=a/1024}
+else if(b==1 && c==3){d=a/1048576}
+else if(b==1 && c==4){d=a/1073741824}
+else if(b==1 && c==5){d=a/1099511627776}
+else if(b==1 && c==6){d=a/1125899906842624}
+//kilobyte
+else if(b==2 && c==0){d=a*8192}
+else if(b==2 && c==1){d=a*1024}
+else if(b==2 && c==3){d=a/1024}
+else if(b==2 && c==4){d=a/1048576}
+else if(b==2 && c==5){d=a/1073741824}
+else if(b==2 && c==6){d=a/1099511627776}
+//megabyte
+else if(b==3 && c==0){d=a*8388608}
+else if(b==3 && c==1){d=a*1048576}
+else if(b==3 && c==2){d=a*1024}
+else if(b==3 && c==4){d=a/1024}
+else if(b==3 && c==5){d=a/1048576}
+else if(b==3 && c==6){d=a/1073741824}
+//gigabyte
+else if(b==4 && c==0){d=a*8589934592}
+else if(b==4 && c==1){d=a*1073741824}
+else if(b==4 && c==2){d=a*1048576}
+else if(b==4 && c==3){d=a*1024}
+else if(b==4 && c==5){d=a/1024}
+else if(b==4 && c==6){d=a/1048576}
+//terabyte
+else if(b==5 && c==0){d=a*8796093022208}
+else if(b==5 && c==1){d=a*1099511627776}
+else if(b==5 && c==2){d=a*1073741824}
+else if(b==5 && c==3){d=a*1048576}
+else if(b==5 && c==4){d=a*1024}
+else if(b==5 && c==6){d=a/1024}
+//polibyte
+else if(b==6 && c==0){d=a*9007199254740992}
+else if(b==6 && c==1){d=a*1125899906842624}
+else if(b==6 && c==2){d=a*1099511627776}
+else if(b==6 && c==3){d=a*1073741824}
+else if(b==6 && c==4){d=a*1048576}
+else if(b==6 && c==5){d=a*1024}
+//outros
+else if(b==c){d=a}
+else if(b>6 || c>6){d=""; c="Selecione uma opção."}
+else{}
+if(c==0){c="bits"}
+else if(c==1){c="bytes"}
+else if(c==2){c="Kb"}
+else if(c==3){c="Mb"}
+else if(c==4){c="Gb"}
+else if(c==5){c="Tb"}
+else if(c==6){c="Pb"}
+else if(c>5){d=""; c="Selecione uma opção."}
+else{}
+if(conversor.inteiro.checked==true && d!=""){d=parseInt(d)}
+else{}
+resposta.innerHTML=d; resptipo.innerHTML=c
+}
+function pressao(){
+var a=conversor.de.value
+var b=conversor.tipode.value
+var c=conversor.tipopara.value
+var d=""
+if(a==""){a=0}
+else{}
+//atmosferas
+if(b==0 && c==1){d=a*101325}
+else if(b==0 && c==2){d=a*760.0021}
+else if(b==0 && c==3){d=a*14.695949}
+else if(b==0 && c==4){d=a*1.01325}
+//pascals
+else if(b==1 && c==0){d=""; c="Calculo muito extenso"}
+else if(b==1 && c==2){d=a*0.00750063}
+else if(b==1 && c==3){d=a*0.00014503}
+else if(b==1 && c==4){d=""; c="Calculo muito extenso"}
+//tor
+else if(b==2 && c==0){d=a*0.00131578}
+else if(b==2 && c==1){d=a*133.322}
+else if(b==2 && c==3){d=a*0.01933672}
+else if(b==2 && c==4){d=a*0.00133322}
+//libs/pol. quadr.
+else if(b==3 && c==0){d=a*0.06804596}
+else if(b==3 && c==1){d=a*6894.757188}
+else if(b==3 && c==2){d=a*51.71507468}
+else if(b==3 && c==4){d=a*0.06894757}
+//bars
+else if(b==4 && c==0){d=a*0.98692326}
+else if(b==4 && c==1){d=a*100000}
+else if(b==4 && c==2){d=a*750.0637552}
+else if(b==4 && c==3){d=a*14.50377399}
+//outros
+else if(b==c){d=a}
+else if(b>6 || c>6){d=""; c="Selecione uma opção."}
+else{}
+if(c==0){c="atmosferas"}
+else if(c==1){c="pascals"}
+else if(c==2){c="tors"}
+else if(c==3){c="libs/pol. qudr."}
+else if(c==4){c="bars"}
+else{}
+if(conversor.inteiro.checked==true && d!=""){d=parseInt(d)}
+else{}
+resposta.innerHTML=d; resptipo.innerHTML=c
+}
+</script>
+</head>
+<body onload="trocaF()">
+	  <nav class="navbar navbar-expand-md bg-primary navbar-dark h-50">
+    <div class="container-fluid">
+   
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+     
+
+    </div>
+       <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+  </nav>
+    </div>
+  </nav>
+  <div class="text-center text-uppercase opaque-overlay h-100">
+    <div class="container py-5 h-100">
+      <div class="row">
+        <div class="col-md-12 text-Dark text-center w-25">
+          <p  style="font-family: arial;font-size: 88px;font-style: italic;
+          font-weight: bolder;" class="display-3 mb-4"><u>
+            CONVERSÃO</u></p>
+       
+          <br/>
+           </div>
+      </div>
+  </div>
+  </div>
+  </form>
+        </div>
+        <div class="col-4 col-md-2 align-self-center">
+          <a href="https://www.facebook.com" target="_blank"><i class="fa fa-fw fa-facebook fa-3x text-white"></i></a>
+        </div>
+        <div class="col-4 col-md-1 align-self-center">
+          <a href="https://twitter.com" target="_blank"><i class="fa fa-fw fa-twitter fa-3x text-white"></i></a>
+        </div>
+        <div class="col-4 col-md-1 align-self-center">
+          <a href="https://www.instagram.com" target="_blank"><i class="fa fa-fw fa-instagram text-white fa-3x"></i></a>
+        </div>
+      </div>
+          <hr style="border:4px solid #e6e6e6; " />
+<!--Formulário--><table align=center height=100%><tr><td valign=center><table border="7" cellpadding="45" cellspacing="45" class="tabela">
+	<tr>
+		<td class="td">
+<form name="conversor">
+	<!--linha-tipo-->
+	<p>Tipo:
+
+	<select name="tipo" onchange="trocaF()">
+		<option value="tempo" id="tempoO" >Tempo</option>
+		<option value="temperatura" id="temperaturaO">Temperatura</option>
+		<option value="velocidade" id="velocidadeO">Velocidade</option>
+		<option value="massa" id="massaO">Massa</option>
+		<option value="bytes" id="bytesO">Byte</option>
+		<option value="pressao" id="pressaoO">Pressão</option>
+		<option value="numeracao" id="numeracao0">Numeração</option>
+	</select></p><!--linha-de-->
+	<p>De: <input type="text" size="5" name="de" value="1" onkeyup="tipoF()"  style="border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;border:4px solid #000;"> 
+	<select name="tipode" onchange="tipoF()">
+		<option>
+	</select></p><!--linha-para-->
+	<p>Para:
+	<select name="tipopara" onchange="tipoF()">
+		<option>
+	</select> <input type="checkbox" name="inteiro" checked onclick="tipoF()"> Esconder decimal</p><!--linha-resposta-->
+	<p>Resposta: <span id="resposta"></span>&nbsp;<span id="resptipo"></span></p>
+</form></td></tr></table></td></tr></table>
+<!--Fim-->
+
+</body>
+</html>

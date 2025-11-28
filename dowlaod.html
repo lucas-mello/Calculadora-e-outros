@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <html>
+  <html lang="en">
+    <head>
+        <title>calculadora</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+<meta name="GENERATOR" content="Microsoft SharePoint" />
+
+<meta name="progid" content="SharePoint.WebPartPage.Document" />
+<meta http-equiv="Expires" content="0" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="viewport" content="width=800px,initial-scale=1">
+<meta name="keywords" content="calculadora"/>
+
+<meta name="description" content="calculadora "/>
+                    
+<meta name="robots" content="index, follow"/>
+                    
+
+<meta name="HandheldFriendly" content="True"/>
+                   
+<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+
+<meta property="og:title" content="calculadora"/>
+
+<meta property="og:description" content="calculadora "/>
+
+<meta property="og:url" content="calculadora"/>
+
+<meta property="og:site_name" content="calculadora"/>
+
+<meta property="fb:app_id" content="1573751922880959"/>
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<script type="text/javascript">
+//<![CDATA[
+window.__cfRocketOptions = {byc:0,p:0,petok:"3c02781efb2451cd89feea14f7fc80ef43881cb5-1520896830-1800"};
+//]]>
+</script>
+<script type="text/javascript" src="https://ajax.cloudflare.com/cdn-cgi/scripts/935cb224/cloudflare-static/rocket.min.js"></script>
+<style>
+                body{margin-top:5;font-family:verdana}
+                a{text-decoration:none;color:gray}
+                a:hover{text-decoration:underline;color:black}
+                </style>
+<script>
+// www.projetoderedes.com.br // 
+
+function cpscalc(myform)
+{
+        var kbits = 0
+        var bytes = 0
+        var trans = 0 
+
+        bytes = myform.dimensione.value * ((myform.unita.options[0].selected == true) + ( (myform.unita.options[1].selected == true)*1024) + ((myform.unita.options[2].selected == true) * 1024*1024))
+        kbits = myform.kvelocita.value * 128
+		trans = kbits / ( (myform.unitaV.options[0].selected == true) + ( (myform.unitaV.options[1].selected == true) / 8))
+        myform.result.value =  getmin(Math.round(bytes/trans)) 
+        myform.result1.value = getmin(Math.round((bytes*1.35)/trans))
+}
+
+function getmin(sec)
+{
+        var ore = 0
+        var minuto = 0
+        var segundo = 0
+        var tempo = " "
+        if(sec<1) return ("Menos de 1 (Um) Segundo")
+                ore = Math.floor (sec/3600)
+                minuto =  Math.floor((sec - (ore * 3600))/60)
+                segundo = Math.floor (sec - ((ore*3600) + (minuto * 60)))
+                if(sec > 2592000) return ("Mais de 1 (Um) M�s!")                      
+                        else if(sec  >=  3600) tempo = ore + " Hora(s) " + minuto + " Min(s). " + segundo + " Seg(s). "
+                        else if( sec< 3600 & sec >=60) tempo = minuto + " Minuto(s) " + segundo + " Seg(s). "
+                        else tempo = segundo + " Segundo(s)"
+        return(tempo)
+}
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4406912-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://v40.pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css" media="screen"> 
+</head>
+<body>
+
+<center><table border="1" cellpadding="5" cellspacing="0" bordercolor="#999999">
+
+<tr><td bgcolor=#999999 align=center><font color="#FFFFFF" face=verdana>
+<strong>Calculadora de tempo de download</strong></font></td>
+</tr>
+<tr><td align="center">
+<form NAME="myform">
+<strong><font size="2"><br>
+Tamanho do Arquivo</font></strong><br>
+<input TYPE="TEXT" NAME="dimensione" VALUE="" onChange="cpscalc(this.form)" size="20" style="border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px;border: 4px solid #000;">
+ <select NAME="unita" onChange="cpscalc(this.form)" size="1">
+<option>Byte</option>
+<option>Kilobyte </option>
+<option selected>Megabyte </option>
+</select></p>
+<p><strong><font size="2">Velocidade da Conex&atilde;o</font></strong><br>
+<input type="TEXT" name="kvelocita" value="" onChange="cpscalc(this.form)" size="20" style="border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px;border: 4px solid #000;">
+<select NAME="unitaV" onChange="cpscalc(this.form)" size="1">
+<option>Kbps</option>
+<option>KBps</option>
+(Bps = bytes por segundo)
+</select></p>
+<strong><font size="2">Tempo</font></strong><br>
+<input TYPE="TEXT" NAME="result" VALUE="  " SIZE="29" style="border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px;border: 4px solid #000;">
+</form>
+</td>
+</tr>
+<tr>
+<td align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9132817890723567" data-ad-slot="5209381501" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>

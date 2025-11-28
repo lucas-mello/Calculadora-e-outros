@@ -1,0 +1,2950 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <html>
+  <html lang="en">
+	<head>
+		<title>calculadora</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+<meta name="GENERATOR" content="Microsoft SharePoint" />
+
+<meta name="progid" content="SharePoint.WebPartPage.Document" />
+<meta http-equiv="Expires" content="0" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Page-Enter" content="blendTrans(Duration=1.10)">
+<meta http-equiv="Page-Exit" content="blendTrans(Duration=1.10)">
+<meta name="viewport" content="width=800px,initial-scale=1">
+<meta name="keywords" content="calculadora"/>
+
+<meta name="description" content="calculadora "/>
+                    
+<meta name="robots" content="index, follow"/>
+                    
+
+<meta name="HandheldFriendly" content="True"/>
+                   
+<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+
+<meta property="og:title" content="calculadora"/>
+
+<meta property="og:description" content="calculadora "/>
+
+<meta property="og:url" content="calculadora"/>
+
+<meta property="og:site_name" content="calculadora"/>
+
+<meta property="fb:app_id" content="1573751922880959"/>
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+   <link rel="stylesheet" href="https://v40.pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css" media="screen"> 
+   		<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+			<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script> 
+<!-- <script type="text/javascript">
+	$( function ( ) {
+		
+     alert('testando');
+	});
+</script> -->
+
+			<script type="text/javascript" src="script2.js"></script>
+  <script type="text/javascript">
+
+function realiza_calculo()
+{
+    var campo1 = document.getElementById('valor1').value;
+    var campo2 = document.getElementById('valor2').value;
+
+    var maior = (parseFloat(campo1) > parseFloat(campo2)? campo1 : campo2);
+    var menor = (parseFloat(campo1) < parseFloat(campo2)? campo1 : campo2);
+
+    var result = (menor*maior)/100;
+
+    document.getElementById('resultado').value = result;
+}
+
+</script>
+
+<script type="text/javascript">
+      <!--
+      function CalcularFatorial() {
+        var numero = document.calc.numero.value;
+        var fatorial = 1;
+        document.calc.resultado.value = "";
+
+        if (isNaN(numero) || numero > 170 || numero.indexOf(".") > -1) {
+          alert("Número inválido");
+          document.calc.numero.value = "";
+          return false;
+        }
+
+        for (i = 1; i <= numero; i++) {
+          fatorial *= i;
+        }
+        document.calc.resultado.value += fatorial;
+      }
+      //-->
+    </script>  
+    <style>
+<!--
+table.tabela{border-color: #3366CC; background-color:#CCFFFF}
+-->
+</style>
+<script type="text/javascript" src="numerosPrimos.js"></script>
+
+ <script language="javascript">
+   num1="";
+   num2="";
+   sex="";
+   IMC="";
+   
+   function enviap(){
+   num1=document.formulario.dpeso.value;
+   }
+   function enviaA(){
+   num2=document.formulario.daltura.value;
+   IMC=num1/(num2*num2);
+      
+   }
+   function sexo(){
+     sex=document.formulario.daltura.value;
+     document.formulario.imc1.value=eval(IMC);   
+   }
+   
+   function resp(){
+   
+    alert("Se você é do sexo masculino seu IMC deve estar entre 20.7 e 27.8 para você estar saudavel.Se estiver abaixo disso voce precisa comer mais,se estiver acima você precisa comer menos.Se você é do sexo feminino seu IMC deve estar entre 19.1 e 27.3.Abaixo disso você esta com IMC baixo e deve se alimentar melhor,acima deve comer menos");
+    
+         
+       
+   }
+   function limpa(){
+     document.formulario.dpeso.value="";
+     document.formulario.daltura.value="";
+     document.formulario.imc1.value="";
+     }
+   function refaz(){
+     document.formulario.dpeso.value="";
+     document.formulario.daltura.value="";
+     document.formulario.imc1.value="";
+     num1="";
+     num2="";
+     sex="";
+     IMC="";
+    
+    }          
+       
+   
+   
+   </script>
+
+   <script language="JavaScript" src="frete.js"></script>
+<script language="JavaScript" type="text/javascript">
+function horas(){
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds()
+  if (hours <=9)
+hours="0"+hours;
+  if (minutes<=9)
+minutes="0"+minutes;
+  if (seconds<=9)
+seconds="0"+seconds;
+  var cdate="<b><font color=#ff0000 face=arial size=2>"+hours+":"+minutes+":"+seconds+" "+"</font>" 
+  clock.innerHTML= cdate;
+setTimeout("horas()",1000);
+}
+</script>
+
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: lighter;
+	color: #00FF33;
+	border: outset;
+	background-color: #000000;
+	text-transform: none;
+	font-style: normal;
+}
+-->
+			
+
+</style>
+    <!-- texto funcao -->
+    <script type="text/javascript">
+      <!--
+      function Converter() {
+        var numero = document.conversor.numero.value;
+        var base = document.conversor.base.value;
+        var digito = new Array();
+        var i = 0;
+        document.conversor.resultado.value = "";
+
+        if (isNaN(numero) || numero.indexOf(".") > -1) {
+          alert("Número inválido");
+          document.conversor.numero.value = "";
+          return false;
+        }
+
+        while (numero != 0) {
+          i++;
+          digito[i] = numero % base;
+          numero = Math.floor(numero / base);  // divisão inteira, ex.: 15 / 2 = 7
+        }
+
+        while (i >= 1) with (document.conversor.resultado) {
+          switch (digito[i]) {
+            // Na base 16, os dígitos maiores que 10 são representados por letras:
+            case 10: { value += "A"; break }
+            case 11: { value += "B"; break }
+            case 12: { value += "C"; break }
+            case 13: { value += "D"; break }
+            case 14: { value += "E"; break }
+            case 15: { value += "F"; break }
+
+            default: { value += digito[i]; break }
+          }
+          i--;
+        }
+      }
+      //-->             
+    </script> 
+
+ <script>
+   alert("Esta página é um complemento da científica, criador:Lucas.");
+    
+   prompt("DIGITE SEU NOME:");
+
+function myFunction() {
+ let person = prompt("CONFIRME SEU NOME:");
+  if (person != null) {
+    document.getElementById("demo").innerHTML =
+    "<h3>SEU NOME É:</h3>" + person.toUpperCase(); + "<h3>E ACESSE A PÁGINA.</h3>";
+      alert("Esta página é um complemento da científica, criador:Lucas.");
+
+  }
+}
+    </script>
+
+	</head>
+
+		<body style="background-image:url(images.jpeg);">
+      <nav class="navbar navbar-expand-md bg-primary navbar-dark h-50">
+    <div class="container-fluid">
+   
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+     
+
+    </div>
+       <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+  </nav>
+    </div>
+  </nav>
+  <div class="text-center text-uppercase opaque-overlay h-100">
+    <div class="container py-5 h-100">
+      <div class="row">
+        <div class="col-md-12 text-Dark text-center w-25">
+          <p  style="font-family: arial;font-size: 47px;font-style: italic;
+          font-weight: bolder;" class="display-3 mb-4"><u>
+           Calculadora</u></p>
+       
+          <br/>
+           </div>
+      </div>
+  </div>
+  </div>
+  </form>
+        </div>
+        <div class="col-4 col-md-2 align-self-center">
+          <a href="https://www.facebook.com" target="_blank"><i class="fa fa-fw fa-facebook fa-3x text-white"></i></a>
+        </div>
+        <div class="col-4 col-md-1 align-self-center">
+          <a href="https://twitter.com" target="_blank"><i class="fa fa-fw fa-twitter fa-3x text-white"></i></a>
+        </div>
+        <div class="col-4 col-md-1 align-self-center">
+          <a href="https://www.instagram.com" target="_blank"><i class="fa fa-fw fa-instagram text-white fa-3x"></i></a>
+        </div>
+      </div>
+          <hr style="border:4px solid #e6e6e6; " />
+<body onload="Tempo()">
+    <div style="position: absolute; top: 20%; left: 130%; font:66px Arial" id="lugar">Tempo</div>
+
+    <script type="text/javascript">
+  
+      
+      
+      function Tempo(){
+        horario = new Date()
+        hora = horario.getHours()
+        minuto = horario.getMinutes()
+        segundo = horario.getSeconds()
+        if (hora < 10) {
+          hora = "0" + hora
+        }
+        if (minuto < 10) {
+          minuto = "0" + minuto
+        }
+        if (segundo < 10) {
+          segundo = "0" + segundo
+        }
+        document.getElementById("lugar").innerHTML = hora + ":" + minuto + ":" + segundo;  // hora no documento
+        // barra de título
+        // barra de status
+      }
+      window.setInterval("Tempo()", 1000)
+    //-->
+    </script>
+
+            <table width="770"  border="5" cellspacing="15" cellpadding="15" align="center" >
+    <tr><td align="center"><span id="clock" ></span><script>setTimeout("horas()",1000);</script></td></tr>
+    </table>
+ <table width="770"  border="5" cellspacing="15" cellpadding="15" align="center" ><tr><th>
+    <form name="y_datetime"><input name="textbox1" type=text class="style1"  
+style="text-align=center" size=55 width=32 > 
+</form>
+<script language="javascript"> 
+
+ydate = new Object(); 
+ydate.style  = 3; 
+ydate.military = 0; 
+
+ydate.days1  = new Array("Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"); 
+ydate.days2  = new Array("Domingo","Segunda","Terça","Quarta", 
+"Quinta","Sexta","Sabado"); 
+ydate.months1 = new Array("janeiro","fevereiro","março","abril","maio","junho","julho", "agosto","setembro","outubro","novembro","dezembro"); 
+ydate.months2 = new Array("jan","fev","mar","abr","mai","jun", 
+"jul","ago","set","out","nov","dez"); 
+
+function datedisplay() { 
+
+  ydate.now   = new Date(); 
+  ydate.year  = ydate.now.getFullYear(); 
+  ydate.month = ydate.now.getMonth(); 
+  ydate.date  = ydate.now.getDate(); 
+  ydate.day   = ydate.now.getDay(); 
+  ydate.hour  = ydate.now.getHours(); 
+  ydate.min   = ydate.now.getMinutes(); 
+  ydate.sec   = ydate.now.getSeconds(); 
+  ydate.ampm  = ""; 
+
+  if (ydate.military) { 
+        if (ydate.hour < 10) { ydate.hour = "0" + ydate.hour; } 
+  } 
+  else if (ydate.hour > 11) { 
+        ydate.ampm = "Pm"; 
+        ydate.hour = ydate.hour - 12; 
+  } 
+  else { ydate.ampm = "Am"; } 
+
+  if (ydate.hour == 0) { ydate.hour = 12; } 
+  if (ydate.min < 10)  { ydate.min = "0" + ydate.min; } 
+  if (ydate.sec < 10)  { ydate.sec = "0" + ydate.sec; } 
+
+  if (ydate.style == 0)      { ydate.txt = ydate.months2[ydate.month]+" "+ydate.date+" "+ydate.year; } 
+  else if (ydate.style == 1) { ydate.txt =":: "+ ydate.days2[ydate.day]+" "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm+" ::"; } 
+  else if (ydate.style == 2) { ydate.txt =":: "+ydate.date+" "+ydate.months2[ydate.month]+"  "+ydate.year+" :: "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm+" ::"; } 
+  else if (ydate.style == 3) { ydate.txt =":: "+ydate.days1[ydate.day]+" - "+ydate.date+" de " +ydate.months1[ydate.month]+" de "+ydate.year+" - "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm+" ::"; } 
+  else if (ydate.style == 4) { ydate.txt = ":: "+ydate.date+"/"+(ydate.month+1)+"/"+ydate.year+" :: "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm+" ::"; } 
+  else{ ydate.txt = ydate.year+"/"+(ydate.month+1)+"/"+ydate.date+" , "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm; } 
+
+  document.y_datetime.textbox1.value = ydate.txt; 
+  ydate.id=setTimeout("datedisplay()",1000); 
+} 
+
+datedisplay(); 
+</script>
+</th></tr></table>
+
+<table border="0" align="center"> 
+  <tr><th>
+    <button onclick="myFunction()"><h3>CONFIRME SEU NOME:</h3></button>
+    <p id="demo"></p>
+  </th></tr>
+</table>
+ 
+          <div id="geral">
+  			<div class="container">
+  	  			<header class="top">
+  	  				<form class="form" action=" " method="" enctype=" ">
+  	  					<label id="op"></label>
+  	  	 <input type="text" id="result" style=" border-radius: 10px;-moz-border-radius: 10px;
+ -webkit-border-radius: 10px;border:4px solid #000;" value=" " class="campo">
+
+  	  				</form>
+
+
+  	  			</header>
+ 
+  	   <section class="body">
+  	  	  <input type="button" name="btn" class="btn"  value="7">
+  	  	  <input type="button" name="btn" class="btn" value="8">
+  	  	  <input type="button" name="btn" class="btn" value="9">
+  	  	  <input type="button" name="soma" class="btn" value="+">
+  	  	  <input type="button" name="c" class="btn" value="c">
+  	  	    <br/>
+  	  	  <input type="button" name="btn" class="btn" value="4">
+          <input type="button" name="btn" class="btn" value="5">
+          <input type="button" name="btn" class="btn" value="6">
+          <input type="button" name="menos" class="btn" value="-">
+          <input type="button" name="ce" class="btn" value="ce">
+            <br/>
+          <input type="button" name="btn" class="btn" value="1">
+          <input type="button" name="btn" class="btn" value="2">
+          <input type="button" name="btn" class="btn" value="3">
+          <input type="button" name="vezes" class="btn" value="*">
+          <input type="button" name="igual" class="btn igual" value="=">
+            <br/>
+  	  	   <input type="button" name="btn" class="btn zero" value="0">
+  	  	   <input type="button" name="btn" class="btn" value=".">
+  	  	   <input type="button" name="div" class="btn" value="/">
+
+  	   </section>
+  			</div>
+       
+      
+       
+         <!--   <input type="button" name="por" class="btn" value="%">
+            &nbsp;
+           <input type="button" name="raiz_q" class="btn_1" value=" raiz quadrada">
+
+            &nbsp;
+           <input type="button" name="raiz_c" class="btn_1" value=" raiz cúbica">
+ -->
+          
+        
+
+           
+            <!--  &nbsp;
+           <input type="button" name="seta" class="btn_1" value="(">
+           &nbsp;
+           <input type="button" name="seta_1" class="btn_1" value=")"> -->
+          <!--  <br/>
+             <h3 class="navbar-brand"><i class="fa d-inline fa-lg fa-motorcycle"></i><b class=""><p style="text-align:center;font-weight: bold;font-size: 24px;"> Para saber o seno, cosseno e tangente clique no link abaixo:</b></h3></p> -->
+  <!-- link personalizado em bootstrap-->
+  <!--   <a class="navbar-brand" href="https://blogcamp.com.br/tabela-do-seno-cosseno-e-tangente/"
+     target="_blank" title="tabela"><i class="fa d-inline fa-lg fa-motorcycle"></i><b class=""><p style="text-align:center;font-weight: bold;font-size: 24px;"> Seno, cosseno e tangente</b></a></p> -->
+          <!--  <a href="https://blogcamp.com.br/tabela-do-seno-cosseno-e-tangente/" target="_blank" title="tabela"> Para saber o seno, cosseno e tangente:
+           https://blogcamp.com.br/tabela-do-seno-cosseno-e-tangente/</a> -->
+           
+           
+
+            <script>
+              $(function(){
+                
+                $("input[name=por]").click(function(){
+                  alert('Para calcular a porcentagem basta digitar o número da porcentagem dividir por 100 e multiplicar pelo número que quer achar. ');
+          
+        });
+
+                  $("input[name=raiz_q]").click(function(){
+                  alert('Para calcular a raiz quadrada basta multiplicar um valor por ele mesmo duas vezes.');
+          
+        });
+              
+               $("input[name=raiz_c]").click(function(){
+                  alert('Para calcular a raiz cúbica basta multiplicar um valor por ele mesmo tres vezes.');
+          
+        });
+  
+             $("input[name=circ]").click(function(){
+           if($("#result").val() != ' '){
+                 v1=parseFloat($("#result").val());
+                  $("#result").val(' ');
+                   op="circ";
+                $("#op").text($(this).val() );       
+                  $("#result").val(v1*2*Math.PI);
+                    }else{
+            // alert('insira um valor para a operação');
+          alert('Digite  1 valor  e calcule aqui mesmo ');
+           }
+       });
+
+       //         $("input[name=seta]").click(function(){
+       //            alert('Para calcular a cirunferência de um cículo basta pegar um valor qualquer, multiplicar por 2 e depois multiplicar por 3.14.');
+          
+       //  });
+
+       //             $("input[name=seta_1]").click(function(){
+       //          alert('Para calcular a cirunferência de um cículo basta pegar um valor qualquer, multiplicar por 2 e depois multiplicar por 3.14.');
+          
+       // });
+   
+            
+
+
+
+              });
+            </script>
+        </div>
+      
+<!-- aqui -->
+
+ <div id="geral">
+
+   <section class="body">
+    <h1 style="text-align: center"><u>CALCULADORA CIENTÍFICA</u></h1>
+     
+
+        <table border="7" cellspacing="15" cellpadding="15">
+         
+            <tr>
+              
+            
+         <th>
+      <input type="button" name="btn-raiz" class="btn-raiz" value="RAIZ QUADRADA">
+      </th>
+ 
+          
+            <th>
+         <input type="button" name="btn-cubica" class="btn-raiz" value="RAIZ CÚBICA">
+        </th>
+
+         <th>
+         <input type="button" name="btn-log" class="btn-raiz" value="   LOGARITMO">
+
+        </th>
+         
+
+         </tr>
+
+         <tr>
+          <th>
+         <input type="button" name="btn-log10" class="btn-10" value="   LOGARITMO BASE 10">
+         </th>
+         <th>
+         <input type="button" name="btn-log1" class="btn-10" value="   LOGARITMO BASE 1">
+          </th>
+ 
+          <th>
+         <input type="button" name="btn-seno" class="btn-10" value="   SENO">
+          </th>
+        </tr>
+
+        <tr>
+          <th>
+
+         <input type="button" name="btn-cos" class="btn-10" value="   COSSENO">
+
+         </th>
+         <th>
+         <input type="button" name="btn-tan" class="btn-10" value="   TANGENTE">
+
+         </th>
+         <th>
+          <input type="button" name="btn-acos" class="btn-11" value="COSSENO HIPERBÓLICO">
+        </th>
+      </tr>
+
+      
+        <th>
+          <input type="button" name="btn-atan" class="btn-11" value="TANGENTE HIPERBÓLICA">
+          </th>
+          
+          
+            <th>
+
+          <input type="button" name="circ" class="btn-11" value="CIRCUNFERÊNCIA">
+          </th>
+
+
+          <!--  inicio area da potencia -->
+           <th>
+          <input type="button" name="btn-pot1" class="btn-11" value="POTÊNCIA DE 2">
+          </th>
+           <tr>
+            <th>
+          <input type="button" name="btn-pot2" class="btn-11" value="POTÊNCIA DE 3">
+          </th>
+          <th>
+          <input type="button" name="btn-pot3" class="btn-11" value="POTÊCIA 4">
+         </th>
+         <th>
+          <input type="button" name="btn-pot4" class="btn-11" value="POTÊCIA DE 5">
+         </th>
+       </tr>
+
+         <tr>
+          <th>
+          <input type="button" name="btn-pot5" class="btn-11" value="POTÊCIA DE 6">
+            </th>
+
+            <th>
+          <input type="button" name="btn-pot7" class="btn-11" value="POTÊCIA DE 7">
+            </th>
+
+            <th>
+          <input type="button" name="btn-pot8" class="btn-11" value="POTÊCIA DE 8">
+            </th>
+          </tr>
+
+          <tr>
+
+           <th>
+          <input type="button" name="btn-pot9" class="btn-11" value="POTÊCIA DE 9">
+           </th>
+
+           <th>
+          <input type="button" name="btn-pot10" class="btn-11" value="POTÊCIA DE 10">
+          </th>
+          <th>
+          <input type="button" name="btn-pot11" class="btn-11" value="POTÊCIA DE 11">
+          </th>
+
+        </tr>
+
+        <tr>
+          <th>
+          <input type="button" name="btn-pot12" class="btn-11" value="POTÊCIA DE 12">
+          </th>
+          <th>
+          <input type="button" name="btn-pot13" class="btn-11" value="POTÊCIA DE 13">
+           </th>
+           <th>
+          <input type="button" name="btn-pot14" class="btn-11" value="POTÊCIA DE 14">
+           </th>
+         </tr>
+
+         <tr>
+          <th>
+          <input type="button" name="btn-pot15" class="btn-11" value="POTÊCIA DE 15">
+           </th>
+           <th>
+          <input type="button" name="btn-pot16" class="btn-11" value="POTÊCIA DE 16">
+         </th>
+         <th>
+          <input type="button" name="btn-pot17" class="btn-11" value="POTÊCIA DE 17">
+          </th>
+        </tr>
+
+        <tr>
+          <th>
+          <input type="button" name="btn-pot18" class="btn-11" value="POTÊCIA DE 18">
+          </th>
+          <th>
+          <input type="button" name="btn-pot19" class="btn-11" value="POTÊCIA DE 19">
+           </th>
+           <th>
+          <input type="button" name="btn-pot20" class="btn-11" value="POTÊCIA DE 20">
+          </th>
+        </tr>
+
+        <tr>
+          <th>
+          <input type="button" name="btn-pot21" class="btn-11" value="POTÊCIA DE 21">
+           </th>
+           <th>
+          <input type="button" name="btn-pot22" class="btn-11" value="POTÊCIA DE 22">
+           </th>
+           <th>
+          <input type="button" name="btn-pot23" class="btn-11" value="POTÊCIA DE 23">
+           </th>
+         </tr>
+
+         <tr>
+          <th>
+          <input type="button" name="btn-pot24" class="btn-11" value="POTÊCIA DE 24">
+           </th>
+           <th>
+          <input type="button" name="btn-pot25" class="btn-11" value="POTÊCIA DE 25">
+           </th>
+           <th>
+          <input type="button" name="btn-pot26" class="btn-11" value="POTÊCIA DE 26">
+          </th>
+        </tr>
+
+        <tr>
+          <th>
+          <input type="button" name="btn-pot27" class="btn-11" value="POTÊCIA DE 27">
+          </th>
+          <th>
+          <input type="button" name="btn-pot28" class="btn-11" value="POTÊCIA DE 28">
+       </th>
+       <th>
+          <input type="button" name="btn-pot29" class="btn-11" value="POTÊCIA DE 29">
+          </th>
+
+        </tr>
+        <tr>
+          <th>
+          <input type="button" name="btn-pot30" class="btn-11" value="POTÊCIA DE 30">
+           </th>
+           <th>
+          <input type="button" name="btn-pot31" class="btn-11" value="POTÊCIA DE 31">
+          </th>
+           <th>
+           <input type="button" name="btn-pot32" class="btn-11" value="POTÊCIA DE 32">
+          </th>
+        </tr>
+
+          
+          <tr>
+            <th>
+          <input type="button" name="btn-pi" class="btn-10" value="PI">
+          </th>
+
+           <th>
+           <input type="button" name="btn-pot33" class="btn-11" value="POTÊCIA DE 33">
+          </th>
+
+           <th>
+           <input type="button" name="btn-pot34" class="btn-11" value="POTÊCIA DE 34">
+          </th>
+
+
+</tr>
+<tr>
+  
+  <th>  <input type="button" name="btn-pot35" class="btn-11" value="POTÊCIA DE 35"></th>
+
+  <th>  <input type="button" name="btn-pot36" class="btn-11" value="POTÊCIA DE 36"></th>
+  <th>  <input type="button" name="btn-pot37" class="btn-11" value="POTÊCIA DE 37"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot38" class="btn-11" value="POTÊCIA DE 38"></th>
+
+  <th>  <input type="button" name="btn-pot39" class="btn-11" value="POTÊCIA DE 39"></th>
+  <th>  <input type="button" name="btn-pot40" class="btn-11" value="POTÊCIA DE 40"></th>
+</tr>
+<tr>
+  
+  <th>  <input type="button" name="btn-pot41" class="btn-11" value="POTÊCIA DE 41"></th>
+
+  <th>  <input type="button" name="btn-pot42" class="btn-11" value="POTÊCIA DE 42"></th>
+  <th>  <input type="button" name="btn-pot43" class="btn-11" value="POTÊCIA DE 43"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot44" class="btn-11" value="POTÊCIA DE 44"></th>
+
+  <th>  <input type="button" name="btn-pot45" class="btn-11" value="POTÊCIA DE 45"></th>
+  <th>  <input type="button" name="btn-pot46" class="btn-11" value="POTÊCIA DE 46"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot47" class="btn-11" value="POTÊCIA DE 47"></th>
+
+  <th>  <input type="button" name="btn-pot48" class="btn-11" value="POTÊCIA DE 48"></th>
+  <th>  <input type="button" name="btn-pot49" class="btn-11" value="POTÊCIA DE 49"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot50" class="btn-11" value="POTÊCIA DE 50"></th>
+
+  <th>  <input type="button" name="btn-pot51" class="btn-11" value="POTÊCIA DE 51"></th>
+  <th>  <input type="button" name="btn-pot52" class="btn-11" value="POTÊCIA DE 52"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot53" class="btn-11" value="POTÊCIA DE 53"></th>
+
+  <th>  <input type="button" name="btn-pot54" class="btn-11" value="POTÊCIA DE 54"></th>
+  <th>  <input type="button" name="btn-pot55" class="btn-11" value="POTÊCIA DE 55"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot56" class="btn-11" value="POTÊCIA DE 56"></th>
+
+  <th>  <input type="button" name="btn-pot57" class="btn-11" value="POTÊCIA DE 57"></th>
+  <th>  <input type="button" name="btn-pot58" class="btn-11" value="POTÊCIA DE 58"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot59" class="btn-11" value="POTÊCIA DE 59"></th>
+
+  <th>  <input type="button" name="btn-pot60" class="btn-11" value="POTÊCIA DE 60"></th>
+  <th>  <input type="button" name="btn-pot61" class="btn-11" value="POTÊCIA DE 61"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot62" class="btn-11" value="POTÊCIA DE 62 "></th>
+
+  <th>  <input type="button" name="btn-pot63" class="btn-11" value="POTÊCIA DE 63"></th>
+  <th>  <input type="button" name="btn-pot64" class="btn-11" value="POTÊCIA DE 64"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot65" class="btn-11" value="POTÊCIA DE 65 "></th>
+
+  <th>  <input type="button" name="btn-pot66" class="btn-11" value="POTÊCIA DE 66"></th>
+  <th>  <input type="button" name="btn-pot67" class="btn-11" value="POTÊCIA DE 67"></th>
+</tr>
+
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot68" class="btn-11" value="POTÊCIA DE 68 "></th>
+
+  <th>  <input type="button" name="btn-pot69" class="btn-11" value="POTÊCIA DE 69"></th>
+  <th>  <input type="button" name="btn-pot70" class="btn-11" value="POTÊCIA DE 70"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot71" class="btn-11" value="POTÊCIA DE 71 "></th>
+
+  <th>  <input type="button" name="btn-pot72" class="btn-11" value="POTÊCIA DE 72"></th>
+  <th>  <input type="button" name="btn-pot73" class="btn-11" value="POTÊCIA DE 73"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot74" class="btn-11" value="POTÊCIA DE 74"></th>
+
+  <th>  <input type="button" name="btn-pot75" class="btn-11" value="POTÊCIA DE 75"></th>
+  <th>  <input type="button" name="btn-pot76" class="btn-11" value="POTÊCIA DE 76"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot77" class="btn-11" value="POTÊCIA DE 77"></th>
+
+  <th>  <input type="button" name="btn-pot78" class="btn-11" value="POTÊCIA DE 78"></th>
+  <th>  <input type="button" name="btn-pot79" class="btn-11" value="POTÊCIA DE 79"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot80" class="btn-11" value="POTÊCIA DE 80"></th>
+
+  <th>  <input type="button" name="btn-pot81" class="btn-11" value="POTÊCIA DE 81"></th>
+  <th>  <input type="button" name="btn-pot82" class="btn-11" value="POTÊCIA DE 82"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot83" class="btn-11" value="POTÊCIA DE 83"></th>
+
+  <th>  <input type="button" name="btn-pot84" class="btn-11" value="POTÊCIA DE 84"></th>
+  <th>  <input type="button" name="btn-pot85" class="btn-11" value="POTÊCIA DE 85"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot86" class="btn-11" value="POTÊCIA DE 86"></th>
+
+  <th>  <input type="button" name="btn-pot87" class="btn-11" value="POTÊCIA DE 87"></th>
+  <th>  <input type="button" name="btn-pot88" class="btn-11" value="POTÊCIA DE 88"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot89" class="btn-11" value="POTÊCIA DE 89"></th>
+
+  <th>  <input type="button" name="btn-pot90" class="btn-11" value="POTÊCIA DE 90"></th>
+  <th>  <input type="button" name="btn-pot91" class="btn-11" value="POTÊCIA DE 91"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot92" class="btn-11" value="POTÊCIA DE 92"></th>
+
+  <th>  <input type="button" name="btn-pot93" class="btn-11" value="POTÊCIA DE 93"></th>
+  <th>  <input type="button" name="btn-pot94" class="btn-11" value="POTÊCIA DE 94"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot95" class="btn-11" value="POTÊCIA DE 95"></th>
+
+  <th>  <input type="button" name="btn-pot96" class="btn-11" value="POTÊCIA DE 96"></th>
+  <th>  <input type="button" name="btn-pot97" class="btn-11" value="POTÊCIA DE 97"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot98" class="btn-11" value="POTÊCIA DE 98"></th>
+
+  <th>  <input type="button" name="btn-pot99" class="btn-11" value="POTÊCIA DE 99"></th>
+  <th>  <input type="button" name="btn-pot100" class="btn-11" value="POTÊCIA DE 100"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot101" class="btn-11" value="POTÊCIA DE 101"></th>
+
+  <th>  <input type="button" name="btn-pot102" class="btn-11" value="POTÊCIA DE 102"></th>
+  <th>  <input type="button" name="btn-pot103" class="btn-11" value="POTÊCIA DE 103"></th>
+</tr>
+<!-- aqui -->
+<tr>
+  
+  <th>  <input type="button" name="btn-pot104" class="btn-11" value="POTÊCIA DE 104"></th>
+
+  <th>  <input type="button" name="btn-pot105" class="btn-11" value="POTÊCIA DE 105"></th>
+  <th>  <input type="button" name="btn-pot106" class="btn-11" value="POTÊCIA DE 106"></th>
+</tr>
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot107" class="btn-11" value="POTÊCIA DE 107"></th>
+
+  <th>  <input type="button" name="btn-pot108" class="btn-11" value="POTÊCIA DE 108"></th>
+  <th>  <input type="button" name="btn-pot109" class="btn-11" value="POTÊCIA DE 109"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot110" class="btn-11" value="POTÊCIA DE 110"></th>
+
+  <th>  <input type="button" name="btn-pot111" class="btn-11" value="POTÊCIA DE 111"></th>
+  <th>  <input type="button" name="btn-pot112" class="btn-11" value="POTÊCIA DE 112"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot113" class="btn-11" value="POTÊCIA DE 113"></th>
+
+  <th>  <input type="button" name="btn-pot114" class="btn-11" value="POTÊCIA DE 114"></th>
+  <th>  <input type="button" name="btn-pot115" class="btn-11" value="POTÊCIA DE 115"></th>
+</tr>
+
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot116" class="btn-11" value="POTÊCIA DE 116"></th>
+
+  <th>  <input type="button" name="btn-pot117" class="btn-11" value="POTÊCIA DE 117"></th>
+  <th>  <input type="button" name="btn-pot118" class="btn-11" value="POTÊCIA DE 118"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot119" class="btn-11" value="POTÊCIA DE 119"></th>
+
+  <th>  <input type="button" name="btn-pot120" class="btn-11" value="POTÊCIA DE 120"></th>
+  <th>  <input type="button" name="btn-pot121" class="btn-11" value="POTÊCIA DE 121"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot122" class="btn-11" value="POTÊCIA DE 122"></th>
+
+  <th>  <input type="button" name="btn-pot123" class="btn-11" value="POTÊCIA DE 123"></th>
+  <th>  <input type="button" name="btn-pot124" class="btn-11" value="POTÊCIA DE 124"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot125" class="btn-11" value="POTÊCIA DE 125"></th>
+
+  <th>  <input type="button" name="btn-pot126" class="btn-11" value="POTÊCIA DE 126"></th>
+  <th>  <input type="button" name="btn-pot127" class="btn-11" value="POTÊCIA DE 127"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot128" class="btn-11" value="POTÊCIA DE 128"></th>
+
+  <th>  <input type="button" name="btn-pot129" class="btn-11" value="POTÊCIA DE 129"></th>
+  <th>  <input type="button" name="btn-pot130" class="btn-11" value="POTÊCIA DE 130"></th>
+</tr>
+
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot131" class="btn-11" value="POTÊCIA DE 131"></th>
+
+  <th>  <input type="button" name="btn-pot132" class="btn-11" value="POTÊCIA DE 132"></th>
+  <th>  <input type="button" name="btn-pot133" class="btn-11" value="POTÊCIA DE 133"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot134" class="btn-11" value="POTÊCIA DE 134"></th>
+
+  <th>  <input type="button" name="btn-pot135" class="btn-11" value="POTÊCIA DE 135"></th>
+  <th>  <input type="button" name="btn-pot136" class="btn-11" value="POTÊCIA DE 136"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot137" class="btn-11" value="POTÊCIA DE 137"></th>
+
+  <th>  <input type="button" name="btn-pot138" class="btn-11" value="POTÊCIA DE 138"></th>
+  <th>  <input type="button" name="btn-pot139" class="btn-11" value="POTÊCIA DE 139"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot140" class="btn-11" value="POTÊCIA DE 140"></th>
+
+  <th>  <input type="button" name="btn-pot141" class="btn-11" value="POTÊCIA DE 141"></th>
+  <th>  <input type="button" name="btn-pot142" class="btn-11" value="POTÊCIA DE 142"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot143" class="btn-11" value="POTÊCIA DE 143"></th>
+
+  <th>  <input type="button" name="btn-pot144" class="btn-11" value="POTÊCIA DE 144"></th>
+  <th>  <input type="button" name="btn-pot145" class="btn-11" value="POTÊCIA DE 145"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot146" class="btn-11" value="POTÊCIA DE 146"></th>
+
+  <th>  <input type="button" name="btn-pot147" class="btn-11" value="POTÊCIA DE 147"></th>
+  <th>  <input type="button" name="btn-pot148" class="btn-11" value="POTÊCIA DE 148"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot149" class="btn-11" value="POTÊCIA DE 149"></th>
+
+  <th>  <input type="button" name="btn-pot150" class="btn-11" value="POTÊCIA DE 150"></th>
+  <th>  <input type="button" name="btn-pot151" class="btn-11" value="POTÊCIA DE 151"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot152" class="btn-11" value="POTÊCIA DE 152"></th>
+
+  <th>  <input type="button" name="btn-pot153" class="btn-11" value="POTÊCIA DE 153"></th>
+  <th>  <input type="button" name="btn-pot154" class="btn-11" value="POTÊCIA DE 154"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot155" class="btn-11" value="POTÊCIA DE 155"></th>
+
+  <th>  <input type="button" name="btn-pot156" class="btn-11" value="POTÊCIA DE 156"></th>
+  <th>  <input type="button" name="btn-pot157" class="btn-11" value="POTÊCIA DE 157"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot158" class="btn-11" value="POTÊCIA DE 158"></th>
+
+  <th>  <input type="button" name="btn-pot159" class="btn-11" value="POTÊCIA DE 159"></th>
+  <th>  <input type="button" name="btn-pot160" class="btn-11" value="POTÊCIA DE 160"></th>
+</tr>
+
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot161" class="btn-11" value="POTÊCIA DE 161"></th>
+
+  <th>  <input type="button" name="btn-pot162" class="btn-11" value="POTÊCIA DE 162"></th>
+  <th>  <input type="button" name="btn-pot163" class="btn-11" value="POTÊCIA DE 163"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot164" class="btn-11" value="POTÊCIA DE 164"></th>
+
+  <th>  <input type="button" name="btn-pot165" class="btn-11" value="POTÊCIA DE 165"></th>
+  <th>  <input type="button" name="btn-pot166" class="btn-11" value="POTÊCIA DE 166"></th>
+</tr>
+
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot168" class="btn-11" value="POTÊCIA DE 167"></th>
+
+  <th>  <input type="button" name="btn-pot169" class="btn-11" value="POTÊCIA DE 169"></th>
+  <th>  <input type="button" name="btn-pot170" class="btn-11" value="POTÊCIA DE 170"></th>
+</tr>
+
+
+<tr>
+  
+  <th>  <input type="button" name="btn-pot171" class="btn-11" value="POTÊCIA DE 171"></th>
+
+  <th>  <input type="button" name="btn-pot172" class="btn-11" value="POTÊCIA DE 172"></th>
+  <th>  <input type="button" name="btn-pot173" class="btn-11" value="POTÊCIA DE 173"></th>
+</tr>
+<!-- atual -->
+<tr>
+<th><input type="button" name="btn-pot174" class="btn-11" value="POTÊCIA DE 174"></th>
+<th><input type="button" name="btn-pot175" class="btn-11" value="POTÊCIA DE 175"></th>
+<th><input type="button" name="btn-pot176" class="btn-11" value="POTÊCIA DE 176"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot177" class="btn-11" value="POTÊCIA DE 177"></th>
+<th><input type="button" name="btn-pot178" class="btn-11" value="POTÊCIA DE 178"></th>
+<th><input type="button" name="btn-pot179" class="btn-11" value="POTÊCIA DE 179"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot180" class="btn-11" value="POTÊCIA DE 180"></th>
+<th><input type="button" name="btn-pot181" class="btn-11" value="POTÊCIA DE 181"></th>
+<th><input type="button" name="btn-pot182" class="btn-11" value="POTÊCIA DE 182"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot183" class="btn-11" value="POTÊCIA DE 183"></th>
+<th><input type="button" name="btn-pot184" class="btn-11" value="POTÊCIA DE 184"></th>
+<th><input type="button" name="btn-pot185" class="btn-11" value="POTÊCIA DE 185"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot186" class="btn-11" value="POTÊCIA DE 186"></th>
+<th><input type="button" name="btn-pot187" class="btn-11" value="POTÊCIA DE 187"></th>
+<th><input type="button" name="btn-pot188" class="btn-11" value="POTÊCIA DE 188"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot189" class="btn-11" value="POTÊCIA DE 189"></th>
+<th><input type="button" name="btn-pot190" class="btn-11" value="POTÊCIA DE 190"></th>
+<th><input type="button" name="btn-pot191" class="btn-11" value="POTÊCIA DE 191"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot192" class="btn-11" value="POTÊCIA DE 192"></th>
+<th><input type="button" name="btn-pot193" class="btn-11" value="POTÊCIA DE 193"></th>
+<th><input type="button" name="btn-pot194" class="btn-11" value="POTÊCIA DE 194"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot195" class="btn-11" value="POTÊCIA DE 195"></th>
+<th><input type="button" name="btn-pot196" class="btn-11" value="POTÊCIA DE 196"></th>
+<th><input type="button" name="btn-pot197" class="btn-11" value="POTÊCIA DE 197"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot198" class="btn-11" value="POTÊCIA DE 198"></th>
+<th><input type="button" name="btn-pot199" class="btn-11" value="POTÊCIA DE 199"></th>
+<th><input type="button" name="btn-pot200" class="btn-11" value="POTÊCIA DE 200"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot201" class="btn-11" value="POTÊCIA DE 201"></th>
+<th><input type="button" name="btn-pot202" class="btn-11" value="POTÊCIA DE 202"></th>
+<th><input type="button" name="btn-pot203" class="btn-11" value="POTÊCIA DE 203"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot204" class="btn-11" value="POTÊCIA DE 204"></th>
+<th><input type="button" name="btn-pot205" class="btn-11" value="POTÊCIA DE 205"></th>
+<th><input type="button" name="btn-pot206" class="btn-11" value="POTÊCIA DE 206"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot207" class="btn-11" value="POTÊCIA DE 207"></th>
+<th><input type="button" name="btn-pot208" class="btn-11" value="POTÊCIA DE 208"></th>
+<th><input type="button" name="btn-pot209" class="btn-11" value="POTÊCIA DE 209"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot210" class="btn-11" value="POTÊCIA DE 210"></th>
+<th><input type="button" name="btn-pot211" class="btn-11" value="POTÊCIA DE 211"></th>
+<th><input type="button" name="btn-pot212" class="btn-11" value="POTÊCIA DE 212"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot213" class="btn-11" value="POTÊCIA DE 213"></th>
+<th><input type="button" name="btn-pot214" class="btn-11" value="POTÊCIA DE 214"></th>
+<th><input type="button" name="btn-pot215" class="btn-11" value="POTÊCIA DE 215"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot216" class="btn-11" value="POTÊCIA DE 216"></th>
+<th><input type="button" name="btn-pot217" class="btn-11" value="POTÊCIA DE 217"></th>
+<th><input type="button" name="btn-pot218" class="btn-11" value="POTÊCIA DE 218"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot219" class="btn-11" value="POTÊCIA DE 219"></th>
+<th><input type="button" name="btn-pot220" class="btn-11" value="POTÊCIA DE 220"></th>
+<th><input type="button" name="btn-pot221" class="btn-11" value="POTÊCIA DE 221"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot222" class="btn-11" value="POTÊCIA DE 222"></th>
+<th><input type="button" name="btn-pot223" class="btn-11" value="POTÊCIA DE 223"></th>
+<th><input type="button" name="btn-pot224" class="btn-11" value="POTÊCIA DE 224"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot225" class="btn-11" value="POTÊCIA DE 225"></th>
+<th><input type="button" name="btn-pot226" class="btn-11" value="POTÊCIA DE 226"></th>
+<th><input type="button" name="btn-pot227" class="btn-11" value="POTÊCIA DE 227"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot228" class="btn-11" value="POTÊCIA DE 228"></th>
+<th><input type="button" name="btn-pot229" class="btn-11" value="POTÊCIA DE 229"></th>
+<th><input type="button" name="btn-pot230" class="btn-11" value="POTÊCIA DE 230"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot231" class="btn-11" value="POTÊCIA DE 231"></th>
+<th><input type="button" name="btn-pot232" class="btn-11" value="POTÊCIA DE 232"></th>
+<th><input type="button" name="btn-pot233" class="btn-11" value="POTÊCIA DE 233"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot234" class="btn-11" value="POTÊCIA DE 234"></th>
+<th><input type="button" name="btn-pot235" class="btn-11" value="POTÊCIA DE 235"></th>
+<th><input type="button" name="btn-pot236" class="btn-11" value="POTÊCIA DE 236"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot237" class="btn-11" value="POTÊCIA DE 237"></th>
+<th><input type="button" name="btn-pot238" class="btn-11" value="POTÊCIA DE 238"></th>
+<th><input type="button" name="btn-pot239" class="btn-11" value="POTÊCIA DE 239"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot240" class="btn-11" value="POTÊCIA DE 240"></th>
+<th><input type="button" name="btn-pot241" class="btn-11" value="POTÊCIA DE 241"></th>
+<th><input type="button" name="btn-pot242" class="btn-11" value="POTÊCIA DE 242"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot243" class="btn-11" value="POTÊCIA DE 243"></th>
+<th><input type="button" name="btn-pot244" class="btn-11" value="POTÊCIA DE 244"></th>
+<th><input type="button" name="btn-pot245" class="btn-11" value="POTÊCIA DE 245"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot246" class="btn-11" value="POTÊCIA DE 246"></th>
+<th><input type="button" name="btn-pot247" class="btn-11" value="POTÊCIA DE 247"></th>
+<th><input type="button" name="btn-pot248" class="btn-11" value="POTÊCIA DE 248"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot249" class="btn-11" value="POTÊCIA DE 249"></th>
+<th><input type="button" name="btn-pot250" class="btn-11" value="POTÊCIA DE 250"></th>
+<th><input type="button" name="btn-pot251" class="btn-11" value="POTÊCIA DE 251"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot252" class="btn-11" value="POTÊCIA DE 252"></th>
+<th><input type="button" name="btn-pot253" class="btn-11" value="POTÊCIA DE 253"></th>
+<th><input type="button" name="btn-pot254" class="btn-11" value="POTÊCIA DE 254"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot255" class="btn-11" value="POTÊCIA DE 255"></th>
+<th><input type="button" name="btn-pot256" class="btn-11" value="POTÊCIA DE 256"></th>
+<th><input type="button" name="btn-pot257" class="btn-11" value="POTÊCIA DE 257"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot258" class="btn-11" value="POTÊCIA DE 258"></th>
+<th><input type="button" name="btn-pot259" class="btn-11" value="POTÊCIA DE 259"></th>
+<th><input type="button" name="btn-pot260" class="btn-11" value="POTÊCIA DE 260"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot261" class="btn-11" value="POTÊCIA DE 261"></th>
+<th><input type="button" name="btn-pot262" class="btn-11" value="POTÊCIA DE 262"></th>
+<th><input type="button" name="btn-pot263" class="btn-11" value="POTÊCIA DE 263"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot264" class="btn-11" value="POTÊCIA DE 264"></th>
+<th><input type="button" name="btn-pot265" class="btn-11" value="POTÊCIA DE 265"></th>
+<th><input type="button" name="btn-pot266" class="btn-11" value="POTÊCIA DE 266"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot267" class="btn-11" value="POTÊCIA DE 267"></th>
+<th><input type="button" name="btn-pot268" class="btn-11" value="POTÊCIA DE 268"></th>
+<th><input type="button" name="btn-pot269" class="btn-11" value="POTÊCIA DE 269"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot270" class="btn-11" value="POTÊCIA DE 270"></th>
+<th><input type="button" name="btn-pot271" class="btn-11" value="POTÊCIA DE 271"></th>
+<th><input type="button" name="btn-pot272" class="btn-11" value="POTÊCIA DE 272"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot273" class="btn-11" value="POTÊCIA DE 273"></th>
+<th><input type="button" name="btn-pot274" class="btn-11" value="POTÊCIA DE 274"></th>
+<th><input type="button" name="btn-pot275" class="btn-11" value="POTÊCIA DE 275"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot276" class="btn-11" value="POTÊCIA DE 276"></th>
+<th><input type="button" name="btn-pot277" class="btn-11" value="POTÊCIA DE 277"></th>
+<th><input type="button" name="btn-pot278" class="btn-11" value="POTÊCIA DE 278"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot279" class="btn-11" value="POTÊCIA DE 279"></th>
+<th><input type="button" name="btn-pot280" class="btn-11" value="POTÊCIA DE 280"></th>
+<th><input type="button" name="btn-pot281" class="btn-11" value="POTÊCIA DE 281"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot282" class="btn-11" value="POTÊCIA DE 282"></th>
+<th><input type="button" name="btn-pot283" class="btn-11" value="POTÊCIA DE 283"></th>
+<th><input type="button" name="btn-pot284" class="btn-11" value="POTÊCIA DE 284"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot285" class="btn-11" value="POTÊCIA DE 285"></th>
+<th><input type="button" name="btn-pot286" class="btn-11" value="POTÊCIA DE 286"></th>
+<th><input type="button" name="btn-pot287" class="btn-11" value="POTÊCIA DE 287"></th>
+</tr>
+
+
+<tr>
+<th><input type="button" name="btn-pot288" class="btn-11" value="POTÊCIA DE 288"></th>
+<th><input type="button" name="btn-pot289" class="btn-11" value="POTÊCIA DE 289"></th>
+<th><input type="button" name="btn-pot290" class="btn-11" value="POTÊCIA DE 290"></th>
+</tr>
+
+
+<tr>
+<th><input type="button" name="btn-pot291" class="btn-11" value="POTÊCIA DE 291"></th>
+<th><input type="button" name="btn-pot292" class="btn-11" value="POTÊCIA DE 292"></th>
+<th><input type="button" name="btn-pot293" class="btn-11" value="POTÊCIA DE 293"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot294" class="btn-11" value="POTÊCIA DE 294"></th>
+<th><input type="button" name="btn-pot295" class="btn-11" value="POTÊCIA DE 295"></th>
+<th><input type="button" name="btn-pot296" class="btn-11" value="POTÊCIA DE 296"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot297" class="btn-11" value="POTÊCIA DE 297"></th>
+<th><input type="button" name="btn-pot298" class="btn-11" value="POTÊCIA DE 298"></th>
+<th><input type="button" name="btn-pot299" class="btn-11" value="POTÊCIA DE 299"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot300" class="btn-11" value="POTÊCIA DE 300"></th>
+<th><input type="button" name="btn-pot301" class="btn-11" value="POTÊCIA DE 301"></th>
+<th><input type="button" name="btn-pot302" class="btn-11" value="POTÊCIA DE 302"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot303" class="btn-11" value="POTÊCIA DE 303"></th>
+<th><input type="button" name="btn-pot304" class="btn-11" value="POTÊCIA DE 304"></th>
+<th><input type="button" name="btn-pot305" class="btn-11" value="POTÊCIA DE 305"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot306" class="btn-11" value="POTÊCIA DE 306"></th>
+<th><input type="button" name="btn-pot307" class="btn-11" value="POTÊCIA DE 307"></th>
+<th><input type="button" name="btn-pot308" class="btn-11" value="POTÊCIA DE 308"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot309" class="btn-11" value="POTÊCIA DE 309"></th>
+<th><input type="button" name="btn-pot310" class="btn-11" value="POTÊCIA DE 310"></th>
+<th><input type="button" name="btn-pot311" class="btn-11" value="POTÊCIA DE 311"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot312" class="btn-11" value="POTÊCIA DE 312"></th>
+<th><input type="button" name="btn-pot313" class="btn-11" value="POTÊCIA DE 313"></th>
+<th><input type="button" name="btn-pot314" class="btn-11" value="POTÊCIA DE 314"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot315" class="btn-11" value="POTÊCIA DE 315"></th>
+<th><input type="button" name="btn-pot316" class="btn-11" value="POTÊCIA DE 316"></th>
+<th><input type="button" name="btn-pot317" class="btn-11" value="POTÊCIA DE 317"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot318" class="btn-11" value="POTÊCIA DE 318"></th>
+<th><input type="button" name="btn-pot319" class="btn-11" value="POTÊCIA DE 319"></th>
+<th><input type="button" name="btn-pot320" class="btn-11" value="POTÊCIA DE 320"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot321" class="btn-11" value="POTÊCIA DE 321"></th>
+<th><input type="button" name="btn-pot322" class="btn-11" value="POTÊCIA DE 322"></th>
+<th><input type="button" name="btn-pot323" class="btn-11" value="POTÊCIA DE 323"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot324" class="btn-11" value="POTÊCIA DE 324"></th>
+<th><input type="button" name="btn-pot325" class="btn-11" value="POTÊCIA DE 325"></th>
+<th><input type="button" name="btn-pot326" class="btn-11" value="POTÊCIA DE 326"></th>
+</tr>
+
+
+<tr>
+<th><input type="button" name="btn-pot327" class="btn-11" value="POTÊCIA DE 327"></th>
+<th><input type="button" name="btn-pot328" class="btn-11" value="POTÊCIA DE 328"></th>
+<th><input type="button" name="btn-pot329" class="btn-11" value="POTÊCIA DE 329"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot330" class="btn-11" value="POTÊCIA DE 330"></th>
+<th><input type="button" name="btn-pot331" class="btn-11" value="POTÊCIA DE 331"></th>
+<th><input type="button" name="btn-pot332" class="btn-11" value="POTÊCIA DE 332"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot333" class="btn-11" value="POTÊCIA DE 333"></th>
+<th><input type="button" name="btn-pot334" class="btn-11" value="POTÊCIA DE 334"></th>
+<th><input type="button" name="btn-pot335" class="btn-11" value="POTÊCIA DE 335"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot336" class="btn-11" value="POTÊCIA DE 336"></th>
+<th><input type="button" name="btn-pot337" class="btn-11" value="POTÊCIA DE 337"></th>
+<th><input type="button" name="btn-pot338" class="btn-11" value="POTÊCIA DE 338"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot339" class="btn-11" value="POTÊCIA DE 339"></th>
+<th><input type="button" name="btn-pot340" class="btn-11" value="POTÊCIA DE 340"></th>
+<th><input type="button" name="btn-pot341" class="btn-11" value="POTÊCIA DE 341"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot342" class="btn-11" value="POTÊCIA DE 342"></th>
+<th><input type="button" name="btn-pot343" class="btn-11" value="POTÊCIA DE 343"></th>
+<th><input type="button" name="btn-pot344" class="btn-11" value="POTÊCIA DE 344"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot345" class="btn-11" value="POTÊCIA DE 345"></th>
+<th><input type="button" name="btn-pot346" class="btn-11" value="POTÊCIA DE 346"></th>
+<th><input type="button" name="btn-pot347" class="btn-11" value="POTÊCIA DE 347"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot348" class="btn-11" value="POTÊCIA DE 348"></th>
+<th><input type="button" name="btn-pot349" class="btn-11" value="POTÊCIA DE 349"></th>
+<th><input type="button" name="btn-pot350" class="btn-11" value="POTÊCIA DE 350"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot351" class="btn-11" value="POTÊCIA DE 351"></th>
+<th><input type="button" name="btn-pot352" class="btn-11" value="POTÊCIA DE 352"></th>
+<th><input type="button" name="btn-pot353" class="btn-11" value="POTÊCIA DE 353"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot354" class="btn-11" value="POTÊCIA DE 354"></th>
+<th><input type="button" name="btn-pot355" class="btn-11" value="POTÊCIA DE 355"></th>
+<th><input type="button" name="btn-pot356" class="btn-11" value="POTÊCIA DE 356"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot357" class="btn-11" value="POTÊCIA DE 357"></th>
+<th><input type="button" name="btn-pot358" class="btn-11" value="POTÊCIA DE 358"></th>
+<th><input type="button" name="btn-pot359" class="btn-11" value="POTÊCIA DE 359"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot360" class="btn-11" value="POTÊCIA DE 360"></th>
+<th><input type="button" name="btn-pot361" class="btn-11" value="POTÊCIA DE 361"></th>
+<th><input type="button" name="btn-pot362" class="btn-11" value="POTÊCIA DE 362"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot363" class="btn-11" value="POTÊCIA DE 363"></th>
+<th><input type="button" name="btn-pot364" class="btn-11" value="POTÊCIA DE 364"></th>
+<th><input type="button" name="btn-pot365" class="btn-11" value="POTÊCIA DE 365"></th>
+</tr>
+
+
+<tr>
+<th><input type="button" name="btn-pot366" class="btn-11" value="POTÊCIA DE 366"></th>
+<th><input type="button" name="btn-pot367" class="btn-11" value="POTÊCIA DE 367"></th>
+<th><input type="button" name="btn-pot368" class="btn-11" value="POTÊCIA DE 368"></th>
+</tr>
+
+
+<tr>
+<th><input type="button" name="btn-pot369" class="btn-11" value="POTÊCIA DE 369"></th>
+<th><input type="button" name="btn-pot370" class="btn-11" value="POTÊCIA DE 370"></th>
+<th><input type="button" name="btn-pot371" class="btn-11" value="POTÊCIA DE 371"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot372" class="btn-11" value="POTÊCIA DE 372"></th>
+<th><input type="button" name="btn-pot373" class="btn-11" value="POTÊCIA DE 373"></th>
+<th><input type="button" name="btn-pot374" class="btn-11" value="POTÊCIA DE 374"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot375" class="btn-11" value="POTÊCIA DE 375"></th>
+<th><input type="button" name="btn-pot376" class="btn-11" value="POTÊCIA DE 376"></th>
+<th><input type="button" name="btn-pot377" class="btn-11" value="POTÊCIA DE 377"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot378" class="btn-11" value="POTÊCIA DE 378"></th>
+<th><input type="button" name="btn-pot379" class="btn-11" value="POTÊCIA DE 379"></th>
+<th><input type="button" name="btn-pot380" class="btn-11" value="POTÊCIA DE 380"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot381" class="btn-11" value="POTÊCIA DE 381"></th>
+<th><input type="button" name="btn-pot382" class="btn-11" value="POTÊCIA DE 382"></th>
+<th><input type="button" name="btn-pot383" class="btn-11" value="POTÊCIA DE 383"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot384" class="btn-11" value="POTÊCIA DE 384"></th>
+<th><input type="button" name="btn-pot385" class="btn-11" value="POTÊCIA DE 385"></th>
+<th><input type="button" name="btn-pot386" class="btn-11" value="POTÊCIA DE 386"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot387" class="btn-11" value="POTÊCIA DE 387"></th>
+<th><input type="button" name="btn-pot388" class="btn-11" value="POTÊCIA DE 388"></th>
+<th><input type="button" name="btn-pot389" class="btn-11" value="POTÊCIA DE 389"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot390" class="btn-11" value="POTÊCIA DE 390"></th>
+<th><input type="button" name="btn-pot391" class="btn-11" value="POTÊCIA DE 391"></th>
+<th><input type="button" name="btn-pot392" class="btn-11" value="POTÊCIA DE 392"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot393" class="btn-11" value="POTÊCIA DE 393"></th>
+<th><input type="button" name="btn-pot394" class="btn-11" value="POTÊCIA DE 394"></th>
+<th><input type="button" name="btn-pot395" class="btn-11" value="POTÊCIA DE 395"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot396" class="btn-11" value="POTÊCIA DE 396"></th>
+<th><input type="button" name="btn-pot397" class="btn-11" value="POTÊCIA DE 397"></th>
+<th><input type="button" name="btn-pot398" class="btn-11" value="POTÊCIA DE 398"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot399" class="btn-11" value="POTÊCIA DE 399"></th>
+<th><input type="button" name="btn-pot400" class="btn-11" value="POTÊCIA DE 400"></th>
+<th><input type="button" name="btn-pot401" class="btn-11" value="POTÊCIA DE 401"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot402" class="btn-11" value="POTÊCIA DE 402"></th>
+<th><input type="button" name="btn-pot403" class="btn-11" value="POTÊCIA DE 403"></th>
+<th><input type="button" name="btn-pot404" class="btn-11" value="POTÊCIA DE 404"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot405" class="btn-11" value="POTÊCIA DE 405"></th>
+<th><input type="button" name="btn-pot406" class="btn-11" value="POTÊCIA DE 406"></th>
+<th><input type="button" name="btn-pot407" class="btn-11" value="POTÊCIA DE 407"></th>
+</tr>
+
+<tr>
+<th><input type="button" name="btn-pot408" class="btn-11" value="POTÊCIA DE 408"></th>
+<th><input type="button" name="btn-pot409" class="btn-11" value="POTÊCIA DE 409"></th>
+<th><input type="button" name="btn-pot410" class="btn-11" value="POTÊCIA DE 410"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot411" class="btn-11" value="POTÊCIA DE 411"></th>
+<th><input type="button" name="btn-pot412" class="btn-11" value="POTÊCIA DE 412"></th>
+<th><input type="button" name="btn-pot413" class="btn-11" value="POTÊCIA DE 413"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot414" class="btn-11" value="POTÊCIA DE 414"></th>
+<th><input type="button" name="btn-pot415" class="btn-11" value="POTÊCIA DE 415"></th>
+<th><input type="button" name="btn-pot416" class="btn-11" value="POTÊCIA DE 416"></th>
+</tr>
+<tr>
+
+<th><input type="button" name="btn-pot417" class="btn-11" value="POTÊCIA DE 417"></th>
+<th><input type="button" name="btn-pot418" class="btn-11" value="POTÊCIA DE 418"></th>
+<th><input type="button" name="btn-pot419" class="btn-11" value="POTÊCIA DE 419"></th>
+</tr>
+<tr>
+
+<th><input type="button" name="btn-pot420" class="btn-11" value="POTÊCIA DE 420"></th>
+<th><input type="button" name="btn-pot421" class="btn-11" value="POTÊCIA DE 421"></th>
+<th><input type="button" name="btn-pot422" class="btn-11" value="POTÊCIA DE 422"></th>
+</tr>
+<tr>
+
+<th><input type="button" name="btn-pot423" class="btn-11" value="POTÊCIA DE 423"></th>
+<th><input type="button" name="btn-pot424" class="btn-11" value="POTÊCIA DE 424"></th>
+<th><input type="button" name="btn-pot425" class="btn-11" value="POTÊCIA DE 425"></th>
+</tr>
+<tr>
+
+<th><input type="button" name="btn-pot426" class="btn-11" value="POTÊCIA DE 426"></th>
+<th><input type="button" name="btn-pot427" class="btn-11" value="POTÊCIA DE 427"></th>
+<th><input type="button" name="btn-pot428" class="btn-11" value="POTÊCIA DE 428"></th>
+</tr>
+<tr>
+
+<th><input type="button" name="btn-pot429" class="btn-11" value="POTÊCIA DE 429"></th>
+<th><input type="button" name="btn-pot430" class="btn-11" value="POTÊCIA DE 430"></th>
+<th><input type="button" name="btn-pot431" class="btn-11" value="POTÊCIA DE 431"></th>
+</tr>
+<tr>
+
+<th><input type="button" name="btn-pot432" class="btn-11" value="POTÊCIA DE 432"></th>
+<th><input type="button" name="btn-pot433" class="btn-11" value="POTÊCIA DE 433"></th>
+<th><input type="button" name="btn-pot434" class="btn-11" value="POTÊCIA DE 434"></th>
+</tr>
+<tr>
+
+<th><input type="button" name="btn-pot435" class="btn-11" value="POTÊCIA DE 435"></th>
+<th><input type="button" name="btn-pot436" class="btn-11" value="POTÊCIA DE 436"></th>
+<th><input type="button" name="btn-pot437" class="btn-11" value="POTÊCIA DE 437"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot438" class="btn-11" value="POTÊCIA DE 438"></th>
+<th><input type="button" name="btn-pot439" class="btn-11" value="POTÊCIA DE 439"></th>
+<th><input type="button" name="btn-pot440" class="btn-11" value="POTÊCIA DE 440"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot441" class="btn-11" value="POTÊCIA DE 441"></th>
+<th><input type="button" name="btn-pot442" class="btn-11" value="POTÊCIA DE 442"></th>
+<th><input type="button" name="btn-pot443" class="btn-11" value="POTÊCIA DE 443"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot444" class="btn-11" value="POTÊCIA DE 444"></th>
+<th><input type="button" name="btn-pot445" class="btn-11" value="POTÊCIA DE 445"></th>
+<th><input type="button" name="btn-pot446" class="btn-11" value="POTÊCIA DE 446"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot447" class="btn-11" value="POTÊCIA DE 447"></th>
+<th><input type="button" name="btn-pot448" class="btn-11" value="POTÊCIA DE 448"></th>
+<th><input type="button" name="btn-pot449" class="btn-11" value="POTÊCIA DE 449"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot450" class="btn-11" value="POTÊCIA DE 450"></th>
+<th><input type="button" name="btn-pot451" class="btn-11" value="POTÊCIA DE 451"></th>
+<th><input type="button" name="btn-pot452" class="btn-11" value="POTÊCIA DE 452"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot453" class="btn-11" value="POTÊCIA DE 453"></th>
+<th><input type="button" name="btn-pot454" class="btn-11" value="POTÊCIA DE 454"></th>
+<th><input type="button" name="btn-pot455" class="btn-11" value="POTÊCIA DE 455"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot456" class="btn-11" value="POTÊCIA DE 456"></th>
+<th><input type="button" name="btn-pot457" class="btn-11" value="POTÊCIA DE 457"></th>
+<th><input type="button" name="btn-pot458" class="btn-11" value="POTÊCIA DE 458"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot459" class="btn-11" value="POTÊCIA DE 459"></th>
+<th><input type="button" name="btn-pot460" class="btn-11" value="POTÊCIA DE 460"></th>
+<th><input type="button" name="btn-pot461" class="btn-11" value="POTÊCIA DE 461"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot462" class="btn-11" value="POTÊCIA DE 462"></th>
+<th><input type="button" name="btn-pot463" class="btn-11" value="POTÊCIA DE 463"></th>
+<th><input type="button" name="btn-pot464" class="btn-11" value="POTÊCIA DE 464"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot465" class="btn-11" value="POTÊCIA DE 465"></th>
+<th><input type="button" name="btn-pot466" class="btn-11" value="POTÊCIA DE 466"></th>
+<th><input type="button" name="btn-pot467" class="btn-11" value="POTÊCIA DE 467"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot468" class="btn-11" value="POTÊCIA DE 468"></th>
+<th><input type="button" name="btn-pot469" class="btn-11" value="POTÊCIA DE 469"></th>
+<th><input type="button" name="btn-pot470" class="btn-11" value="POTÊCIA DE 470"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot471" class="btn-11" value="POTÊCIA DE 471"></th>
+<th><input type="button" name="btn-pot472" class="btn-11" value="POTÊCIA DE 472"></th>
+<th><input type="button" name="btn-pot473" class="btn-11" value="POTÊCIA DE 473"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot474" class="btn-11" value="POTÊCIA DE 474"></th>
+<th><input type="button" name="btn-pot475" class="btn-11" value="POTÊCIA DE 475"></th>
+<th><input type="button" name="btn-pot476" class="btn-11" value="POTÊCIA DE 476"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot477" class="btn-11" value="POTÊCIA DE 477"></th>
+<th><input type="button" name="btn-pot478" class="btn-11" value="POTÊCIA DE 478"></th>
+<th><input type="button" name="btn-pot479" class="btn-11" value="POTÊCIA DE 479"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot480" class="btn-11" value="POTÊCIA DE 480"></th>
+<th><input type="button" name="btn-pot481" class="btn-11" value="POTÊCIA DE 481"></th>
+<th><input type="button" name="btn-pot482" class="btn-11" value="POTÊCIA DE 482"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot483" class="btn-11" value="POTÊCIA DE 483"></th>
+<th><input type="button" name="btn-pot484" class="btn-11" value="POTÊCIA DE 484"></th>
+<th><input type="button" name="btn-pot485" class="btn-11" value="POTÊCIA DE 485"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot486" class="btn-11" value="POTÊCIA DE 486"></th>
+<th><input type="button" name="btn-pot487" class="btn-11" value="POTÊCIA DE 487"></th>
+<th><input type="button" name="btn-pot488" class="btn-11" value="POTÊCIA DE 488"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot489" class="btn-11" value="POTÊCIA DE 489"></th>
+<th><input type="button" name="btn-pot490" class="btn-11" value="POTÊCIA DE 490"></th>
+<th><input type="button" name="btn-pot491" class="btn-11" value="POTÊCIA DE 491"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot492" class="btn-11" value="POTÊCIA DE 492"></th>
+<th><input type="button" name="btn-pot493" class="btn-11" value="POTÊCIA DE 493"></th>
+<th><input type="button" name="btn-pot494" class="btn-11" value="POTÊCIA DE 494"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot495" class="btn-11" value="POTÊCIA DE 495"></th>
+<th><input type="button" name="btn-pot496" class="btn-11" value="POTÊCIA DE 496"></th>
+<th><input type="button" name="btn-pot497" class="btn-11" value="POTÊCIA DE 497"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot498" class="btn-11" value="POTÊCIA DE 498"></th>
+<th><input type="button" name="btn-pot499" class="btn-11" value="POTÊCIA DE 499"></th>
+<th><input type="button" name="btn-pot500" class="btn-11" value="POTÊCIA DE 500"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot501" class="btn-11" value="POTÊCIA DE 501"></th>
+<th><input type="button" name="btn-pot502" class="btn-11" value="POTÊCIA DE 502"></th>
+<th><input type="button" name="btn-pot503" class="btn-11" value="POTÊCIA DE 503"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot504" class="btn-11" value="POTÊCIA DE 504"></th>
+<th><input type="button" name="btn-pot505" class="btn-11" value="POTÊCIA DE 505"></th>
+<th><input type="button" name="btn-pot506" class="btn-11" value="POTÊCIA DE 506"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot507" class="btn-11" value="POTÊCIA DE 507"></th>
+<th><input type="button" name="btn-pot508" class="btn-11" value="POTÊCIA DE 508"></th>
+<th><input type="button" name="btn-pot509" class="btn-11" value="POTÊCIA DE 509"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot510" class="btn-11" value="POTÊCIA DE 510"></th>
+<th><input type="button" name="btn-pot511" class="btn-11" value="POTÊCIA DE 511"></th>
+<th><input type="button" name="btn-pot512" class="btn-11" value="POTÊCIA DE 512"></th>
+</tr>
+<tr>
+
+<th><input type="button" name="btn-pot513" class="btn-11" value="POTÊCIA DE 513"></th>
+<th><input type="button" name="btn-pot514" class="btn-11" value="POTÊCIA DE 514"></th>
+<th><input type="button" name="btn-pot515" class="btn-11" value="POTÊCIA DE 515"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot516" class="btn-11" value="POTÊCIA DE 516"></th>
+<th><input type="button" name="btn-pot517" class="btn-11" value="POTÊCIA DE 517"></th>
+<th><input type="button" name="btn-pot518" class="btn-11" value="POTÊCIA DE 518"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot519" class="btn-11" value="POTÊCIA DE 519"></th>
+<th><input type="button" name="btn-pot520" class="btn-11" value="POTÊCIA DE 520"></th>
+<th><input type="button" name="btn-pot521" class="btn-11" value="POTÊCIA DE 521"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot522" class="btn-11" value="POTÊCIA DE 522"></th>
+<th><input type="button" name="btn-pot523" class="btn-11" value="POTÊCIA DE 523"></th>
+<th><input type="button" name="btn-pot524" class="btn-11" value="POTÊCIA DE 524"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot525" class="btn-11" value="POTÊCIA DE 525"></th>
+<th><input type="button" name="btn-pot526" class="btn-11" value="POTÊCIA DE 526"></th>
+<th><input type="button" name="btn-pot527" class="btn-11" value="POTÊCIA DE 527"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot528" class="btn-11" value="POTÊCIA DE 528"></th>
+<th><input type="button" name="btn-pot529" class="btn-11" value="POTÊCIA DE 529"></th>
+<th><input type="button" name="btn-pot530" class="btn-11" value="POTÊCIA DE 530"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot531" class="btn-11" value="POTÊCIA DE 531"></th>
+<th><input type="button" name="btn-pot532" class="btn-11" value="POTÊCIA DE 532"></th>
+<th><input type="button" name="btn-pot533" class="btn-11" value="POTÊCIA DE 533"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot534" class="btn-11" value="POTÊCIA DE 534"></th>
+<th><input type="button" name="btn-pot535" class="btn-11" value="POTÊCIA DE 535"></th>
+<th><input type="button" name="btn-pot536" class="btn-11" value="POTÊCIA DE 536"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot537" class="btn-11" value="POTÊCIA DE 537"></th>
+<th><input type="button" name="btn-pot538" class="btn-11" value="POTÊCIA DE 538"></th>
+<th><input type="button" name="btn-pot539" class="btn-11" value="POTÊCIA DE 539"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot540" class="btn-11" value="POTÊCIA DE 540"></th>
+<th><input type="button" name="btn-pot541" class="btn-11" value="POTÊCIA DE 541"></th>
+<th><input type="button" name="btn-pot542" class="btn-11" value="POTÊCIA DE 542"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot543" class="btn-11" value="POTÊCIA DE 543"></th>
+<th><input type="button" name="btn-pot544" class="btn-11" value="POTÊCIA DE 544"></th>
+<th><input type="button" name="btn-pot545" class="btn-11" value="POTÊCIA DE 545"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot546" class="btn-11" value="POTÊCIA DE 546"></th>
+<th><input type="button" name="btn-pot547" class="btn-11" value="POTÊCIA DE 547"></th>
+<th><input type="button" name="btn-pot548" class="btn-11" value="POTÊCIA DE 548"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot549" class="btn-11" value="POTÊCIA DE 549"></th>
+<th><input type="button" name="btn-pot550" class="btn-11" value="POTÊCIA DE 550"></th>
+<th><input type="button" name="btn-pot551" class="btn-11" value="POTÊCIA DE 551"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot552" class="btn-11" value="POTÊCIA DE 552"></th>
+<th><input type="button" name="btn-pot553" class="btn-11" value="POTÊCIA DE 553"></th>
+<th><input type="button" name="btn-pot554" class="btn-11" value="POTÊCIA DE 554"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot555" class="btn-11" value="POTÊCIA DE 555"></th>
+<th><input type="button" name="btn-pot556" class="btn-11" value="POTÊCIA DE 556"></th>
+<th><input type="button" name="btn-pot557" class="btn-11" value="POTÊCIA DE 557"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot558" class="btn-11" value="POTÊCIA DE 558"></th>
+<th><input type="button" name="btn-pot559" class="btn-11" value="POTÊCIA DE 559"></th>
+<th><input type="button" name="btn-pot560" class="btn-11" value="POTÊCIA DE 560"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot561" class="btn-11" value="POTÊCIA DE 561"></th>
+<th><input type="button" name="btn-pot562" class="btn-11" value="POTÊCIA DE 562"></th>
+<th><input type="button" name="btn-pot563" class="btn-11" value="POTÊCIA DE 563"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot564" class="btn-11" value="POTÊCIA DE 564"></th>
+<th><input type="button" name="btn-pot565" class="btn-11" value="POTÊCIA DE 565"></th>
+<th><input type="button" name="btn-pot566" class="btn-11" value="POTÊCIA DE 566"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot567" class="btn-11" value="POTÊCIA DE 567"></th>
+<th><input type="button" name="btn-pot568" class="btn-11" value="POTÊCIA DE 568"></th>
+<th><input type="button" name="btn-pot569" class="btn-11" value="POTÊCIA DE 569"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot570" class="btn-11" value="POTÊCIA DE 570"></th>
+<th><input type="button" name="btn-pot571" class="btn-11" value="POTÊCIA DE 571"></th>
+<th><input type="button" name="btn-pot572" class="btn-11" value="POTÊCIA DE 572"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot573" class="btn-11" value="POTÊCIA DE 573"></th>
+<th><input type="button" name="btn-pot574" class="btn-11" value="POTÊCIA DE 574"></th>
+<th><input type="button" name="btn-pot575" class="btn-11" value="POTÊCIA DE 575"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot576" class="btn-11" value="POTÊCIA DE 576"></th>
+<th><input type="button" name="btn-pot577" class="btn-11" value="POTÊCIA DE 577"></th>
+<th><input type="button" name="btn-pot578" class="btn-11" value="POTÊCIA DE 578"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot579" class="btn-11" value="POTÊCIA DE 579"></th>
+<th><input type="button" name="btn-pot580" class="btn-11" value="POTÊCIA DE 580"></th>
+<th><input type="button" name="btn-pot581" class="btn-11" value="POTÊCIA DE 581"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot582" class="btn-11" value="POTÊCIA DE 582"></th>
+<th><input type="button" name="btn-pot583" class="btn-11" value="POTÊCIA DE 583"></th>
+<th><input type="button" name="btn-pot584" class="btn-11" value="POTÊCIA DE 584"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot585" class="btn-11" value="POTÊCIA DE 585"></th>
+<th><input type="button" name="btn-pot586" class="btn-11" value="POTÊCIA DE 586"></th>
+<th><input type="button" name="btn-pot587" class="btn-11" value="POTÊCIA DE 587"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot588" class="btn-11" value="POTÊCIA DE 588"></th>
+<th><input type="button" name="btn-pot589" class="btn-11" value="POTÊCIA DE 589"></th>
+<th><input type="button" name="btn-pot590" class="btn-11" value="POTÊCIA DE 590"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot591" class="btn-11" value="POTÊCIA DE 591"></th>
+<th><input type="button" name="btn-pot592" class="btn-11" value="POTÊCIA DE 592"></th>
+<th><input type="button" name="btn-pot593" class="btn-11" value="POTÊCIA DE 593"></th>
+</tr>
+<th><input type="button" name="btn-pot594" class="btn-11" value="POTÊCIA DE 594"></th>
+<th><input type="button" name="btn-pot595" class="btn-11" value="POTÊCIA DE 595"></th>
+<th><input type="button" name="btn-pot596" class="btn-11" value="POTÊCIA DE 596"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot597" class="btn-11" value="POTÊCIA DE 597"></th>
+<th><input type="button" name="btn-pot598" class="btn-11" value="POTÊCIA DE 598"></th>
+<th><input type="button" name="btn-pot599" class="btn-11" value="POTÊCIA DE 599"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot600" class="btn-11" value="POTÊCIA DE 600"></th>
+<th><input type="button" name="btn-pot601" class="btn-11" value="POTÊCIA DE 601"></th>
+<th><input type="button" name="btn-pot602" class="btn-11" value="POTÊCIA DE 602"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot603" class="btn-11" value="POTÊCIA DE 603"></th>
+<th><input type="button" name="btn-pot604" class="btn-11" value="POTÊCIA DE 604"></th>
+<th><input type="button" name="btn-pot605" class="btn-11" value="POTÊCIA DE 605"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot606" class="btn-11" value="POTÊCIA DE 606"></th>
+<th><input type="button" name="btn-pot607" class="btn-11" value="POTÊCIA DE 607"></th>
+<th><input type="button" name="btn-pot608" class="btn-11" value="POTÊCIA DE 608"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot609" class="btn-11" value="POTÊCIA DE 609"></th>
+<th><input type="button" name="btn-pot610" class="btn-11" value="POTÊCIA DE 610"></th>
+<th><input type="button" name="btn-pot611" class="btn-11" value="POTÊCIA DE 611"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot612" class="btn-11" value="POTÊCIA DE 612"></th>
+<th><input type="button" name="btn-pot613" class="btn-11" value="POTÊCIA DE 613"></th>
+<th><input type="button" name="btn-pot614" class="btn-11" value="POTÊCIA DE 614"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot615" class="btn-11" value="POTÊCIA DE 615"></th>
+<th><input type="button" name="btn-pot616" class="btn-11" value="POTÊCIA DE 616"></th>
+<th><input type="button" name="btn-pot617" class="btn-11" value="POTÊCIA DE 617"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot618" class="btn-11" value="POTÊCIA DE 618"></th>
+<th><input type="button" name="btn-pot619" class="btn-11" value="POTÊCIA DE 619"></th>
+<th><input type="button" name="btn-pot620" class="btn-11" value="POTÊCIA DE 620"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot621" class="btn-11" value="POTÊCIA DE 621"></th>
+<th><input type="button" name="btn-pot622" class="btn-11" value="POTÊCIA DE 622"></th>
+<th><input type="button" name="btn-pot623" class="btn-11" value="POTÊCIA DE 623"></th>
+
+</tr>
+<tr>
+<th><input type="button" name="btn-pot624" class="btn-11" value="POTÊCIA DE 624"></th>
+<th><input type="button" name="btn-pot625" class="btn-11" value="POTÊCIA DE 625"></th>
+<th><input type="button" name="btn-pot626" class="btn-11" value="POTÊCIA DE 626"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot627" class="btn-11" value="POTÊCIA DE 627"></th>
+<th><input type="button" name="btn-pot628" class="btn-11" value="POTÊCIA DE 628"></th>
+<th><input type="button" name="btn-pot629" class="btn-11" value="POTÊCIA DE 629"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot630" class="btn-11" value="POTÊCIA DE 630"></th>
+<th><input type="button" name="btn-pot631" class="btn-11" value="POTÊCIA DE 631"></th>
+<th><input type="button" name="btn-pot632" class="btn-11" value="POTÊCIA DE 632"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot633" class="btn-11" value="POTÊCIA DE 633"></th>
+<th><input type="button" name="btn-pot634" class="btn-11" value="POTÊCIA DE 634"></th>
+<th><input type="button" name="btn-pot635" class="btn-11" value="POTÊCIA DE 635"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot636" class="btn-11" value="POTÊCIA DE 636"></th>
+<th><input type="button" name="btn-pot637" class="btn-11" value="POTÊCIA DE 637"></th>
+<th><input type="button" name="btn-pot638" class="btn-11" value="POTÊCIA DE 638"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot639" class="btn-11" value="POTÊCIA DE 639"></th>
+<th><input type="button" name="btn-pot640" class="btn-11" value="POTÊCIA DE 640"></th>
+<th><input type="button" name="btn-pot641" class="btn-11" value="POTÊCIA DE 641"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot642" class="btn-11" value="POTÊCIA DE 642"></th>
+<th><input type="button" name="btn-pot643" class="btn-11" value="POTÊCIA DE 643"></th>
+<th><input type="button" name="btn-pot644" class="btn-11" value="POTÊCIA DE 644"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot645" class="btn-11" value="POTÊCIA DE 645"></th>
+<th><input type="button" name="btn-pot646" class="btn-11" value="POTÊCIA DE 646"></th>
+<th><input type="button" name="btn-pot647" class="btn-11" value="POTÊCIA DE 647"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot648" class="btn-11" value="POTÊCIA DE 648"></th>
+<th><input type="button" name="btn-pot649" class="btn-11" value="POTÊCIA DE 649"></th>
+<th><input type="button" name="btn-pot650" class="btn-11" value="POTÊCIA DE 650"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot651" class="btn-11" value="POTÊCIA DE 651"></th>
+<th><input type="button" name="btn-pot652" class="btn-11" value="POTÊCIA DE 652"></th>
+<th><input type="button" name="btn-pot653" class="btn-11" value="POTÊCIA DE 653"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot654" class="btn-11" value="POTÊCIA DE 654"></th>
+<th><input type="button" name="btn-pot655" class="btn-11" value="POTÊCIA DE 655"></th>
+<th><input type="button" name="btn-pot656" class="btn-11" value="POTÊCIA DE 656"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot657" class="btn-11" value="POTÊCIA DE 657"></th>
+<th><input type="button" name="btn-pot658" class="btn-11" value="POTÊCIA DE 658"></th>
+<th><input type="button" name="btn-pot659" class="btn-11" value="POTÊCIA DE 659"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot660" class="btn-11" value="POTÊCIA DE 660"></th>
+<th><input type="button" name="btn-pot661" class="btn-11" value="POTÊCIA DE 661"></th>
+<th><input type="button" name="btn-pot662" class="btn-11" value="POTÊCIA DE 662"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot663" class="btn-11" value="POTÊCIA DE 663"></th>
+<th><input type="button" name="btn-pot664" class="btn-11" value="POTÊCIA DE 664"></th>
+<th><input type="button" name="btn-pot665" class="btn-11" value="POTÊCIA DE 665"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot666" class="btn-11" value="POTÊCIA DE 666"></th>
+<th><input type="button" name="btn-pot667" class="btn-11" value="POTÊCIA DE 667"></th>
+<th><input type="button" name="btn-pot668" class="btn-11" value="POTÊCIA DE 668"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot669" class="btn-11" value="POTÊCIA DE 669"></th>
+<th><input type="button" name="btn-pot670" class="btn-11" value="POTÊCIA DE 670"></th>
+<th><input type="button" name="btn-pot671" class="btn-11" value="POTÊCIA DE 671"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot672" class="btn-11" value="POTÊCIA DE 672"></th>
+<th><input type="button" name="btn-pot673" class="btn-11" value="POTÊCIA DE 673"></th>
+<th><input type="button" name="btn-pot674" class="btn-11" value="POTÊCIA DE 674"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot675" class="btn-11" value="POTÊCIA DE 675"></th>
+<th><input type="button" name="btn-pot676" class="btn-11" value="POTÊCIA DE 676"></th>
+<th><input type="button" name="btn-pot677" class="btn-11" value="POTÊCIA DE 677"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot678" class="btn-11" value="POTÊCIA DE 678"></th>
+<th><input type="button" name="btn-pot679" class="btn-11" value="POTÊCIA DE 679"></th>
+<th><input type="button" name="btn-pot680" class="btn-11" value="POTÊCIA DE 680"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot681" class="btn-11" value="POTÊCIA DE 681"></th>
+<th><input type="button" name="btn-pot682" class="btn-11" value="POTÊCIA DE 682"></th>
+<th><input type="button" name="btn-pot683" class="btn-11" value="POTÊCIA DE 683"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot684" class="btn-11" value="POTÊCIA DE 684"></th>
+<th><input type="button" name="btn-pot685" class="btn-11" value="POTÊCIA DE 685"></th>
+<th><input type="button" name="btn-pot686" class="btn-11" value="POTÊCIA DE 686"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot687" class="btn-11" value="POTÊCIA DE 687"></th>
+<th><input type="button" name="btn-pot688" class="btn-11" value="POTÊCIA DE 688"></th>
+<th><input type="button" name="btn-pot689" class="btn-11" value="POTÊCIA DE 689"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot690" class="btn-11" value="POTÊCIA DE 690"></th>
+<th><input type="button" name="btn-pot691" class="btn-11" value="POTÊCIA DE 691"></th>
+<th><input type="button" name="btn-pot692" class="btn-11" value="POTÊCIA DE 692"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot693" class="btn-11" value="POTÊCIA DE 693"></th>
+<th><input type="button" name="btn-pot694" class="btn-11" value="POTÊCIA DE 694"></th>
+<th><input type="button" name="btn-pot695" class="btn-11" value="POTÊCIA DE 695"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot696" class="btn-11" value="POTÊCIA DE 696"></th>
+<th><input type="button" name="btn-pot697" class="btn-11" value="POTÊCIA DE 697"></th>
+<th><input type="button" name="btn-pot698" class="btn-11" value="POTÊCIA DE 698"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot699" class="btn-11" value="POTÊCIA DE 699"></th>
+<th><input type="button" name="btn-pot700" class="btn-11" value="POTÊCIA DE 700"></th>
+<th><input type="button" name="btn-pot701" class="btn-11" value="POTÊCIA DE 701"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot702" class="btn-11" value="POTÊCIA DE 702"></th>
+<th><input type="button" name="btn-pot703" class="btn-11" value="POTÊCIA DE 703"></th>
+<th><input type="button" name="btn-pot704" class="btn-11" value="POTÊCIA DE 704"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot705" class="btn-11" value="POTÊCIA DE 705"></th>
+<th><input type="button" name="btn-pot706" class="btn-11" value="POTÊCIA DE 706"></th>
+<th><input type="button" name="btn-pot707" class="btn-11" value="POTÊCIA DE 707"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot708" class="btn-11" value="POTÊCIA DE 708"></th>
+<th><input type="button" name="btn-pot709" class="btn-11" value="POTÊCIA DE 709"></th>
+<th><input type="button" name="btn-pot710" class="btn-11" value="POTÊCIA DE 710"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot711" class="btn-11" value="POTÊCIA DE 711"></th>
+<th><input type="button" name="btn-pot712" class="btn-11" value="POTÊCIA DE 712"></th>
+<th><input type="button" name="btn-pot713" class="btn-11" value="POTÊCIA DE 713"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot714" class="btn-11" value="POTÊCIA DE 714"></th>
+<th><input type="button" name="btn-pot715" class="btn-11" value="POTÊCIA DE 715"></th>
+<th><input type="button" name="btn-pot716" class="btn-11" value="POTÊCIA DE 716"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot717" class="btn-11" value="POTÊCIA DE 717"></th>
+<th><input type="button" name="btn-pot718" class="btn-11" value="POTÊCIA DE 718"></th>
+<th><input type="button" name="btn-pot719" class="btn-11" value="POTÊCIA DE 719"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot720" class="btn-11" value="POTÊCIA DE 720"></th>
+<th><input type="button" name="btn-pot721" class="btn-11" value="POTÊCIA DE 721"></th>
+<th><input type="button" name="btn-pot722" class="btn-11" value="POTÊCIA DE 722"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot723" class="btn-11" value="POTÊCIA DE 723"></th>
+<th><input type="button" name="btn-pot724" class="btn-11" value="POTÊCIA DE 724"></th>
+<th><input type="button" name="btn-pot725" class="btn-11" value="POTÊCIA DE 725"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot726" class="btn-11" value="POTÊCIA DE 726"></th>
+<th><input type="button" name="btn-pot727" class="btn-11" value="POTÊCIA DE 727"></th>
+<th><input type="button" name="btn-pot728" class="btn-11" value="POTÊCIA DE 728"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot729" class="btn-11" value="POTÊCIA DE 729"></th>
+<th><input type="button" name="btn-pot730" class="btn-11" value="POTÊCIA DE 730"></th>
+<th><input type="button" name="btn-pot731" class="btn-11" value="POTÊCIA DE 731"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot732" class="btn-11" value="POTÊCIA DE 732"></th>
+<th><input type="button" name="btn-pot733" class="btn-11" value="POTÊCIA DE 733"></th>
+<th><input type="button" name="btn-pot734" class="btn-11" value="POTÊCIA DE 734"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot735" class="btn-11" value="POTÊCIA DE 735"></th>
+<th><input type="button" name="btn-pot736" class="btn-11" value="POTÊCIA DE 736"></th>
+<th><input type="button" name="btn-pot737" class="btn-11" value="POTÊCIA DE 737"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot738" class="btn-11" value="POTÊCIA DE 738"></th>
+<th><input type="button" name="btn-pot739" class="btn-11" value="POTÊCIA DE 739"></th>
+<th><input type="button" name="btn-pot740" class="btn-11" value="POTÊCIA DE 740"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot741" class="btn-11" value="POTÊCIA DE 741"></th>
+<th><input type="button" name="btn-pot742" class="btn-11" value="POTÊCIA DE 742"></th>
+<th><input type="button" name="btn-pot743" class="btn-11" value="POTÊCIA DE 743"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot744" class="btn-11" value="POTÊCIA DE 744"></th>
+<th><input type="button" name="btn-pot745" class="btn-11" value="POTÊCIA DE 745"></th>
+<th><input type="button" name="btn-pot746" class="btn-11" value="POTÊCIA DE 746"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot747" class="btn-11" value="POTÊCIA DE 747"></th>
+<th><input type="button" name="btn-pot748" class="btn-11" value="POTÊCIA DE 748"></th>
+<th><input type="button" name="btn-pot749" class="btn-11" value="POTÊCIA DE 749"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot750" class="btn-11" value="POTÊCIA DE 750"></th>
+<th><input type="button" name="btn-pot751" class="btn-11" value="POTÊCIA DE 751"></th>
+<th><input type="button" name="btn-pot752" class="btn-11" value="POTÊCIA DE 752"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot753" class="btn-11" value="POTÊCIA DE 753"></th>
+<th><input type="button" name="btn-pot754" class="btn-11" value="POTÊCIA DE 754"></th>
+<th><input type="button" name="btn-pot755" class="btn-11" value="POTÊCIA DE 755"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot756" class="btn-11" value="POTÊCIA DE 756"></th>
+<th><input type="button" name="btn-pot757" class="btn-11" value="POTÊCIA DE 757"></th>
+<th><input type="button" name="btn-pot758" class="btn-11" value="POTÊCIA DE 758"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot759" class="btn-11" value="POTÊCIA DE 759"></th>
+<th><input type="button" name="btn-pot760" class="btn-11" value="POTÊCIA DE 760"></th>
+<th><input type="button" name="btn-pot761" class="btn-11" value="POTÊCIA DE 761"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot762" class="btn-11" value="POTÊCIA DE 762"></th>
+<th><input type="button" name="btn-pot763" class="btn-11" value="POTÊCIA DE 763"></th>
+<th><input type="button" name="btn-pot764" class="btn-11" value="POTÊCIA DE 764"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot765" class="btn-11" value="POTÊCIA DE 765"></th>
+<th><input type="button" name="btn-pot766" class="btn-11" value="POTÊCIA DE 766"></th>
+<th><input type="button" name="btn-pot767" class="btn-11" value="POTÊCIA DE 767"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot768" class="btn-11" value="POTÊCIA DE 768"></th>
+<th><input type="button" name="btn-pot769" class="btn-11" value="POTÊCIA DE 769"></th>
+<th><input type="button" name="btn-pot770" class="btn-11" value="POTÊCIA DE 770"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot771" class="btn-11" value="POTÊCIA DE 771"></th>
+<th><input type="button" name="btn-pot772" class="btn-11" value="POTÊCIA DE 772"></th>
+<th><input type="button" name="btn-pot773" class="btn-11" value="POTÊCIA DE 773"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot774" class="btn-11" value="POTÊCIA DE 774"></th>
+<th><input type="button" name="btn-pot775" class="btn-11" value="POTÊCIA DE 775"></th>
+<th><input type="button" name="btn-pot776" class="btn-11" value="POTÊCIA DE 776"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot777" class="btn-11" value="POTÊCIA DE 777"></th>
+<th><input type="button" name="btn-pot778" class="btn-11" value="POTÊCIA DE 778"></th>
+<th><input type="button" name="btn-pot779" class="btn-11" value="POTÊCIA DE 779"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot780" class="btn-11" value="POTÊCIA DE 780"></th>
+<th><input type="button" name="btn-pot781" class="btn-11" value="POTÊCIA DE 781"></th>
+<th><input type="button" name="btn-pot782" class="btn-11" value="POTÊCIA DE 782"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot783" class="btn-11" value="POTÊCIA DE 783"></th>
+<th><input type="button" name="btn-pot784" class="btn-11" value="POTÊCIA DE 784"></th>
+<th><input type="button" name="btn-pot785" class="btn-11" value="POTÊCIA DE 785"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot786" class="btn-11" value="POTÊCIA DE 786"></th>
+<th><input type="button" name="btn-pot787" class="btn-11" value="POTÊCIA DE 787"></th>
+<th><input type="button" name="btn-pot788" class="btn-11" value="POTÊCIA DE 788"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot789" class="btn-11" value="POTÊCIA DE 789"></th>
+<th><input type="button" name="btn-pot790" class="btn-11" value="POTÊCIA DE 790"></th>
+<th><input type="button" name="btn-pot791" class="btn-11" value="POTÊCIA DE 791"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot792" class="btn-11" value="POTÊCIA DE 792"></th>
+<th><input type="button" name="btn-pot793" class="btn-11" value="POTÊCIA DE 793"></th>
+<th><input type="button" name="btn-pot794" class="btn-11" value="POTÊCIA DE 794"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot795" class="btn-11" value="POTÊCIA DE 795"></th>
+<th><input type="button" name="btn-pot796" class="btn-11" value="POTÊCIA DE 796"></th>
+<th><input type="button" name="btn-pot797" class="btn-11" value="POTÊCIA DE 797"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot798" class="btn-11" value="POTÊCIA DE 798"></th>
+<th><input type="button" name="btn-pot799" class="btn-11" value="POTÊCIA DE 799"></th>
+<th><input type="button" name="btn-pot800" class="btn-11" value="POTÊCIA DE 800"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot801" class="btn-11" value="POTÊCIA DE 801"></th>
+<th><input type="button" name="btn-pot802" class="btn-11" value="POTÊCIA DE 802"></th>
+<th><input type="button" name="btn-pot803" class="btn-11" value="POTÊCIA DE 803"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot804" class="btn-11" value="POTÊCIA DE 804"></th>
+<th><input type="button" name="btn-pot805" class="btn-11" value="POTÊCIA DE 805"></th>
+<th><input type="button" name="btn-pot806" class="btn-11" value="POTÊCIA DE 806"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot807" class="btn-11" value="POTÊCIA DE 807"></th>
+<th><input type="button" name="btn-pot808" class="btn-11" value="POTÊCIA DE 808"></th>
+<th><input type="button" name="btn-pot809" class="btn-11" value="POTÊCIA DE 809"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot810" class="btn-11" value="POTÊCIA DE 810"></th>
+<th><input type="button" name="btn-pot811" class="btn-11" value="POTÊCIA DE 811"></th>
+<th><input type="button" name="btn-pot812" class="btn-11" value="POTÊCIA DE 812"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot813" class="btn-11" value="POTÊCIA DE 813"></th>
+<th><input type="button" name="btn-pot814" class="btn-11" value="POTÊCIA DE 814"></th>
+<th><input type="button" name="btn-pot815" class="btn-11" value="POTÊCIA DE 815"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot816" class="btn-11" value="POTÊCIA DE 816"></th>
+<th><input type="button" name="btn-pot817" class="btn-11" value="POTÊCIA DE 817"></th>
+<th><input type="button" name="btn-pot818" class="btn-11" value="POTÊCIA DE 818"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot819" class="btn-11" value="POTÊCIA DE 819"></th>
+<th><input type="button" name="btn-pot820" class="btn-11" value="POTÊCIA DE 820"></th>
+<th><input type="button" name="btn-pot821" class="btn-11" value="POTÊCIA DE 821"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot822" class="btn-11" value="POTÊCIA DE 822"></th>
+<th><input type="button" name="btn-pot823" class="btn-11" value="POTÊCIA DE 823"></th>
+<th><input type="button" name="btn-pot824" class="btn-11" value="POTÊCIA DE 824"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot825" class="btn-11" value="POTÊCIA DE 825"></th>
+<th><input type="button" name="btn-pot826" class="btn-11" value="POTÊCIA DE 826"></th>
+<th><input type="button" name="btn-pot827" class="btn-11" value="POTÊCIA DE 827"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot828" class="btn-11" value="POTÊCIA DE 828"></th>
+<th><input type="button" name="btn-pot829" class="btn-11" value="POTÊCIA DE 829"></th>
+<th><input type="button" name="btn-pot830" class="btn-11" value="POTÊCIA DE 830"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot831" class="btn-11" value="POTÊCIA DE 831"></th>
+<th><input type="button" name="btn-pot832" class="btn-11" value="POTÊCIA DE 832"></th>
+<th><input type="button" name="btn-pot833" class="btn-11" value="POTÊCIA DE 833"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot834" class="btn-11" value="POTÊCIA DE 834"></th>
+<th><input type="button" name="btn-pot835" class="btn-11" value="POTÊCIA DE 835"></th>
+<th><input type="button" name="btn-pot836" class="btn-11" value="POTÊCIA DE 836"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot837" class="btn-11" value="POTÊCIA DE 837"></th>
+<th><input type="button" name="btn-pot838" class="btn-11" value="POTÊCIA DE 838"></th>
+<th><input type="button" name="btn-pot839" class="btn-11" value="POTÊCIA DE 839"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot840" class="btn-11" value="POTÊCIA DE 840"></th>
+<th><input type="button" name="btn-pot841" class="btn-11" value="POTÊCIA DE 841"></th>
+<th><input type="button" name="btn-pot842" class="btn-11" value="POTÊCIA DE 842"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot843" class="btn-11" value="POTÊCIA DE 843"></th>
+<th><input type="button" name="btn-pot844" class="btn-11" value="POTÊCIA DE 844"></th>
+<th><input type="button" name="btn-pot845" class="btn-11" value="POTÊCIA DE 845"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot846" class="btn-11" value="POTÊCIA DE 846"></th>
+<th><input type="button" name="btn-pot847" class="btn-11" value="POTÊCIA DE 847"></th>
+<th><input type="button" name="btn-pot848" class="btn-11" value="POTÊCIA DE 848"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot849" class="btn-11" value="POTÊCIA DE 849"></th>
+<th><input type="button" name="btn-pot850" class="btn-11" value="POTÊCIA DE 850"></th>
+<th><input type="button" name="btn-pot851" class="btn-11" value="POTÊCIA DE 851"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot852" class="btn-11" value="POTÊCIA DE 852"></th>
+<th><input type="button" name="btn-pot853" class="btn-11" value="POTÊCIA DE 853"></th>
+<th><input type="button" name="btn-pot854" class="btn-11" value="POTÊCIA DE 854"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot855" class="btn-11" value="POTÊCIA DE 855"></th>
+<th><input type="button" name="btn-pot856" class="btn-11" value="POTÊCIA DE 856"></th>
+<th><input type="button" name="btn-pot857" class="btn-11" value="POTÊCIA DE 857"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot858" class="btn-11" value="POTÊCIA DE 858"></th>
+<th><input type="button" name="btn-pot859" class="btn-11" value="POTÊCIA DE 859"></th>
+<th><input type="button" name="btn-pot860" class="btn-11" value="POTÊCIA DE 860"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot861" class="btn-11" value="POTÊCIA DE 861"></th>
+<th><input type="button" name="btn-pot862" class="btn-11" value="POTÊCIA DE 862"></th>
+<th><input type="button" name="btn-pot863" class="btn-11" value="POTÊCIA DE 863"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot864" class="btn-11" value="POTÊCIA DE 864"></th>
+<th><input type="button" name="btn-pot865" class="btn-11" value="POTÊCIA DE 865"></th>
+<th><input type="button" name="btn-pot866" class="btn-11" value="POTÊCIA DE 866"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot867" class="btn-11" value="POTÊCIA DE 867"></th>
+<th><input type="button" name="btn-pot868" class="btn-11" value="POTÊCIA DE 868"></th>
+<th><input type="button" name="btn-pot869" class="btn-11" value="POTÊCIA DE 869"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot870" class="btn-11" value="POTÊCIA DE 870"></th>
+<th><input type="button" name="btn-pot871" class="btn-11" value="POTÊCIA DE 871"></th>
+<th><input type="button" name="btn-pot872" class="btn-11" value="POTÊCIA DE 872"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot873" class="btn-11" value="POTÊCIA DE 873"></th>
+<th><input type="button" name="btn-pot874" class="btn-11" value="POTÊCIA DE 874"></th>
+<th><input type="button" name="btn-pot875" class="btn-11" value="POTÊCIA DE 875"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot876" class="btn-11" value="POTÊCIA DE 876"></th>
+<th><input type="button" name="btn-pot877" class="btn-11" value="POTÊCIA DE 877"></th>
+<th><input type="button" name="btn-pot878" class="btn-11" value="POTÊCIA DE 878"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot879" class="btn-11" value="POTÊCIA DE 879"></th>
+<th><input type="button" name="btn-pot880" class="btn-11" value="POTÊCIA DE 880"></th>
+<th><input type="button" name="btn-pot881" class="btn-11" value="POTÊCIA DE 881"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot882" class="btn-11" value="POTÊCIA DE 882"></th>
+<th><input type="button" name="btn-pot883" class="btn-11" value="POTÊCIA DE 883"></th>
+<th><input type="button" name="btn-pot884" class="btn-11" value="POTÊCIA DE 884"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot885" class="btn-11" value="POTÊCIA DE 885"></th>
+<th><input type="button" name="btn-pot886" class="btn-11" value="POTÊCIA DE 886"></th>
+<th><input type="button" name="btn-pot887" class="btn-11" value="POTÊCIA DE 887"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot888" class="btn-11" value="POTÊCIA DE 888"></th>
+<th><input type="button" name="btn-pot889" class="btn-11" value="POTÊCIA DE 889"></th>
+<th><input type="button" name="btn-pot890" class="btn-11" value="POTÊCIA DE 890"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot891" class="btn-11" value="POTÊCIA DE 891"></th>
+<th><input type="button" name="btn-pot892" class="btn-11" value="POTÊCIA DE 892"></th>
+<th><input type="button" name="btn-pot893" class="btn-11" value="POTÊCIA DE 893"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot894" class="btn-11" value="POTÊCIA DE 894"></th>
+<th><input type="button" name="btn-pot895" class="btn-11" value="POTÊCIA DE 895"></th>
+<th><input type="button" name="btn-pot896" class="btn-11" value="POTÊCIA DE 896"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot897" class="btn-11" value="POTÊCIA DE 897"></th>
+<th><input type="button" name="btn-pot898" class="btn-11" value="POTÊCIA DE 898"></th>
+<th><input type="button" name="btn-pot899" class="btn-11" value="POTÊCIA DE 899"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot900" class="btn-11" value="POTÊCIA DE 900"></th>
+<th><input type="button" name="btn-pot901" class="btn-11" value="POTÊCIA DE 901"></th>
+<th><input type="button" name="btn-pot902" class="btn-11" value="POTÊCIA DE 902"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot903" class="btn-11" value="POTÊCIA DE 903"></th>
+<th><input type="button" name="btn-pot904" class="btn-11" value="POTÊCIA DE 904"></th>
+<th><input type="button" name="btn-pot905" class="btn-11" value="POTÊCIA DE 905"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot906" class="btn-11" value="POTÊCIA DE 906"></th>
+<th><input type="button" name="btn-pot907" class="btn-11" value="POTÊCIA DE 907"></th>
+<th><input type="button" name="btn-pot908" class="btn-11" value="POTÊCIA DE 908"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot909" class="btn-11" value="POTÊCIA DE 909"></th>
+<th><input type="button" name="btn-pot910" class="btn-11" value="POTÊCIA DE 910"></th>
+<th><input type="button" name="btn-pot911" class="btn-11" value="POTÊCIA DE 911"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot912" class="btn-11" value="POTÊCIA DE 912"></th>
+<th><input type="button" name="btn-pot913" class="btn-11" value="POTÊCIA DE 913"></th>
+<th><input type="button" name="btn-pot914" class="btn-11" value="POTÊCIA DE 914"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot915" class="btn-11" value="POTÊCIA DE 915"></th>
+<th><input type="button" name="btn-pot916" class="btn-11" value="POTÊCIA DE 916"></th>
+<th><input type="button" name="btn-pot917" class="btn-11" value="POTÊCIA DE 917"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot918" class="btn-11" value="POTÊCIA DE 918"></th>
+<th><input type="button" name="btn-pot919" class="btn-11" value="POTÊCIA DE 919"></th>
+<th><input type="button" name="btn-pot920" class="btn-11" value="POTÊCIA DE 920"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot921" class="btn-11" value="POTÊCIA DE 921"></th>
+<th><input type="button" name="btn-pot922" class="btn-11" value="POTÊCIA DE 922"></th>
+<th><input type="button" name="btn-pot923" class="btn-11" value="POTÊCIA DE 923"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot924" class="btn-11" value="POTÊCIA DE 924"></th>
+<th><input type="button" name="btn-pot925" class="btn-11" value="POTÊCIA DE 925"></th>
+<th><input type="button" name="btn-pot926" class="btn-11" value="POTÊCIA DE 926"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot927" class="btn-11" value="POTÊCIA DE 927"></th>
+<th><input type="button" name="btn-pot928" class="btn-11" value="POTÊCIA DE 928"></th>
+<th><input type="button" name="btn-pot929" class="btn-11" value="POTÊCIA DE 929"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot930" class="btn-11" value="POTÊCIA DE 930"></th>
+<th><input type="button" name="btn-pot931" class="btn-11" value="POTÊCIA DE 931"></th>
+<th><input type="button" name="btn-pot932" class="btn-11" value="POTÊCIA DE 932"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot933" class="btn-11" value="POTÊCIA DE 933"></th>
+<th><input type="button" name="btn-pot934" class="btn-11" value="POTÊCIA DE 934"></th>
+<th><input type="button" name="btn-pot935" class="btn-11" value="POTÊCIA DE 935"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot936" class="btn-11" value="POTÊCIA DE 936"></th>
+<th><input type="button" name="btn-pot937" class="btn-11" value="POTÊCIA DE 937"></th>
+<th><input type="button" name="btn-pot938" class="btn-11" value="POTÊCIA DE 938"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot939" class="btn-11" value="POTÊCIA DE 939"></th>
+<th><input type="button" name="btn-pot940" class="btn-11" value="POTÊCIA DE 940"></th>
+<th><input type="button" name="btn-pot941" class="btn-11" value="POTÊCIA DE 941"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot942" class="btn-11" value="POTÊCIA DE 942"></th>
+<th><input type="button" name="btn-pot943" class="btn-11" value="POTÊCIA DE 943"></th>
+<th><input type="button" name="btn-pot944" class="btn-11" value="POTÊCIA DE 944"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot945" class="btn-11" value="POTÊCIA DE 945"></th>
+<th><input type="button" name="btn-pot946" class="btn-11" value="POTÊCIA DE 946"></th>
+<th><input type="button" name="btn-pot947" class="btn-11" value="POTÊCIA DE 947"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot948" class="btn-11" value="POTÊCIA DE 948"></th>
+<th><input type="button" name="btn-pot949" class="btn-11" value="POTÊCIA DE 949"></th>
+<th><input type="button" name="btn-pot950" class="btn-11" value="POTÊCIA DE 950"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot951" class="btn-11" value="POTÊCIA DE 951"></th>
+<th><input type="button" name="btn-pot952" class="btn-11" value="POTÊCIA DE 952"></th>
+<th><input type="button" name="btn-pot953" class="btn-11" value="POTÊCIA DE 953"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot954" class="btn-11" value="POTÊCIA DE 954"></th>
+<th><input type="button" name="btn-pot955" class="btn-11" value="POTÊCIA DE 955"></th>
+<th><input type="button" name="btn-pot956" class="btn-11" value="POTÊCIA DE 956"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot957" class="btn-11" value="POTÊCIA DE 957"></th>
+<th><input type="button" name="btn-pot958" class="btn-11" value="POTÊCIA DE 958"></th>
+<th><input type="button" name="btn-pot959" class="btn-11" value="POTÊCIA DE 959"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot960" class="btn-11" value="POTÊCIA DE 960"></th>
+<th><input type="button" name="btn-pot961" class="btn-11" value="POTÊCIA DE 961"></th>
+<th><input type="button" name="btn-pot962" class="btn-11" value="POTÊCIA DE 962"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot963" class="btn-11" value="POTÊCIA DE 963"></th>
+<th><input type="button" name="btn-pot964" class="btn-11" value="POTÊCIA DE 964"></th>
+<th><input type="button" name="btn-pot965" class="btn-11" value="POTÊCIA DE 965"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot966" class="btn-11" value="POTÊCIA DE 966"></th>
+<th><input type="button" name="btn-pot967" class="btn-11" value="POTÊCIA DE 967"></th>
+<th><input type="button" name="btn-pot968" class="btn-11" value="POTÊCIA DE 968"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot969" class="btn-11" value="POTÊCIA DE 969"></th>
+<th><input type="button" name="btn-pot970" class="btn-11" value="POTÊCIA DE 970"></th>
+<th><input type="button" name="btn-pot971" class="btn-11" value="POTÊCIA DE 971"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot972" class="btn-11" value="POTÊCIA DE 972"></th>
+<th><input type="button" name="btn-pot973" class="btn-11" value="POTÊCIA DE 973"></th>
+<th><input type="button" name="btn-pot974" class="btn-11" value="POTÊCIA DE 974"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot975" class="btn-11" value="POTÊCIA DE 975"></th>
+<th><input type="button" name="btn-pot976" class="btn-11" value="POTÊCIA DE 976"></th>
+<th><input type="button" name="btn-pot977" class="btn-11" value="POTÊCIA DE 977"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot978" class="btn-11" value="POTÊCIA DE 978"></th>
+<th><input type="button" name="btn-pot979" class="btn-11" value="POTÊCIA DE 979"></th>
+<th><input type="button" name="btn-pot980" class="btn-11" value="POTÊCIA DE 980"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot981" class="btn-11" value="POTÊCIA DE 981"></th>
+<th><input type="button" name="btn-pot982" class="btn-11" value="POTÊCIA DE 982"></th>
+<th><input type="button" name="btn-pot983" class="btn-11" value="POTÊCIA DE 983"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot984" class="btn-11" value="POTÊCIA DE 984"></th>
+<th><input type="button" name="btn-pot985" class="btn-11" value="POTÊCIA DE 985"></th>
+<th><input type="button" name="btn-pot986" class="btn-11" value="POTÊCIA DE 986"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot987" class="btn-11" value="POTÊCIA DE 987"></th>
+<th><input type="button" name="btn-pot988" class="btn-11" value="POTÊCIA DE 988"></th>
+<th><input type="button" name="btn-pot989" class="btn-11" value="POTÊCIA DE 989"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot990" class="btn-11" value="POTÊCIA DE 990"></th>
+<th><input type="button" name="btn-pot991" class="btn-11" value="POTÊCIA DE 991"></th>
+<th><input type="button" name="btn-pot992" class="btn-11" value="POTÊCIA DE 992"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot993" class="btn-11" value="POTÊCIA DE 993"></th>
+<th><input type="button" name="btn-pot994" class="btn-11" value="POTÊCIA DE 994"></th>
+<th><input type="button" name="btn-pot995" class="btn-11" value="POTÊCIA DE 995"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot996" class="btn-11" value="POTÊCIA DE 996"></th>
+<th><input type="button" name="btn-pot997" class="btn-11" value="POTÊCIA DE 997"></th>
+<th><input type="button" name="btn-pot998" class="btn-11" value="POTÊCIA DE 998"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot999" class="btn-11" value="POTÊCIA DE 999"></th>
+<th><input type="button" name="btn-pot1000" class="btn-11" value="POTÊCIA DE 1000"></th>
+<th><input type="button" name="btn-pot1001" class="btn-11" value="POTÊCIA DE 1001"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot1002" class="btn-11" value="POTÊCIA DE 1002"></th>
+<th><input type="button" name="btn-pot1003" class="btn-11" value="POTÊCIA DE 1003"></th>
+<th><input type="button" name="btn-pot1004" class="btn-11" value="POTÊCIA DE 1004"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot1005" class="btn-11" value="POTÊCIA DE 1005"></th>
+<th><input type="button" name="btn-pot1006" class="btn-11" value="POTÊCIA DE 1006"></th>
+<th><input type="button" name="btn-pot1007" class="btn-11" value="POTÊCIA DE 1007"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot1008" class="btn-11" value="POTÊCIA DE 1008"></th>
+<th><input type="button" name="btn-pot1009" class="btn-11" value="POTÊCIA DE 1009"></th>
+<th><input type="button" name="btn-pot1010" class="btn-11" value="POTÊCIA DE 1010"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot1011" class="btn-11" value="POTÊCIA DE 1011"></th>
+<th><input type="button" name="btn-pot1012" class="btn-11" value="POTÊCIA DE 1012"></th>
+<th><input type="button" name="btn-pot1013" class="btn-11" value="POTÊCIA DE 1013"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot1014" class="btn-11" value="POTÊCIA DE 1014"></th>
+<th><input type="button" name="btn-pot1015" class="btn-11" value="POTÊCIA DE 1015"></th>
+<th><input type="button" name="btn-pot1016" class="btn-11" value="POTÊCIA DE 1016"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot1017" class="btn-11" value="POTÊCIA DE 1017"></th>
+<th><input type="button" name="btn-pot1018" class="btn-11" value="POTÊCIA DE 1018"></th>
+<th><input type="button" name="btn-pot1019" class="btn-11" value="POTÊCIA DE 1019"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot1020" class="btn-11" value="POTÊCIA DE 1020"></th>
+<th><input type="button" name="btn-pot1021" class="btn-11" value="POTÊCIA DE 1021"></th>
+<th><input type="button" name="btn-pot1022" class="btn-11" value="POTÊCIA DE 1022"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot1023" class="btn-11" value="POTÊCIA DE 1023"></th>
+<th><input type="button" name="btn-pot1024" class="btn-11" value="POTÊCIA DE 1024"></th>
+<th><input type="button" name="btn-pot1098" class="btn-11" value="POTÊCIA DE 1098"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot3848" class="btn-11" value="POTÊCIA DE 3848"></th>
+<th><input type="button" name="btn-pot6959" class="btn-11" value="POTÊCIA DE 6959"></th>
+<th><input type="button" name="btn-pot15998" class="btn-11" value="POTÊCIA DE 15998"></th>
+</tr>
+<tr>
+<th><input type="button" name="btn-pot33848" class="btn-11" value="POTÊCIA DE 33848"></th>
+<th><input type="button" name="btn-pot99959" class="btn-11" value="POTÊCIA DE 99959"></th>
+<th><input type="button" name="btn-pot189998" class="btn-11" value="POTÊCIA DE 189998"></th>
+ </tr>
+<tr>
+<th><input type="button" name="btn-pot338498" class="btn-11" value="POTÊCIA DE 338498"></th>
+<th><input type="button" name="btn-pot789959" class="btn-11" value="POTÊCIA DE 789959"></th>
+<th><input type="button" name="btn-pot185999889524" class="btn-12" value="POTÊCIA DE 185999889524">
+</th>
+</tr>
+<!--  fim area da potencia -->
+        <tr>
+          <th>
+          <input type="button" name="btn-e" class="btn-11" value="NUMERO NEPERIANO">
+          </th>
+          <th>
+          <input type="button" name="btn-exp" class="btn-11" value="EXPONENCIAL">
+          </th>
+          <th>
+          <input type="button" name="btn-rp" class="btn-11" value="RAIZ QUADRADA DE PI">
+     </th>
+     <tr>
+      <th>
+          <input type="button" name="btn-sen2" class="btn-11" value="SENO DE PI A 2">
+          </th>
+          <th>
+          <input type="button" name="btn-tan2" class="btn-11" value="SENO DE PI A 4">
+          </th>
+          <th>
+          <input type="button" name="btn-abs" class="btn-11" value="VALOR ABSOLUTO">
+         </th>
+       </tr>
+       <tr>
+       <th>
+          <input type="button" name="btn-asin" class="btn-10" value="SENO 2">
+         </th>
+         <th>
+          <input type="button" name="btn-acos2" class="btn-11" value="COSSENO 2">
+          </th>
+          <th>
+          <input type="button" name="btn-atan3" class="btn-11" value="TANGENTE 2">
+          </th>
+        </tr>
+
+          <tr>
+            <th>
+          <input type="button" name="btn-ceil" class="btn-10" value="CEIL">
+           </th>
+           <th>
+          <input type="button" name="btn-copy" class="btn-11" value="VALOR COPY SIGN">
+           </th>
+           <th>
+          <input type="button" name="btn-cosh" class="btn-11" value="COSSENO 3">
+           </th>
+         </tr>
+
+         <tr>
+          <th>
+          <input type="button" name="btn-exp2" class="btn-11" value="EXPONENCIAL 2">
+           </th>
+           <th>
+          <input type="button" name="btn-floor" class="btn-11" value=" VALOR REAL ">
+           </th>
+           <th>
+          <input type="button" name="btn-hypot" class="btn-11" value="HYPOTENUSA">
+           </th>
+         </tr>
+
+          <tr>
+            <th>
+          <input type="button" name="btn-ieee" class="btn-11" value="IEEE REMAINDER">
+           </th>
+           <th>
+          <input type="button" name="btn-max" class="btn-11" value="VALOR MÁXIMO">
+           </th>
+           <th>
+          <input type="button" name="btn-min" class="btn-11" value="VALOR MÍNIMO">
+           </th>
+         </tr>
+
+         <tr>
+          <th>
+          <input type="button" name="btn-next1" class="btn-11" value="NEXT AFTER">
+           </th>
+           <th>
+          <input type="button" name="btn-next2" class="btn-11" value="VALOR ACIMA">
+           </th>
+           <th>
+          <input type="button" name="btn-alea" class="btn-11" value="VALOR ALEATÓRIO">
+            </th>
+          </tr>
+
+          <tr>
+            <th>
+          <input type="button" name="btn-rint" class="btn-11" value="VALOR RINT">
+            </th>
+            <th>
+          <input type="button" name="btn-round" class="btn-11" value="VALOR ROUND">
+            </th>
+            <th>
+          <input type="button" name="btn-scalb" class="btn-11" value="VALOR SCALB">
+         </th>
+       </tr>
+       <tr>
+        <th>
+
+          <input type="button" name="btn-signum" class="btn-11" value="VALOR SIGNUM">
+            </th>
+            <th>
+          <input type="button" name="btn-sinh" class="btn-11" value="SENO 3">
+            </th>
+            <th>
+          <input type="button" name="btn-tanh" class="btn-11" value="TANGENTE 3">
+           </th>
+         </tr>
+
+         <tr>
+          <th>
+          <input type="button" name="btn-to" class="btn-11" value="VALOR TO DEGRESS">
+            </th>
+            <th>
+          <input type="button" name="btn-rad" class="btn-11" value="VALOR RADIANO">
+           </th>
+           <th>
+          <input type="button" name="btn-ulp" class="btn-11" value="VALOR ULP">
+           </th>
+         </tr>
+ 
+ <tr>
+   <th>
+       <input type="button" name="btn-ra" class="btn-11" value="RAIZ QUADRADA DE 1/2">
+   </th>
+ <th>
+       <input type="button" name="btn-ra2" class="btn-14" value="CIRCUNFERÊNCIA A POTÊNCIA 2">
+   </th>
+
+    <th>
+       <input type="button" name="btn-potencia" class="btn-11" value="SOMAR POTÊCIA 2 e 3">
+   </th>
+  
+ </tr>
+       
+
+
+         <tr>
+   <th>
+       <input type="button" name="btn-multi" class="btn-13" value="MULTIPLICAR POTÊCIA 2,3 E 8">
+   </th>
+ <th>
+       <input type="button" name="btn-ra5" class="btn-13" value="RAIZ QUADRADA DA CÚBICA">
+   </th>
+
+    <th>
+    <input type="button" name="btn-ex" class="btn-14" value="EXPONENCIAL DA RAIZ QUADRADA">
+   </th>
+  
+ </tr>
+
+
+ <tr>
+   
+   <th>
+      <input type="button" name="btn-log3" class="btn-13" value="LOGARITMO DA EXPONENCIAL">
+   </th>
+
+   <th>
+      <input type="button" name="btn-di" class="btn-13" value="DIVIDIR POTÊNCIA 16 PARA 2">
+   </th>
+
+      <th>
+      <input type="button" name="btn-ra6" class="btn-15" value="RAIZ QUADRADA DA RAIZ QUADRADA DE 1/2">
+   </th>
+
+ </tr>
+    </section>
+  </div>
+</table>
+
+  
+  </div>
+
+     
+ </body>  
+ </html>    

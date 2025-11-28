@@ -1,0 +1,1331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <html>
+  <html lang="en">
+  <head>
+    <title>calculadora</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+<meta name="GENERATOR" content="Microsoft SharePoint" />
+
+<meta name="progid" content="SharePoint.WebPartPage.Document" />
+<meta http-equiv="Expires" content="0" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="viewport" content="width=800px,initial-scale=1">
+<meta name="keywords" content="calculadora"/>
+
+<meta name="description" content="calculadora "/>
+                    
+<meta name="robots" content="index, follow"/>
+                    
+
+<meta name="HandheldFriendly" content="True"/>
+                   
+<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+
+<meta property="og:title" content="calculadora"/>
+
+<meta property="og:description" content="calculadora "/>
+
+<meta property="og:url" content="calculadora"/>
+
+<meta property="og:site_name" content="calculadora"/>
+
+<meta property="fb:app_id" content="1573751922880959"/>
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+   <link rel="stylesheet" href="https://v40.pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css" media="screen"> 
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+foodgroup = new Array;
+
+function food(name,choper,protper,fatper,kcalper,namgper,kmgper)
+{
+   this.name=name;
+   this.servings=0;
+   this.choper=choper;
+   this.protper=protper;
+   this.fatper=fatper;
+   this.kcalper=kcalper;
+   this.namgper=namgper;
+   this.kmgper=kmgper;
+   this.cho=1;
+   this.prot=0;
+   this.fat=0;
+   this.kcal=0;
+   this.namg=0;
+   this.kmg=0;
+}
+
+function setup()
+{
+// LUNCH Appetizers and Soups
+
+   foodgroup[1]=new food("Apple Juice",15,0,0,59,0,125);
+   foodgroup[2]=new food("Tomato Juice",8,0,0,36,570,268);
+foodgroup[3]=new food("Low-Salt V8",8.2,1.6,0.1,36,44,431);
+foodgroup[4]=new food("Beef Consumme",1,1,1,18,300,12);
+foodgroup[5]=new food("Chicken Consumme",1,1,1,18,300,8);
+foodgroup[6]=new food("Veg. Vegetable Soup",10,1,2,62,270,297);
+foodgroup[7]=new food("Chix Noodle Soup",10,4,2,74,413,57);
+foodgroup[8]=new food("Broccoli Cheese Soup",12,15,20,288,543,287);
+foodgroup[9]=new food("Chicken Rice Soup",5,2,1,51,808,54);
+foodgroup[10]=new food("Cream of Mushroom",7,1,6,110,910,84);
+foodgroup[11]=new food("Low-Salt Cream of Mushroom",9,2,8,118,24,89);
+foodgroup[12]=new food("Tomato Soup",20,2,1,106,790,283);
+foodgroup[13]=new food("Low-Salt Tomato Soup",22,0,3,140,28,380);
+foodgroup[14]=new food("Crackers",8,1,1,45,125,14);
+foodgroup[15]=new food("Low-Salt Crackers",14,2,2,82,5,10);
+foodgroup[16]=new food("C&C Plate-4 crax",10,2,3,75,119,38);
+foodgroup[17]=new food("-1 oz cheese",1,7,7,95,388,61);
+foodgroup[18]=new food("-grapes-80gms",10,0,0,40,4,66);
+
+//Lunch Entrees - Daily Specials
+foodgroup[19]=new food("Baked Shrimp 3 each",0.6,12.8,1.1,68,95,117);
+foodgroup[20]=new food("BBQ Chicken Breast 100gm",9.8,31.6,3.8,200,111,406);
+foodgroup[21]=new food("Beef Burgundy 100gm",11.1,32.5,13,291,518,651);
+foodgroup[22]=new food("Beef Kabob ",3,29,9.4,216,66,562);
+foodgroup[23]=new food("Beef Stew 90gm",17,30,20,368,370,345);
+foodgroup[24]=new food("Beef Teriyaki 90gm",1,23,8,168,364,320);
+foodgroup[25]=new food("Breaded Scallops 90gm",32,26,5,279,217,437);
+foodgroup[26]=new food("Brisket 90gm",0,18,39,423,55,299);
+foodgroup[27]=new food("Cajun Chicken Breast",4.5,32.8,9,230,840,310);
+
+//Hot Entrees
+foodgroup[28]=new food("Healthy Lasagna",23,15,5,197,315,555);
+foodgroup[29]=new food("LF Veg. Burger",12,17,3.5,148,390,200);
+foodgroup[30]=new food("Chix Breast-100gm",0.5,29,9,199,310,300);
+foodgroup[31]=new food("Roast Turkey-90gm",0,19.1,3,105,413,373);
+foodgroup[32]=new food("Salmon Filet-90gm",0,34,13,253,107,514);
+foodgroup[33]=new food("Baked Scrod-100gm",0,28,6,166,111,407);
+foodgroup[34]=new food("Chix PotPie ",33,27,26,474,315,225);
+foodgroup[35]=new food("-filling only",11,24,9,221,314,198);
+foodgroup[36]=new food("-crust only",22,3,17,253,1,27);
+foodgroup[37]=new food("Spaghetti-100gm",27,5,1,137,1,72);
+foodgroup[38]=new food("-Spaghetti sauce",11,2,0,52,390,450);
+foodgroup[39]=new food("-Meatballs-100gm",8,23,19,295,207,370);
+foodgroup[40]=new food("Parmesean cheese",0,2,2,26,44,9);
+foodgroup[41]=new food("Tenderloin Steak",0,33,10,222,82,372);
+foodgroup[42]=new food("Mac and Cheese",34.7,20.5,27.5,469,562,257);
+foodgroup[43]=new food("Grill Cheese",26,14,27,403,921,128);
+foodgroup[44]=new food("-on wheat",28,20,28,444,1083,268);
+foodgroup[45]=new food("Hamburger",3.6,15.2,13.8,230,406,0);
+foodgroup[46]=new food("-Hamburger Roll",20,3,2,110,241,37);
+foodgroup[47]=new food("-Cheese slice",0.5,4.7,6.7,81,323,29);
+foodgroup[48]=new food("Cheese Pizza ",46,15,24,450,740,222);
+foodgroup[49]=new food("Fries-100gm",24,2,12,212,430,255);
+
+
+//Gravies
+foodgroup[50]=new food("Country Herb Gravy",2,1,2,30,158,5);
+foodgroup[51]=new food("Dill Sauce",2,1,1,21,42,728);
+foodgroup[52]=new food("Mushroom Gravy",2,0.5,2,28,165,70);
+
+//Cold Deli Entrees 
+foodgroup[53]=new food("Tuna Salad 120 gm",1,21,11,187,809,0);
+foodgroup[54]=new food("Low Sodium Tuna Salad 120 gm.",9.6,21,3,150,389,277);
+foodgroup[55]=new food("Shrimp Salad 90 gm.",7,21,2.7,136,135,206);
+foodgroup[56]=new food("Turkey Breast 90 gm.",0,19.1,3.2,105,413,216);
+foodgroup[57]=new food("Chicken Salad 120 gm",6.6,28,16,282,306,373);
+foodgroup[58]=new food("Roast Beef 90 gm",0,18,1.5,86,493,278);
+foodgroup[59]=new food("American Cheese",0.5,4.7,6.7,81,332,29);
+
+//Small Salads								
+foodgroup[60]=new food("Small Garden Salad-100gm",2,1,0,12,6,150);
+foodgroup[61]=new food("Tomato Slices on Lett.",3,1,0,16,3,159);
+foodgroup[62]=new food("Cottage Cheese",4,14,1,90,370,100);
+
+//Dressings and Condiments
+foodgroup[63]=new food("Oil and Vinegar",1,0,15,139,0,20);
+foodgroup[64]=new food("French Dressing",3,0,6,66,219,13);
+foodgroup[65]=new food("Creamy Italian",1,0,7,67,98,9);
+foodgroup[66]=new food("F.F.Ranch Dressing",4,0,0,16,125,0);
+foodgroup[67]=new food("F.F. Thousand Isl.",4,0,0,16,105,0);
+foodgroup[68]=new food("Ketchup",3,0,0,12,104,36);
+foodgroup[69]=new food("Mustard",0.3,0.2,0.2,4,63,7);
+foodgroup[70]=new food("Relish",3,0,0,12,84,8);
+foodgroup[71]=new food("Tartar Sauce",1,0,6,58,77,9);
+foodgroup[72]=new food("Mayonnaise",0,0,8,72,60,4);
+foodgroup[73]=new food("Low-Fat/Salt Mayo",1,2,1,20,30,0);
+foodgroup[74]=new food("Cranberry Sauce",5,0,0,20,0,4);
+foodgroup[75]=new food("LoCal Cran Sauce",1,0,0,4,14,2);
+//starches
+foodgroup[76]=new food("Noodles",25,4,1,125,0,0);
+foodgroup[77]=new food("Whipped Potatoes 100gm",14,2,4,100,256,289);
+foodgroup[78]=new food("Baked Potato 1/2 with Sour Cream ",16,2,3,99,3,390);
+foodgroup[79]=new food("-Sour Cream ",1,1,4,44,14,43);
+foodgroup[80]=new food("Peas 100gm",12,5,0,68,115,135);
+foodgroup[81]=new food("Broccoli 100gm",5,3,0,32,13,219);
+foodgroup[82]=new food("Carrot Coins 100gm",7,1,0,32,33,222);
+foodgroup[83]=new food("Whipped Squash 100gm",16,1.6,0,63,168,186);
+//bread
+foodgroup[84]=new food("Whole Wheat Bread 37g",14,4,2,90,160,55);
+foodgroup[85]=new food("Rye Bread 28g",15,3,0,72,156,40);
+foodgroup[86]=new food("White Bread 20g",13,2,0,60,99,24);
+foodgroup[87]=new food("Low Sodium White Bread 29g",13,3,1,73,13,83);
+foodgroup[88]=new food("Syrian Bread 1/2 pouch",20,3,1,99,203,44);
+//desserts
+foodgroup[89]=new food("Apple (2 3/4 in diam.) I med",20,0,1,89,1,152);
+foodgroup[90]=new food("Orange (navel) 1 med",18,2,0,80,1,272);
+foodgroup[91]=new food("Banana (7in) 1 small",17,1,0,72,1,288);
+foodgroup[92]=new food("Applesauce -carbotrol 100gm",11,0,0,44,10,78);
+foodgroup[93]=new food("Pineapple -carbotrol 100gm",11,0,0,44,10,150);
+foodgroup[94]=new food("Peaches - carbotrol 100gm",10,0,0,40,10,130);
+foodgroup[95]=new food("Gelatin 1/2 c",16,1,0,70,55,91);
+foodgroup[96]=new food("Low Cal Gelatin 1/2 c",0,2,1,10,0,36);
+foodgroup[97]=new food("Tapioca 100gm",17,5,5,133,155,135);
+foodgroup[98]=new food("Whipped Topping 15g",3,0,4,48,9,0);
+foodgroup[99]=new food("Custartd 1/2 c",20,6,4,140,130,190);
+foodgroup[100]=new food("LF- Low Cal Custard (fructose) 1/2c",15,6,0,84,110,0);
+foodgroup[101]=new food("LF,sugar free Choc. Pudding 130g",15,5,0,80,100,440);
+foodgroup[102]=new food("Angel Cake 45g",27,3,0,120,127,40);
+foodgroup[103]=new food("Pound Cake (1/8th) 60g",29,3,13,245,205,84);
+foodgroup[104]=new food("Carrot Cake (1/16th) 120g",51,7.5,30,504,495,0);
+foodgroup[105]=new food("Chocolate Chip Cookies 2",33,3,11,243,231,59);
+foodgroup[106]=new food("Low Cal Fruit Sorbet 3oz",5,0,0,20,30,45);
+foodgroup[107]=new food("Raspberry Sherbet 90g",27,1,0,112,88,93);
+foodgroup[108]=new food("Lemon Italian Ice 6oz",26,0,0,104,1.5,0);
+foodgroup[109]=new food("Orange Water Ice 90g",30,0,0,120,0,9);
+foodgroup[110]=new food("Chocolate Ice Cream 4oz",18,2,7,140,29,128);
+foodgroup[111]=new food("Blueberry NF Yogurt",42,8,0,200,133,442);
+foodgroup[112]=new food("Vanilla NF Yogurt",30,10,0,160,130,323);
+foodgroup[113]=new food("SF, NF Mixed Berry Yogurt",15,8,0.5,100,110,0);
+//beverages
+foodgroup[114]=new food("Skim Milk-8oz",13,8,0,90,125,355);
+foodgroup[115]=new food("Low-Fat Milk-8oz",13,8,2.5,110,125,381);
+foodgroup[116]=new food("Whole Milk-8oz",12,8,8,150,120,351);
+foodgroup[117]=new food("LF Chocolate Milk-8oz",32,8,2.5,180,135,426);
+foodgroup[118]=new food("Lactaid Milk-4oz",13,9,0,88,130,381);
+foodgroup[119]=new food("Lemonade 120cc",13,0,0,52,0,19);
+foodgroup[120]=new food("Ice Tea 120cc",1,0,0,4,5,66);
+foodgroup[121]=new food("Coffee-8oz",0,0,0,2.4,4.7,116);
+foodgroup[122]=new food("Cocoa-1pkg",20,4,3,123,115,174);
+foodgroup[123]=new food("Diet Cocoa-1pkg",9,2,1,58,135,405);
+//Condiments
+foodgroup[124]=new food("Salt Packet",0,0,0,0,500,0);
+foodgroup[125]=new food("Sugar",4,0,0,16,0,0);
+foodgroup[126]=new food("Sugar Substitute",1,0,0,4,0,0);
+foodgroup[127]=new food("Creamer",1,1,3,35,6,18);
+foodgroup[128]=new food("Non-dairy creamer",1.6,0,1.1,17,3.8,8);
+foodgroup[129]=new food("1 oz Whole Milk",1.5,1,1,19,15,44);
+foodgroup[130]=new food("Butter",0,0,4,36,47,1);
+foodgroup[131]=new food("Margarine",0,0,4,36,42,1);
+foodgroup[132]=new food("Low-Salt Margarine",0,0,4,36,10,1);
+foodgroup[133]=new food("Lemon Juice 1 tsp",1,0,0,4,3,15);
+foodgroup[134]=new food("Strawberry Jam",9.4,0.1,0,38,9,13);
+foodgroup[135]=new food("Jelly",9.3,0,0,37,8,8);
+foodgroup[136]=new food("LoCal Jelly",2,0,0,8,3,29);
+foodgroup[137]=new food("Peanutbutter",3.1,3.8,7.8,98,75,98);
+foodgroup[138]=new food("Honey",12,0,0,48,1,7);
+
+//Special Frappes	
+foodgroup[139]=new food("Chocolate PNB Frappe-240cc",54,15,20,456,290,708);
+foodgroup[140]=new food("CIB with Enriched Milk-220cc",52,16,11,372,314,819);
+foodgroup[141]=new food("Cocoa Frappe (low sugar)-240cc",23,14,10,238,435,846);
+foodgroup[142]=new food("Cocoa Eggnog Frappe-225cc",60,12,12,396,241,559);
+foodgroup[143]=new food("Coffee Frappe-240 cc",24,13,11,247,216,699);
+foodgroup[144]=new food("Cream Frappe-230 cc",36,6,32,456,122,316);
+foodgroup[145]=new food("Fat-free Frappe-180 cc",48,5,0,212,90,241);
+foodgroup[146]=new food("Lemonade Frappe-120mL",15,2,5,107,48,130);
+foodgroup[147]=new food("Low Lactose Frappe-180cc",48,5,1,221,98,253);
+foodgroup[148]=new food("Low Pro/Low K Frappe-150cc",47,0,2,206,26,53);
+foodgroup[149]=new food("Mocha Ensure+ Frappe-250cc",67,17,11,482,365,697);
+foodgroup[150]=new food("Peach Melba Frappe-120mL",18,3,2,100,48,173);
+foodgroup[151]=new food("Raspberry Ensure+ Frappe-200cc",51,8,7,285,213,323);
+foodgroup[152]=new food("Sherbert Frappe-170cc",42,2,2,194,43,338);
+
+//Supplements								
+foodgroup[153]=new food("NuBasic Tomato/crm Soup",33.1,8.75,9.2,250,660,310);
+foodgroup[154]=new food("Nutrihep",69.6,9.6,5.04,240,76.8,316.8);
+foodgroup[155]=new food("Polycose",15,0,0,60,21,0);
+foodgroup[156]=new food("Promod",0.67,5,0.6,28,15,65);
+foodgroup[157]=new food("Sysco Food Thickener",4,0,0,15,5,0);
+foodgroup[158]=new food("Vanilla Nutrashake",47,9,9,300,83,335);
+foodgroup[159]=new food("Vegetable Oil 8.1 cal/cc",0,0,27,243,0,0);
+
+   for (x=1;x<foodgroup.length;x++)
+   {   adjust(x);   }
+}
+
+var working=true;
+
+function calc()
+{
+   setup();
+}
+
+function adjust(x)
+{
+   foodgroup[x].servings=0;
+
+   foodgroup[x].cho= foodgroup[x].servings*foodgroup[x].choper;
+   foodgroup[x].prot=foodgroup[x].servings*foodgroup[x].protper;
+   foodgroup[x].fat= foodgroup[x].servings*foodgroup[x].fatper;
+   foodgroup[x].kcal=foodgroup[x].servings*foodgroup[x].kcalper;
+   foodgroup[x].namg=foodgroup[x].servings*foodgroup[x].namgper;
+   foodgroup[x].kmg= foodgroup[x].servings*foodgroup[x].kmgper;
+
+   document.diet.name[x-1].value=foodgroup[x].name;
+   document.diet.cho[x-1].value=foodgroup[x].cho;
+   document.diet.prot[x-1].value=foodgroup[x].prot;
+   document.diet.fat[x-1].value=foodgroup[x].fat;
+   document.diet.kcal[x-1].value=foodgroup[x].kcal;
+   document.diet.na[x-1].value=foodgroup[x].namg;
+   document.diet.k[x-1].value=foodgroup[x].kmg;
+
+}
+
+function adjust1(x)
+{
+   foodgroup[x].servings=document.diet.oneserving[x-1].value;
+
+   foodgroup[x].cho= foodgroup[x].servings*foodgroup[x].choper;
+   foodgroup[x].prot=foodgroup[x].servings*foodgroup[x].protper;
+   foodgroup[x].fat= foodgroup[x].servings*foodgroup[x].fatper;
+   foodgroup[x].kcal=foodgroup[x].servings*foodgroup[x].kcalper;
+   foodgroup[x].namg=foodgroup[x].servings*foodgroup[x].namgper;
+   foodgroup[x].kmg= foodgroup[x].servings*foodgroup[x].kmgper;
+
+   document.diet.name[x-1].value=foodgroup[x].name;
+   document.diet.cho[x-1].value=foodgroup[x].cho;
+   document.diet.prot[x-1].value=foodgroup[x].prot;
+   document.diet.fat[x-1].value=foodgroup[x].fat;
+   document.diet.kcal[x-1].value=foodgroup[x].kcal;
+   document.diet.na[x-1].value=foodgroup[x].namg;
+   document.diet.k[x-1].value=foodgroup[x].kmg;
+   findtotal();
+}
+
+function findtotal()
+{
+    brkcho=0;
+    brkprot=0;
+    brkfat=0;
+    brkkcal=0;
+    brkna=0;
+    brkk=0;
+    LastBreakFastNum = 159;
+
+    luncho=0;
+    lunprot=0;
+    lunfat=0;
+    lunkcal=0;
+    lunna=0;
+    lunk=0;
+    LastLunchNum = 40;
+
+    dincho=0;
+    dinprot=0;
+    dinfat=0;
+    dinkcal=0;
+    dinna=0;
+    dink=0;
+
+    totcho=0;
+    totprot=0;
+    totfat=0;
+    totkcal=0;
+    totna=0;
+    totk=0;
+  var txt = new String(window.location);
+
+var txt2 = txt.length;
+
+var startpos = txt.indexOf("?") + 1;
+
+var txt3 = txt.substring(startpos, txt.length);
+
+for(var i=0; i < 6; i++) {
+  eval(txt3.substring(0, txt3.indexOf("&")));
+  txt3 = txt3.substring(txt3.indexOf("&") + 1, txt3.length);
+}
+  eval(txt3.substring(0, txt3.length));
+   
+    for (j=1;j<foodgroup.length;j++)
+    {
+     if (j>=1 && j<=LastBreakFastNum) {
+       brkcho=brkcho+foodgroup[j].cho;
+       brkprot=brkprot+foodgroup[j].prot;
+       brkfat=brkfat+foodgroup[j].fat;
+       brkkcal=brkkcal+foodgroup[j].kcal;
+       brkna=brkna+foodgroup[j].namg;
+       brkk=brkk+foodgroup[j].kmg;
+     }
+
+     if (j>LastBreakFastNum && j<=LastLunchNum) {
+       luncho=luncho+foodgroup[j].cho;
+       lunprot=lunprot+foodgroup[j].prot;
+       lunfat=lunfat+foodgroup[j].fat;
+       lunkcal=lunkcal+foodgroup[j].kcal;
+       lunna=lunna+foodgroup[j].namg;
+       lunk=lunk+foodgroup[j].kmg;
+     }
+
+     if (j>LastLunchNum && j<foodgroup.length) {
+       dincho=dincho+foodgroup[j].cho;
+       dinprot=dinprot+foodgroup[j].prot;
+       dinfat=dinfat+foodgroup[j].fat;
+       dinkcal=dinkcal+foodgroup[j].kcal;
+       dinna=dinna+foodgroup[j].namg;
+       dink=dink+foodgroup[j].kmg;
+     }
+       totcho=totcho+foodgroup[j].cho;
+       totprot=totprot+foodgroup[j].prot;
+       totfat=totfat+foodgroup[j].fat;
+       totkcal=totkcal+foodgroup[j].kcal;
+       totna=totna+foodgroup[j].namg;
+       totk=totk+foodgroup[j].kmg;
+
+
+       document.diet2.totcho.value=Math.round(totcho*100)/100;
+       document.diet2.totprot.value=Math.round(totprot*100)/100;
+       document.diet2.totfat.value=Math.round(totfat*100)/100;
+       document.diet2.totkcal.value=Math.round(totkcal*100)/100;
+       document.diet2.totna.value=Math.round(totna*100)/100;
+       document.diet2.totk.value=Math.round(totk*100)/100;
+
+    }
+}
+
+<!--  End Javascript  -->
+</SCRIPT>
+
+</HEAD>
+
+<BODY bgcolor="#FFFFFF" onload="calc();">
+<form name="diet">
+<CENTER>
+
+
+
+<H2 align=center><a name="LUNCH:_APPETIZERS_&amp;_SOUPS">LUNCH: APPETIZERS &amp; SOUPS</a><br>
+<font size="2"><a href="#LUNCH:_APPETIZERS_&_SOUPS">Apps/Soups </a>,
+<a href="#LUNCH:_DAILY_SPECIALS">Daily Specials</a> ,<a href="#BREAKFAST:_ENTREES"> 
+</a><a href="#LUNCH:_ENTREES-HOT">Entrees-HOT </a>, <a href="#LUNCH:_GRAVIES">Gravies</a> , 
+<a href="#LUNCH:_ENTREES-COLD">Entrees-COLD</a> , <a href="#LUNCH:_SMALL_SALADS">Small Salads</a> , 
+<a href="#LUNCH:_DRESSINGS">Dressings</a> , 
+<a href="#LUNCH:_STARCHES/VEGETABLES_">Starches/Veg</a> 
+, <a href="#LUNCH:_BREAD">Breads ,</a> <a href="#LUNCH:_DESSERTS">Desserts</a> , 
+<a href="#LUNCH:_BEVERAGES">Beverages</a> , <a href="#LUNCH:_CONDIMENTS_">Condiments</a> , 
+<a href="#LUNCH:_SPECIAL_FRAPPES">Frappes </a>,
+<a href="#LUNCH:_SUPPLEMENTS">Supplements</a><br>
+<a href="#Totals">TOTALS</a></font></H2>
+
+<TABLE  border=1 bgcolor="#006699" align=center cellspacing=0>
+<TR align=center>
+<Td bgcolor="#006699"> <font color="#FFFFFF">Food</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">Servings</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">CHO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">PRO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">FAT(g)</font></Td>
+<TD bgcolor="#006699" >
+<font color="#FFFFFF">Kcal</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">Na+</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">K+</font></Td>
+</TR>
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+for (i=1;i<19;i++)
+{
+	document.write("<TR align=center><TD >");
+	document.write("<input type='text' name='name' value='' size=30><\/Td><TD >");
+
+	document.write("<SELECT name='oneserving' onchange='adjust1(",i,")' >");
+	document.write("<OPTION value='0' selected> 0	");
+	document.write("<OPTION value='0.25'> 0.25");
+	document.write("<OPTION value='0.50'> 0.50");
+	document.write("<OPTION value='0.75'> 0.75");
+	document.write("<OPTION value='1.0'> 1.0");
+	document.write("<OPTION value='1.5'> 1.5");
+	document.write("<OPTION value='2.0'> 2.0");
+	document.write("<OPTION value='3.0'> 3.0");
+	document.write("<OPTION value='4.0'> 4.0");
+	document.write("<OPTION value='4.5'> 4.5");
+	document.write("<OPTION value='5.0'> 5.0");
+	document.write("<OPTION value='5.5'> 5.5");
+	document.write("<OPTION value='6.0'> 6.0");
+	document.write("<\/SELECT>");
+	document.write("<\/Td><TD>");
+	document.write("<input type='text' name='cho' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='prot'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='fat'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='kcal' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='na'   value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='k'    value=''  size=4><\/Td><TD >");
+	document.write("<\/Td><\/TR>");
+}
+<!--  End Javascript  -->
+</SCRIPT>
+
+</TABLE>
+
+
+<H2 align=center><a name="LUNCH:_DAILY_SPECIALS">LUNCH: DAILY SPECIALS</a><br>
+<font size="2"><a href="#LUNCH:_APPETIZERS_&_SOUPS">Apps/Soups </a>,
+<a href="#LUNCH:_DAILY_SPECIALS">Daily Specials</a> ,<a href="#BREAKFAST:_ENTREES"> 
+</a><a href="#LUNCH:_ENTREES-HOT">Entrees-HOT </a>, <a href="#LUNCH:_GRAVIES">Gravies</a> , 
+<a href="#LUNCH:_ENTREES-COLD">Entrees-COLD</a> , <a href="#LUNCH:_SMALL_SALADS">Small Salads</a> , 
+<a href="#LUNCH:_DRESSINGS">Dressings</a> , 
+<a href="#LUNCH:_STARCHES/VEGETABLES_">Starches/Veg</a> 
+, <a href="#LUNCH:_BREAD">Breads ,</a> <a href="#LUNCH:_DESSERTS">Desserts</a> , 
+<a href="#LUNCH:_BEVERAGES">Beverages</a> , <a href="#LUNCH:_CONDIMENTS_">Condiments</a> , 
+<a href="#LUNCH:_SPECIAL_FRAPPES">Frappes </a>,
+<a href="#LUNCH:_SUPPLEMENTS">Supplements</a><br>
+<a href="#Totals">TOTALS</a></font></H2>
+<TABLE  border=1 bgcolor="#006699" align=center cellspacing=0>
+<TR align=center>
+<Td bgcolor="#006699"> <font color="#FFFFFF">Food</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">Servings</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">CHO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">PRO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">FAT(g)</font></Td>
+<TD bgcolor="#006699" >
+<font color="#FFFFFF">Kcal</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">Na+</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">K+</font></Td>
+</TR>
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+//LUNCH
+
+for (i=19;i<28;i++)
+{
+	document.write("<TR align=center><TD >");
+	document.write("<input type='text' name='name' value='' size=30><\/Td><TD >");
+
+	document.write("<SELECT name='oneserving' onchange='adjust1(",i,")' >");
+	document.write("<OPTION value='0' selected> 0	");
+	document.write("<OPTION value='0.25'> 0.25");
+	document.write("<OPTION value='0.50'> 0.50");
+	document.write("<OPTION value='0.75'> 0.75");
+	document.write("<OPTION value='1.0'> 1.0");
+	document.write("<OPTION value='1.5'> 1.5");
+	document.write("<OPTION value='2.0'> 2.0");
+	document.write("<OPTION value='3.0'> 3.0");
+	document.write("<OPTION value='4.0'> 4.0");
+	document.write("<OPTION value='4.5'> 4.5");
+	document.write("<OPTION value='5.0'> 5.0");
+	document.write("<OPTION value='5.5'> 5.5");
+	document.write("<OPTION value='6.0'> 6.0");
+	document.write("<\/SELECT>");
+	document.write("<\/Td><TD>");
+	document.write("<input type='text' name='cho' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='prot'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='fat'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='kcal' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='na'   value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='k'    value=''  size=4><\/Td><TD >");
+	document.write("<\/Td><\/TR>");
+}
+<!--  End Javascript  -->
+</SCRIPT>
+
+</TABLE>
+
+
+<H2 align=center><a name="LUNCH:_ENTREES-HOT">LUNCH: ENTREES-HOT</a><br>
+<font size="2"><a href="#LUNCH:_APPETIZERS_&_SOUPS">Apps/Soups </a>,
+<a href="#LUNCH:_DAILY_SPECIALS">Daily Specials</a> ,<a href="#BREAKFAST:_ENTREES"> 
+</a><a href="#LUNCH:_ENTREES-HOT">Entrees-HOT </a>, <a href="#LUNCH:_GRAVIES">Gravies</a> , 
+<a href="#LUNCH:_ENTREES-COLD">Entrees-COLD</a> , <a href="#LUNCH:_SMALL_SALADS">Small Salads</a> , 
+<a href="#LUNCH:_DRESSINGS">Dressings</a> , 
+<a href="#LUNCH:_STARCHES/VEGETABLES_">Starches/Veg</a> 
+, <a href="#LUNCH:_BREAD">Breads ,</a> <a href="#LUNCH:_DESSERTS">Desserts</a> , 
+<a href="#LUNCH:_BEVERAGES">Beverages</a> , <a href="#LUNCH:_CONDIMENTS_">Condiments</a> , 
+<a href="#LUNCH:_SPECIAL_FRAPPES">Frappes </a>,
+<a href="#LUNCH:_SUPPLEMENTS">Supplements</a><br>
+<a href="#Totals">TOTALS</a></font></H2>
+
+
+<TABLE  border=1 bgcolor="#006699" align=center cellspacing=0>
+<TR align=center>
+<Td bgcolor="#006699"> <font color="#FFFFFF">Food</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">Servings</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">CHO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">PRO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">FAT(g)</font></Td>
+<TD bgcolor="#006699" >
+<font color="#FFFFFF">Kcal</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">Na+</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">K+</font></Td>
+</TR>
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+//Dinner
+
+for (i=28;i<50;i++)
+{
+	document.write("<TR align=center><TD >");
+	document.write("<input type='text' name='name' value='' size=30><\/Td><TD >");
+
+	document.write("<SELECT name='oneserving' onchange='adjust1(",i,")' >");
+	document.write("<OPTION value='0' selected> 0	");
+	document.write("<OPTION value='0.25'> 0.25");
+	document.write("<OPTION value='0.50'> 0.50");
+	document.write("<OPTION value='0.75'> 0.75");
+	document.write("<OPTION value='1.0'> 1.0");
+	document.write("<OPTION value='1.5'> 1.5");
+	document.write("<OPTION value='2.0'> 2.0");
+	document.write("<OPTION value='3.0'> 3.0");
+	document.write("<OPTION value='4.0'> 4.0");
+	document.write("<OPTION value='4.5'> 4.5");
+	document.write("<OPTION value='5.0'> 5.0");
+	document.write("<OPTION value='5.5'> 5.5");
+	document.write("<OPTION value='6.0'> 6.0");
+	document.write("<\/SELECT>");
+	document.write("<\/Td><TD>");
+	document.write("<input type='text' name='cho' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='prot'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='fat'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='kcal' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='na'   value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='k'    value=''  size=4><\/Td><TD >");
+	document.write("<\/Td><\/TR>");
+}
+<!--  End Javascript  -->
+</SCRIPT>
+
+</TABLE>
+<H2 align=center><a name="LUNCH:_GRAVIES">LUNCH: GRAVIES</a><br>
+<font size="2"><a href="#LUNCH:_APPETIZERS_&_SOUPS">Apps/Soups </a>,
+<a href="#LUNCH:_DAILY_SPECIALS">Daily Specials</a> ,<a href="#BREAKFAST:_ENTREES"> 
+</a><a href="#LUNCH:_ENTREES-HOT">Entrees-HOT </a>, <a href="#LUNCH:_GRAVIES">Gravies</a> , 
+<a href="#LUNCH:_ENTREES-COLD">Entrees-COLD</a> , <a href="#LUNCH:_SMALL_SALADS">Small Salads</a> , 
+<a href="#LUNCH:_DRESSINGS">Dressings</a> , 
+<a href="#LUNCH:_STARCHES/VEGETABLES_">Starches/Veg</a> 
+, <a href="#LUNCH:_BREAD">Breads ,</a> <a href="#LUNCH:_DESSERTS">Desserts</a> , 
+<a href="#LUNCH:_BEVERAGES">Beverages</a> , <a href="#LUNCH:_CONDIMENTS_">Condiments</a> , 
+<a href="#LUNCH:_SPECIAL_FRAPPES">Frappes </a>,
+<a href="#LUNCH:_SUPPLEMENTS">Supplements</a><br>
+<a href="#Totals">TOTALS</a></font></H2>
+
+
+<TABLE  border=1 bgcolor="#006699" align=center cellspacing=0>
+<TR align=center>
+<Td bgcolor="#006699"> <font color="#FFFFFF">Food</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">Servings</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">CHO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">PRO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">FAT(g)</font></Td>
+<TD bgcolor="#006699" >
+<font color="#FFFFFF">Kcal</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">Na+</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">K+</font></Td>
+</TR>
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+//Dinner
+
+for (i=50;i<53;i++)
+{
+	document.write("<TR align=center><TD >");
+	document.write("<input type='text' name='name' value='' size=30><\/Td><TD >");
+
+	document.write("<SELECT name='oneserving' onchange='adjust1(",i,")' >");
+	document.write("<OPTION value='0' selected> 0	");
+	document.write("<OPTION value='0.25'> 0.25");
+	document.write("<OPTION value='0.50'> 0.50");
+	document.write("<OPTION value='0.75'> 0.75");
+	document.write("<OPTION value='1.0'> 1.0");
+	document.write("<OPTION value='1.5'> 1.5");
+	document.write("<OPTION value='2.0'> 2.0");
+	document.write("<OPTION value='3.0'> 3.0");
+	document.write("<OPTION value='4.0'> 4.0");
+	document.write("<OPTION value='4.5'> 4.5");
+	document.write("<OPTION value='5.0'> 5.0");
+	document.write("<OPTION value='5.5'> 5.5");
+	document.write("<OPTION value='6.0'> 6.0");
+	document.write("<\/SELECT>");
+	document.write("<\/Td><TD>");
+	document.write("<input type='text' name='cho' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='prot'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='fat'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='kcal' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='na'   value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='k'    value=''  size=4><\/Td><TD >");
+	document.write("<\/Td><\/TR>");
+}
+<!--  End Javascript  -->
+</SCRIPT>
+
+</TABLE>
+<H2 align=center><a name="LUNCH:_ENTREES-COLD">LUNCH: ENTREES-COLD</a><br>
+<font size="2"><a href="#LUNCH:_APPETIZERS_&_SOUPS">Apps/Soups </a>,
+<a href="#LUNCH:_DAILY_SPECIALS">Daily Specials</a> ,<a href="#BREAKFAST:_ENTREES"> 
+</a><a href="#LUNCH:_ENTREES-HOT">Entrees-HOT </a>, <a href="#LUNCH:_GRAVIES">Gravies</a> , 
+<a href="#LUNCH:_ENTREES-COLD">Entrees-COLD</a> , <a href="#LUNCH:_SMALL_SALADS">Small Salads</a> , 
+<a href="#LUNCH:_DRESSINGS">Dressings</a> , 
+<a href="#LUNCH:_STARCHES/VEGETABLES_">Starches/Veg</a> 
+, <a href="#LUNCH:_BREAD">Breads ,</a> <a href="#LUNCH:_DESSERTS">Desserts</a> , 
+<a href="#LUNCH:_BEVERAGES">Beverages</a> , <a href="#LUNCH:_CONDIMENTS_">Condiments</a> , 
+<a href="#LUNCH:_SPECIAL_FRAPPES">Frappes </a>,
+<a href="#LUNCH:_SUPPLEMENTS">Supplements</a><br>
+<a href="#Totals">TOTALS</a></font></H2>
+
+
+<TABLE  border=1 bgcolor="#006699" align=center cellspacing=0>
+<TR align=center>
+<Td bgcolor="#006699"> <font color="#FFFFFF">Food</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">Servings</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">CHO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">PRO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">FAT(g)</font></Td>
+<TD bgcolor="#006699" >
+<font color="#FFFFFF">Kcal</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">Na+</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">K+</font></Td>
+</TR>
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+//Dinner
+
+for (i=53;i<60;i++)
+{
+	document.write("<TR align=center><TD >");
+	document.write("<input type='text' name='name' value='' size=30><\/Td><TD >");
+
+	document.write("<SELECT name='oneserving' onchange='adjust1(",i,")' >");
+	document.write("<OPTION value='0' selected> 0	");
+	document.write("<OPTION value='0.25'> 0.25");
+	document.write("<OPTION value='0.50'> 0.50");
+	document.write("<OPTION value='0.75'> 0.75");
+	document.write("<OPTION value='1.0'> 1.0");
+	document.write("<OPTION value='1.5'> 1.5");
+	document.write("<OPTION value='2.0'> 2.0");
+	document.write("<OPTION value='3.0'> 3.0");
+	document.write("<OPTION value='4.0'> 4.0");
+	document.write("<OPTION value='4.5'> 4.5");
+	document.write("<OPTION value='5.0'> 5.0");
+	document.write("<OPTION value='5.5'> 5.5");
+	document.write("<OPTION value='6.0'> 6.0");
+	document.write("<\/SELECT>");
+	document.write("<\/Td><TD>");
+	document.write("<input type='text' name='cho' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='prot'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='fat'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='kcal' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='na'   value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='k'    value=''  size=4><\/Td><TD >");
+	document.write("<\/Td><\/TR>");
+}
+<!--  End Javascript  -->
+</SCRIPT>
+
+</TABLE>
+<H2 align=center><a name="LUNCH:_SMALL_SALADS">LUNCH: SMALL SALADS</a><br>
+<font size="2"><a href="#LUNCH:_APPETIZERS_&_SOUPS">Apps/Soups </a>,
+<a href="#LUNCH:_DAILY_SPECIALS">Daily Specials</a> ,<a href="#BREAKFAST:_ENTREES"> 
+</a><a href="#LUNCH:_ENTREES-HOT">Entrees-HOT </a>, <a href="#LUNCH:_GRAVIES">Gravies</a> , 
+<a href="#LUNCH:_ENTREES-COLD">Entrees-COLD</a> , <a href="#LUNCH:_SMALL_SALADS">Small Salads</a> , 
+<a href="#LUNCH:_DRESSINGS">Dressings</a> , 
+<a href="#LUNCH:_STARCHES/VEGETABLES_">Starches/Veg</a> 
+, <a href="#LUNCH:_BREAD">Breads ,</a> <a href="#LUNCH:_DESSERTS">Desserts</a> , 
+<a href="#LUNCH:_BEVERAGES">Beverages</a> , <a href="#LUNCH:_CONDIMENTS_">Condiments</a> , 
+<a href="#LUNCH:_SPECIAL_FRAPPES">Frappes </a>,
+<a href="#LUNCH:_SUPPLEMENTS">Supplements</a><br>
+<a href="#Totals">TOTALS</a></font></H2>
+
+
+<TABLE  border=1 bgcolor="#006699" align=center cellspacing=0>
+<TR align=center>
+<Td bgcolor="#006699"> <font color="#FFFFFF">Food</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">Servings</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">CHO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">PRO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">FAT(g)</font></Td>
+<TD bgcolor="#006699" >
+<font color="#FFFFFF">Kcal</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">Na+</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">K+</font></Td>
+</TR>
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+//Dinner
+
+for (i=60;i<63;i++)
+{
+	document.write("<TR align=center><TD >");
+	document.write("<input type='text' name='name' value='' size=30><\/Td><TD >");
+
+	document.write("<SELECT name='oneserving' onchange='adjust1(",i,")' >");
+	document.write("<OPTION value='0' selected> 0	");
+	document.write("<OPTION value='0.25'> 0.25");
+	document.write("<OPTION value='0.50'> 0.50");
+	document.write("<OPTION value='0.75'> 0.75");
+	document.write("<OPTION value='1.0'> 1.0");
+	document.write("<OPTION value='1.5'> 1.5");
+	document.write("<OPTION value='2.0'> 2.0");
+	document.write("<OPTION value='3.0'> 3.0");
+	document.write("<OPTION value='4.0'> 4.0");
+	document.write("<OPTION value='4.5'> 4.5");
+	document.write("<OPTION value='5.0'> 5.0");
+	document.write("<OPTION value='5.5'> 5.5");
+	document.write("<OPTION value='6.0'> 6.0");
+	document.write("<\/SELECT>");
+	document.write("<\/Td><TD>");
+	document.write("<input type='text' name='cho' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='prot'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='fat'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='kcal' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='na'   value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='k'    value=''  size=4><\/Td><TD >");
+	document.write("<\/Td><\/TR>");
+}
+<!--  End Javascript  -->
+</SCRIPT>
+
+</TABLE>
+<H2 align=center><a name="LUNCH:_DRESSINGS">LUNCH: DRESSINGS</a><br>
+<font size="2"><a href="#LUNCH:_APPETIZERS_&_SOUPS">Apps/Soups </a>,
+<a href="#LUNCH:_DAILY_SPECIALS">Daily Specials</a> ,<a href="#BREAKFAST:_ENTREES"> 
+</a><a href="#LUNCH:_ENTREES-HOT">Entrees-HOT </a>, <a href="#LUNCH:_GRAVIES">Gravies</a> , 
+<a href="#LUNCH:_ENTREES-COLD">Entrees-COLD</a> , <a href="#LUNCH:_SMALL_SALADS">Small Salads</a> , 
+<a href="#LUNCH:_DRESSINGS">Dressings</a> , 
+<a href="#LUNCH:_STARCHES/VEGETABLES_">Starches/Veg</a> 
+, <a href="#LUNCH:_BREAD">Breads ,</a> <a href="#LUNCH:_DESSERTS">Desserts</a> , 
+<a href="#LUNCH:_BEVERAGES">Beverages</a> , <a href="#LUNCH:_CONDIMENTS_">Condiments</a> , 
+<a href="#LUNCH:_SPECIAL_FRAPPES">Frappes </a>,
+<a href="#LUNCH:_SUPPLEMENTS">Supplements</a><br>
+<a href="#Totals">TOTALS</a></font></H2>
+
+<TABLE  border=1 bgcolor="#006699" align=center cellspacing=0>
+<TR align=center>
+<Td bgcolor="#006699"> <font color="#FFFFFF">Food</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">Servings</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">CHO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">PRO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">FAT(g)</font></Td>
+<TD bgcolor="#006699" >
+<font color="#FFFFFF">Kcal</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">Na+</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">K+</font></Td>
+</TR>
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+//Dinner
+
+for (i=63;i<76;i++)
+{
+	document.write("<TR align=center><TD >");
+	document.write("<input type='text' name='name' value='' size=30><\/Td><TD >");
+
+	document.write("<SELECT name='oneserving' onchange='adjust1(",i,")' >");
+	document.write("<OPTION value='0' selected> 0	");
+	document.write("<OPTION value='0.25'> 0.25");
+	document.write("<OPTION value='0.50'> 0.50");
+	document.write("<OPTION value='0.75'> 0.75");
+	document.write("<OPTION value='1.0'> 1.0");
+	document.write("<OPTION value='1.5'> 1.5");
+	document.write("<OPTION value='2.0'> 2.0");
+	document.write("<OPTION value='3.0'> 3.0");
+	document.write("<OPTION value='4.0'> 4.0");
+	document.write("<OPTION value='4.5'> 4.5");
+	document.write("<OPTION value='5.0'> 5.0");
+	document.write("<OPTION value='5.5'> 5.5");
+	document.write("<OPTION value='6.0'> 6.0");
+	document.write("<\/SELECT>");
+	document.write("<\/Td><TD>");
+	document.write("<input type='text' name='cho' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='prot'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='fat'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='kcal' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='na'   value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='k'    value=''  size=4><\/Td><TD >");
+	document.write("<\/Td><\/TR>");
+}
+<!--  End Javascript  -->
+</SCRIPT>
+
+</TABLE>
+<H2 align=center><a name="LUNCH:_STARCHES/VEGETABLES_">LUNCH: STARCHES/VEGETABLES</a><br>
+<font size="2"><a href="#LUNCH:_APPETIZERS_&_SOUPS">Apps/Soups </a>,
+<a href="#LUNCH:_DAILY_SPECIALS">Daily Specials</a> ,<a href="#BREAKFAST:_ENTREES"> 
+</a><a href="#LUNCH:_ENTREES-HOT">Entrees-HOT </a>, <a href="#LUNCH:_GRAVIES">Gravies</a> , 
+<a href="#LUNCH:_ENTREES-COLD">Entrees-COLD</a> , <a href="#LUNCH:_SMALL_SALADS">Small Salads</a> , 
+<a href="#LUNCH:_DRESSINGS">Dressings</a> , 
+<a href="#LUNCH:_STARCHES/VEGETABLES_">Starches/Veg</a> 
+, <a href="#LUNCH:_BREAD">Breads ,</a> <a href="#LUNCH:_DESSERTS">Desserts</a> , 
+<a href="#LUNCH:_BEVERAGES">Beverages</a> , <a href="#LUNCH:_CONDIMENTS_">Condiments</a> , 
+<a href="#LUNCH:_SPECIAL_FRAPPES">Frappes </a>,
+<a href="#LUNCH:_SUPPLEMENTS">Supplements</a><br>
+<a href="#Totals">TOTALS</a></font></H2>
+
+
+<TABLE  border=1 bgcolor="#006699" align=center cellspacing=0>
+<TR align=center>
+<Td bgcolor="#006699"> <font color="#FFFFFF">Food</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">Servings</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">CHO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">PRO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">FAT(g)</font></Td>
+<TD bgcolor="#006699" >
+<font color="#FFFFFF">Kcal</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">Na+</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">K+</font></Td>
+</TR>
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+//Dinner
+
+for (i=76;i<84;i++)
+{
+	document.write("<TR align=center><TD >");
+	document.write("<input type='text' name='name' value='' size=30><\/Td><TD >");
+
+	document.write("<SELECT name='oneserving' onchange='adjust1(",i,")' >");
+	document.write("<OPTION value='0' selected> 0	");
+	document.write("<OPTION value='0.25'> 0.25");
+	document.write("<OPTION value='0.50'> 0.50");
+	document.write("<OPTION value='0.75'> 0.75");
+	document.write("<OPTION value='1.0'> 1.0");
+	document.write("<OPTION value='1.5'> 1.5");
+	document.write("<OPTION value='2.0'> 2.0");
+	document.write("<OPTION value='3.0'> 3.0");
+	document.write("<OPTION value='4.0'> 4.0");
+	document.write("<OPTION value='4.5'> 4.5");
+	document.write("<OPTION value='5.0'> 5.0");
+	document.write("<OPTION value='5.5'> 5.5");
+	document.write("<OPTION value='6.0'> 6.0");
+	document.write("<\/SELECT>");
+	document.write("<\/Td><TD>");
+	document.write("<input type='text' name='cho' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='prot'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='fat'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='kcal' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='na'   value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='k'    value=''  size=4><\/Td><TD >");
+	document.write("<\/Td><\/TR>");
+}
+<!--  End Javascript  -->
+</SCRIPT>
+
+</TABLE>
+<H2 align=center><a name="LUNCH:_BREAD">LUNCH: BREAD</a><br>
+<font size="2"><a href="#LUNCH:_APPETIZERS_&_SOUPS">Apps/Soups </a>,
+<a href="#LUNCH:_DAILY_SPECIALS">Daily Specials</a> ,<a href="#BREAKFAST:_ENTREES"> 
+</a><a href="#LUNCH:_ENTREES-HOT">Entrees-HOT </a>, <a href="#LUNCH:_GRAVIES">Gravies</a> , 
+<a href="#LUNCH:_ENTREES-COLD">Entrees-COLD</a> , <a href="#LUNCH:_SMALL_SALADS">Small Salads</a> , 
+<a href="#LUNCH:_DRESSINGS">Dressings</a> , 
+<a href="#LUNCH:_STARCHES/VEGETABLES_">Starches/Veg</a> 
+, <a href="#LUNCH:_BREAD">Breads ,</a> <a href="#LUNCH:_DESSERTS">Desserts</a> , 
+<a href="#LUNCH:_BEVERAGES">Beverages</a> , <a href="#LUNCH:_CONDIMENTS_">Condiments</a> , 
+<a href="#LUNCH:_SPECIAL_FRAPPES">Frappes </a>,
+<a href="#LUNCH:_SUPPLEMENTS">Supplements</a><br>
+<a href="#Totals">TOTALS</a></font></H2>
+<TABLE  border=1 bgcolor="#006699" align=center cellspacing=0>
+<TR align=center>
+<Td bgcolor="#006699"> <font color="#FFFFFF">Food</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">Servings</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">CHO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">PRO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">FAT(g)</font></Td>
+<TD bgcolor="#006699" >
+<font color="#FFFFFF">Kcal</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">Na+</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">K+</font></Td>
+</TR>
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+for (i=84;i<89;i++)
+{
+	document.write("<TR align=center><TD >");
+	document.write("<input type='text' name='name' value='' size=30><\/Td><TD >");
+
+	document.write("<SELECT name='oneserving' onchange='adjust1(",i,")' >");
+	document.write("<OPTION value='0' selected> 0	");
+	document.write("<OPTION value='0.25'> 0.25");
+	document.write("<OPTION value='0.50'> 0.50");
+	document.write("<OPTION value='0.75'> 0.75");
+	document.write("<OPTION value='1.0'> 1.0");
+	document.write("<OPTION value='1.5'> 1.5");
+	document.write("<OPTION value='2.0'> 2.0");
+	document.write("<OPTION value='3.0'> 3.0");
+	document.write("<OPTION value='4.0'> 4.0");
+	document.write("<OPTION value='4.5'> 4.5");
+	document.write("<OPTION value='5.0'> 5.0");
+	document.write("<OPTION value='5.5'> 5.5");
+	document.write("<OPTION value='6.0'> 6.0");
+	document.write("<\/SELECT>");
+	document.write("<\/Td><TD>");
+	document.write("<input type='text' name='cho' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='prot'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='fat'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='kcal' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='na'   value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='k'    value=''  size=4><\/Td><TD >");
+	document.write("<\/Td><\/TR>");
+}
+<!--  End Javascript  -->
+</SCRIPT>
+
+</TABLE>
+
+<H2 align=center><a name="LUNCH:_DESSERTS">LUNCH: DESSERTS</a><br>
+<font size="2"><a href="#LUNCH:_APPETIZERS_&_SOUPS">Apps/Soups </a>,
+<a href="#LUNCH:_DAILY_SPECIALS">Daily Specials</a> ,<a href="#BREAKFAST:_ENTREES"> 
+</a><a href="#LUNCH:_ENTREES-HOT">Entrees-HOT </a>, <a href="#LUNCH:_GRAVIES">Gravies</a> , 
+<a href="#LUNCH:_ENTREES-COLD">Entrees-COLD</a> , <a href="#LUNCH:_SMALL_SALADS">Small Salads</a> , 
+<a href="#LUNCH:_DRESSINGS">Dressings</a> , 
+<a href="#LUNCH:_STARCHES/VEGETABLES_">Starches/Veg</a> 
+, <a href="#LUNCH:_BREAD">Breads ,</a> <a href="#LUNCH:_DESSERTS">Desserts</a> , 
+<a href="#LUNCH:_BEVERAGES">Beverages</a> , <a href="#LUNCH:_CONDIMENTS_">Condiments</a> , 
+<a href="#LUNCH:_SPECIAL_FRAPPES">Frappes </a>,
+<a href="#LUNCH:_SUPPLEMENTS">Supplements</a><br>
+<a href="#Totals">TOTALS</a></font></H2>
+<TABLE  border=1 bgcolor="#006699" align=center cellspacing=0>
+<TR align=center>
+<Td bgcolor="#006699"> <font color="#FFFFFF">Food</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">Servings</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">CHO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">PRO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">FAT(g)</font></Td>
+<TD bgcolor="#006699" >
+<font color="#FFFFFF">Kcal</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">Na+</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">K+</font></Td>
+</TR>
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+for (i=89;i<114;i++)
+{
+	document.write("<TR align=center><TD >");
+	document.write("<input type='text' name='name' value='' size=30><\/Td><TD >");
+
+	document.write("<SELECT name='oneserving' onchange='adjust1(",i,")' >");
+	document.write("<OPTION value='0' selected> 0	");
+	document.write("<OPTION value='0.25'> 0.25");
+	document.write("<OPTION value='0.50'> 0.50");
+	document.write("<OPTION value='0.75'> 0.75");
+	document.write("<OPTION value='1.0'> 1.0");
+	document.write("<OPTION value='1.5'> 1.5");
+	document.write("<OPTION value='2.0'> 2.0");
+	document.write("<OPTION value='3.0'> 3.0");
+	document.write("<OPTION value='4.0'> 4.0");
+	document.write("<OPTION value='4.5'> 4.5");
+	document.write("<OPTION value='5.0'> 5.0");
+	document.write("<OPTION value='5.5'> 5.5");
+	document.write("<OPTION value='6.0'> 6.0");
+	document.write("<\/SELECT>");
+	document.write("<\/Td><TD>");
+	document.write("<input type='text' name='cho' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='prot'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='fat'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='kcal' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='na'   value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='k'    value=''  size=4><\/Td><TD >");
+	document.write("<\/Td><\/TR>");
+}
+<!--  End Javascript  -->
+</SCRIPT>
+
+</TABLE>
+</TABLE>
+
+<H2 align=center><a name="LUNCH:_BEVERAGES">LUNCH: BEVERAGES</a><br>
+<font size="2"><a href="#LUNCH:_APPETIZERS_&_SOUPS">Apps/Soups </a>,
+<a href="#LUNCH:_DAILY_SPECIALS">Daily Specials</a> ,<a href="#BREAKFAST:_ENTREES"> 
+</a><a href="#LUNCH:_ENTREES-HOT">Entrees-HOT </a>, <a href="#LUNCH:_GRAVIES">Gravies</a> , 
+<a href="#LUNCH:_ENTREES-COLD">Entrees-COLD</a> , <a href="#LUNCH:_SMALL_SALADS">Small Salads</a> , 
+<a href="#LUNCH:_DRESSINGS">Dressings</a> , 
+<a href="#LUNCH:_STARCHES/VEGETABLES_">Starches/Veg</a> 
+, <a href="#LUNCH:_BREAD">Breads ,</a> <a href="#LUNCH:_DESSERTS">Desserts</a> , 
+<a href="#LUNCH:_BEVERAGES">Beverages</a> , <a href="#LUNCH:_CONDIMENTS_">Condiments</a> , 
+<a href="#LUNCH:_SPECIAL_FRAPPES">Frappes </a>,
+<a href="#LUNCH:_SUPPLEMENTS">Supplements</a><br>
+<a href="#Totals">TOTALS</a></font></H2>
+<TABLE  border=1 bgcolor="#006699" align=center cellspacing=0>
+<TR align=center>
+<Td bgcolor="#006699"> <font color="#FFFFFF">Food</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">Servings</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">CHO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">PRO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">FAT(g)</font></Td>
+<TD bgcolor="#006699" >
+<font color="#FFFFFF">Kcal</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">Na+</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">K+</font></Td>
+</TR>
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+for (i=114;i<124;i++)
+{
+	document.write("<TR align=center><TD >");
+	document.write("<input type='text' name='name' value='' size=30><\/Td><TD >");
+
+	document.write("<SELECT name='oneserving' onchange='adjust1(",i,")' >");
+	document.write("<OPTION value='0' selected> 0	");
+	document.write("<OPTION value='0.25'> 0.25");
+	document.write("<OPTION value='0.50'> 0.50");
+	document.write("<OPTION value='0.75'> 0.75");
+	document.write("<OPTION value='1.0'> 1.0");
+	document.write("<OPTION value='1.5'> 1.5");
+	document.write("<OPTION value='2.0'> 2.0");
+	document.write("<OPTION value='3.0'> 3.0");
+	document.write("<OPTION value='4.0'> 4.0");
+	document.write("<OPTION value='4.5'> 4.5");
+	document.write("<OPTION value='5.0'> 5.0");
+	document.write("<OPTION value='5.5'> 5.5");
+	document.write("<OPTION value='6.0'> 6.0");
+	document.write("<\/SELECT>");
+	document.write("<\/Td><TD>");
+	document.write("<input type='text' name='cho' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='prot'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='fat'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='kcal' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='na'   value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='k'    value=''  size=4><\/Td><TD >");
+	document.write("<\/Td><\/TR>");
+}
+<!--  End Javascript  -->
+</SCRIPT>
+
+</TABLE>
+
+
+<H2 align=center><a name="LUNCH:_CONDIMENTS_">LUNCH: CONDIMENTS</a><br>
+<font size="2"><a href="#LUNCH:_APPETIZERS_&_SOUPS">Apps/Soups </a>,
+<a href="#LUNCH:_DAILY_SPECIALS">Daily Specials</a> ,<a href="#BREAKFAST:_ENTREES"> 
+</a><a href="#LUNCH:_ENTREES-HOT">Entrees-HOT </a>, <a href="#LUNCH:_GRAVIES">Gravies</a> , 
+<a href="#LUNCH:_ENTREES-COLD">Entrees-COLD</a> , <a href="#LUNCH:_SMALL_SALADS">Small Salads</a> , 
+<a href="#LUNCH:_DRESSINGS">Dressings</a> , 
+<a href="#LUNCH:_STARCHES/VEGETABLES_">Starches/Veg</a> 
+, <a href="#LUNCH:_BREAD">Breads ,</a> <a href="#LUNCH:_DESSERTS">Desserts</a> , 
+<a href="#LUNCH:_BEVERAGES">Beverages</a> , <a href="#LUNCH:_CONDIMENTS_">Condiments</a> , 
+<a href="#LUNCH:_SPECIAL_FRAPPES">Frappes </a>,
+<a href="#LUNCH:_SUPPLEMENTS">Supplements</a><br>
+<a href="#Totals">TOTALS</a></font></H2>
+<TABLE  border=1 bgcolor="#006699" align=center cellspacing=0>
+<TR align=center>
+<Td bgcolor="#006699"> <font color="#FFFFFF">Food</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">Servings</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">CHO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">PRO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">FAT(g)</font></Td>
+<TD bgcolor="#006699" >
+<font color="#FFFFFF">Kcal</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">Na+</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">K+</font></Td>
+</TR>
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+for (i=124;i<139;i++)
+{
+	document.write("<TR align=center><TD >");
+	document.write("<input type='text' name='name' value='' size=30><\/Td><TD >");
+
+	document.write("<SELECT name='oneserving' onchange='adjust1(",i,")' >");
+	document.write("<OPTION value='0' selected> 0	");
+	document.write("<OPTION value='0.25'> 0.25");
+	document.write("<OPTION value='0.50'> 0.50");
+	document.write("<OPTION value='0.75'> 0.75");
+	document.write("<OPTION value='1.0'> 1.0");
+	document.write("<OPTION value='1.5'> 1.5");
+	document.write("<OPTION value='2.0'> 2.0");
+	document.write("<OPTION value='3.0'> 3.0");
+	document.write("<OPTION value='4.0'> 4.0");
+	document.write("<OPTION value='4.5'> 4.5");
+	document.write("<OPTION value='5.0'> 5.0");
+	document.write("<OPTION value='5.5'> 5.5");
+	document.write("<OPTION value='6.0'> 6.0");
+	document.write("<\/SELECT>");
+	document.write("<\/Td><TD>");
+	document.write("<input type='text' name='cho' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='prot'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='fat'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='kcal' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='na'   value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='k'    value=''  size=4><\/Td><TD >");
+	document.write("<\/Td><\/TR>");
+}
+<!--  End Javascript  -->
+</SCRIPT>
+
+</TABLE>
+
+<H2 align=center><a name="LUNCH:_SPECIAL_FRAPPES">LUNCH: SPECIAL FRAPPES</a><br>
+<font size="2"><a href="#LUNCH:_APPETIZERS_&_SOUPS">Apps/Soups </a>,
+<a href="#LUNCH:_DAILY_SPECIALS">Daily Specials</a> ,<a href="#BREAKFAST:_ENTREES"> 
+</a><a href="#LUNCH:_ENTREES-HOT">Entrees-HOT </a>, <a href="#LUNCH:_GRAVIES">Gravies</a> , 
+<a href="#LUNCH:_ENTREES-COLD">Entrees-COLD</a> , <a href="#LUNCH:_SMALL_SALADS">Small Salads</a> , 
+<a href="#LUNCH:_DRESSINGS">Dressings</a> , 
+<a href="#LUNCH:_STARCHES/VEGETABLES_">Starches/Veg</a> 
+, <a href="#LUNCH:_BREAD">Breads ,</a> <a href="#LUNCH:_DESSERTS">Desserts</a> , 
+<a href="#LUNCH:_BEVERAGES">Beverages</a> , <a href="#LUNCH:_CONDIMENTS_">Condiments</a> , 
+<a href="#LUNCH:_SPECIAL_FRAPPES">Frappes </a>,
+<a href="#LUNCH:_SUPPLEMENTS">Supplements</a><br>
+<a href="#Totals">TOTALS</a></font></H2>
+<TABLE  border=1 bgcolor="#006699" align=center cellspacing=0>
+<TR align=center>
+<Td bgcolor="#006699"> <font color="#FFFFFF">Food</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">Servings</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">CHO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">PRO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">FAT(g)</font></Td>
+<TD bgcolor="#006699" >
+<font color="#FFFFFF">Kcal</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">Na+</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">K+</font></Td>
+</TR>
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+for (i=139;i<153;i++)
+{
+	document.write("<TR align=center><TD >");
+	document.write("<input type='text' name='name' value='' size=30><\/Td><TD >");
+
+	document.write("<SELECT name='oneserving' onchange='adjust1(",i,")' >");
+	document.write("<OPTION value='0' selected> 0	");
+	document.write("<OPTION value='0.25'> 0.25");
+	document.write("<OPTION value='0.50'> 0.50");
+	document.write("<OPTION value='0.75'> 0.75");
+	document.write("<OPTION value='1.0'> 1.0");
+	document.write("<OPTION value='1.5'> 1.5");
+	document.write("<OPTION value='2.0'> 2.0");
+	document.write("<OPTION value='3.0'> 3.0");
+	document.write("<OPTION value='4.0'> 4.0");
+	document.write("<OPTION value='4.5'> 4.5");
+	document.write("<OPTION value='5.0'> 5.0");
+	document.write("<OPTION value='5.5'> 5.5");
+	document.write("<OPTION value='6.0'> 6.0");
+	document.write("<\/SELECT>");
+	document.write("<\/Td><TD>");
+	document.write("<input type='text' name='cho' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='prot'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='fat'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='kcal' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='na'   value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='k'    value=''  size=4><\/Td><TD >");
+	document.write("<\/Td><\/TR>");
+}
+<!--  End Javascript  -->
+</SCRIPT>
+
+</TABLE>
+
+
+<H2 align=center><a name="LUNCH:_SUPPLEMENTS">LUNCH: SUPPLEMENTS</a><br>
+<font size="2"><a href="#LUNCH:_APPETIZERS_&_SOUPS">Apps/Soups </a>,
+<a href="#LUNCH:_DAILY_SPECIALS">Daily Specials</a> ,<a href="#BREAKFAST:_ENTREES"> 
+</a><a href="#LUNCH:_ENTREES-HOT">Entrees-HOT </a>, <a href="#LUNCH:_GRAVIES">Gravies</a> , 
+<a href="#LUNCH:_ENTREES-COLD">Entrees-COLD</a> , <a href="#LUNCH:_SMALL_SALADS">Small Salads</a> , 
+<a href="#LUNCH:_DRESSINGS">Dressings</a> , 
+<a href="#LUNCH:_STARCHES/VEGETABLES_">Starches/Veg</a> 
+, <a href="#LUNCH:_BREAD">Breads ,</a> <a href="#LUNCH:_DESSERTS">Desserts</a> , 
+<a href="#LUNCH:_BEVERAGES">Beverages</a> , <a href="#LUNCH:_CONDIMENTS_">Condiments</a> , 
+<a href="#LUNCH:_SPECIAL_FRAPPES">Frappes </a>,
+<a href="#LUNCH:_SUPPLEMENTS">Supplements</a><br>
+<a href="#Totals">TOTALS</a></font></H2>
+<TABLE  border=1 bgcolor="#006699" align=center cellspacing=0>
+<TR align=center>
+<Td bgcolor="#006699"> <font color="#FFFFFF">Food</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">Servings</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">CHO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">PRO(g)</font></Td>
+<TD bgcolor="#006699" ><font color="#FFFFFF">FAT(g)</font></Td>
+<TD bgcolor="#006699" >
+<font color="#FFFFFF">Kcal</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">Na+</font></Td><TD bgcolor="#006699" >
+<font color="#FFFFFF">K+</font></Td>
+</TR>
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="JavaScript" >
+<!--  Hide from non javascript browsers
+
+for (i=153;i<160;i++)
+{
+	document.write("<TR align=center><TD >");
+	document.write("<input type='text' name='name' value='' size=30><\/Td><TD >");
+
+	document.write("<SELECT name='oneserving' onchange='adjust1(",i,")' >");
+	document.write("<OPTION value='0' selected> 0	");
+	document.write("<OPTION value='0.25'> 0.25");
+	document.write("<OPTION value='0.50'> 0.50");
+	document.write("<OPTION value='0.75'> 0.75");
+	document.write("<OPTION value='1.0'> 1.0");
+	document.write("<OPTION value='1.5'> 1.5");
+	document.write("<OPTION value='2.0'> 2.0");
+	document.write("<OPTION value='3.0'> 3.0");
+	document.write("<OPTION value='4.0'> 4.0");
+	document.write("<OPTION value='4.5'> 4.5");
+	document.write("<OPTION value='5.0'> 5.0");
+	document.write("<OPTION value='5.5'> 5.5");
+	document.write("<OPTION value='6.0'> 6.0");
+	document.write("<\/SELECT>");
+	document.write("<\/Td><TD>");
+	document.write("<input type='text' name='cho' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='prot'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='fat'  value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='kcal' value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='na'   value=''  size=4><\/Td><TD >");
+	document.write("<input type='text' name='k'    value=''  size=4><\/Td><TD >");
+	document.write("<\/Td><\/TR>");
+}
+<!--  End Javascript  -->
+</SCRIPT>
+
+</TABLE>
+
+</form>
+<FORM name="diet2" method="GET" action="caldinner.html">
+
+<BR>
+<TABLE border=0 cellspacing=0 cellpadding=4>
+<TR bgcolor="#006699" align=center><TD bgcolor=white>
+	<font size=4 style="font-family: Arial">Breakfast &amp; Lunch <a name="Totals">Totals</a></FONT></Td>
+<TD bgcolor="#C0C0C0">
+<input type="text" name="totcho" value="" size=4></Td><TD bgcolor="#C0C0C0">
+<input type="text" name="totprot"  value=""  size=4></Td><TD bgcolor="#C0C0C0">
+<input type="text" name="totfat"  value=""  size=4></Td><TD bgcolor="#C0C0C0">
+<input type="text" name="totkcal"   value=""  size=4></Td><TD bgcolor="#C0C0C0">
+<input type="text" name="totna"    value=""  size=4></Td><TD bgcolor="#C0C0C0">
+<input type="text" name="totk"    value=""  size=4></Td>
+<TR align=center ><TD></Td>
+<TD  width=60 ><b>CHO(g)</b></Td><TD  width=60 >
+	<b>PRO(g)</b></Td><TD  width=60 ><b>FAT(g)</b></Td>
+<TD  width=60 ><b>Kcals</b></Td><TD  width=60 >
+	<b>Na(mg)</b></Td><TD  width=60 >
+	<b>
+	<font  width=60 >K(mg)</FONT></b></Td>
+</TR>
+<TR>
+<TD><input type=submit value="Calculate Dinner"></TD>
+</TR>
+</TABLE>
+<BR>&nbsp;</FORM>
+<A HREF="http://www.nafwa.org" target="_blank" title="NAFWA.org">Form Provided By The Nutrition and Food Web Archive</A> 
+</BODY>
+</HTML>

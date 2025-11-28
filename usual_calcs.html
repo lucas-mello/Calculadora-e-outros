@@ -1,0 +1,922 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--
+*    Usual Calcs 1.0
+*    Descrição: Um programa simples e prático, escrito em javascript, que possibilita realizar cálculos úteis
+*    com base em equações conhecidas.
+*
+*    Espero que este script lhe seja útil, seja de forma funcional ou  didática.
+*
+*    Autor: Geovane Fernandes
+*    Data:  Nov, 2010
+-->
+
+<head>
+<title>Usual Calcs - 1.0</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<style type="text/css">
+
+<!--
+/*basics*/
+body {
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	/*background-color: #666666;*/
+}
+#BG {
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	/*background-color: #666666;*/	
+}
+#general {
+	width:600px;
+	overflow: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	/*background-color: #999999;*/
+	border: 1px solid #999999;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* form styles*/
+
+#optionss,#select_form,#form,#form2,#form3,#form4,#form5,#form6,#form7,#form8,#form9 {
+	width: 500px;
+	text-align: left;
+	padding-top: 5px;
+	} 
+#form3 table td,#form8 table td,#form9 table td{
+	border: 1px dotted #CCCCCC;
+	padding-left: 2px;
+	padding-right: 2px;
+	text-align: center;
+}
+	
+#select_form fieldset{
+	border: 1px solid #999999;
+	background-color: #FEEAD8;
+}
+#optionss fieldset{
+	border: 1px solid #009900;
+	background-color: #D8F1FE;
+}
+       
+#form fieldset,#form2 fieldset,#form3 fieldset,#form4 fieldset,#form5 fieldset,#form6 fieldset,#form7 fieldset,#form8 fieldset,#form9 fieldset{
+	border: 1px solid #009900;
+	background-color: #DFFFDF;
+    }
+#select_form legend,#optionss legend,#form legend,#form2 legend,#form3 legend,#form4 legend,#form5 legend,#form6 legend,#form7 legend,#form8 legend,#form9 legend{
+	font-size: 12px;
+	color: #FFFFFF;
+	font-weight: bold;
+	background-color: #009900;
+	border: 1px solid #009900;
+	padding-right: 4px;
+	padding-left: 4px;
+	margin-bottom: 8px;
+
+    }
+        
+#optionss input,#select_form input,#form input,#form2 input,#form3 input,#form4 input,#form5 input,#form6 input,#form7 input,#form8 input,#form9 input{
+	font-size: 14px;
+	color: #333333;
+	margin-bottom: 5px;
+	border: 1px solid #CCCCCC;
+
+        }
+		
+#general #resInput{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	margin-bottom: 5px;
+	background-color: DFFFDF;
+	text-align: center;
+	font-weight: bold;
+}
+
+#general #resInput2{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #888888;
+	margin-bottom: 5px;
+	background-color: DFFFDF;
+	text-align: center;
+	font-weight: bold;
+	font-style: italic;
+}#general #offInput{
+	color: #333333;
+	background-color: DFFFDF;
+	text-align: center;
+}
+#general #hibInput{
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #494949;
+	background-color: DFFFDF;
+	font-weight: bold;
+	border: 1px solid DFFFDF;
+}
+
+#general #button_id{
+	color: #E8E8E8;
+	background-color: #666666;
+	border: 1px inset #333333;
+}
+#general select{
+	color: #333333;
+}
+			
+#optionss label,#select_form label,#form label,#form2 label,#form4 label,#form5 label,#form6 label,#form7 label{
+	width: 180px;
+	color: #6F6F6F;
+	border-bottom: 1px solid #CCCCCC;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	margin-left: 20px;
+	margin-right: 20px;
+	/*display: block;*/
+        }
+#form3 table label,#form8 table label,#form9 table label{
+	color: #6F6F6F;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+		
+#general #optionss select{
+	font-size: 12px;
+	color: #999999;		
+}#general #optionss select #cor1{
+	background-color: #0066FF;	
+}#general #optionss select #cor2{
+	background-color: #0099FF;	
+}#general #optionss select #cor3{
+	background-color: #00CCFF;	
+}#general #optionss select #cor4{
+	background-color: #FFCC00;	
+}#general #optionss select #cor5{
+	background-color: #FFFF00;	
+}#general #optionss select #cor6{
+	background-color: #FFFFFF;	
+}#general #optionss select #cor7{
+	background-color: #CCCCCC;	
+}#general #optionss select #cor8{
+	background-color: #FF7A22;	
+}#general #optionss select #cor9{
+	background-color: #FF00FF;	
+}#general #optionss select #cor10{
+	background-color: #000000;	
+}#general #optionss select #cor11{
+	background-color: #333333;	
+}#general #optionss select #cor12{
+	background-color: #666666;	
+}#general #optionss select #cor13{
+	background-color: #FF6699;	
+}#general #optionss select #cor14{
+	background-color: #FF9999;	
+}#general #optionss select #cor15{
+	background-color: #9900FF;	
+}#general #optionss select #cor16{
+	background-color: #CC0000;	
+}#general #optionss select #cor17{
+	background-color: #FF0000;	
+}#general #optionss select #cor18{
+	background-color: #009900;	
+}#general #optionss select #cor19{
+	background-color: #00CC00;	
+}#general #optionss select #cor20{
+	background-color: #99FF00;	
+}
+
+/* others*/
+.displayON{position: static;visibility: visible;height: auto;}
+.displayOFF{height: 1px;overflow: hidden;position: absolute;visibility: hidden;top: 0px;right: 0px;}
+ul#list {list-style-type: circle;font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 11px;font-weight: normal;color: #999999;text-align: left;}
+ul#list li{padding-top: 1px;}
+.chSt {background-color: #EAFFEA;cursor: auto}
+-->
+</style>
+</head>
+<script type="text/javascript">
+/*function clock(){ 
+    time=new Date(); 
+    hour=time.getHours(); 
+    minut=time.getMinutes(); 
+    sec=time.getSeconds(); 
+      if(sec<10){sec="0"+sec; }
+	  if(minut<10){minut="0"+minut; }
+	  if(hour<10){hour="0"+hour; }
+    defaultStatus=" "+hour+":"+minut+":"+sec; 
+  setTimeout("clock()","1000"); 
+} */
+
+/* create and read cookie value with base in prefix*/
+function GetCookie(prefix) { 
+  var dc = document.cookie; 
+  var prefixo = prefix + "="; 
+  var inicio = dc.indexOf(prefixo); 
+  if (inicio == -1) return null; 
+   
+  var final = document.cookie.indexOf(";",inicio); 
+  if (final == -1) final = dc.length; 
+  return unescape(dc.substring(inicio+prefixo.length, final)); 
+} 
+
+function DefineCookie(o_cookie,evalor,exp_arg){
+if(exp_arg=="true"){
+var a_data= new Date("December 31, 2099");	
+var exp_date = ";expires="+ a_data.toGMTString();}
+
+else{var exp_date = "";}
+    document.cookie = o_cookie + "=" + evalor + exp_date;
+}
+<!--//-->
+/* check if numbers*/
+function verify_num(c_field){
+var c_val = c_field.value;
+for (var i = 0; i < c_val.length; i++){
+      var ch = c_val.substring(i, i + 1);	 
+      if ((ch < "0" || "9" < ch)&&(ch < "." || "." < ch)){
+	  c_field.value = "";
+         //search element
+		 /*var Ename;
+         for(var i2=0;i2<document.forms.length;i2++){
+         var quant =document.forms[i2].elements.length;
+         for(var i=0;i<quant;i++){
+         Ename = document.forms[i2].elements[i].name;
+         if(c_field.name==Ename){document.forms[i2].elements[i].value="";break;}//alert("form: "+i2+"/element: "+i);
+		 }
+       }*/
+         alert("Este campo é somente para números. \nPor favor digite corretamente .");
+		 return false;
+      }
+   }
+return true;
+}
+
+
+function verify_media(c_field){
+var c_val = c_field.value;
+for (var i = 0; i < c_val.length; i++){
+      var ch = c_val.substring(i, i + 1);	 
+      if ((ch < "0" || "9" < ch)&&(ch < "." || "." < ch)&&(ch < "," || "," < ch)){
+	  c_field.value = "";
+         alert("Este campo aceita somente números e vírgulas. \nPor favor digite corretamente.");
+		 return false;
+      }
+   }
+return true;
+}
+
+
+function verify_char(p_field){
+if(p_field!=""&&p_field!=null){
+for (var i = 0; i < p_field.length; i++){
+      var ch = p_field.substring(i, i + 1);
+      if ((ch < "a" || "z" < ch)&&(ch < "A" || "Z" < ch)){
+	  return false;
+      }
+    }
+return true;
+  }
+}
+function verify_char2(p_field){
+var c_val = p_field.value;
+if(p_field!=""&&p_field!=null){
+for (var i = 0; i < c_val.length; i++){
+      var ch = c_val.substring(i, i + 1);
+      if ((ch < "0" || "9" < ch)&&(ch < "a" || "z" < ch)&&(ch < "A" || "Z" < ch )&&(ch < "+" || "+" < ch )){
+	  p_field.value = "";
+	  alert("caractere inválido.\nPor favor digite corretamente.");
+	  return false;
+      }
+    }
+return true;
+  }
+}
+/* calc percent*/	   
+function calc_ff(parc,tot){
+var d = document.calc_form;
+var parc_v = parc.value;var tot_v = tot.value;
+if(parc_v!=""&&tot_v!=""){
+i=0;while(i<calc_ff.arguments.length){if(!verify_num(calc_ff.arguments[i])){d.result.value="";return;}i++;}
+var _result = parseFloat((parc_v*100)/tot_v);
+d.result.value = _result+" %";
+defaultStatus=("cálculo efetuado :: ((parcial x 100) -:- total) = "+_result+" %");
+  }
+  else{
+    if((parc_v==null)||(parc_v=="")){parc.focus();}
+    if((tot_v==null)||(tot_v=="")){tot.focus();}
+  }
+}
+
+/* raiz quadrada*/
+function sqrt_ff(sq_v){
+d = document.calc_form2;
+if(sq_v!="" && verify_num(d.sqrt_v)){
+var raiz_q = Math.sqrt(sq_v);
+d.result.value = raiz_q;
+defaultStatus=("cálculo efetuado :: Função nativa = "+raiz_q);}
+else{d.result.value="";d.sqrt_v.focus();}
+}
+
+/* regra 3*/	   
+function TrRule(new_grand,grand_prop,grand){
+var d = document.calc_form3;
+var new_grand_v=new_grand.value;var grand_prop_v=grand_prop.value;var grand_v=grand.value;
+if(new_grand_v!=""&&grand_prop_v!=""&&grand_v!=""){
+i=0;while(i<TrRule.arguments.length){if(!verify_num(TrRule.arguments[i])){d.result.value="";return;}i++;}
+if(d.in_prop.checked==true){
+var _result = parseFloat((grand_v*grand_prop_v)/new_grand_v);
+d.result.value = _result;
+defaultStatus=("cálculo efetuado :: ((Grandeza x Grandeza proporcional) -:- Nova grandeza) = "+_result);
+}else{
+var _result = parseFloat((new_grand_v*grand_prop_v)/grand_v);
+d.result.value = _result;
+defaultStatus=("cálculo efetuado :: ((Nova grandeza x Grandeza proporcional) -:- Grandeza) = "+_result);
+  }
+}
+  else{
+    if((new_grand_v==null)||(new_grand_v=="")){new_grand.focus();return;}
+    if((grand_prop_v==null)||(grand_prop_v=="")){gran_prop.focus();return;}
+    if((grand_v==null)||(grand_v=="")){grand.focus();return;}
+  }
+}
+function Labeling(field,arg){
+if(arg=="edit"){field.value="";field.style.background= 'FFFFFF';}else{field.style.background= 'DFFFDF';if(field.value==""){field.value="rotular.."}}
+}
+
+/* media*/	   
+function SMedia(media_v){
+var d = document.calc_form4;
+var media=0;
+if(media_v!="" && verify_media(d.media_v)){
+//retira vírgula do início e final
+var sub_1=media_v.substring(0,1);
+if(isNaN(sub_1)){media_v=media_v.substring(1,media_v.length)}
+var sub_2=media_v.substring(media_v.length-1,media_v.length);
+if(isNaN(sub_2)){media_v=media_v.substring(0,media_v.length-1)}
+
+var array_media = media_v.split(",");
+for(i=0;i<array_media.length;i++){
+media += eval(array_media[i]);
+var mLen=array_media.length;}
+var array_Rmedia = array_media.join("+");
+media = parseFloat(media/mLen);
+var _result = media;d.result.value = _result;
+defaultStatus=("cálculo efetuado :: (("+array_Rmedia+") -:- "+mLen+") = "+_result);}
+  else{d.result.value="";d.media_v.focus();}
+}
+
+/* juros*/
+//set choise
+function select_m(choise){
+if(choise.name=="select_mode"){
+var d=document.calc_form5;var _index=choise.selectedIndex;DefineCookie('j_choise',_index);
+if(_index=="3"){d.set_tempo.value="";}else{
+var t_index=document.calc_form5.set_tax.selectedIndex;
+if(t_index=="0"){d.set_tempo.value="dia(s)";}
+if(t_index=="1"){d.set_tempo.value="mes(es)";}
+if(t_index=="2"){d.set_tempo.value="ano(s)";}}
+
+if(_index=="0"){d.capital_v.value="";d.capital_v.disabled=true;d.capital_v.id= 'offInput';}else{d.capital_v.disabled=false;d.capital_v.id= '';}
+if(_index=="1"){d.juros_v.value="";d.juros_v.disabled=true;d.juros_v.id= 'offInput';}else{d.juros_v.disabled=false;d.juros_v.id= '';}
+if(_index=="2"){d.taxa_v.value="";d.taxa_v.disabled=true;d.set_tax.disabled=true;d.taxa_v.id= 'offInput';d.set_tax.id= 'offInput';}else{d.taxa_v.disabled=false;d.set_tax.disabled=false;d.taxa_v.id= '';d.set_tax.id= '';}
+if(_index=="3"){d.tempo_v.value="";d.tempo_v.disabled=true;d.tempo_v.id= 'offInput';}else{d.tempo_v.disabled=false;d.tempo_v.id= '';}}
+else{
+if(choise.name=="select_mode2"){
+var d=document.calc_form7;var _index=choise.selectedIndex;DefineCookie('t_choise',_index);
+if(_index=="0"){d.hipotenusa.value="";d.hipotenusa.size="20";d.hipotenusa.disabled=true;d.hipotenusa.id= 'resInput';}else{d.hipotenusa.size="12";d.hipotenusa.disabled=false;d.hipotenusa.id= '';}
+if(_index=="1"){d.cateto_v.value="";d.cateto_v.size="20";d.cateto_v.disabled=true;d.cateto_v.id= 'resInput';}else{d.cateto_v.size="12";d.cateto_v.disabled=false;d.cateto_v.id= '';}
+if(_index=="2"){d.cateto2_v.value="";d.cateto2_v.size="20";d.cateto2_v.disabled=true;d.cateto2_v.id= 'resInput';}else{d.cateto2_v.size="12";d.cateto2_v.disabled=false;d.cateto2_v.id= '';}}}
+}
+
+function EJuros(choise,juros,capital,taxa,tempo){
+var _index=choise.selectedIndex;var d=document.calc_form5;
+i=1;while(i<EJuros.arguments.length){if(!verify_num(EJuros.arguments[i])){d.result.value="";return;}i++;}
+var juros_v=juros.value;var capital_v=capital.value;var taxa_v=taxa.value;var tempo_v=tempo.value;
+if(_index=="0"){if(juros_v!=""&&taxa_v!=""&&tempo_v!=""){_result=parseFloat((100*juros_v)/(taxa_v*tempo_v));d.prefix.value="Capital";d.result.value=_result;defaultStatus=("cálculo efetuado :: ((100 x juros) -:- (taxa x tempo)) = "+_result);}
+else{if((juros_v==null)||(juros_v=="")){juros.focus();return;}if((taxa_v==null)||(taxa_v=="")){taxa.focus();return;}if((tempo_v==null)||(tempo_v=="")){tempo.focus();return;}}}
+if(_index=="1"){if(capital_v!=""&&taxa_v!=""&&tempo_v!=""){_result=parseFloat((capital_v*taxa_v*tempo_v)/100);d.prefix.value="Juros";d.result.value=_result;defaultStatus=("cálculo efetuado :: ((capital x taxa x tempo) -:- 100) = "+_result);}
+else{if((capital_v==null)||(capital_v=="")){capital.focus();return ;}if((taxa_v==null)||(taxa_v=="")){taxa.focus();return;}if((tempo_v==null)||(tempo_v=="")){tempo.focus();return;}}}
+if(_index=="2"){if(juros_v!=""&&capital_v!=""&&tempo_v!=""){_result=parseFloat((100*juros_v)/(capital_v*tempo_v));d.prefix.value="Taxa";d.result.value=_result+" %";defaultStatus=("cálculo efetuado :: ((100 x juros) -:- (capital x tempo)) = "+_result);}
+else{if((juros_v==null)||(juros_v=="")){juros.focus();return;}if((capital_v==null)||(capital_v=="")){capital.focus();return;}if((tempo_v==null)||(tempo_v=="")){tempo.focus();return;}}}   
+if(_index=="3"){if(juros_v!=""&&capital_v!=""&&taxa_v!=""){_result=parseFloat((100*juros_v)/(capital_v*taxa_v));d.prefix.value="Tempo";var CvToStr = _result.toString();var abrev = CvToStr.indexOf('.');if(abrev){var initSe = CvToStr.substr(abrev,CvToStr.length);var StPoint = CvToStr.substr(0,abrev);for (var i = 1; i < initSe.length; i++){var fz = initSe.substr(i, i + 1);if(fz>0){_result = StPoint+initSe.substr(0,i+1);break;}}}d.result.value=_result+" "+d.set_tax.value;defaultStatus=("cálculo efetuado :: ((100 x juros) -:- (capital x taxa)) = "+_result);}
+else{if((juros_v==null)||(juros_v=="")){juros.focus();return;}if((capital_v==null)||(capital_v=="")){capital.focus();return;}if((taxa_v==null)||(taxa_v=="")){taxa.focus();return;}}}
+}
+
+/* scale*/
+function Scale(distance,mapd){
+var d=document.calc_form6;
+distance_v=distance.value;mapd_v=mapd.value;
+if(distance_v!=""&&mapd_v!=""){
+i=0;while(i<Scale.arguments.length){if(!verify_num(Scale.arguments[i])){d.result.value="";return;}i++;}
+var _result = parseFloat(((distance_v*100000)/mapd_v)/100000);d.result.value = "1 cm = "+_result +" km";}
+else{if((distance_v==null)||(distance_v=="")){distance.focus();}
+if((mapd_v==null)||(mapd_v=="")){mapd.focus();}} 
+}
+
+/* Teorema*/
+function ETeorema(choise,cateto,cateto2,hipotenusa){
+var d=document.calc_form7;var _index=choise.selectedIndex;
+i=1;while(i<ETeorema.arguments.length){if(!verify_num(ETeorema.arguments[i])){return;}i++;}
+var cateto_v=cateto.value;var cateto2_v=cateto2.value;var hipotenusa_v=hipotenusa.value;
+if(_index=="0"){if(cateto_v!=""&&cateto2_v!=""){_result=Math.sqrt(Math.pow(cateto_v,2)+Math.pow(cateto2_v,2));hipotenusa.value=_result;defaultStatus=("cálculo efetuado :: ( raiz(cateto(ao quadrado) + cateto 2(ao quadrado) )) = "+_result);}
+else{if((cateto_v==null)||(cateto_v=="")){cateto.focus();return;}if((cateto2_v==null)||(cateto2_v=="")){cateto2.focus();return;}}}
+if(_index=="1"){if(cateto2_v!=""&&hipotenusa_v!=""){_result=Math.sqrt(Math.abs((Math.pow(cateto2_v,2)-Math.pow(hipotenusa_v,2))));cateto.value=_result;defaultStatus=("cálculo efetuado :: ( raiz(cateto 2(ao quadrado) - hipotenusa (ao quadrado) )) = "+_result);}
+else{if((cateto2_v==null)||(cateto2_v=="")){cateto2.focus();return;}if((hipotenusa_v==null)||(hipotenusa_v=="")){hipotenusa.focus();return;}}} 
+if(_index=="2"){if(cateto_v!=""&&hipotenusa_v!=""){_result=Math.sqrt(Math.abs((Math.pow(cateto_v,2)-Math.pow(hipotenusa_v,2))));cateto2.value=_result;defaultStatus=("cálculo efetuado :: ( raiz(cateto (ao quadrado) - hipotenusa (ao quadrado) )) = "+_result);} 
+else{if((cateto_v==null)||(cateto_v=="")){cateto.focus();return;}if((hipotenusa_v==null)||(hipotenusa_v=="")){hipotenusa.focus();return;}}} 
+}
+
+/* regra de 3 composta*/	   
+function TrRule2(grand,grand_prop,grand_prop2,new_grand,new_gprop2){
+var d = document.calc_form8;
+i=0;while(i<TrRule2.arguments.length){if(!verify_num(TrRule2.arguments[i])){d.result.value="";return;}i++;}
+var grand_v=grand.value;var grand_prop_v=grand_prop.value;var grand_prop2_v=grand_prop2.value;var new_grand_v=new_grand.value;var new_gprop2_v=new_gprop2.value;
+if(d.in_prop.checked){d.in_prop2.disabled=true;}else{d.in_prop2.disabled=false;}
+if(d.in_prop2.checked){d.in_prop.disabled=true;}else{d.in_prop.disabled=false;}
+
+if(grand_v!=""&&grand_prop_v!=""&&grand_prop2_v!=""&&new_grand_v!=""&&new_gprop2_v!=""){
+if(d.in_prop.checked==true){
+var _result = parseFloat(((grand_v*new_gprop2_v*grand_prop2_v)/(new_grand_v*grand_prop_v)));
+d.result.value = _result;
+//defaultStatus=("cálculo efetuado :: ((Grandeza x Nova grandeza propor. (2) x Grand. proporc.(2)) -:- (Nova grandeza x Grand. proporc.) = "+_result);
+}
+else{
+if(d.in_prop2.checked==true){
+var _result = parseFloat(((grand_prop_v*grand_v*new_gprop2_v)/(new_grand_v*grand_prop2_v)));
+d.result.value = _result;
+//defaultStatus=("cálculo efetuado :: ((Grand. propor. x Grandeza x Nova grandeza propor. (2) ) -:- (Nova grandeza x Grand. proporc.(2)) = "+_result);
+}  
+}if(d.in_prop.checked==false&&d.in_prop2.checked==false){
+var _result = parseFloat(((grand_prop_v*new_grand_v*new_gprop2_v)/(grand_v*grand_prop2_v)));
+d.result.value = _result;
+//defaultStatus=("cálculo efetuado :: ((Grand. propor. x Nova grand. x Nova grandeza propor. (2) ) -:- (Grandeza x Grand. proporc.(2)) = "+_result);
+  }
+
+}
+  else{
+    if((grand_v==null)||(grand_v=="")){grand.focus();return;}
+    if((grand_prop_v==null)||(grand_prop_v=="")){grand_prop.focus();return;}
+    if((grand_prop2_v==null)||(grand_prop2_v=="")){grand_prop2.focus();return;}
+	if((new_grand_v==null)||(new_grand_v=="")){new_grand.focus();return;}
+	if((new_gprop2_v==null)||(new_gprop2_v=="")){new_gprop2.focus();return;}
+  }
+}
+/* conversão de unidades*/
+function convert_ff(s_unity,un,un2,un3,un4,un5,un6,un7,id){
+var _index=s_unity.selectedIndex;var d=document.calc_form9;
+i=0;while(i<(convert_ff.arguments.length-1)){if(!verify_num(convert_ff.arguments[i])){return;}i++;}
+if(_index=="0"){un_a = new Array(7);un_a[0]="kilô";un_a[1]="hectô";un_a[2]="dekâ";un_a[3]="decí";un_a[4]="centí";un_a[5]="milí";}else{un_a = new Array(7);un_a[0]="kilo";un_a[1]="hecto";un_a[2]="deka";un_a[3]="deci";un_a[4]="centi";un_a[5]="mili";}
+if(_index=="0"){unity = "metro";d.un_label.value = un_a[0]+unity+"(km)";d.un_label2.value = un_a[1]+unity;d.un_label3.value = un_a[2]+unity;d.un_label4.value = unity+"(m)";d.un_label5.value = un_a[3]+unity;d.un_label6.value = un_a[4]+unity;d.un_label7.value = un_a[5]+unity;}
+if(_index=="1"){unity = "grama";d.un_label.value = un_a[0]+unity+"(kg)";d.un_label2.value = un_a[1]+unity;d.un_label3.value = un_a[2]+unity;d.un_label4.value = unity+"(gr)";d.un_label5.value = un_a[3]+unity;d.un_label6.value = un_a[4]+unity;d.un_label7.value = un_a[5]+unity;}
+if(_index=="2"){unity = "litro";d.un_label.value = un_a[0]+unity;d.un_label2.value = un_a[1]+unity;d.un_label3.value = un_a[2]+unity;d.un_label4.value = unity+"(l)";d.un_label5.value = un_a[3]+unity;d.un_label6.value = un_a[4]+unity;d.un_label7.value = un_a[5]+unity+"(ml)";}
+var mt = 10;
+if(un.value!=""&&id=="01"){vl = un.value;un2.value = vl*mt; un3.value = vl*(mt*mt); un4.value = vl*(mt*mt*mt); un5.value = vl*(mt*mt*mt*mt); un6.value = vl*(mt*mt*mt*mt*mt); un7.value = vl*(mt*mt*mt*mt*mt*mt);}
+if(un2.value!=""&&id=="02"){vl = un2.value;un.value = vl/mt; un3.value = vl*mt; un4.value = vl*(mt*mt); un5.value = vl*(mt*mt*mt); un6.value = vl*(mt*mt*mt*mt); un7.value = vl*(mt*mt*mt*mt*mt);}
+if(un3.value!=""&&id=="03"){vl = un3.value;un.value = vl/(mt*mt); un2.value = vl/mt; un4.value = vl*mt; un5.value = vl*(mt*mt); un6.value = vl*(mt*mt*mt); un7.value = vl*(mt*mt*mt*mt);}
+if(un4.value!=""&&id=="04"){vl = un4.value;un.value = vl/(mt*mt*mt); un2.value = vl/(mt*mt); un3.value = vl/mt; un5.value = vl*mt; un6.value = vl*(mt*mt); un7.value = vl*(mt*mt*mt);}
+if(un5.value!=""&&id=="05"){vl = un5.value;un.value = vl/(mt*mt*mt*mt); un2.value = vl/(mt*mt*mt); un3.value = vl/(mt*mt); un4.value = vl/mt; un6.value = vl*mt; un7.value = vl*(mt*mt);}
+if(un6.value!=""&&id=="06"){vl = un6.value;un.value = vl/(mt*mt*mt*mt*mt); un2.value = vl/(mt*mt*mt*mt); un3.value = vl/(mt*mt*mt); un4.value = vl/(mt*mt); un5.value = vl/mt; un7.value = vl*mt;}
+if(un7.value!=""&&id=="07"){vl = un7.value;un.value = vl/(mt*mt*mt*mt*mt*mt); un2.value = vl/(mt*mt*mt*mt*mt); un3.value = vl/(mt*mt*mt*mt); un4.value = vl/(mt*mt*mt); un5.value = vl/(mt*mt); un6.value = vl/mt;}
+}
+/* calc select*/
+function calc_selector(combox){
+anc.style.visibility='hidden';var _index=combox.selectedIndex;DefineCookie('c_choise',_index);
+//opt_text=combox.options[_index].text;
+if(_index=="1"){form6.className='displayON';}else{form6.className='displayOFF';}
+if(_index=="2"){form5.className='displayON';}else{form5.className='displayOFF';}if(_index=="3"){form4.className='displayON';}else{form4.className='displayOFF';}
+if(_index=="4"){form.className='displayON';}else{form.className='displayOFF';}if(_index=="5"){form2.className='displayON';}else{form2.className='displayOFF';}
+if(_index=="6"){form3.className='displayON';}else{form3.className='displayOFF';}if(_index=="7"){form8.className='displayON';}else{form8.className='displayOFF';}
+if(_index=="8"){form7.className='displayON';}else{form7.className='displayOFF';}if(_index=="9"){form9.className='displayON';}else{form9.className='displayOFF';}
+if(_index=="10"){form.className='displayON';form2.className='displayON';form3.className='displayON';form4.className='displayON';form5.className='displayON';form6.className='displayON';form7.className='displayON';form8.className='displayON';form9.className='displayON';}
+if(_index==""){defaultStatus=(' Usual Calcs 1.0 :: selecione um cálculo para começar.');}else{defaultStatus=(" Usual Calcs 1.0 :: Após preencher os campos click fora para obter o resultado.");}
+}
+
+/* Show/hide options*/
+function showOptions(cmd){
+var iniVal=cmd.substring(0,1);
+if(iniVal=="O"){optionss.style.visibility='visible';optionss.style.height= 'auto';optionss.style.position='static';document.select_calc.opcoes.value = "-"+cmd;}else{optionss.style.visibility='hidden';optionss.style.height= '1px';optionss.style.overflow= 'hidden';optionss.style.position= 'absolute';optionss.style.top= '0px';optionss.style.right= '0px';document.select_calc.opcoes.value = cmd.substring(1,cmd.length);}}
+
+</script>
+
+<body id="BG">
+<noscript>
+<h2 align="center"><font color="#999999">Para este programa funcionar, voçê precisa ativar o JavaScript do seu navegador.</font></h2>
+</noscript>
+<a name="up"></a>
+<div id="general" align="center">
+  <div id="optionss">
+    <fieldset>
+    <legend>Opções</legend>
+      <form name="opt_form" onSubmit="javascript:DefineCookie('bgcolor',bgcolor.value,'true'),document.location.reload();">
+	    <label for="bgcolor">Cor de fundo (inglês ou hex.)</label>
+        <input name="bgcolor" value="" onKeyPress="return verify_char2(this);" onChange="javascript:DefineCookie('bgcolor',this.value,'true'),document.location.reload();" type="text" maxlength="30" size="25">
+		<input name="defColor" type="button" onClick="javascript:DefineCookie('bgcolor','default','true');document.location.reload();" id="button_id" value="Padr&atilde;o">
+		<br/>
+	    <label for="laycolor">Cor do layout</label>
+        <select name="laycolor" onChange="javascript:DefineCookie('laycolor',this.value,'true'),document.location.reload();">
+		  <option value="default">sem cor</option>
+          <option id="cor1" value="#0066FF">#0066FF</option>
+          <option id="cor2" value="#0099FF">#0099FF</option>
+          <option id="cor3" value="#00CCFF">#00CCFF</option>
+          <option id="cor4" value="#FFCC00">#FFCC00</option>
+          <option id="cor5" value="#FFFF00">#FFFF00</option>
+          <option id="cor6" value="#FFFFFF">#FFFFFF</option>
+          <option id="cor7" value="#CCCCCC">#CCCCCC</option>
+          <option id="cor8" value="#FF7A22">#FF7A22</option>
+          <option id="cor9" value="#FF00FF">#FF00FF</option>
+          <option id="cor10" value="#000000">#000000</option>
+          <option id="cor11" value="#333333">#333333</option>
+          <option id="cor12" value="#666666">#666666</option>
+          <option id="cor13" value="#FF6699">#FF6699</option>
+          <option id="cor14" value="#FF9999">#FF9999</option>
+          <option id="cor15" value="#9900FF">#9900FF</option>
+          <option id="cor16" value="#CC0000">#CC0000</option>
+          <option id="cor17" value="#FF0000">#FF0000</option>
+          <option id="cor18" value="#009900">#009900</option>
+          <option id="cor19" value="#00CC00">#00CC00</option>
+          <option id="cor20" value="#99FF00">#99FF00</option>
+        </select>
+      </form>
+       <ul id="list"><li>Dica:</li><br>
+	   <li>Para obter o resultado click fora do campo.</li>
+	   <li>Para copiar o resultado gerado clique no mesmo.</li>
+	   <p>&nbsp;</p>
+	   </ul>
+    </fieldset>
+  </div>
+
+  <div id="select_form"> 
+    <fieldset>
+    <legend>Selecionar cálculo</legend>
+    <form name="select_calc" target="_self">
+	  <p style="text-align: center;">
+      <select name="select_cm" onFocus="calc_selector(this);" onChange="calc_selector(this);">
+        <option value="">...</option>
+		<option value="">Escala</option>
+		<option value="">Juros (simples)</option>
+		<option value="">Média (simples)</option>
+        <option value="">Porcentagem sobre um valor</option>
+		<option value="">Raiz quadrada</option>
+		<option value="">Regra de três</option>
+		<option value="">Regra de três (composta)</option>
+		<option value="">Teorema</option>
+		<option value="">Unidades de medida</option>
+        <option value="">Mostre-me tudo</option>
+      </select>
+
+      &nbsp;&nbsp;
+      <input name="about" title="Click aqui para mais informações" onClick="javascript:alert('Usual Calcs versão 1.0\n\Este programa foi escrito para finalidade de estudo pessoal, na esperança que lhe possa ser útil, estou distribuindo este script, mas SEM NENHUMA GARANTIA ! OU GARANTIA IMPLÍCITA! USE-O POR SUA CONTA E RISCO!\n\nUse para o fim que desejar, voçê pode distribuí-lo livremente, mas por gentileza mantenha os créditos no ínicio do script!\n\nQualquer dúvida, comentário, sugestão ou contato :: geovane-fb@hotmail.com\n\n'+navigator.appName+' - '+navigator.userAgent+'\n\n DEUS seja louvado!');" id="button_id" type="button" value="Sobre">
+      &nbsp;&nbsp;
+      <input name="opcoes" title="Op&ccedil;&otilde;es" onClick="showOptions(this.value);" type="button" onMouseOver="defaultStatus=(' Usual Calcs 1.0 :: Op&ccedil;&otilde;es');" onMouseOut="calc_selector(select_cm);"  value="Op&ccedil;&otilde;es" id="button_id">
+    </p>
+	</form>
+    </fieldset>
+  </div>
+  <!-- /form -->
+  
+  <div id="form6"> 
+    <fieldset>
+    <legend title="Obtém a escala, com base na distânçia real e na representada no desenho(mapa).">Escala</legend>
+    <form name="calc_form6" target="_self">
+	  <label for="distance_v">Distância real (km)</label>
+	  <input name="distance_v" type="text" onChange=" Scale(this,mapd_v);" size="12" maxlength="30">
+	  <br/>
+	  <label for="mapd_v">Medida no desenho (cm)</label>
+	  <input name="mapd_v" type="text" onChange=" Scale(distance_v,this);" size="12" maxlength="30">
+	  <!--<input id="button_id" type="submit" value="ok">-->
+      <br/>
+      <label for="result">Escala </label>
+      <input name="result" id="resInput" onFocus="javascript:select();" type="text" readonly="yes"  size="30">
+	  <input name="clean" id="button_id" type="reset" value="limpar">
+    </form>
+    </fieldset>
+  </div>
+  <!-- /form -->
+  
+  <div id="form5"> 
+    <fieldset>
+    <legend title="Obtém juros, capital, tempo ou taxa com base em valores definidos.">Juros simples</legend>
+    <form name="calc_form5" target="_self">
+	  <label for="select_mode">Quero saber o (a)</label>
+	  <select name="select_mode" onChange="select_m(this), EJuros(this,juros_v,capital_v,taxa_v,tempo_v);">
+        <option value="">capital</option>
+		<option value="" selected>juros</option>
+		<option value="">taxa</option>
+		<option value="">tempo</option>
+      </select>
+	  <br/><br/>
+	  <label for="capital_v">Capital</label>
+	  <input name="capital_v" type="text" onChange=" EJuros(select_mode,juros_v,this,taxa_v,tempo_v);" size="12" maxlength="30">
+	  <br/>
+	  <label for="juros_v">Juros</label>
+	  <input name="juros_v" type="text" onChange=" EJuros(select_mode,this,capital_v,taxa_v,tempo_v);" size="12" maxlength="30">
+	  <br/>
+	  <label for="taxa_v">Taxa</label>
+	  <input name="taxa_v" type="text" onChange=" EJuros(select_mode,juros_v,capital_v,this,tempo_v);" size="12" maxlength="30">
+	  <select name="set_tax" onChange="select_m(select_mode), EJuros(select_mode,juros_v,capital_v,taxa_v,tempo_v);">
+	    <option value="dia(s)">(%) ao dia</option>
+        <option value="mes(es)" selected>(%) ao mês</option>
+        <option value="ano(s)">(%) ao ano</option>
+	  </select>
+	  <br/>
+	  <label for="tempo_v">Tempo</label>
+	  <input name="tempo_v" type="text" onChange=" EJuros(select_mode,juros_v,capital_v,taxa_v,this);" size="12" maxlength="30">
+      <input name="set_tempo" value="mes(es)" id="resInput" type="text" readonly="yes" size="10">
+	  <!--<input id="button_id" type="submit" value="ok">-->
+      <br/><br/>
+      <label for="result"><input name="prefix" id="hibInput" value="Resultado" type="text" readonly="yes" size="12"></label>
+      <input name="result" id="resInput" onFocus="javascript:select();" type="text" readonly="yes"  size="25">
+	  <input name="clean" id="button_id" type="reset" value="limpar">
+    </form>
+    </fieldset>
+  </div>
+  <!-- /form -->
+  
+  <div id="form4"> 
+    <fieldset>
+    <legend title="Obtém a média com base em valores definidos, separados por vírgula.">Média simples</legend>
+    <form name="calc_form4" target="_self">
+	  <label for="media_v">Valores (separados por vírgula)</label>
+	  <input name="media_v" type="text" onChange=" SMedia(this.value);" size="25" maxlength="30">
+	  <!--<input id="button_id" type="submit" value="ok">-->
+      <br/>
+      <label for="result">Média</label>
+      <input name="result" id="resInput" onFocus="javascript:select();" type="text" readonly="yes"  size="25">
+	  <input name="clean" id="button_id" type="reset" value="limpar">
+    </form>
+    </fieldset>
+  </div>
+  <!-- /form -->
+  
+  <div id="form"> 
+    <fieldset>
+    <legend title="Obtém a porcentagem de (x) Valor total sobre (y) Valor parcial.">Porcentagem sobre um valor</legend>
+    <form name="calc_form" target="_self">
+      <label for="total_v">Valor total/ Valor parcial</label>	  
+      <input name="total_v" type="text" id="total" onChange=" calc_ff(parcial_v,this);" size="12" maxlength="30">
+      <input name="parcial_v" type="text" id="parcial" onChange=" calc_ff(this,total_v);" size="12" maxlength="30">
+      <!--<input id="button_id" type="submit" value="ok">-->
+      <br/>
+      <label for="result">Porcentagem</label>
+      <input name="result" id="resInput" onFocus="javascript:select();" type="text" readonly="yes"  size="25">
+	  <input name="clean" id="button_id" type="reset" value="limpar">
+    </form>
+    </fieldset>
+  </div>
+  <!-- /form -->
+  
+    <div id="form2"> 
+    <fieldset>
+    <legend title="Obtém a raiz quadrada do número fornecido.">Raiz quadrada</legend>
+    <form name="calc_form2" target="_self">
+      <label for="total_v">Número </label>
+      <input name="sqrt_v" type="text" id="" onChange=" sqrt_ff(this.value);" size="25" maxlength="30">
+      <!--<input id="button_id" type="submit" value="ok">-->
+      <br/>
+      <label for="result">Resultado</label>
+      <input name="result" id="resInput" onFocus="javascript:select();" type="text" readonly="yes"  size="25">
+	  <input name="clean" id="button_id" type="reset" value="limpar">
+    </form>
+    </fieldset>
+  </div>
+  <!-- /form -->
+  
+  <div id="form3"> 
+    <fieldset>
+    <legend title="Obtém o resultado proporcional com base em duas grandezas conhecidas.">Regra de três</legend>
+    <form name="calc_form3" target="_self">
+	  <table border="0" align="center">
+        <tr> 
+          <td><label for="in_prop" style="font-style: italic;">Inversamente proporcional</label> 
+            <input name="in_prop" onClick=" TrRule(new_grand_v,g_prop_v,grand_v);" title="Marque esta opção se '' Grandeza '' for inversamente proporcional em relação a  Incógnita, neste caso, quando aumentamos a grandeza diminui a sua grandeza proporcional." type="checkbox"></td>
+          <td><label for="in_prop" style="font-style: italic;">Incógnita</label></td>
+		</tr>
+        <tr> 
+          <td><input name="g_label" id="resInput2" onClick="Labeling(this,'edit');" onBlur="Labeling(this,'ok')" value="rotular.." size="12" maxlength="15"></td>
+          <td><input name="g_label" id="resInput2" onClick="Labeling(this,'edit');" onBlur="Labeling(this,'ok')" value="rotular.." size="12" maxlength="15"></td>
+        </tr>
+        <tr> 
+          <td><label for="grand_v">Grandeza</label></td>
+          <td><label for="g_prop_v">Grandeza proporc.</label></td>
+        </tr>
+        <tr> 
+          <td><input name="grand_v" type="text" onChange=" TrRule(new_grand_v,g_prop_v,this);" size="12" maxlength="30"></td>
+          <td><input name="g_prop_v" type="text" onChange=" TrRule(new_grand_v,this,grand_v);" size="12" maxlength="30"></td>
+        </tr>
+        <tr> 
+          <td><label for="new_grand_v">Nova grandeza</label></td>
+          <td><label for="result">Resutado (x)</label></td>
+        </tr>
+        <tr> 
+          <td><input name="new_grand_v" type="text" onChange=" TrRule(this,g_prop_v,grand_v);" size="12" maxlength="30"></td>
+          <td><input name="result" id="resInput" onFocus="javascript:select();" type="text" readonly="yes"  size="25"></td>
+        </tr>
+        <tr> 
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td colspan="2" align="center"><input name="clean" id="button_id" type="reset" value="limpar"></td>
+        </tr>
+      </table>
+    </form>
+    </fieldset>
+  </div>
+  <!-- /form -->
+
+  <div id="form8"> 
+    <fieldset>
+    <legend title="Obtém o resultado proporcional com base em três grandezas conhecidas.">Regra de três composta (3 grandezas)</legend>
+    <form name="calc_form8" target="_self">
+      <table border="0" align="center">
+        <tr> 
+          <td><label for="in_prop" style="font-style: italic;">Invers. proporcional</label> 
+            <input name="in_prop" onClick=" TrRule2(grand_v,g_prop_v,g_prop_v2,new_grand_v,new_grand_prop_v2);" title="Marque esta opção se '' Grandeza '' for inversamente proporcional em relação a Incógnita." type="checkbox"></td>
+		  <td><label for="in_prop" style="font-style: italic;">Incógnita</label></td>
+		  <td><label for="in_prop2" style="font-style: italic;">Invers. proporcional</label> 
+            <input name="in_prop2" onClick=" TrRule2(grand_v,g_prop_v,g_prop_v2,new_grand_v,new_grand_prop_v2);" title="Marque esta opção se '' Grandeza proporcional (2)'' for inversamente proporcional em relação a Incógnita." type="checkbox"></td>
+		</tr>
+		<tr></tr>
+		<tr><td><input name="g_label" id="resInput2" onClick="Labeling(this,'edit');" onBlur="Labeling(this,'ok')" value="rotular.." size="12" maxlength="15"></td><td><input name="g_label2" id="resInput2" onClick="Labeling(this,'edit');" onBlur="Labeling(this,'ok')" value="rotular.." size="12" maxlength="15"></td><td><input name="g_label3" id="resInput2" onClick="Labeling(this,'edit');" onBlur="Labeling(this,'ok')" size="12" value="rotular.." maxlength="15"></td></tr>
+		<tr>
+		<td><label for="">Grandeza</label></td><td><label for="">Grandeza proporc.</label></td><td><label for="">Grandeza proporc. (2)</label></td></tr>
+        <tr> 
+          <td><input name="grand_v" type="text" onChange=" TrRule2(this,g_prop_v,g_prop_v2,new_grand_v,new_grand_prop_v2);" size="10" maxlength="30"></td>
+		  <td><input name="g_prop_v" type="text" onChange=" TrRule2(grand_v,this,g_prop_v2,new_grand_v,new_grand_prop_v2);" size="10" maxlength="30"></td>
+		  <td><input name="g_prop_v2" type="text" onChange=" TrRule2(grand_v,g_prop_v,this,new_grand_v,new_grand_prop_v2);" size="10" maxlength="30"></td>
+        </tr>
+		<tr><td><label for="">Nova grandeza</label></td><td><label for="">Resultado (x)</label></td><td><label for="">Nova grandeza proporc. (2)</label></td></tr>
+        <tr>
+		  <td><input name="new_grand_v" type="text" onChange=" TrRule2(grand_v,g_prop_v,g_prop_v2,this,new_grand_prop_v2);" size="10" maxlength="30"></td>
+		  <td><input name="result" id="resInput" onFocus="javascript:select();" type="text" readonly="yes"  size="25"></td>
+		  <td><input name="new_grand_prop_v2" type="text" onChange=" TrRule2(grand_v,g_prop_v,g_prop_v2,new_grand_v,this);" size="10" maxlength="30"></td>
+		</tr>
+		<tr><td colspan="4">&nbsp;</td></tr>
+        <tr> 
+          <td colspan="3" align="center"><input name="clean" id="button_id" type="reset" value="limpar"></td>
+        </tr>
+      </table>
+    </form>
+    </fieldset>
+  </div>
+  <!-- /form -->
+  
+  <div id="form7"> 
+    <fieldset>
+    <legend title="Obtém largura, altura, comprimento ou ângulo diagonal(hipotenusa), com base em dois valores definidos.">Teorema (trigonom.)</legend>
+    <form name="calc_form7" target="_self">
+	  <label for="select_mode">Calcular (o) a</label>
+	  <select name="select_mode2" onChange="select_m(this), ETeorema(this,cateto_v,cateto2_v,hipotenusa);">
+        <option value="" selected>hipotenusa</option>
+        <option value="">cateto 1</option>
+		<option value="">cateto 2</option>
+      </select>
+	  <br/><br/>
+	  <label for="cateto_v">Cateto 1/ Cateto 2</label>
+	  <input name="cateto_v" type="text" onChange=" ETeorema(select_mode2,this,cateto2_v,hipotenusa);" size="12" maxlength="30">
+	  <input name="cateto2_v" type="text" onChange=" ETeorema(select_mode2,cateto_v,this,hipotenusa);" size="12" maxlength="30">
+	  <!--<input id="button_id" type="submit" value="ok">-->
+      <br/>
+      <label for="hipotenusa">Hipotenusa </label>
+	  <input name="hipotenusa" type="text" onChange=" ETeorema(select_mode2,cateto_v,cateto2_v,this);" size="12" maxlength="30">
+	  <input name="clean" id="button_id" type="reset" value="limpar">
+    </form>
+    </fieldset>
+  </div>
+  <!-- /form -->
+  
+  <div id="form9"> 
+    <fieldset>
+    <legend title="Faz a conversão de unidades.">Unidades básicas (conversão)</legend>
+    <form name="calc_form9" target="_self">
+      <table border="0" align="center">
+        <tr> 
+          <td colspan="7"> <div align="left">
+              <select name="select_un" onChange="convert_ff(this,un_v,un_v2,un_v3,un_v4,un_v5,un_v6,un_v7);">
+                <option value="" selected>distância</option>
+                <option value="">peso</option>
+                <option value="">volume</option>
+              </select>
+            </div></td>
+        </tr>
+        <tr> 
+          <td><input name="un_label" value="kil&ocirc;metro(km)" id="resInput" type="text" readonly="yes" size="9">
+		  <input name="un_v" type="text" id="01" size="9" onChange="return convert_ff(select_un,this,un_v2,un_v3,un_v4,un_v5,un_v6,un_v7,this.id);" maxlength="30"></td>
+          <td><input name="un_label2" type="text" id="resInput" value="hect&ocirc;metro" size="9" readonly="yes">
+		  <input name="un_v2" type="text" id="02" size="9" onChange="convert_ff(select_un,un_v,this,un_v3,un_v4,un_v5,un_v6,un_v7,this.id);" maxlength="30"></td>
+          <td><input name="un_label3" type="text" id="resInput" value="dek&acirc;metro" size="9" readonly="yes">
+		  <input name="un_v3" type="text" id="03" size="9" onChange="convert_ff(select_un,un_v,un_v2,this,un_v4,un_v5,un_v6,un_v7,this.id);" maxlength="30"></td>
+          <td><input name="un_label4" type="text" id="resInput" value="metro(m)" size="9" readonly="yes">
+		  <input name="un_v4" type="text" id="04" size="9" onChange="convert_ff(select_un,un_v,un_v2,un_v3,this,un_v5,un_v6,un_v7,this.id);" maxlength="30"></td>
+          <td><input name="un_label5" type="text" id="resInput" value="dec&iacute;metro" size="9" readonly="yes">
+		  <input name="un_v5" type="text" id="05" size="9" onChange="convert_ff(select_un,un_v,un_v2,un_v3,un_v4,this,un_v6,un_v7,this.id);" maxlength="30"></td>
+		</tr>
+		<tr></tr>
+		<tr>
+		  <td><input name="un_label6" type="text" id="resInput" value="cent&iacute;metro"  size="9" readonly="yes">
+		  <input name="un_v6" type="text" id="06" size="9" onChange="convert_ff(select_un,un_v,un_v2,un_v3,un_v4,un_v5,this,un_v7,this.id);" maxlength="30"></td>
+          <td><input name="un_label7" type="text" id="resInput" value="mil&iacute;metro"  size="9" readonly="yes">
+		  <input name="un_v7" type="text" id="07" size="9" onChange="convert_ff(select_un,un_v,un_v2,un_v3,un_v4,un_v5,un_v6,this,this.id);" maxlength="30"></td>
+        </tr>
+		<tr> 
+          <td colspan="5" align="center"><input name="clean" id="button_id" type="reset" value="limpar"></td>
+        </tr>
+      </table>
+    </form>
+    </fieldset>
+  </div>
+  <!-- /form -->
+  
+  <p><a href="#up" id="anc" style="visibility: hidden;position: fixed;right: 0px;bottom: 0px;text-decoration: none;padding: 2px 4px;font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-weight: bold;color: #FFFFFF;background-color: #333333;border: 1px solid #FFFFFF;">topo</a></p>
+</div><!-- /general -->
+
+</body>
+</html>
+  
+<script type="text/javascript">
+/* bgcolor definition*/
+if(GetCookie('bgcolor')!="default"&&GetCookie('bgcolor')!=null){document.bgColor=GetCookie('bgcolor');}else{document.bgColor="#333333";}
+//layout style color
+if(GetCookie('laycolor')!="default"&&GetCookie('laycolor')!=null){general.style.background=(GetCookie('laycolor'));}
+//options fields
+if(GetCookie('bgcolor')!=null){document.opt_form.bgcolor.value = GetCookie('bgcolor');}
+if(GetCookie('laycolor')!=null){lcombox = document.opt_form.laycolor;
+_setLaycolor = GetCookie('laycolor');
+for(i=0;i<lcombox.length;i++){
+if(lcombox.options[i].value == _setLaycolor){lcombox.options[i].selected = true;break;}
+  }
+}
+
+//hide options argument
+showOptions("-Opções");
+//loading.. state
+combox = document.select_calc.select_cm;
+if(GetCookie('c_choise')){_setCalc=GetCookie('c_choise');
+combox.options[_setCalc].selected = true;}else{combox.options[1].selected = true;}
+calc_selector(combox);
+combox2 = document.calc_form5.select_mode;
+if(GetCookie('j_choise')){_setComb=GetCookie('j_choise');
+combox2.options[_setComb].selected = true;}else{combox2.options[1].selected = true;}
+select_m(combox2);
+combox3 = document.calc_form7.select_mode2;
+if(GetCookie('t_choise')){_setComb2=GetCookie('t_choise');
+combox3.options[_setComb2].selected = true;}else{combox3.options[0].selected = true;}
+select_m(combox3);
+d=document.calc_form9;convert_ff(d.select_un,d.un_v,d.un_v2,d.un_v3,d.un_v4,d.un_v5,d.un_v6,d.un_v7);
+
+/* First visit*/
+function askName(){
+eName=prompt("Forneça seu nome, se quiser:","");
+if((eName!=null)&&(eName!="")){while(verify_char(eName)==false){eName=prompt("Forneça seu nome correto por favor, ou deixe em branco:","");}}
+if(eName==""||eName==null||eName.length<=2){DefineCookie('nome','desconhecido','true');setTimeout("askBGcolor('msg2');",20000);}
+else{if(eName.length>2){
+if(verify_char(eName)==true){
+DefineCookie('nome',eName,'true');
+setTimeout("askBGcolor('msg1');",20000);
+      }
+	}
+  }
+}
+function askBGcolor(def){
+if(def=="msg1"){
+bgColor=prompt(GetCookie('nome')+", voçê pode mudar a cor do plano de fundo\n Se desejar digite o nome de uma cor aqui, em inglês por favor, esta configuração também pode ser alterada em '' opções ''.","");}
+else{bgColor=prompt("Voçê quer mudar a cor do plano de fundo?\n Se quiser digite o nome de uma cor aqui, em inglês por favor.","");}
+if((bgColor!=null)&&(bgColor!="")){while(verify_char2(bgColor)==false){bgColor=prompt(GetCookie('nome')+", digite uma ou mais cores separadas pelo caractere de soma ''+''\nsenão deixe em branco para manter a cor atual:","");}}
+if(bgColor==""||bgColor==null||bgColor.length<=2){DefineCookie('bgcolor','default','true');}
+else{if(bgColor.length>2){
+if(verify_char2(bgColor)==true){
+DefineCookie('bgcolor',bgColor,'true');
+document.location.reload();
+      }
+    }
+  }
+}
+if(GetCookie('nome')==""||GetCookie('nome')==null){setTimeout("askName();",20000);}
+
+//debug - list elements
+/*
+var type;
+for(var i2=0;i2<document.forms.length;i2++){
+document.write("<br>"+document.forms[i2].name+"<hr noshade size=1 width=20%>");
+
+var quant =document.forms[i2].elements.length;
+for(var i=0;i<quant;i++){
+type = document.forms[i2].elements[i].type;
+document.write((i+ 1)+ "ºelemento - type: "+ type+"<br>");
+  }
+}
+*/
+ </script>

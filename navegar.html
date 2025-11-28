@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <html>
+  <html lang="en">
+	<head>
+		<title>calculadora</title>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+<meta name="GENERATOR" content="Microsoft SharePoint" />
+
+<meta name="progid" content="SharePoint.WebPartPage.Document" />
+<meta http-equiv="Expires" content="0" />
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Page-Enter" content="blendTrans(Duration=1.10)">
+<meta http-equiv="Page-Exit" content="blendTrans(Duration=1.10)">
+<meta name="viewport" content="width=800px,initial-scale=1">
+<meta name="keywords" content="calculadora"/>
+
+<meta name="description" content="calculadora "/>
+                    
+<meta name="robots" content="index, follow"/>
+                    
+
+<meta name="HandheldFriendly" content="True"/>
+                   
+<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+
+<meta property="og:title" content="calculadora"/>
+
+<meta property="og:description" content="calculadora "/>
+
+<meta property="og:url" content="calculadora"/>
+
+<meta property="og:site_name" content="calculadora"/>
+
+<meta property="fb:app_id" content="1573751922880959"/>
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<style type="text/css">
+  /* inicio retangulo */
+  .rectangle {
+    width: 200px;
+    height: 100px;
+    background-color: #4CAF50;
+    color: #fff;
+    transition: transform 0.3s;
+    perspective: 1000px;
+  }
+
+  .rectangle:hover {
+    transform: rotateY(180deg);
+  }
+
+  @media only screen and (max-width: 2600px) {
+    .rectangle {
+      transform-style: preserve-3d;
+    }
+  }
+/*  fim  retangulo*/
+
+/*  inicio btn-3d*/
+
+
+#btn-3d {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #4CAF50;
+    box-shadow: 0px 4px 0px #2E7D32;
+    position: relative;
+    transition: transform 0.3s;
+  }
+
+  #btn-3d:link{
+    transform: translateY(4px);
+  }
+
+#btn-3d:hover {
+    transform: translateY(4px);
+  }
+
+  #btn-3d:visted {
+    transform: translateY(4px);
+  }
+
+  #btn-3d:active {
+     top: 4px;
+    box-shadow: none;
+  }
+
+
+  @keyframes rotate360 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  #btn-3d{
+    animation: rotate360 13s linear infinite;
+  }
+
+  /*  fim btn-3d*/
+  </style>
+   <link rel="stylesheet" href="https://v40.pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css" media="screen"> 
+   		<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+			<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script> 
+<!-- <script type="text/javascript">
+	$( function ( ) {
+		
+     alert('testando');
+	});
+</script> -->
+
+			<script type="text/javascript" src="script1.js"></script>
+  <script type="text/javascript">
+
+function realiza_calculo()
+{
+    var campo1 = document.getElementById('valor1').value;
+    var campo2 = document.getElementById('valor2').value;
+
+    var maior = (parseFloat(campo1) > parseFloat(campo2)? campo1 : campo2);
+    var menor = (parseFloat(campo1) < parseFloat(campo2)? campo1 : campo2);
+
+    var result = (menor*maior)/100;
+
+    document.getElementById('resultado').value = result;
+}
+
+</script>
+
+<script type="text/javascript">
+      <!--
+      function CalcularFatorial() {
+        var numero = document.calc.numero.value;
+        var fatorial = 1;
+        document.calc.resultado.value = "";
+
+        if (isNaN(numero) || numero > 170 || numero.indexOf(".") > -1) {
+          alert("Número inválido");
+          document.calc.numero.value = "";
+          return false;
+        }
+
+        for (i = 1; i <= numero; i++) {
+          fatorial *= i;
+        }
+        document.calc.resultado.value += fatorial;
+      }
+      //-->
+    </script>  
+    <style>
+<!--
+table.tabela{border-color: #3366CC; background-color:#CCFFFF}
+-->
+</style>
+<script type="text/javascript" src="numerosPrimos.js"></script>
+
+ <script language="javascript">
+   num1="";
+   num2="";
+   sex="";
+   IMC="";
+   
+   function enviap(){
+   num1=document.formulario.dpeso.value;
+   }
+   function enviaA(){
+   num2=document.formulario.daltura.value;
+   IMC=num1/(num2*num2);
+      
+   }
+   function sexo(){
+     sex=document.formulario.daltura.value;
+     document.formulario.imc1.value=eval(IMC);   
+   }
+   
+   function resp(){
+   
+    alert("Se você é do sexo masculino seu IMC deve estar entre 20.7 e 27.8 para você estar saudavel.Se estiver abaixo disso voce precisa comer mais,se estiver acima você precisa comer menos.Se você é do sexo feminino seu IMC deve estar entre 19.1 e 27.3.Abaixo disso você esta com IMC baixo e deve se alimentar melhor,acima deve comer menos");
+    
+         
+       
+   }
+   function limpa(){
+     document.formulario.dpeso.value="";
+     document.formulario.daltura.value="";
+     document.formulario.imc1.value="";
+     }
+   function refaz(){
+     document.formulario.dpeso.value="";
+     document.formulario.daltura.value="";
+     document.formulario.imc1.value="";
+     num1="";
+     num2="";
+     sex="";
+     IMC="";
+    
+    }          
+       
+   
+   
+   </script>
+
+   <script language="JavaScript" src="frete.js"></script>
+<script language="JavaScript" type="text/javascript">
+function horas(){
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds()
+  if (hours <=9)
+hours="0"+hours;
+  if (minutes<=9)
+minutes="0"+minutes;
+  if (seconds<=9)
+seconds="0"+seconds;
+  var cdate="<b><font color=#ff0000 face=arial size=2>"+hours+":"+minutes+":"+seconds+" "+"</font>" 
+  clock.innerHTML= cdate;
+setTimeout("horas()",1000);
+}
+</script>
+
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: lighter;
+	color: #00FF33;
+	border: outset;
+	background-color: #000000;
+	text-transform: none;
+	font-style: normal;
+}
+-->
+			
+
+</style>
+    <!-- texto funcao -->
+    <script type="text/javascript">
+      <!--
+      function Converter() {
+        var numero = document.conversor.numero.value;
+        var base = document.conversor.base.value;
+        var digito = new Array();
+        var i = 0;
+        document.conversor.resultado.value = "";
+
+        if (isNaN(numero) || numero.indexOf(".") > -1) {
+          alert("Número inválido");
+          document.conversor.numero.value = "";
+          return false;
+        }
+
+        while (numero != 0) {
+          i++;
+          digito[i] = numero % base;
+          numero = Math.floor(numero / base);  // divisão inteira, ex.: 15 / 2 = 7
+        }
+
+        while (i >= 1) with (document.conversor.resultado) {
+          switch (digito[i]) {
+            // Na base 16, os dígitos maiores que 10 são representados por letras:
+            case 10: { value += "A"; break }
+            case 11: { value += "B"; break }
+            case 12: { value += "C"; break }
+            case 13: { value += "D"; break }
+            case 14: { value += "E"; break }
+            case 15: { value += "F"; break }
+
+            default: { value += digito[i]; break }
+          }
+          i--;
+        }
+      }
+      //-->             
+    </script> 
+
+     <script>
+   alert("Esta página mostra como navegar, criador:Lucas.");
+    
+   prompt("DIGITE SEU NOME:");
+
+function myFunction() {
+  let person = prompt("CONFIRME SEU NOME:");
+  if (person != null) {
+    document.getElementById("demo").innerHTML =
+    "<h3>SEU NOME É:</h3>" + person.toUpperCase(); + "<h3>E ACESSE A PÁGINA.</h3>";
+      alert("Esta página mostra como navegar, criador:Lucas.");
+
+  }
+}
+    </script>
+
+
+	</head>
+
+  <!-- body começa aqui -->
+		<body style="background-image:url(images.jpeg);">
+     
+     <nav class="navbar navbar-expand-md bg-primary navbar-dark h-50">
+    <div class="container-fluid">
+   
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+     
+
+    </div>
+       <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+          <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <i class="fa d-inline fa-lg fa-diamond"></i>
+         <img src="imagens/Estou indo 8.gif" width="120"  alt="ABRIR LINKS" border="7">
+          </li>
+          
+        </ul>
+      </div>
+       
+  </nav>
+    </div>
+  </nav>
+  <div class="text-center text-uppercase opaque-overlay h-100">
+    <div class="container py-5 h-100">
+      <div class="row">
+        <div class="col-md-12 text-Dark text-center w-25">
+          <p  style="font-family: arial;font-size: 27px;font-style: italic;
+          font-weight: bolder;" id="btn-3d"class="display-3 mb-4"><u>
+           Calculadora</u></p>
+       
+          <br/>
+           </div>
+      </div>
+  </div>
+  </div>
+  </form>
+        </div>
+        <div class="col-4 col-md-2 align-self-center">
+          <a href="https://www.facebook.com" target="_blank"><i class="fa fa-fw fa-facebook fa-3x text-white"></i></a>
+        </div>
+        <div class="col-4 col-md-1 align-self-center">
+          <a href="https://twitter.com" target="_blank"><i class="fa fa-fw fa-twitter fa-3x text-white"></i></a>
+        </div>
+        <div class="col-4 col-md-1 align-self-center">
+          <a href="https://www.instagram.com" target="_blank"><i class="fa fa-fw fa-instagram text-white fa-3x"></i></a>
+        </div>
+      </div>
+          <hr style="border:4px solid #e6e6e6; " />
+           <table width="770"  border="5" cellspacing="39" cellpadding="39" align="center" >
+    <tr><td>
+<body onload="Tempo()">
+    <div style="position: absolute; top: 58%; left: 35%; font:66px Arial" id="lugar">Tempo</div>
+
+    <script type="text/javascript">
+  
+      
+      
+      function Tempo(){
+        horario = new Date()
+        hora = horario.getHours()
+        minuto = horario.getMinutes()
+        segundo = horario.getSeconds()
+        if (hora < 10) {
+          hora = "0" + hora
+        }
+        if (minuto < 10) {
+          minuto = "0" + minuto
+        }
+        if (segundo < 10) {
+          segundo = "0" + segundo
+        }
+        document.getElementById("lugar").innerHTML = hora + ":" + minuto + ":" + segundo;  // hora no documento
+        // barra de título
+        // barra de status
+      }
+      window.setInterval("Tempo()", 1000)
+    //-->
+    </script>
+    </td></tr>
+</table>
+
+
+            <table width="770"  border="5" cellspacing="15" cellpadding="15" align="center" >
+    <tr><td align="center"><span id="clock" ></span><script>setTimeout("horas()",1000);</script></td></tr>
+    </table>
+ <table width="770"  border="5" cellspacing="15" cellpadding="15" align="center" ><tr><th>
+    <form name="y_datetime"><input name="textbox1" type=text class="style1"  
+style="text-align=center" size=55 width=32 > 
+</form>
+<script language="javascript"> 
+
+ydate = new Object(); 
+ydate.style  = 3; 
+ydate.military = 0; 
+
+ydate.days1  = new Array("Domingo","Segunda-feira","Terça-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sábado"); 
+ydate.days2  = new Array("Domingo","Segunda","Terça","Quarta", 
+"Quinta","Sexta","Sabado"); 
+ydate.months1 = new Array("janeiro","fevereiro","março","abril","maio","junho","julho", "agosto","setembro","outubro","novembro","dezembro"); 
+ydate.months2 = new Array("jan","fev","mar","abr","mai","jun", 
+"jul","ago","set","out","nov","dez"); 
+
+function datedisplay() { 
+
+  ydate.now   = new Date(); 
+  ydate.year  = ydate.now.getFullYear(); 
+  ydate.month = ydate.now.getMonth(); 
+  ydate.date  = ydate.now.getDate(); 
+  ydate.day   = ydate.now.getDay(); 
+  ydate.hour  = ydate.now.getHours(); 
+  ydate.min   = ydate.now.getMinutes(); 
+  ydate.sec   = ydate.now.getSeconds(); 
+  ydate.ampm  = ""; 
+
+  if (ydate.military) { 
+        if (ydate.hour < 10) { ydate.hour = "0" + ydate.hour; } 
+  } 
+  else if (ydate.hour > 11) { 
+        ydate.ampm = "Pm"; 
+        ydate.hour = ydate.hour - 12; 
+  } 
+  else { ydate.ampm = "Am"; } 
+
+  if (ydate.hour == 0) { ydate.hour = 12; } 
+  if (ydate.min < 10)  { ydate.min = "0" + ydate.min; } 
+  if (ydate.sec < 10)  { ydate.sec = "0" + ydate.sec; } 
+
+  if (ydate.style == 0)      { ydate.txt = ydate.months2[ydate.month]+" "+ydate.date+" "+ydate.year; } 
+  else if (ydate.style == 1) { ydate.txt =":: "+ ydate.days2[ydate.day]+" "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm+" ::"; } 
+  else if (ydate.style == 2) { ydate.txt =":: "+ydate.date+" "+ydate.months2[ydate.month]+"  "+ydate.year+" :: "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm+" ::"; } 
+  else if (ydate.style == 3) { ydate.txt =":: "+ydate.days1[ydate.day]+" - "+ydate.date+" de " +ydate.months1[ydate.month]+" de "+ydate.year+" - "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm+" ::"; } 
+  else if (ydate.style == 4) { ydate.txt = ":: "+ydate.date+"/"+(ydate.month+1)+"/"+ydate.year+" :: "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm+" ::"; } 
+  else{ ydate.txt = ydate.year+"/"+(ydate.month+1)+"/"+ydate.date+" , "+ydate.hour+":"+ydate.min+":"+ydate.sec+" "+ydate.ampm; } 
+
+  document.y_datetime.textbox1.value = ydate.txt; 
+  ydate.id=setTimeout("datedisplay()",1000); 
+} 
+
+datedisplay(); 
+</script>
+</th></tr></table>
+ 
+ <table border="0" align="center"> 
+  <tr><th>
+    <button onclick="myFunction()"><h3>CONFIRME SEU NOME:</h3></button>
+    <p id="demo"></p>
+  </th></tr>
+</table>
+
+
+        <div id="geral_4">
+        	<h1 align="center"><b><u>COMO NAVEGAR:</u></b></h1>
+        	 <img src="navegar/1.png" width="950" height="950" alt="imagem" border="5">
+        	  <br/>
+            <img src="navegar/2.png" width="950" height="950" alt="imagem" border="5">
+        	  <br/>
+        	 <img src="navegar/3.png" width="950" height="950" alt="imagem" border="5">
+        	 <br/>
+        	 <img src="navegar/4.png" width="950" height="950" alt="imagem" border="5">
+        	 <br/>
+        	 <img src="navegar/5.png" width="950" height="950" alt="imagem" border="5">
+        	 <br/>
+        	 <img src="navegar/6.png" width="950" height="950" alt="imagem" border="5">
+        	 <br/>
+        	 <img src="navegar/7.png" width="950" height="950" alt="imagem" border="5">
+        	 <br/>
+        	 <img src="navegar/8.png" width="950" height="950" alt="imagem" border="5">
+        	 <br/>
+        	 <img src="navegar/9.png" width="950" height="950" alt="imagem" border="5">
+           <br/>
+           <img src="navegar/10.png" width="950" height="950" alt="imagem" border="5">
+           <br/>
+           <img src="navegar/11.png" width="950" height="950" alt="imagem" border="5">
+           <br/>
+           <img src="navegar/12.png" width="950" height="950" alt="imagem" border="5">
+           <br/>
+           <img src="navegar/13.png" width="950" height="950" alt="imagem" border="5">
+           <br/>
+           <img src="navegar/14.png" width="950" height="950" alt="imagem" border="5">
+           <br/>
+           <img src="navegar/15.png" width="950" height="950" alt="imagem" border="5">
+           <br/>
+           <img src="navegar/16.png" width="950" height="950" alt="imagem" border="5">
+           <br/>
+           <img src="navegar/17.png" width="950" height="950" alt="imagem" border="5">
+        </div>
+
+</body>  
+ </html>    
