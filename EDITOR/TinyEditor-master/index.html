@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TinyEditor - JavaScript WYSIWYG Editor</title>
+<link rel="stylesheet" href="style.css" />
+<script type="text/javascript" src="tinyeditor.js"></script>
+
+<style type="text/css">
+        	charset 'utf-8';
+
+			* {
+     			margin:0;
+     			padding:0;
+     			border:0;
+      			/* CSS RESET - zera estilo para começar novo css*/
+     			text-decoration:none;
+     			list-style:none;
+     			vertical-align:baseline;
+     			z-index:0
+
+		}
+        </style>
+        <!-- abrir chamando bootstrap -->
+   		<link rel="stylesheet" href="https://v40.pingendo.com/assets/bootstrap/bootstrap-4.0.0-beta.1.css" type="text/css" media="screen"> 
+      	<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+      	<!-- fechar chamando bootstrap -->
+</head>
+<body>
+
+	<!-- <nav class="navbar navbar-expand-md bg-primary navbar-dark h-50">
+    			<div class="container-fluid">
+   				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="co" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> -->
+
+<textarea id="input" style="width:400px; height:200px;">
+
+    <label style="font-weight:bold;font-size:50px;text-decoration:underline;">inserir imagens:</label>
+              <br/><br/>
+  
+    <label for="img-input" style="border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;">Inserir Imagem:</label>
+    <input type="file" id="img-input">
+    <br/>
+    <label for="width-input" style="border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;">Largura (px):</label>
+    <input type="number" id="width-input" value="200">
+    <br/>
+    <label for="height-input" style="border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;">Altura (px):</label>
+    <input type="number" id="height-input" value="200">
+    <br/>
+    <input type="radio" id="keep-proportions" name="proportions" value="keep" checked>
+    <label for="keep-proportions">Manter proporcoes</label>
+    <br/>
+    <input type="radio" id="ignore-proportions" name="proportions" value="ignore">
+    <label for="ignore-proportions">Nao manter proporcoes</label>
+    <br/>
+    <button id="insert-btn" style="border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;">Inserir</button>
+    <div id="images-container"></div>
+    <script src="main_jpg.js"></script>
+ 
+
+</textarea>
+<script type="text/javascript">
+new TINY.editor.edit('editor',{
+	id:'input',
+	width:1284,
+	height:475,
+	cssclass:'te',
+	controlclass:'tecontrol',
+	rowclass:'teheader',
+	dividerclass:'tedivider',
+	controls:['bold','italic','underline','strikethrough','|','subscript','superscript','|',
+			  'orderedlist','unorderedlist','|','outdent','indent','|','leftalign',
+			  'centeralign','rightalign','blockjustify','|','unformat','|','undo','redo','n',
+			  'font','size','style','|','image','hr','link','unlink','|','cut','copy','paste','print'],
+	footer:true,
+	fonts:['Verdana','Arial','Georgia','Trebuchet MS','Bauhaus 93','Times New Roman','Berlin Sans FB','Algerian','Bernard MT Condensed','Mongolian Baiti','Adobe Arabic','Adobe Caslon Pro','Adobe Caslon Pro Bold','Adobe Gothic Std B','Adobe Hebrew','Adobe Myungjo Std M','Arial Black','Arial Narrow','Arial Rounded MT Bold','Bahnschrift','Bahnschrift Light Condensed','Birch Std','Blackadder ITC','Blackoak Std','Bodoni MT','Brush Script MT','Bahnschrift SemiBold','Bahnschrift SemiBold Condensed','Bahnschrift SemiLight','Baskerville Old Face','Bell MT','Calibri Light','Californian FB','Chiller','Castellar','Centaur','Century Schoolbook','Century Gothic','Chaparral Pro Light','Cooper Black','Cooper Std Black','Curlz MT','Charlemagne Std','Ebrima','Edwardian Script ITC','Elephant','Engravers MT','Freestyle Script','French Script MT','Giddyup Std','Gigi','Gill Sans Ultra Bold Condensed','Gloucester MT Extra Condensed','Haettenschweiler','Harlow Solid Italic','HoloLens MDL2 Assets','Impact','Imprint MT Shadow','Informal Roman','Ink Free','Jokerman','Juice ITC','Kozuka Gothic Pr6N B','Kozuka Gothic Pro B','Kunstler Script','Kristen ITC','Leelawadee','Lucida Console','Lucida Handwriting','Magneto','Matura MT Script Capitals','Microsoft Tai Le','Microsoft Uighur','MingLiU_HKSCS-ExtB','MingLiU-ExtB','MT Extra','MV Boli','Rosewood Std Regular','Nueva Std Cond','OCR A Extended','OCR A Std','Old English Text MT','Onyx','Palace Script MT','Parchment','PMingLiU-ExtB','Pristina','Ravie','Segoe UI Symbol','Snap ITC','Source Code Pro Semibold','Sylfaen','Tw Cen MT Condensed Extra Bold','Vladimir Script','Viner Hand ITC','Wide Latin','Wingdings','Wingdings 2','Wingdings 3','Yu Gothic','Yu Gothic UI Semibold'],
+	xhtml:true,
+	cssfile:'style.css',
+	bodyid:'editor',
+	footerclass:'tefooter',
+	toggle:{text:'show source',activetext:'show wysiwyg',cssclass:'toggle'},
+	resize:{cssclass:'resize'}
+});
+</script>
+
+
+<!-- </div>
+</nav> -->
+</body>
+</html>
