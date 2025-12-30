@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sudoku</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      max-width: 900px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #2e7d32;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #a5d6a7, #81c784);
+      border-radius: 16px;
+      padding: 25px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+
+    .card a {
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+      color: #1b5e20;
+      display: block;
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<audio id="somAbertura">
+  <source src="Sons/Pirates of the Caribbean (original).mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+  const audio = document.getElementById("somAbertura");
+
+  function tocarSom() {
+    audio.volume = 0.5;
+    audio.play().catch(() => {});
+    document.removeEventListener("click", tocarSom);
+  }
+
+  document.addEventListener("click", tocarSom);
+</script>
+
+  <div class="container">
+    <h1> Sudoku</h1>
+    <div class="subtitle">Escolha uma opção para começar</div>
+
+    <div class="grid">
+      <div class="card">
+        <a href="Básico/TABELA_BÁSICO.html" target="_blank">Básico</a>
+      </div>
+
+      <div class="card">
+        <a href="Médio/TABELA_MÉDIO.html" target="_blank">Médio</a>
+      </div>
+
+      <div class="card">
+        <a href="Avançado/TABELA_AVANÇADOS.html" target="_blank">Avançado</a>
+      </div>
+
+      <div class="card">
+        <a href="imagens/imagens.html" target="_blank">Imagens</a>
+      </div>
+
+      <div class="card">
+        <a href="https://drive.google.com/file/d/1HoPpQ0cRooh2qnkGu6DKyZn3wXIykO4w/view" target="_blank">
+          Links de Jogos
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="Jogos/TABELA_JOGOS.html" target="_blank">Jogos Online</a>
+      </div>
+    </div>
+
+    <footer>
+      © Sudoku • Divirta-se treinando o cérebro
+    </footer>
+  </div>
+
+</body>
+</html>
