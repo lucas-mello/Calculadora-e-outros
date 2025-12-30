@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Arquivos e Projetos</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      max-width: 900px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #2e7d32;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #a5d6a7, #81c784);
+      border-radius: 16px;
+      padding: 25px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+
+    .card a {
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+      color: #1b5e20;
+      display: block;
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 14px;
+      color: #777;
+    }
+
+
+    /* Cronômetro base */
+.cronometro {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  color: #0f0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0f0, 0 0 20px #0f0 inset;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  text-align: center;
+  transition: all 0.3s ease, color 1s;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .cronometro {
+    font-size: 14px;
+    padding: 8px 16px;
+    top: 10px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .cronometro {
+    font-size: 12px;
+    padding: 6px 12px;
+    top: 5px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* Dia/Noite */
+body.day .cronometro {
+  color: #006600;
+  box-shadow: 0 0 10px #00cc00, 0 0 20px #00cc00 inset;
+}
+body.night .cronometro {
+  color: #00ffff;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff inset;
+}
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="relogio" class="cronometro"></div>
+
+<script>
+function atualizarRelogio() {
+  const agora = new Date();
+
+  // Ajuste do fuso horário (exemplo: 'America/Sao_Paulo')
+  const opcoes = {
+    timeZone: 'America/Sao_Paulo',
+    weekday: 'short',
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  };
+
+  const dataFormatada = agora.toLocaleString('pt-BR', opcoes);
+
+  document.getElementById("relogio").textContent = dataFormatada;
+
+  // Dia ou Noite baseado no horário de São Paulo
+  const hora = parseInt(agora.toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo', hour:'2-digit', hour12:false}));
+  if (hora >= 6 && hora < 18) {
+    document.body.classList.add('day');
+    document.body.classList.remove('night');
+  } else {
+    document.body.classList.add('night');
+    document.body.classList.remove('day');
+  }
+}
+
+setInterval(atualizarRelogio, 1000);
+atualizarRelogio();
+
+</script>
+
+<div class="container">
+    <h1>LINKS DE PROJETOS:</h1>
+    <div class="subtitle">Escolha uma opção para começar:</div>
+
+     <div class="grid">
+      <div class="card">
+        <a href="http://www.matematicadidatica.com.br/" target="_blank">CÁLCULOS</a>
+      </div>
+
+
+    
+
+<div class="card"><a href="abrir_pdf/web/index.html">LEITOR DE PDF ONLINE</a></div>
+
+<div class="card"><a href="mario/webapp/index.html">JOGO MARIO HTML 5</a></div>
+
+<div class="card"><a href="minimax/minimax.html">JOGO DA VELHA MINIMAX</a></div>
+
+<div class="card"><a href="CC_154_Tic_Tac_Toe_Minimax/P5/index.html">MINIMAX</a></div>
+
+<div class="card"><a href="jogo i.a/jogo-da-velha-js-master/jogo-da-velha-js-master/index.html">JOGO DA VELHA I.A</a></div>
+
+<div class="card"><a href="jogo i.a/tic-tac-toe-game-master/index.html">JOGO DA VELHA I.A 2</a></div>
+
+<div class="card"><a href="minimax completo com ia/Jogo 1.html">JOGO COMPLETO COM IA MAIS AVANÇADA 1</a></div>
+
+<div class="card"><a href="2048 2/index.html">JOGO 2048</a></div>
+<div class="card"><a href="2048 completo/index.html">JOGO 2048 COMPLETO</a></div>
+
+<div class="card"><a href="2048 usb/index.html">JOGO 2048</a></div>
+<div class="card"><a href="2048 master/index.html">JOGO 2048</a></div>
+<div class="card"><a href="hex-2048-master/index.html">JOGO 2048 HEX</a></div>
+
+<div class="card"><a href="flappy 2048/ChromeExt/window.html">FLAPPY 2048</a></div>
+
+<div class="card"><a href="SingleHtml/flappy2048.html">FLAPPY 2048</a></div>
+
+<div class="card"><a href="bitcoin/index.html">MOEDA VIRTUAL</a></div>
+
+<div class="card"><a href="piratas e harry/index.html">FILMES</a></div>
+
+<div class="card"><a href="mapa do brasil/map.html">MAPA INTERATIVO</a></div>
+
+<div class="card"><a href="Urna/urna master/index.html">URNA PRESIDENTES 2018</a></div>
+
+<div class="card"><a href="Urna/urna 2/index.html">URNA GOVERNADORES BH 2018</a></div>
+
+<div class="card"><a href="Urna/urna 3/index.html">URNA SENADORES BH 2018</a></div>
+
+<div class="card"><a href="Urna/urna 4/index.html">URNA PREFEITURA BH 2020</a></div>
+     
+<div class="card"><a href="Urna/urna 5/index.html">URNA GOVERNADORES BH 2022</a></div>
+
+<div class="card"><a href="Urna/urna 6/index.html">URNA PRESIDENTES BH 2022</a></div>
+
+<div class="card"><a href="Urna/urna 7/index.html">URNA SENADORES BH 2022</a></div>
+
+<div class="card"><a href="Urna/urna 8/index.html">URNA PREFEITURA BH 2024</a></div>
+
+<div class="card"><a href="jogo i.a/checkers-master/index.html">DAMA</a></div>
+
+<div class="card"><a href="jogo i.a/Xadrez-master/index.html">XADREZ</a></div>
+
+<div class="card"><a href="jogo i.a/xadrez-js-master/index.html">XADREZ</a></div>
+
+<div class="card"><a href="jogo i.a/engine-xadrez-randomico-master/index.php">XADREZ</a></div>
+
+<div class="card"><a href="jogo i.a/snake/snake.html">SNAKE</a></div>
+
+<div class="card"><a href="jogo i.a/paint completa/index.html">PAINT COMPLETA</a></div>
+
+<div class="card"><a href="jogo i.a/piano/index.html">PIANO</a></div>
+
+<div class="card"><a href="Letras/index.html">LETRAS DE MÚSICAS</a></div>
+
+<div class="card"><a href="atalhos Bat windows.zip">ATALHOS BAT WINDOWS</a></div>
+
+<div class="card"><a href="ativador gpedit windows 10 home.zip">ATIVADOR GPEDIT WINDOWS</a></div>
+
+<div class="card"><a href="dvd/index.html">DVD</a></div>
+
+<div class="card"><a href="teclado/index.html">TECLADO</a></div>
+
+<div class="card"><a href="movimentos/index.html">MOVIMENTOS</a></div>
+
+<div class="card"><a href="crud angular/index.html">CRUD ANGULAR COMPLETO</a></div>
+
+<div class="card"><a href="pacman/index.htm">PACMAN</a></div>
+
+<div class="card"><a href="Bubble-Shooter-HTML5-master/bubble-shooter.html">BUBBLE SHOOTER</a></div>
+
+<div class="card"><a href="genius_js-master/index.html">GENIO QUIZ</a></div>
+
+<div class="card"><a href="memory-game/game.html">JOGO DA MEMÓRIA</a></div>
+
+<div class="card"><a href="javascript-racer-master/index.html">JOGO DE CORRIDA</a></div>
+
+<div class="card"><a href="rubiks-solver-master/rubiks.html">CUBO DE RUBIK</a></div>
+
+<div class="card"><a href="piano-tiles-master/index.html">PIANO TILES</a></div>
+
+<div class="card"><a href="EDITOR/max_bootstrap.html">TEXTO PARA MAIÚSCULO</a></div>
+
+<div class="card"><a href="EDITOR/mi_bootstrap.html">TEXTO PARA MINÚSCULO</a></div>
+
+<div class="card"><a href="https://www.textconverter.io/pt/capitalize/">1º MAIÚSCULA E OUTROS</a></div>
+
+<div class="card"><a href="EDITOR/texto_normal.html">EDITOR NORMAL</a></div>
+
+<div class="card"><a href="EDITOR/TinyEditor-master/index.html">TINY EDITOR</a></div>
+
+<div class="card"><a href="https://www.unitarios.com.br/ferramentas/converter-maiusculas-minusculas">MAIÚSCULA E OUTROS</a></div>
+
+<div class="card"><a href="https://www.4devs.com.br/tabela_ascii">GERAL E OUTROS</a></div>
+
+<div class="card"><a href="https://www.site24x7.com/pt/tools/imagem-para-dados-uri.html">IMAGEM EM URL</a></div>
+
+<div class="card"><a href="https://ezgif.com/image-to-datauri">IMAGEM EM URL</a></div>
+
+<div class="card"><a href="https://im.ge/">IMAGEM EM URL CURTA</a></div>
+
+<div class="card"><a href="EDITOR/excel_xls_max.html">EXCEL EM MAIÚSCULO</a></div>
+
+<div class="card"><a href="EDITOR/excel_xls_min.html">EXCEL EM MINÚSCULO</a></div>
+
+<div class="card"><a href="EDITOR/excel_xls_normal.html">EXCEL EM TEXTO NORMAL</a></div>
+
+<div class="card"><a href="EDITOR/gerar_imagem_png.html">ABRIR IMAGEM E SALVAR EM PNG</a></div>
+
+<div class="card"><a href="EDITOR/gerar_imagem_jpg.html">ABRIR IMAGEM E SALVAR EM JPG</a></div>
+
+<div class="card"><a href="jogo/index.html">SUDOKU</a></div>
+
+</div>
+
+
+
+
+
+    <!--   <div class="card">
+        <a href="" target="_blank">Avançado</a>
+      </div>
+
+      <div class="card">
+        <a href="imagens/imagens.html" target="_blank">Imagens</a>
+      </div>
+
+      <div class="card">
+        <a href="https://drive.google.com/file/d/1HoPpQ0cRooh2qnkGu6DKyZn3wXIykO4w/view" target="_blank">
+          Links de Jogos
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="Jogos/TABELA_JOGOS.html" target="_blank">Jogos Online</a>
+      </div>
+    </div> -->
+
+
+
+    <footer>
+      ©  • Divirta-se treinando o cérebro
+    </footer>
+  
+
+</body>
+</html>

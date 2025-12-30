@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cronômetro Responsivo</title>
+<style>
+/* Cronômetro base */
+.cronometro {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #0f0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 6px 12px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px #0f0;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .cronometro {
+    font-size: 14px;
+    padding: 5px 10px;
+    top: 10px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .cronometro {
+    font-size: 12px;
+    padding: 4px 8px;
+    top: 5px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Cronômetro -->
+<div id="relogio" class="cronometro"></div>
+
+<script>
+function atualizarRelogio() {
+  const agora = new Date();
+
+  const diasSemana = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+  const diaSemana = diasSemana[agora.getDay()];
+  const dia = agora.getDate().toString().padStart(2, '0');
+  const mes = (agora.getMonth() + 1).toString().padStart(2, '0');
+  const ano = agora.getFullYear();
+
+  const horas = agora.getHours().toString().padStart(2, '0');
+  const minutos = agora.getMinutes().toString().padStart(2, '0');
+  const segundos = agora.getSeconds().toString().padStart(2, '0');
+
+  document.getElementById("relogio").textContent =
+    `${diaSemana}, ${dia}/${mes}/${ano} ${horas}:${minutos}:${segundos}`;
+}
+
+// Atualiza a cada segundo
+setInterval(atualizarRelogio, 1000);
+atualizarRelogio();
+</script>
+
+</body>
+</html>

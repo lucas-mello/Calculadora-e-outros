@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Arquivos e Projetos</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      max-width: 900px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #2e7d32;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #a5d6a7, #81c784);
+      border-radius: 16px;
+      padding: 25px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+
+    .card a {
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: bold;
+      color: #1b5e20;
+      display: block;
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 14px;
+      color: #777;
+    }
+    
+    /* Cronômetro base */
+.cronometro {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  color: #0f0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0f0, 0 0 20px #0f0 inset;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  text-align: center;
+  transition: all 0.3s ease, color 1s;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .cronometro {
+    font-size: 14px;
+    padding: 8px 16px;
+    top: 10px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .cronometro {
+    font-size: 12px;
+    padding: 6px 12px;
+    top: 5px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* Dia/Noite */
+body.day .cronometro {
+  color: #006600;
+  box-shadow: 0 0 10px #00cc00, 0 0 20px #00cc00 inset;
+}
+body.night .cronometro {
+  color: #00ffff;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff inset;
+}
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  
+<div id="relogio" class="cronometro"></div>
+
+<script>
+function atualizarRelogio() {
+  const agora = new Date();
+
+  // Ajuste do fuso horário (exemplo: 'America/Sao_Paulo')
+  const opcoes = {
+    timeZone: 'America/Sao_Paulo',
+    weekday: 'short',
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  };
+
+  const dataFormatada = agora.toLocaleString('pt-BR', opcoes);
+
+  document.getElementById("relogio").textContent = dataFormatada;
+
+  // Dia ou Noite baseado no horário de São Paulo
+  const hora = parseInt(agora.toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo', hour:'2-digit', hour12:false}));
+  if (hora >= 6 && hora < 18) {
+    document.body.classList.add('day');
+    document.body.classList.remove('night');
+  } else {
+    document.body.classList.add('night');
+    document.body.classList.remove('day');
+  }
+}
+
+setInterval(atualizarRelogio, 1000);
+atualizarRelogio();
+
+</script>
+
+  <div class="container">
+    <h1>BINÁRIO:</h1>
+    <div class="subtitle">Escolha uma opção para começar:</div>
+
+    <div class="grid">
+<div class="card"><a href="binario/binário.html" target="_blank">BINÁRIO 1</a></div>
+
+<div class="card"><a href="binario/binário2.html" target="_blank">BINÁRIO 2</a></div>
+
+<div class="card"><a href="binario/binário3.html" target="_blank">BINÁRIO 3</a></div>
+
+<div class="card"><a href="binario/binário4.html" target="_blank">BINÁRIO 4</a></div>
+
+<div class="card"><a href="binario/binário5.html" target="_blank">BINÁRIO 5</a></div>
+
+<div class="card"><a href="binario/binário6.html" target="_blank">BINÁRIO 6</a></div>
+
+<div class="card"><a href="binario/binário7.html" target="_blank">BINÁRIO 7</a></div>
+
+<div class="card"><a href="binario/binário8.html" target="_blank">BINÁRIO 8</a></div>
+
+<div class="card"><a href="binario/binário9.html" target="_blank">BINÁRIO 9</a></div>
+
+<div class="card"><a href="binario/binário10.html" target="_blank">BINÁRIO 10</a></div>
+
+<div class="card"><a href="binario/binário11.html" target="_blank">BINÁRIO 11</a></div>
+
+<div class="card"><a href="binario/binário12.html" target="_blank">BINÁRIO 12</a></div>
+
+<div class="card"><a href="binario/binário13.html" target="_blank">BINÁRIO 13</a></div>
+
+<div class="card"><a href="binario/binário14.html" target="_blank">BINÁRIO 14</a></div>
+
+<div class="card"><a href="binario/binário15.html" target="_blank">BINÁRIO 15</a></div>
+
+<div class="card"><a href="binario/binário16.html" target="_blank">BINÁRIO 16</a></div>
+
+<div class="card"><a href="binario/binário17.html" target="_blank">BINÁRIO 17</a></div>
+
+<div class="card"><a href="binario/binário18.html" target="_blank">BINÁRIO 18</a></div>
+
+<div class="card"><a href="binario/binário19.html" target="_blank">BINÁRIO 19</a></div>
+
+<div class="card"><a href="binario/binário20.html" target="_blank">BINÁRIO 20</a></div>
+
+<div class="card"><a href="binario/binário21.html" target="_blank">BINÁRIO 21</a></div>
+
+<div class="card"><a href="binario/binário22.html" target="_blank">BINÁRIO 22</a></div>
+
+<div class="card"><a href="binario/binário23.html" target="_blank">BINÁRIO 23</a></div>
+
+<div class="card"><a href="binario/binário24.html" target="_blank">BINÁRIO 24</a></div>
+
+<div class="card"><a href="binario/binário25.html" target="_blank">BINÁRIO 25</a></div>
+
+<div class="card"><a href="binario/binário26.html" target="_blank">BINÁRIO 26</a></div>
+
+<div class="card"><a href="binario/binário27.html" target="_blank">BINÁRIO 27</a></div>
+
+<div class="card"> <a href="binario/binário28.html" target="_blank">BINÁRIO 28</a></div>
+
+<div class="card"><a href="binario/binário29.html" target="_blank">BINÁRIO 29</a></div>
+
+<div class="card"><a href="binario/binário30.html" target="_blank">BINÁRIO 30</a></div>
+
+<div class="card"><a href="binario/binário31.html" target="_blank">BINÁRIO 31</a></div>
+
+<div class="card"><a href="binario/binário32.html" target="_blank">BINÁRIO 32</a></div>
+
+<div class="card"><a href="binario/binário33.html" target="_blank">BINÁRIO 33</a></div>
+
+<div class="card"><a href="binario/binário34.html" target="_blank">BINÁRIO 34</a></div>
+       
+    </div>
+
+    
+
+
+
+    
+   <div class="container">
+    <h1>OUTROS CÁLCULOS:</h1>
+    <div class="subtitle">Escolha uma opção para começar:</div>
+
+     <div class="grid">
+<div class="card"><a href="http://www.matematicadidatica.com.br/" target="_blank">CÁLCULOS</a></div>
+
+
+<div class="card"><a href="http://www.calculadoraonline.com.br/basica" target="_blank">CÁLCULOS</a></div>
+
+<div class="card">
+        <a href="https://engiobra.com/calculadoras/areas/" target="_blank">CÁLCULOS</a>
+      </div>
+      
+
+<div class="card"><a href="https://www.calcule.net/financeiro/juros-financiamento-calculadora/" target="_blank">CÁLCULOS FINANCEIROS</a></div>
+
+<div class="card"><a href="https://calculojuridico.com.br/calculadora-juros/" target="_blank">CÁLCULOS FINANCEIROS</a></div>
+      
+
+<div class="card"><a href="http://www.calculadoraonline.com.br/juros" target="_blank">CÁLCULOS FINANCEIROS</a></div>
+
+
+<div class="card"><a href="https://carteirarica.com.br/juros-compostos/" target="_blank">CÁLCULOS FINANCEIROS</a></div>
+      
+
+<div class="card"><a href="https://www.calculat.org/pt/area-perimetro/poligono.html" target="_blank">CÁLCULOS FINANCEIROS</a></div>
+    
+<div class="card"><a href="https://www.4devs.com.br/area_poligono_regular" target="_blank">CÁLCULOS FINANCEIROS</a></div>
+      
+<div class="card"><a href="https://www.4devs.com.br/" target="_blank">GERAR PDF</a></div>
+
+<div class="card"><a href="https://m.matrix.reshish.com/ptBr/" target="_blank">CÁLCULOS DE MATRIZES</a></div>
+      
+
+<div class="card"><a href="https://pt.numberempire.com/matrixcalculator.php" target="_blank">CÁLCULOS DE MATRIZES</a></div>
+
+<div class="card"><a href="https://pt.planetcalc.com/8328/" target="_blank">CÁLCULOS DE MATRIZES</a></div>
+      
+
+<div class="card"><a href="determinantes-de-matrizes.html" target="_blank">CÁLCULOS DE MATRIZES</a></div>
+     
+<div class="card"><a href="" target="_blank">CÁLCULOS DE MATRIZES</a></div>
+    
+<div class="card"><a href="http://www.profcardy.com/calculadoras/aplicativos.php?calc=20" target="_blank">MATRIZ:TEOREMA DE LAPLACE</a></div>
+    
+
+<div class="card"><a href="https://matrixcalc.org/pt/#determinant%28%7B%7B5,9,6%7D,%7B5,6,4%7D,%7B7,-9,6%7D%7D%29" target="_blank">VÁRIOS CALCULOS COM MATRIZES</a></div>
+
+<div class="card"><a href="http://matrix.reshish.com/ptBr/" target="_blank">CÁLCULO MATRIZ</a></div>
+      
+
+<div class="card"><a href="http://www.profcardy.com/calculadoras/aplicativos.php?calc=26" target="_blank">CÁLCULO NÚMEROS COMPLEXOS E EQUAÇÕES:</a></div>
+
+<div class="card"><a href="https://miniwebtool.com/br/complex-numbers-calculator/" target="_blank">NÚMEROS IMAGINÁRIOS</a></div>
+      
+
+<div class="card"><a href="https://miniwebtool.com/br/mean-median-mode-calculator/" target="_blank">MÉDIA, MEDIANA, MODA</a></div>
+
+     
+<div class="card"><a href="https://calculareconverter.com.br/" target="_blank">MÉDIA, MEDIANA, MODA:</a></div>
+
+<div class="card"><a href="https://calculoexato.com.br/parprima.aspx?codMenu=TrabRescisao" target="_blank">CÁLCULOS DE RESCISÃO:</a></div>
+
+<div class="card"><a href="https://doza.pro/art/math/matrix/pt/calcs#%7B%7B2,3,4%7D,%7B5,6,7%7D,%7B9,8,2%7D%7D%2B%7B%7B2,6,6%7D,%7B5,5,4%7D,%7B9,8,7%7D%7D" target="_blank">CÁLCULOS DE RECISÃO:</a></div>
+
+<div class="card"><a href="https://www.calculorescisao.com.br/calcular-rescisao.php" target="_blank">CÁLCULOS DE RESCISÃO:</a></div>
+
+<div class="card"><a href="https://www.valordotrabalho.com.br/calculo-rescisao.php" target="_blank">CÁLCULOS DE RESCISÃO:</a></div>
+
+<div class="card"><a href="https://calculador.com.br/calculo/rescisao-clt" target="_blank">CÁLCULOS DE RESCISÃO:</a></div>
+<div class="card"><a href="https://www.calcule.net/trabalhista/calculo-rescisao-clt/" target="_blank">CÁLCULOS DE RESCISÃO:</a></div>
+<div class="card"><a href="conversorbeta4.html">OUTRAS CONVERSÕES:</a></div>
+<div class="card"><a href="http://www.webcalc.com.br/" target="_blank">OUTROS CÁLCULOS:</a></div>
+<div class="card"><a href="https://calculareconverter.com.br/" target="_blank">OUTROS CÁLCULOS:</a></div>
+  <div class="card"><a href="dowlaod.html">TEMPO DE DOWNLOAD:</a></div>
+<div class="card">
+  <a href="https://www.projetoderedes.com.br/calculadora/calculadora.php" target="_blank">CALCULADORA TEMPO DE DOWNLOAD:</a></div>
+<div class="card"><a href="usual_calcs.html">MATEMÁTICA:</a></div>
+<div class="card"><a href="divisores-de-um-numero.html">DIVISORES DE UM NÚMERO:</a></div>
+<div class="card"><a href="divisores/divisores2.html">DIVISORES DE UM NÚMERO:</a></div>
+
+<div class="card"><a href="https://www.4devs.com.br/calculadora_regra_tres_simples" target="_blank">REGRA DE TRÊS SIMPLES:</a></div>
+<div class="card"><a href="https://pt.calcuworld.com/calculadoras-matematicas/calculadora-de-regra-de-tres/" target="_blank">REGRA DE TRÊS COMPOSTA:</a></div>
+<div class="card"><a href="http://www.gyplan.com.br/pt/compound_rule3_pt.html" target="_blank">REGRA DE TRÊS COMPOSTA:</a></div>
+
+<div class="card"><a href="http://www.calculadoraonline.com.br/equacao-polinomial" target="_blank">POLINÔMIOS:</a></div>
+<div class="card"><a href="http://www.32x8.com/index.html" target="_blank">TABELA VERDADE (KARNAUGH):</a></div>
+<div class="card"><a href="http://www.calculadoraonline.com.br/tabela-verdade" target="_blank">TABELA VERDADE:</a></div>
+
+<div class="card"><a href="equacao-do-segundo-grau.html">EQUAÇÃO DE SEGUNDO GRAU:</a></div>
+<div class="card"><a href="mmc-e-mdc.html">MMC E MDC:</a></div>
+<div class="card"><a href="numeros-perfeitos.html">NÚMEROS PERFEITOS:</a></div>
+<div class="card"><a href="pa-e-pg.html">PA E PG:</a></div>
+<div class="card"><a href="pa/Index.html">PA:</a></div>
+
+<div class="card"><a href="sequencia-de-fibonacci.html">SEQUÊNCIA DE FIBONACCI:</a></div>
+
+<div class="card"><a href="sequencia-de-fibonacci.html">SEQUÊNCIA DE FIBONACCI:</a></div>
+<div class="card"><a href="Fibonacci com escolha/Index.html">FIBONACCI:</a></div>
+<div class="card"><a href="fibonacci 2/fibonacci.html">FIBONACCI 2:</a></div>
+
+<div class="card"><a href="validar-e-classificar-triangulo.html">VALIDAR E CLASSIFICAR TRIÂNGULO:</a></div>
+<div class="card"><a href="intervalo primos/Index.html">INTERVALO PRIMOS:</a></div>
+<div class="card"><a href="intervalo primos/com intervalos/Index.html">INTERVALO PRIMOS COM INTERVALOS:</a></div>
+
+<div class="card"><a href="calbreakfast.html">CÁLCULOS DE CALORIAS:</a></div>
+<div class="card"><a href="caldinner.html">CÁLCULOS DE CALORIAS:</a></div>
+<div class="card"><a href="callunch.html">CÁLCULOS DE CALORIAS:</a></div>
+
+<div class="card"><a href="calcdevida.htm">CÁLCULO DE IDADE:</a></div>
+<div class="card"><a href="http://webcalc.com.br/Matematica/index" target="_blank">OUTROS CÁLCULOS:</a></div>
+
+<div class="card"><a href="hora.html">HORA, MINUTO E SEGUNDO:</a></div>
+<div class="card"><a href="altura e peso.html">PESO E ÍNDICE:</a></div>
+
+<div class="card"><a href="http://matematicadidatica.com.br/CalculadoraConversaoNumerosDecimaisEmFracao.aspx" target="_blank">CONVERTER DECIMAIS EM FRAÇÃO:</a></div>
+
+<div class="card"><a href="https://dolarhoje.com/iota/" target="_blank">CONVERSÕES DE MOEDAS:</a></div>
+<div class="card"><a href="http://www.xe.com/pt/" target="_blank">CONVERTER MOEDAS DO MUNDO:</a></div>
+<div class="card"><a href="https://cuex.com/pt/bam-brl" target="_blank">CONVERTER MOEDAS DO MUNDO:</a></div>
+
+<div class="card"><a href="https://www.somatematica.com.br/softOnline/ConversorMedidas/conversor.php" target="_blank">CONVERTER GRANDEZAS:</a></div>
+<div class="card"><a href="https://pt.calcuworld.com/calculadoras-da-saude-e-de-exercicios/" target="_blank">CALCULOS ACADEMIA E SAÚDE:</a></div>
+<div class="card"><a href="http://www.conversaodeunidades.com/" target="_blank">CÁLCULOS DA FÍSICA:</a></div>
+
+<div class="card"><a href="http://calculoexato.com.br/conversoes" target="_blank">MAIS CONVERSÕES:</a></div>
+<div class="card"><a href="http://conversordemedidas.info/" target="_blank">MAIS CONVERSÕES:</a></div>
+<div class="card"><a href="https://www.metric-conversions.org/pt/" target="_blank">MEDIDAS:</a></div>
+<div class="card"><a href="https://www.converter-unidades.info/conversor-de-unidades.php" target="_blank">CÁLCULOS ELÉTRICOS:</a></div>
+<div class="card"><a href="http://www.calculadoraonline.com.br/calculadoras" target="_blank">MAIS CÁLCULOS E SISTEMA LINEAR:</a></div>
+
+<div class="card"><a href="https://www.convertworld.com/pt/torque/" target="_blank">ALGUMAS UNIDADES FÍSICAS:</a></div>
+<div class="card"><a href="https://www.convertworld.com/pt/armazenagem-de-dados/byte.html" target="_blank">UNIDADES INFORMÁTICA:</a></div>
+<div class="card"><a href="https://www.convertworld.com/pt/potencia/watt.html" target="_blank">UNIDADES:</a></div>
+<div class="card"><a href="https://jumk.de/calc/luminosidade.shtml" target="_blank">MAIS UNIDADES:</a></div>
+<div class="card"><a href="http://www.conversaodeunidades.com/densidade-kg-m3-oz-in3-lb-gal.php" target="_blank">OUTROS:</a></div>
+<div class="card"><a href="http://unit-converter.org/pt/Densidade.html" target="_blank">MAIS OUTROS:</a></div>
+
+<div class="card"><a href="http://conversor-de-medidas.com/matematica/calculadora-de-fracoes/" target="_blank">CÁLCULO DE FRAÇÕES:</a></div>
+<div class="card"><a href="https://pt-br.calculatestuff.com/math/fraction-calculator" target="_blank">CÁLCULO DE FRAÇÕES:</a></div>
+<div class="card"><a href="http://conversor-de-medidas.com/matematica/decimal-em-fracao/" target="_blank">CÁLCULO DE FRAÇÕES:</a></div>
+<div class="card"><a href="http://www.matematicadidatica.com.br/CalculadoraNumerosDecimaisPorExtenso.aspx" target="_blank">CÁLCULO DE FRAÇÕES:</a></div>
+<div class="card"><a href="https://www.easycalculation.com/pt/fraction-calculator.php" target="_blank">CÁLCULO DE FRAÇÕES:</a></div>
+
+<div class="card"><a href="https://www.calculatorsoup.com/calculators/discretemathematics/permutations.php" target="_blank">PERMUTAÇÃO EM FATORIAL:</a></div>
+<div class="card"><a href="https://www.calculatorsoup.com/calculators/discretemathematics/combinationsreplacement.php" target="_blank">COMBINAÇÃO EM FATORIAL:</a></div>
+
+<div class="card"><a href="https://www.calculatorsoup.com/" target="_blank">MATEMÁTICA:</a></div>
+<div class="card"><a href="http://pessoal.sercomtel.com.br/matematica/conline/fatorial/fatorial.htm" target="_blank">MATEMÁTICA E SISTEMA LINEAR:</a></div>
+<div class="card"><a href="http://ecalc.blogspot.com.br/p/variaveis-var-contvar-repetvar-ordemvar.html" target="_blank">PERMUTAÇÃO E COMBINAÇÃO:</a></div>
+<div class="card"><a href="http://matematicadidatica.com.br/CalculadoraArranjoCombinacaoSimples.aspx" target="_blank">ARRANJO:</a></div>
+<div class="card"><a href="https://pt.calcuworld.com/calculadoras-matematicas/calculadora-binomial/" target="_blank">CALCULADORA BINOMIAL:</a></div>
+
+<div class="card"><a href="https://www.easycalculation.com/pt/statistics/probability.php" target="_blank">PROBABILIDADE:</a></div>
+
+<div class="card"><a href="https://betatelecom.com.br/testewp/calculadora/" target="_blank">TELECOM:</a></div>
+<div class="card"><a href="http://www.calculatoredge.com/portuguese.htm" target="_blank">TELECOM E OUTROS:</a></div>
+<div class="card"><a href="https://pt.planetcalc.com/all/" target="_blank">TELECOM E VÁRIAS ÁREAS:</a></div>
+
+<div class="card"><a href="https://engiobra.com/calculadoras/" target="_blank">ENGENHARIA:</a></div>
+
+<div class="card"><a href="http://www.dpi.inpe.br/calcula/" target="_blank">CALCULADORA GEOGRÁFICA:</a></div>
+<div class="card"><a href="https://sigam.ambiente.sp.gov.br/sigam3/Controles/latlongutm.htm" target="_blank">CALCULADORA GEOGRÁFICA:</a></div>
+<div class="card"><a href="http://comiterb.com.br/outorga/conversor_de_coordenadas.html" target="_blank">CALCULADORA GEOGRÁFICA:</a></div>
+<div class="card"><a href="https://www.sunearthtools.com/dp/tools/conversion.php?lang=pt" target="_blank">CALCULADORA GEOGRÁFICA:</a></div>
+<div class="card"><a href="https://pt.planetcalc.com/7042/" target="_blank">CALCULADORA GEOGRÁFICA:</a></div>
+<div class="card"><a href="https://www.geosensori.com.br/calculadora-fator-de-escala-utm/" target="_blank">CALCULADORA GEOGRÁFICA:</a></div>
+<div class="card"><a href="https://www.asturnatura.com/sinfiber/calculadora-conversiones-coordenadas.php" target="_blank">CALCULADORA GEOGRÁFICA:</a></div>
+<div class="card"><a href="https://pt.symbolab.com/solver/polar-calculator" target="_blank">CALCULADORA GEOGRÁFICA:</a></div>
+<div class="card"><a href="https://www.sigrb.com.br/outorga/conversor_de_coordenadas.html" target="_blank">CALCULADORA GEOGRÁFICA:</a></div>
+
+<div class="card"><a href="https://www.calculatoratoz.com/pt/" target="_blank">VÁRIAS ÁREAS:</a></div>
+<div class="card"><a href="https://www.easycalculation.com/pt/index.php" target="_blank">VÁRIAS ÁREAS:</a></div>
+<div class="card"><a href="https://www.easycalculation.com/pt/physics/classical-physics/classical-physics.php" target="_blank">FÍSICA:</a></div>
+
+<div class="card"><a href="https://miniwebtool.com/br/log-calculator/" target="_blank">LOGARITMO:</a></div>
+<div class="card"><a href="https://miniwebtool.com/br/math/" target="_blank">MATEMÁTICA:</a></div>
+<div class="card"><a href="https://okcalc.com/pt/logarithm/" target="_blank">CIENTÍFICA:</a></div>
+
+<div class="card"><a href="fernando/index.html">IMC:</a></div>
+
+<div class="card"><a href="http://www.calculadoraonline.com.br/conversao-bases" target="_blank">BINÁRIO, HEXADECIMAL, OCTAL E DECIMAL:</a></div>
+<div class="card"><a href="http://profcardy.com/calculadoras/aplicativos.php?calc=19" target="_blank">BASE 2 ATÉ BASE 36:</a></div>
+<div class="card"><a href="http://www.cleavebooks.co.uk/scol/calnumba.htm" target="_blank">BASE 2 ATÉ BASE 20:</a></div>
+
+<div class="card"><a href="https://www.subnetonline.com/pages/subnet-calculators/ip-subnet-calculator.php" target="_blank">CÁLCULO DE IP:</a></div>
+<div class="card"><a href="http://www.subnet-calculator.com/subnet.php?net_class=C" target="_blank">CÁLCULO DE IP:</a></div>
+<div class="card"><a href="http://calculadoraip.com.br/" target="_blank">CÁLCULO DE IP:</a></div>
+<div class="card"><a href="https://pt.planetcalc.com/1669/" target="_blank">CÁLCULO DE IP:</a></div>
+<div class="card"><a href="https://www.todoespacoonline.com/w/tuts/2014/11/calc_ipv4/" target="_blank">CÁLCULO DE IP:</a></div>
+<div class="card"><a href="http://www.joao.pro.br/aplicativos/netcalc.htm" target="_blank">CÁLCULO DE IP:</a></div>
+<div class="card"><a href="https://www.site24x7.com/pt/tools/ipv4-sub-rede-calculadora.html" target="_blank">CÁLCULO DE IP:</a></div>
+<div class="card"><a href="https://calculadoraip.com.br/" target="_blank">CÁLCULO DE IP</a></div>
+<div class="card"><a href="https://pt.planetcalc.com/1669/" target="_blank">CÁLCULO DE IP</a></div>
+<div class="card"><a href="https://www.site24x7.com/pt/tools/ipv6-sub-rede-calculadora.html#:~:text=Ferramenta%20calculadora%20IPv6%20de%20sub%2Drede%3A%20Ferramentas%20do%20Site24x7&text=A%20calculadora%20IPv6%20de%20sub,nota%C3%A7%C3%A3o%20para%20a%20sub%2Drede." target="_blank">CÁLCULO DE IPV6</a></div>
+
+<div class="card"><a href="https://www.site24x7.com/pt/tools/ipv6-sub-rede-calculadora.html" target="_blank">CÁLCULO DE IPV6</a></div>
+<div class="card"><a href="https://www.vultr.com/pt/resources/subnet-calculator-ipv6/" target="_blank">CÁLCULO DE IPV6</a></div>
+<div class="card"><a href="https://www.vultr.com/pt/resources/subnet-calculator-ipv6/" target="_blank">CÁLCULO DE IPV6</a></div>
+<div class="card"><a href="https://ipv6.br/paginas/subnet" target="_blank">CÁLCULO DE IPV6</a></div>
+
+<div class="card"><a href="https://www.iptp.net/pt_PT/iptp-tools/ip-calculator/" target="_blank">CÁLCULO DE IPV6</a></div>
+
+<div class="card"><a href="https://pt.rakko.tools/tools/27/" target="_blank">CÁLCULO DE IPV6</a></div>
+<div class="card"><a href="http://www.gestioip.net/cgi-bin/subnet_calculator.cgi" target="_blank">CÁLCULO DE IPV6</a></div>
+<div class="card"><a href="https://ferramentas.lymas.com.br/ipcalc/" target="_blank">CÁLCULO DE IPV6</a></div>
+
+<div class="card"><a href="https://www.speedtest.com.br/" target="_blank">VELOCIDADE DA INTERNET</a></div>
+<div class="card"><a href="http://www.speedtest.net/" target="_blank">VELOCIDADE DA INTERNET</a></div>
+<div class="card"><a href="https://www.minhaconexao.com.br/" target="_blank">VELOCIDADE DA INTERNET</a></div>
+<div class="card"><a href="http://www.brasilbandalarga.com.br/bbl/" target="_blank">VELOCIDADE DA INTERNET</a></div>
+<div class="card"><a href="https://fast.com/pt/" target="_blank">VELOCIDADE DA INTERNET</a></div>
+<div class="card"><a href="https://www.nperf.com/pt/" target="_blank">VELOCIDADE DA INTERNET</a></div>
+<div class="card"><a href="https://www.speedteste.net.br/" target="_blank">VELOCIDADE DA INTERNET</a></div>
+<div class="card"><a href="https://speedteste.com.br/" target="_blank">VELOCIDADE DA INTERNET</a></div>
+
+<div class="card"><a href="https://www.calc-online.xyz/derivadas" target="_blank">DERIVADAS E OUTROS CÁLCULOS</a></div>
+<div class="card"><a href="http://www.calculadoraonline.com.br/derivadas" target="_blank">DERIVADAS E INTEGRAIS</a></div>
+<div class="card"><a href="https://pt.numberempire.com/derivativecalculator.php" target="_blank">DERIVADA E INTEGRAL</a></div>
+<div class="card"><a href="http://calculadoradeexatas.blogspot.com.br/p/integral-dupla.html" target="_blank">DERIVADAS E INTEGRAIS</a></div>
+<div class="card"><a href="https://pt.symbolab.com/solver/derivative-calculator" target="_blank">DERIVADAS E INTEGRAIS</a></div>
+<div class="card"><a href="https://calculode.com.br/calculadora-de-derivadas-online-tabela-de-derivadas/" target="_blank">DERIVADAS E INTEGRAIS</a></div>
+<div class="card"><a href="https://www.solumaths.com/pt/calculadora/calcular/derivada#calculadora-derivada-polinomio" target="_blank">DERIVADAS E INTEGRAIS</a></div>
+<div class="card"><a href="https://pt.planetcalc.com/671/" target="_blank">DERIVADAS E INTEGRAIS</a></div>
+<div class="card"><a href="https://calculatorderivative.com/pt/#derivativecalc" target="_blank">DERIVADAS E INTEGRAIS</a></div>
+<div class="card"><a href="https://www.respondeai.com.br/conteudo/calculadora/derivadas" target="_blank">DERIVADAS E INTEGRAIS</a></div>
+<div class="card"><a href="https://www.meracalculator.com/math/br/calculadora-derivada.php" target="_blank">DERIVADAS E INTEGRAIS</a></div>
+<div class="card"><a href="https://www.calculadora-de-derivadas.com/" target="_blank">DERIVADAS E INTEGRAIS</a></div>
+<div class="card"><a href="https://www.easycalculation.com/pt/differentiation/chain-rule-derivative.php" target="_blank">DERIVADAS E INTEGRAIS</a></div>
+
+</div>
+
+
+    
+   
+
+    <footer>
+      ©  • Divirta-se treinando o cérebro
+    </footer>
+  
+
+</body>
+</html>

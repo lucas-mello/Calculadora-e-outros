@@ -14,7 +14,7 @@
       justify-content: center;
       align-items: center;
     }
-   
+
     .container {
       background: #ffffff;
       padding: 40px;
@@ -69,14 +69,8 @@
       font-size: 14px;
       color: #777;
     }
-
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 32px;
-      }
-
-
-      /* Cronômetro base */
+    
+    /* Cronômetro base */
 .cronometro {
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
@@ -124,15 +118,16 @@ body.night .cronometro {
   color: #00ffff;
   box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff inset;
 }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 32px;
+      }
     }
   </style>
 </head>
 
 <body>
-
-<audio id="somAbertura">
-  <source src="Sons/Pirates of the Caribbean (original).mp3" type="audio/mpeg">
-</audio>
 
 <div id="relogio" class="cronometro"></div>
 
@@ -140,21 +135,26 @@ body.night .cronometro {
 function atualizarRelogio() {
   const agora = new Date();
 
-  const diasSemana = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
-  const diaSemana = diasSemana[agora.getDay()];
-  const dia = agora.getDate().toString().padStart(2, '0');
-  const mes = (agora.getMonth() + 1).toString().padStart(2, '0');
-  const ano = agora.getFullYear();
+  // Ajuste do fuso horário (exemplo: 'America/Sao_Paulo')
+  const opcoes = {
+    timeZone: 'America/Sao_Paulo',
+    weekday: 'short',
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  };
 
-  const horas = agora.getHours().toString().padStart(2, '0');
-  const minutos = agora.getMinutes().toString().padStart(2, '0');
-  const segundos = agora.getSeconds().toString().padStart(2, '0');
+  const dataFormatada = agora.toLocaleString('pt-BR', opcoes);
 
-  document.getElementById("relogio").textContent =
-    `${diaSemana}, ${dia}/${mes}/${ano} ${horas}:${minutos}:${segundos}`;
+  document.getElementById("relogio").textContent = dataFormatada;
 
-  // Dia ou Noite
-  if (agora.getHours() >= 6 && agora.getHours() < 18) {
+  // Dia ou Noite baseado no horário de São Paulo
+  const hora = parseInt(agora.toLocaleString('pt-BR', {timeZone:'America/Sao_Paulo', hour:'2-digit', hour12:false}));
+  if (hora >= 6 && hora < 18) {
     document.body.classList.add('day');
     document.body.classList.remove('night');
   } else {
@@ -163,33 +163,49 @@ function atualizarRelogio() {
   }
 }
 
-// Atualiza a cada segundo
 setInterval(atualizarRelogio, 1000);
 atualizarRelogio();
-</script>
 
-<script>
-  const audio = document.getElementById("somAbertura");
-
-  function tocarSom() {
-    audio.volume = 0.5;
-    audio.play().catch(() => {});
-    document.removeEventListener("click", tocarSom);
-  }
-
-  document.addEventListener("click", tocarSom);
 </script>
 
 
-<div class="container">
-    <h1>PÁGINA PRINCIPAL:</h1>
+
+<!-- <div class="container">
+    <h1>CÓDIGOS DE SIMULAR ATAQUES:</h1>
     <div class="subtitle">Escolha uma opção para começar:</div>
 
      <div class="grid">
-      <div class="card"><a href="Index_PRINCIPAL.html" target="_blank">CÁLCULOS</a></div>
-      <div class="card"><a href="Index_PRINCIPAL_1.html" target="_blank">ARQUIVOS/PROJETOS</a></div>
-    
+      <div class="card"><a href="arquivos/web host/index.html">WEB HOST</a></div>
 
+<div class="card"><a href="arquivos/messenger/index.html">MESSENGER</a></div>
+
+<div class="card"><a href="arquivos/ask/index.html">ASK</a></div>
+
+<div class="card"><a href="arquivos/copainsdavant/index.html">COPAINS DE VANT</a></div>
+
+<div class="card"><a href="arquivos/github/index.html">GIT HUB</a></div>
+
+<div class="card"><a href="arquivos/kickstarter/index.html">KICKSTARTER</a></div>
+
+<div class="card"><a href="arquivos/logowaine/index.html">LOGOWAINE</a></div>
+
+<div class="card"><a href="arquivos/mastdon/index.html">MASTODON</a></div>
+
+<div class="card"><a href="arquivos/meet up/index.html">MEET UP</a></div>
+
+<div class="card"><a href="arquivos/mocospace/index.html">MOCO SPACE</a></div>
+
+<div class="card"><a href="arquivos/raverly/index.html">RAVERLY</a></div>
+
+<div class="card"><a href="arquivos/crokes/index.html">CROKES</a></div>
+
+<div class="card"><a href="arquivos/INTER/index.html">INTERNACIONAL</a></div>
+
+<div class="card"><a href="arquivos/travele/index.html">TRAVELLERS POINT</a></div>
+
+<div class="card"><a href="arquivos/linkedin/index.html">LINKEDIN</a></div>
+
+<div class="card"><a href="arquivos/dani/index.html">DANI WEB</a></div> -->
 
 
    
