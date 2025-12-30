@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Científica 3D Realista com Glow</title>
+
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #b0c4de;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+  width: 100%;
+  max-width: 450px;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.2), -10px -10px 30px rgba(255,255,255,0.7);
+  transition: all 0.2s ease;
+}
+
+.calculator:hover {
+  box-shadow: 8px 8px 25px rgba(0,0,0,0.25), -8px -8px 25px rgba(255,255,255,0.8);
+}
+
+.display {
+  width: 100%;
+  height: 70px;
+  font-size: 2rem;
+  text-align: right;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(145deg, #ffffff, #dcdcdc);
+  box-shadow: inset 5px 5px 12px rgba(0,0,0,0.1), inset -5px -5px 12px rgba(255,255,255,0.7);
+  transition: all 0.2s ease;
+}
+
+.display.glow {
+  box-shadow: 0 0 15px #00f, inset 5px 5px 12px rgba(0,0,0,0.1), inset -5px -5px 12px rgba(255,255,255,0.7);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+button {
+  padding: 18px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background: linear-gradient(145deg, #f0f0f0, #dcdcdc);
+  box-shadow: 5px 5px 12px rgba(0,0,0,0.2), -5px -5px 12px rgba(255,255,255,0.7);
+  transition: all 0.1s ease;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: inset 3px 3px 10px rgba(0,0,0,0.2), inset -3px -3px 10px rgba(255,255,255,0.7);
+}
+
+.op { background: #ff9800; color: #fff; }
+.equal { background: #4caf50; color: #fff; grid-column: span 2; }
+.clear { background: #f44336; color: #fff; }
+.func { background: #607d8b; color: #fff; }
+.zero { grid-column: span 2; }
+
+@media (max-width: 480px) {
+  button { padding: 14px; font-size: 1rem; }
+  .display { font-size: 1.5rem; }
+}
+
+  /* Cronômetro base */
+.cronometro {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  color: #0f0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0f0, 0 0 20px #0f0 inset;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  text-align: center;
+  transition: all 0.3s ease, color 1s;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .cronometro {
+    font-size: 14px;
+    padding: 8px 16px;
+    top: 10px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .cronometro {
+    font-size: 12px;
+    padding: 6px 12px;
+    top: 5px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* Dia/Noite */
+body.day .cronometro {
+  color: #006600;
+  box-shadow: 0 0 10px #00cc00, 0 0 20px #00cc00 inset;
+}
+body.night .cronometro {
+  color: #00ffff;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff inset;
+}
+</style>
+</head>
+
+<body>
+
+  <div id="relogio" class="cronometro"></div>
+
+<script>
+function atualizarRelogio() {
+  const agora = new Date();
+
+  const diasSemana = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+  const diaSemana = diasSemana[agora.getDay()];
+  const dia = agora.getDate().toString().padStart(2, '0');
+  const mes = (agora.getMonth() + 1).toString().padStart(2, '0');
+  const ano = agora.getFullYear();
+
+  const horas = agora.getHours().toString().padStart(2, '0');
+  const minutos = agora.getMinutes().toString().padStart(2, '0');
+  const segundos = agora.getSeconds().toString().padStart(2, '0');
+
+  document.getElementById("relogio").textContent =
+    `${diaSemana}, ${dia}/${mes}/${ano} ${horas}:${minutos}:${segundos}`;
+
+  // Dia ou Noite
+  if (agora.getHours() >= 6 && agora.getHours() < 18) {
+    document.body.classList.add('day');
+    document.body.classList.remove('night');
+  } else {
+    document.body.classList.add('night');
+    document.body.classList.remove('day');
+  }
+}
+
+// Atualiza a cada segundo
+setInterval(atualizarRelogio, 1000);
+atualizarRelogio();
+</script>
+
+<div class="calculator">
+  <input type="text" id="display" class="display" disabled>
+
+  <div class="buttons">
+    <button class="clear" onclick="clickButton(clearDisplay)">C</button>
+    <button onclick="clickButton(deleteLast)">⌫</button>
+    <button class="func" onclick="clickButton(()=>addValue('('))">(</button>
+    <button class="func" onclick="clickButton(()=>addValue(')'))">)</button>
+    <button class="op" onclick="clickButton(()=>addValue('/'))">÷</button>
+
+    <button class="func" onclick="clickButton(()=>applyFunc('sin'))">sin</button>
+    <button class="func" onclick="clickButton(()=>applyFunc('cos'))">cos</button>
+    <button class="func" onclick="clickButton(()=>applyFunc('tan'))">tan</button>
+    <button class="func" onclick="clickButton(()=>applyFunc('sqrt'))">√</button>
+    <button class="op" onclick="clickButton(()=>addValue('*'))">×</button>
+
+    <button class="func" onclick="clickButton(()=>applyFunc('log10'))">log</button>
+    <button class="func" onclick="clickButton(()=>applyFunc('ln'))">ln</button>
+    <button class="func" onclick="clickButton(()=>addValue('**'))">xʸ</button>
+    <button class="func" onclick="clickButton(()=>applyFunc('pi'))">π</button>
+    <button class="op" onclick="clickButton(()=>addValue('-'))">−</button>
+
+    <button class="func" onclick="clickButton(()=>applyFunc('acos'))">acos</button>
+    <button class="func" onclick="clickButton(()=>applyFunc('asin'))">asin</button>
+    <button class="func" onclick="clickButton(()=>applyFunc('atan'))">atan</button>
+    <button class="func" onclick="clickButton(()=>applyFunc('cbrt'))">³√</button>
+
+    <button class="func" onclick="clickButton(powerEight)">x⁸</button>
+    <button class="func" onclick="clickButton(powerCustom)">x^n</button>
+    <button class="func" onclick="clickButton(percentage)">%</button>
+    <button class="func" onclick="clickButton(factorial)">!</button>
+
+    <button class="func" onclick="clickButton(()=>applyCombined('sqrt'))">√</button>
+    <button class="func" onclick="clickButton(()=>applyCombined('pi'))">×π</button>
+    <button class="func" onclick="clickButton(()=>applyCombined('sqrtPi2'))">√×π/2</button>
+
+    <button onclick="clickButton(()=>addValue('7'))">7</button>
+    <button onclick="clickButton(()=>addValue('8'))">8</button>
+    <button onclick="clickButton(()=>addValue('9'))">9</button>
+    <button class="op" onclick="clickButton(()=>addValue('+'))">+</button>
+    <button class="equal" onclick="clickButton(calculate)">=</button>
+
+    <button onclick="clickButton(()=>addValue('4'))">4</button>
+    <button onclick="clickButton(()=>addValue('5'))">5</button>
+    <button onclick="clickButton(()=>addValue('6'))">6</button>
+
+    <button onclick="clickButton(()=>addValue('1'))">1</button>
+    <button onclick="clickButton(()=>addValue('2'))">2</button>
+    <button onclick="clickButton(()=>addValue('3'))">3</button>
+
+    <button class="zero" onclick="clickButton(()=>addValue('0'))">0</button>
+    <button onclick="clickButton(()=>addValue('.'))">.</button>
+    <button class="func" onclick="clickButton(()=>addValue('^'))">^</button>
+  </div>
+</div>
+
+<script>
+const display = document.getElementById("display");
+
+// Função central para adicionar efeito glow
+function clickButton(func){
+  display.classList.add('glow');
+  setTimeout(()=> display.classList.remove('glow'), 200);
+  func();
+}
+
+// Básicas
+function addValue(value) { display.value += value; }
+function clearDisplay() { display.value = ""; }
+function deleteLast() { display.value = display.value.slice(0, -1); }
+
+// Avalia expressões com ^
+function calculate() {
+  try {
+    let expr = display.value;
+    expr = expr.replace(/(\d+(\.\d+)?|\([^()]+\))\s*\^\s*(\d+(\.\d+)?|\([^()]+\))/g, "Math.pow($1,$3)");
+    display.value = eval(expr);
+  } catch { display.value = "Erro"; }
+}
+
+// Potência
+function powerEight() {
+  const base = parseFloat(display.value);
+  display.value = isNaN(base)? "Erro": Math.pow(base,8);
+}
+
+function powerCustom() {
+  const base = parseFloat(display.value);
+  if (isNaN(base)) { display.value="Erro"; return; }
+  let exponent = parseInt(prompt("Digite o expoente (1 a 90000000000):"));
+  if (isNaN(exponent) || exponent<1 || exponent>90000000000) { alert("Expoente inválido"); return; }
+  display.value = Math.pow(base, exponent);
+}
+
+// Funções científicas
+function applyFunc(func) {
+  const value = parseFloat(display.value);
+  if (isNaN(value) && func!='pi') { display.value="Erro"; return; }
+  let result;
+  switch(func){
+    case 'sin': result=Math.sin(value); break;
+    case 'cos': result=Math.cos(value); break;
+    case 'tan': result=Math.tan(value); break;
+    case 'sqrt': result=Math.sqrt(value); break;
+    case 'cbrt': result=Math.cbrt(value); break;
+    case 'log10': result=Math.log10(value); break;
+    case 'ln': result=Math.log(value); break;
+    case 'acos': result=Math.acos(value); break;
+    case 'asin': result=Math.asin(value); break;
+    case 'atan': result=Math.atan(value); break;
+    case 'pi': result=Math.PI; break;
+    default: result=value;
+  }
+  display.value=result;
+}
+
+// Combinadas
+function applyCombined(func){
+  let value=parseFloat(display.value);
+  if (isNaN(value)){ display.value="Erro"; return; }
+  switch(func){
+    case 'sqrt': value=Math.sqrt(value); break;
+    case 'pi': value*=Math.PI; break;
+    case 'sqrtPi2': value=Math.sqrt(value)*Math.PI/2; break;
+    case 'cbrt': value=Math.cbrt(value); break;
+  }
+  display.value=value;
+}
+
+// Porcentagem 1 ou 2 números
+function percentage(){
+  try {
+    let expr = display.value;
+    if(expr.includes('%')){
+      const parts = expr.split('%');
+      if(parts.length!==2){ display.value="Erro"; return; }
+      const num1=parseFloat(parts[0]);
+      const num2=parseFloat(parts[1]);
+      if(isNaN(num1)||isNaN(num2)){ display.value="Erro"; return; }
+      display.value=(num1/100)*num2;
+    }else{
+      const value=parseFloat(display.value);
+      if(isNaN(value)){ display.value="Erro"; return; }
+      display.value=value/100;
+    }
+  } catch { display.value="Erro"; }
+}
+
+// Fatorial
+function factorial(){
+  let value=parseInt(display.value);
+  if(isNaN(value)||value<0){ display.value="Erro"; return; }
+  let result=1;
+  for(let i=1;i<=value;i++) result*=i;
+  display.value=result;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Científica Avançada</title>
+
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ececec;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  background: #fff;
+  width: 100%;
+  max-width: 450px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.2);
+}
+
+.display {
+  width: 100%;
+  height: 60px;
+  font-size: 1.8rem;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #e0e0e0;
+}
+
+button:hover { background: #d0d0d0; }
+
+.op { background: #ff9800; color: #fff; }
+.equal { background: #4caf50; color: #fff; grid-column: span 2; }
+.clear { background: #f44336; color: #fff; }
+.func { background: #607d8b; color: #fff; }
+.zero { grid-column: span 2; }
+
+@media (max-width: 480px) {
+  button { padding: 12px; font-size: 0.9rem; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="calculator">
+  <input type="text" id="display" class="display" disabled>
+
+  <div class="buttons">
+    <button class="clear" onclick="clearDisplay()">C</button>
+    <button onclick="deleteLast()">⌫</button>
+    <button class="func" onclick="addValue('(')">(</button>
+    <button class="func" onclick="addValue(')')">)</button>
+    <button class="op" onclick="addValue('/')">÷</button>
+
+    <!-- Agora as funções aplicam o valor do display diretamente -->
+    <button class="func" onclick="applyFunc('sin')">sin</button>
+    <button class="func" onclick="applyFunc('cos')">cos</button>
+    <button class="func" onclick="applyFunc('tan')">tan</button>
+    <button class="func" onclick="applyFunc('sqrt')">√</button>
+    <button class="op" onclick="addValue('*')">×</button>
+
+    <button class="func" onclick="applyFunc('log10')">log</button>
+    <button class="func" onclick="applyFunc('ln')">ln</button>
+    <button class="func" onclick="addValue('**')">xʸ</button>
+    <button class="func" onclick="applyFunc('pi')">π</button>
+    <button class="op" onclick="addValue('-')">−</button>
+
+    <button class="func" onclick="applyFunc('acos')">acos</button>
+    <button class="func" onclick="applyFunc('asin')">asin</button>
+    <button class="func" onclick="applyFunc('atan')">atan</button>
+    <button class="func" onclick="applyFunc('cbrt')">³√</button>
+
+    <button class="func" onclick="powerEight()">x⁸</button>
+    <button class="func" onclick="powerCustom()">x^n</button>
+    <button class="func" onclick="percentage()">%</button>
+    <button class="func" onclick="factorial()">!</button>
+
+
+
+    <!-- Botões de funções combinadas -->
+<button class="func" onclick="applyCombined('sqrt')">√</button>
+<button class="func" onclick="applyCombined('pi')">×π</button>
+<button class="func" onclick="applyCombined('sqrtPi2')">√×π/2</button>
+
+
+
+    <button onclick="addValue('7')">7</button>
+    <button onclick="addValue('8')">8</button>
+    <button onclick="addValue('9')">9</button>
+    <button class="op" onclick="addValue('+')">+</button>
+    <button class="equal" onclick="calculate()">=</button>
+
+    <button onclick="addValue('4')">4</button>
+    <button onclick="addValue('5')">5</button>
+    <button onclick="addValue('6')">6</button>
+
+    <button onclick="addValue('1')">1</button>
+    <button onclick="addValue('2')">2</button>
+    <button onclick="addValue('3')">3</button>
+
+    <button class="zero" onclick="addValue('0')">0</button>
+    <button onclick="addValue('.')">.</button>
+    <button class="func" onclick="addValue('^')">^</button>
+  </div>
+</div>
+
+<script>
+const display = document.getElementById("display");
+
+// Adiciona valor
+function addValue(value) {
+  display.value += value;
+}
+
+// Limpa display
+function clearDisplay() {
+  display.value = "";
+}
+
+// Deleta último caractere
+function deleteLast() {
+  display.value = display.value.slice(0, -1);
+}
+
+// Avalia expressões matemáticas avançadas
+function calculate() {
+  try {
+    let expr = display.value;
+
+    // Substitui ^ por Math.pow(base, expoente)
+    expr = expr.replace(/(\d+(\.\d+)?|\([^()]+\))\s*\^\s*(\d+(\.\d+)?|\([^()]+\))/g, "Math.pow($1,$3)");
+
+    display.value = eval(expr);
+  } catch {
+    display.value = "Erro";
+  }
+}
+
+// Potência fixa x⁸
+function powerEight() {
+  try {
+    const base = parseFloat(display.value);
+    if (isNaN(base)) { display.value = "Erro"; return; }
+    display.value = Math.pow(base, 8);
+  } catch {
+    display.value = "Erro";
+  }
+}
+
+// Potência personalizada x^n (prompt)
+function powerCustom() {
+  try {
+    const base = parseFloat(display.value);
+    if (isNaN(base)) { display.value = "Erro"; return; }
+    let exponent = prompt("Digite o expoente (1 a 90000000000):");
+    exponent = parseInt(exponent);
+    if (isNaN(exponent) || exponent < 1 || exponent > 90000000000) {
+      alert("Expoente inválido! Deve ser entre 1 e 90000000000.");
+      return;
+    }
+    display.value = Math.pow(base, exponent);
+  } catch {
+    display.value = "Erro";
+  }
+}
+
+// Função centralizada para aplicar funções matemáticas diretamente
+function applyFunc(func) {
+  try {
+    const value = parseFloat(display.value);
+    if (isNaN(value)) { display.value = "Erro"; return; }
+
+    let result;
+    switch(func) {
+      case 'sin': result = Math.sin(value); break;
+      case 'cos': result = Math.cos(value); break;
+      case 'tan': result = Math.tan(value); break;
+      case 'sqrt': result = Math.sqrt(value); break;
+      case 'cbrt': result = Math.cbrt(value); break;
+      case 'log10': result = Math.log10(value); break;
+      case 'ln': result = Math.log(value); break;
+      case 'acos': result = Math.acos(value); break;
+      case 'asin': result = Math.asin(value); break;
+      case 'atan': result = Math.atan(value); break;
+      case 'pi': result = Math.PI; break;
+      default: result = value; break;
+    }
+
+    display.value = result;
+  } catch {
+    display.value = "Erro";
+  }
+}
+</script>
+
+<!-- COMBINADO -->
+<script>
+function applyCombined(func) {
+  try {
+    let value = parseFloat(display.value);
+    if (isNaN(value)) { display.value = "Erro"; return; }
+
+    switch(func) {
+      case 'sqrt':
+        value = Math.sqrt(value);
+        break;
+      case 'pi':
+        value = value * Math.PI;
+        break;
+      case 'sqrtPi2':
+        value = Math.sqrt(value) * Math.PI / 2;
+        break;
+    }
+
+    display.value = value;
+  } catch {
+    display.value = "Erro";
+  }
+}
+</script>
+
+<!-- FATORIAL E % -->
+<script>
+// Porcentagem
+function percentage() {
+  try {
+    const value = parseFloat(display.value);
+    if (isNaN(value)) { display.value = "Erro"; return; }
+    display.value = value / 100;
+  } catch {
+    display.value = "Erro";
+  }
+}
+
+// Fatorial
+function factorial() {
+  try {
+    let value = parseInt(display.value);
+    if (isNaN(value) || value < 0) { display.value = "Erro"; return; }
+
+    let result = 1;
+    for (let i = 1; i <= value; i++) {
+      result *= i;
+    }
+    display.value = result;
+  } catch {
+    display.value = "Erro";
+  }
+}
+
+</script>
+
+</body>
+</html>
+
+
+
