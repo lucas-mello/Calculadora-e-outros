@@ -133,60 +133,45 @@ body.night .cronometro {
 
 <script>
 
-    /* === INJETA CSS DO RELÓGIO (BORDA RESPONSIVA) === */
+   /* === INJETA CSS DO RELÓGIO (BORDA RESPONSIVA) === */
 const estiloRelogio = document.createElement("style");
 estiloRelogio.innerHTML = `
   .cronometro {
-    font-family: 'Courier New', Courier, monospace;
+   box-sizing: border-box;
 
-    font-size: clamp(20px, 4vw, 25px);
-    font-weight: bold;
-    letter-spacing: 1.8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: clamp(28px, 3.8vw, 48px);
+  font-weight: bold;
+  letter-spacing: 2px;
 
-    color: #00ffcc;
-    background: linear-gradient(145deg, #050505, #0c0c0c);
+  /* 🔥 NEON VERDE DE VOLTA */
+  color: #00ff66;
 
-    padding: clamp(12px, 2.5vw, 26px) clamp(18px, 4vw, 42px);
-    border-radius: clamp(12px, 2vw, 22px);
+  background: rgba(0, 0, 0, 0.15);
 
-    border: clamp(2px, 0.5vw, 4px) solid #000;
+  padding: clamp(20px, 4vw, 40px);
+  border-radius: clamp(18px, 3vw, 30px);
 
-    box-shadow:
-      0 0 clamp(10px, 2vw, 18px) rgba(0,255,204,0.5),
-      inset 0 0 clamp(8px, 1.5vw, 16px) rgba(0,255,204,0.35);
+  border: clamp(2px, 0.6vw, 5px) solid #00ff66;
 
-    position: fixed;
-    top: clamp(8px, 2vw, 18px);
-    left: 50%;
-    transform: translateX(-50%);
+  box-shadow:
+    0 0 12px rgba(0, 255, 102, 0.9),
+    0 0 28px rgba(0, 255, 102, 0.7),
+    inset 0 0 20px rgba(0, 255, 102, 0.35);
 
-    z-index: 9999;
-    text-align: center;
-    white-space: nowrap;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-    max-width: 95vw;
-    overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
 
-    transition: transform 0.25s ease, box-shadow 0.5s ease;
-  }
+  text-align: center;
+  white-space: nowrap;
 
-  .cronometro.tick {
-    transform: translateX(-50%) scale(1.03);
-  }
-
-  body.day .cronometro {
-    color: #00cc66;
-    box-shadow:
-      0 0 14px #00cc66,
-      inset 0 0 18px #00cc66;
-  }
-
-  body.night .cronometro {
-    color: #00ffff;
-    box-shadow:
-      0 0 16px #00ffff,
-      inset 0 0 22px #00ffff;
-  }
+  width: fit-content;
+  max-width: 95vw;
 `;
 document.head.appendChild(estiloRelogio);
 
@@ -230,6 +215,13 @@ atualizarRelogio();
 
 
 <!-- <div class="container">
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <h1>CÓDIGOS DE SIMULAR ATAQUES:</h1>
     <div class="subtitle">Escolha uma opção para começar:</div>
 
