@@ -160,7 +160,7 @@ estiloRelogio.innerHTML = `
     inset 0 0 20px rgba(0, 255, 102, 0.35);
 
   position: fixed;
-  top: 10%;
+  top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -184,7 +184,7 @@ estiloLayoutAnterior.innerHTML = `
     .cronometro {
       font-size: 48px;
       padding: 10px 20px;
-      top: 10px;
+      top: 5px;
       right: 50%;
       left: auto;
       transform: translateX(50%);
@@ -204,6 +204,7 @@ estiloLayoutAnterior.innerHTML = `
   }
 `;
 document.head.appendChild(estiloLayoutAnterior);
+
 /* === RELÓGIO === */
 function atualizarRelogio() {
   const agora = new Date();
@@ -242,6 +243,10 @@ atualizarRelogio();
 </script>
 
   <div class="container">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <br/>
     <br/>
     <br/>
