@@ -175,6 +175,35 @@ estiloRelogio.innerHTML = `
 `;
 document.head.appendChild(estiloRelogio);
 
+
+/* === INJETA RESPONSIVIDADE (LAYOUT ANTERIOR) === */
+const estiloLayoutAnterior = document.createElement("style");
+estiloLayoutAnterior.innerHTML = `
+  /* Tablets */
+  @media (max-width: 1024px) {
+    .cronometro {
+      font-size: 48px;
+      padding: 10px 20px;
+      top: 10px;
+      right: 50%;
+      left: auto;
+      transform: translateX(50%);
+    }
+  }
+
+  /* Celulares */
+  @media (max-width: 480px) {
+    .cronometro {
+      font-size: 48px;
+      padding: 10px 20px;
+      top: 5px;
+      right: 50%;
+      left: auto;
+      transform: translateX(50%);
+    }
+  }
+`;
+document.head.appendChild(estiloLayoutAnterior);
 /* === RELÓGIO === */
 function atualizarRelogio() {
   const agora = new Date();
