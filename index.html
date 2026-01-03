@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Arquivos e Projetos</title>
+<meta charset="UTF-8">
+<title>Arquivos e Projetos</title>
 
 <style>
 /* ===== BODY ===== */
@@ -130,180 +130,81 @@ footer {
 
 <body>
 
+<!-- 🔊 SOM -->
 <audio id="somAbertura">
   <source src="Sons/Pirates of the Caribbean (original).mp3" type="audio/mpeg">
 </audio>
 
+<!-- 🕒 RELÓGIO -->
 <div id="relogio" class="cronometro"></div>
 
+<!-- 🕒 SCRIPT RELÓGIO -->
 <script>
-
-
- /* === INJETA CSS DO RELÓGIO (BORDA RESPONSIVA) === */
-const estiloRelogio = document.createElement("style");
-estiloRelogio.innerHTML = `
-  .cronometro {
-    font-family: 'Courier New', Courier, monospace;
-
-    font-size: clamp(28px, 4vw, 28px);
-    font-weight: bold;
-    letter-spacing: 1.8px;
-
-    color: #00ffcc;
-    background: linear-gradient(145deg, #050505, #0c0c0c);
-
-    padding: clamp(12px, 2.5vw, 26px) clamp(18px, 4vw, 42px);
-    border-radius: clamp(12px, 2vw, 22px);
-
-    border: clamp(2px, 0.5vw, 4px) solid #000;
-
-    box-shadow:
-      0 0 clamp(10px, 2vw, 18px) rgba(0,255,204,0.5),
-      inset 0 0 clamp(8px, 1.5vw, 16px) rgba(0,255,204,0.35);
-
-    position: fixed;
-    top: clamp(8px, 2vw, 18px);
-    left: 50%;
-    transform: translateX(-50%);
-
-    z-index: 9999;
-    text-align: center;
-    white-space: nowrap;
-
-    max-width: 95vw;
-    overflow: hidden;
-
-    transition: transform 0.25s ease, box-shadow 0.5s ease;
-  }
-
-
-
-  .cronometro.tick {
-    transform: translateX(-50%) scale(1.03);
-  }
-
-  body.day .cronometro {
-    color: #00cc66;
-    box-shadow:
-      0 0 14px #00cc66,
-      inset 0 0 18px #00cc66;
-  }
-
-  body.night .cronometro {
-    color: #00ffff;
-    box-shadow:
-      0 0 16px #00ffff,
-      inset 0 0 22px #00ffff;
-  }
-
-
-`;
-document.head.appendChild(estiloRelogio);
-
-
-
-/* === INJETA RESPONSIVIDADE (LAYOUT ANTERIOR) === */
-const estiloLayoutAnterior = document.createElement("style");
-estiloLayoutAnterior.innerHTML = `
-  /* Tablets */
-  @media (max-width: 1024px) {
-    .cronometro {
-      font-size: 48px;
-      padding: 10px 20px;
-      top: 5px;
-      right: 50%;
-      left: auto;
-      transform: translateX(50%);
-    }
-  }
-
-  /* Celulares */
-  @media (max-width: 480px) {
-    .cronometro {
-      font-size: 48px;
-      padding: 10px 20px;
-      top: 5px;
-      right: 50%;
-      left: auto;
-      transform: translateX(50%);
-    }
-  }
-`;
-document.head.appendChild(estiloLayoutAnterior);
-
-
-/* === RELÓGIO === */
 function atualizarRelogio() {
   const agora = new Date();
 
   const diasSemana = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
   const diaSemana = diasSemana[agora.getDay()];
-  const dia = agora.getDate().toString().padStart(2, '0');
-  const mes = (agora.getMonth() + 1).toString().padStart(2, '0');
+  const dia = String(agora.getDate()).padStart(2, "0");
+  const mes = String(agora.getMonth() + 1).padStart(2, "0");
   const ano = agora.getFullYear();
 
-  const horas = agora.getHours().toString().padStart(2, '0');
-  const minutos = agora.getMinutes().toString().padStart(2, '0');
-  const segundos = agora.getSeconds().toString().padStart(2, '0');
+  const horas = String(agora.getHours()).padStart(2, "0");
+  const minutos = String(agora.getMinutes()).padStart(2, "0");
+  const segundos = String(agora.getSeconds()).padStart(2, "0");
 
   document.getElementById("relogio").textContent =
     `${diaSemana}, ${dia}/${mes}/${ano} ${horas}:${minutos}:${segundos}`;
 
-  // Dia ou Noite
   if (agora.getHours() >= 6 && agora.getHours() < 18) {
-    document.body.classList.add('day');
-    document.body.classList.remove('night');
+    document.body.classList.add("day");
+    document.body.classList.remove("night");
   } else {
-    document.body.classList.add('night');
-    document.body.classList.remove('day');
+    document.body.classList.add("night");
+    document.body.classList.remove("day");
   }
 }
 
-// Atualiza a cada segundo
 setInterval(atualizarRelogio, 1000);
 atualizarRelogio();
 </script>
 
-
+<!-- 🔊 SCRIPT SOM -->
 <script>
-  const audio = document.getElementById("somAbertura");
-
-  function tocarSom() {
-    audio.volume = 0.5;
-    audio.play().catch(() => {});
-    document.removeEventListener("click", tocarSom);
-  }
-
-  document.addEventListener("click", tocarSom);
+const audio = document.getElementById("somAbertura");
+function tocarSom() {
+  audio.volume = 0.5;
+  audio.play().catch(() => {});
+  document.removeEventListener("click", tocarSom);
+}
+document.addEventListener("click", tocarSom);
 </script>
 
-
+<!-- 📦 CONTEÚDO -->
 <div class="container">
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-    <h1>PÁGINA PRINCIPAL:</h1>
-    <div class="subtitle">Escolha uma opção para começar:</div>
+  <br><br><br><br><br><br>
 
-     <div class="grid">
-      <div class="card"><a href="Index_PRINCIPAL.html" target="_blank">CÁLCULOS E CALCULADORA CIENTIFICA COM 3D</a></div>
-      <div class="card"><a href="Index_PRINCIPAL_1.html" target="_blank">ARQUIVOS/PROJETOS</a></div>
-      
-    
+  <h1>PÁGINA PRINCIPAL:</h1>
+  <div class="subtitle">Escolha uma opção para começar:</div>
 
+  <div class="grid">
+    <div class="card">
+      <a href="Index_PRINCIPAL.html" target="_blank">
+        CÁLCULOS E CALCULADORA CIENTÍFICA COM 3D
+      </a>
+    </div>
 
+    <div class="card">
+      <a href="Index_PRINCIPAL_1.html" target="_blank">
+        ARQUIVOS / PROJETOS
+      </a>
+    </div>
+  </div>
 
-   
-   </div>
-
-
-    <footer>
-      ©  • Divirta-se treinando o cérebro
-    </footer>
-  
+  <footer>
+    © • Divirta-se treinando o cérebro
+  </footer>
+</div>
 
 </body>
 </html>
