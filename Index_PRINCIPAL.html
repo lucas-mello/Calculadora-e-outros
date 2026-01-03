@@ -187,6 +187,44 @@ estiloRelogio.innerHTML = `
       0 0 16px #00ffff,
       inset 0 0 22px #00ffff;
   }
+
+  /* Tablets */
+@media (max-width: 1024px) {
+  .cronometro {
+    font-size: 14px;
+    padding: 8px 16px;
+    top: 10px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .cronometro {
+    font-size: 12px;
+    padding: 6px 12px;
+    top: 5px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* Dia/Noite */
+body.day .cronometro {
+  color: #006600;
+  box-shadow: 0 0 10px #00cc00, 0 0 20px #00cc00 inset;
+}
+body.night .cronometro {
+  color: #00ffff;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff inset;
+}
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 32px;
+      }
+    }
 `;
 document.head.appendChild(estiloRelogio);
 
